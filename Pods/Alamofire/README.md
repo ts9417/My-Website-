@@ -940,3 +940,517 @@ The first way to customize the `SessionDelegate` behavior is through the use of 
 ```swift
 /// Overrides default behavior for URLSessionDelegate method `urlSession(_:didReceive:completionHandler:)`.
 open var sessionDidReceiveChallenge: ((URLSession, URLAuthenticationChallenge) -> (URLSession.AuthChallengeDisposition, URLCredential?))?
+
+/// Overrides default behavior for URLSessionDelegate method `urlSessionDidFinishEvents(forBackgroundURLSession:)`.
+open var sessionDidFinishEventsForBackgroundURLSession: ((URLSession) -> Void)?
+
+/// Overrides default behavior for URLSessionTaskDelegate method `urlSession(_:task:willPerformHTTPRedirection:newRequest:completionHandler:)`.
+open var taskWillPerformHTTPRedirection: ((URLSession, URLSessionTask, HTTPURLResponse, URLRequest) -> URLRequest?)?
+
+/// Overrides default behavior for URLSessionDataDelegate method `urlSession(_:dataTask:willCacheResponse:completionHandler:)`.
+open var dataTaskWillCacheResponse: ((URLSession, URLSessionDataTask, CachedURLResponse) -> CachedURLResponse?)?
+```
+
+The following is a short example of how to use the `taskWillPerformHTTPRedirection` to avoid following redirects to any `apple.com` domains.
+
+```swift
+let sessionManager = Alamofire.SessionManager(configuration: URLSessionConfiguration.default)
+let delegate: Alamofire.SessionDelegate = sessionManager.delegate
+
+delegate.taskWillPerformHTTPRedirection = { session, task, response, request in
+    var finalRequest = request
+
+    if
+        let originalRequest = task.originalRequest,
+        let urlString = originalRequest.url?.urlString,
+        urlString.contains("apple.com")
+    {
+        finalRequest = originalRequest
+    }
+
+    return finalRequest
+}
+```
+
+#### Subclassing
+
+Another way to override the default implementation of the `SessionDelegate` is to subclass it. Subclassing allows you completely customize the behavior of the API or to create a proxy for the API and still use the default implementation. Creating a proxy allows you to log events, emit notifications, provide pre and post hook implementations, etc. Here's a quick example of subclassing the `SessionDelegate` and logging a message when a redirect occurs.
+
+```swift
+class LoggingSessionDelegate: SessionDelegate {
+    override func urlSession(
+        _ session: URLSession,
+        task: URLSessionTask,
+        willPerformHTTPRedirection response: HTTPURLResponse,
+        newRequest request: URLRequest,
+        completionHandler: @escaping (URLRequest?) -> Void)
+    {
+        print("URLSession will perform HTTP redirection to request: \(request)")
+
+        super.urlSession(
+            session,
+            task: task,
+            willPerformHTTPRedirection: response,
+            newRequest: request,
+            completionHandler: completionHandler
+        )
+    }
+}
+```
+
+Generally speaking, either the default implementation or the override closures should provide the necessary functionality required. Subclassing should only be used as a last resort.
+
+> It is important to keep in mind that the `subdelegates` are initialized and destroyed in the default implementation. Be careful when subclassing to not introduce memory leaks.
+
+### Request
+
+The result of a `request`, `download`, `upload` or `stream` methods are a `DataRequest`, `DownloadRequest`, `UploadRequest` and `StreamRequest` which all inherit from `Request`. All `Request` instances are always created by an owning session manager, and never initialized directly.
+
+Each subclass has specialized methods such as `authenticate`, `validate`, `responseJSON` and `uploadProgress` that each return the caller instance in order to facilitate method chaining.
+
+Requests can be suspended, resumed and cancelled:
+
+- `suspend()`: Suspends the underlying task and dispatch queue.
+- `resume()`: Resumes the underlying task and dispatch queue. If the owning manager does not have `startRequestsImmediately` set to `true`, the request must call `resume()` in order to start.
+- `cancel()`: Cancels the underlying task, producing an error that is passed to any registered response handlers.
+
+### Routing Requests
+
+As apps grow in size, it's important to adopt common patterns as you build out your network stack. An important part of that design is how to route your requests. The Alamofire `URLConvertible` and `URLRequestConvertible` protocols along with the `Router` design pattern are here to help.
+
+#### URLConvertible
+
+Types adopting the `URLConvertible` protocol can be used to construct URLs, which are then used to construct URL requests internally. `String`, `URL`, and `URLComponents` conform to `URLConvertible` by default, allowing any of them to be passed as `url` parameters to the `request`, `upload`, and `download` methods:
+
+```swift
+let urlString = "https://httpbin.org/post"
+Alamofire.request(urlString, method: .post)
+
+let url = URL(string: urlString)!
+Alamofire.request(url, method: .post)
+
+let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)!
+Alamofire.request(urlComponents, method: .post)
+```
+
+Applications interacting with web applications in a significant manner are encouraged to have custom types conform to `URLConvertible` as a convenient way to map domain-specific models to server resources.
+
+##### Type-Safe Routing
+
+```swift
+extension User: URLConvertible {
+    static let baseURLString = "https://example.com"
+
+    func asURL() throws -> URL {
+    	let urlString = User.baseURLString + "/users/\(username)/"
+        return try urlString.asURL()
+    }
+}
+```
+
+```swift
+let user = User(username: "mattt")
+Alamofire.request(user) // https://example.com/users/mattt
+```
+
+#### URLRequestConvertible
+
+Types adopting the `URLRequestConvertible` protocol can be used to construct URL requests. `URLRequest` conforms to `URLRequestConvertible` by default, allowing it to be passed into `request`, `upload`, and `download` methods directly (this is the recommended way to specify custom HTTP body for individual requests):
+
+```swift
+let url = URL(string: "https://httpbin.org/post")!
+var urlRequest = URLRequest(url: url)
+urlRequest.httpMethod = "POST"
+
+let parameters = ["foo": "bar"]
+
+do {
+    urlRequest.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
+} catch {
+    // No-op
+}
+
+urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+Alamofire.request(urlRequest)
+```
+
+Applications interacting with web applications in a significant manner are encouraged to have custom types conform to `URLRequestConvertible` as a way to ensure consistency of requested endpoints. Such an approach can be used to abstract away server-side inconsistencies and provide type-safe routing, as well as manage authentication credentials and other state.
+
+##### API Parameter Abstraction
+
+```swift
+enum Router: URLRequestConvertible {
+    case search(query: String, page: Int)
+
+    static let baseURLString = "https://example.com"
+    static let perPage = 50
+
+    // MARK: URLRequestConvertible
+
+    func asURLRequest() throws -> URLRequest {
+        let result: (path: String, parameters: Parameters) = {
+            switch self {
+            case let .search(query, page) where page > 0:
+                return ("/search", ["q": query, "offset": Router.perPage * page])
+            case let .search(query, _):
+                return ("/search", ["q": query])
+            }
+        }()
+
+        let url = try Router.baseURLString.asURL()
+        let urlRequest = URLRequest(url: url.appendingPathComponent(result.path))
+
+        return try URLEncoding.default.encode(urlRequest, with: result.parameters)
+    }
+}
+```
+
+```swift
+Alamofire.request(Router.search(query: "foo bar", page: 1)) // https://example.com/search?q=foo%20bar&offset=50
+```
+
+##### CRUD & Authorization
+
+```swift
+import Alamofire
+
+enum Router: URLRequestConvertible {
+    case createUser(parameters: Parameters)
+    case readUser(username: String)
+    case updateUser(username: String, parameters: Parameters)
+    case destroyUser(username: String)
+
+    static let baseURLString = "https://example.com"
+
+    var method: HTTPMethod {
+        switch self {
+        case .createUser:
+            return .post
+        case .readUser:
+            return .get
+        case .updateUser:
+            return .put
+        case .destroyUser:
+            return .delete
+        }
+    }
+
+    var path: String {
+        switch self {
+        case .createUser:
+            return "/users"
+        case .readUser(let username):
+            return "/users/\(username)"
+        case .updateUser(let username, _):
+            return "/users/\(username)"
+        case .destroyUser(let username):
+            return "/users/\(username)"
+        }
+    }
+
+    // MARK: URLRequestConvertible
+
+    func asURLRequest() throws -> URLRequest {
+    	let url = try Router.baseURLString.asURL()
+
+        var urlRequest = URLRequest(url: url.appendingPathComponent(path))
+        urlRequest.httpMethod = method.rawValue
+
+        switch self {
+        case .createUser(let parameters):
+            urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)
+        case .updateUser(_, let parameters):
+            urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)
+        default:
+            break
+        }
+
+        return urlRequest
+    }
+}
+```
+
+```swift
+Alamofire.request(Router.readUser("mattt")) // GET https://example.com/users/mattt
+```
+
+### Adapting and Retrying Requests
+
+Most web services these days are behind some sort of authentication system. One of the more common ones today is OAuth. This generally involves generating an access token authorizing your application or user to call the various supported web services. While creating these initial access tokens can be laborsome, it can be even more complicated when your access token expires and you need to fetch a new one. There are many thread-safety issues that need to be considered.
+
+The `RequestAdapter` and `RequestRetrier` protocols were created to make it much easier to create a thread-safe authentication system for a specific set of web services.
+
+#### RequestAdapter
+
+The `RequestAdapter` protocol allows each `Request` made on a `SessionManager` to be inspected and adapted before being created. One very specific way to use an adapter is to append an `Authorization` header to requests behind a certain type of authentication.
+
+```swift
+class AccessTokenAdapter: RequestAdapter {
+    private let accessToken: String
+
+    init(accessToken: String) {
+        self.accessToken = accessToken
+    }
+
+    func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
+        var urlRequest = urlRequest
+
+        if let urlString = urlRequest.url?.absoluteString, urlString.hasPrefix("https://httpbin.org") {
+            urlRequest.setValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")
+        }
+
+        return urlRequest
+	}
+}
+```
+
+```swift
+let sessionManager = SessionManager()
+sessionManager.adapter = AccessTokenAdapter(accessToken: "1234")
+
+sessionManager.request("https://httpbin.org/get")
+```
+
+#### RequestRetrier
+
+The `RequestRetrier` protocol allows a `Request` that encountered an `Error` while being executed to be retried. When using both the `RequestAdapter` and `RequestRetrier` protocols together, you can create credential refresh systems for OAuth1, OAuth2, Basic Auth and even exponential backoff retry policies. The possibilities are endless. Here's an example of how you could implement a refresh flow for OAuth2 access tokens.
+
+> **DISCLAIMER:** This is **NOT** a global `OAuth2` solution. It is merely an example demonstrating how one could use the `RequestAdapter` in conjunction with the `RequestRetrier` to create a thread-safe refresh system.
+
+> To reiterate, **do NOT copy** this sample code and drop it into a production application. This is merely an example. Each authentication system must be tailored to a particular platform and authentication type.
+
+```swift
+class OAuth2Handler: RequestAdapter, RequestRetrier {
+    private typealias RefreshCompletion = (_ succeeded: Bool, _ accessToken: String?, _ refreshToken: String?) -> Void
+
+    private let sessionManager: SessionManager = {
+        let configuration = URLSessionConfiguration.default
+        configuration.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
+
+        return SessionManager(configuration: configuration)
+    }()
+
+    private let lock = NSLock()
+
+    private var clientID: String
+    private var baseURLString: String
+    private var accessToken: String
+    private var refreshToken: String
+
+    private var isRefreshing = false
+    private var requestsToRetry: [RequestRetryCompletion] = []
+
+    // MARK: - Initialization
+
+    public init(clientID: String, baseURLString: String, accessToken: String, refreshToken: String) {
+        self.clientID = clientID
+        self.baseURLString = baseURLString
+        self.accessToken = accessToken
+        self.refreshToken = refreshToken
+    }
+
+    // MARK: - RequestAdapter
+
+    func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
+        if let urlString = urlRequest.url?.absoluteString, urlString.hasPrefix(baseURLString) {
+            var urlRequest = urlRequest
+            urlRequest.setValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")
+            return urlRequest
+        }
+
+        return urlRequest
+    }
+
+    // MARK: - RequestRetrier
+
+    func should(_ manager: SessionManager, retry request: Request, with error: Error, completion: @escaping RequestRetryCompletion) {
+        lock.lock() ; defer { lock.unlock() }
+
+        if let response = request.task?.response as? HTTPURLResponse, response.statusCode == 401 {
+            requestsToRetry.append(completion)
+
+            if !isRefreshing {
+                refreshTokens { [weak self] succeeded, accessToken, refreshToken in
+                    guard let strongSelf = self else { return }
+
+                    strongSelf.lock.lock() ; defer { strongSelf.lock.unlock() }
+
+                    if let accessToken = accessToken, let refreshToken = refreshToken {
+                        strongSelf.accessToken = accessToken
+                        strongSelf.refreshToken = refreshToken
+                    }
+
+                    strongSelf.requestsToRetry.forEach { $0(succeeded, 0.0) }
+                    strongSelf.requestsToRetry.removeAll()
+                }
+            }
+        } else {
+            completion(false, 0.0)
+        }
+    }
+
+    // MARK: - Private - Refresh Tokens
+
+    private func refreshTokens(completion: @escaping RefreshCompletion) {
+        guard !isRefreshing else { return }
+
+        isRefreshing = true
+
+        let urlString = "\(baseURLString)/oauth2/token"
+
+        let parameters: [String: Any] = [
+            "access_token": accessToken,
+            "refresh_token": refreshToken,
+            "client_id": clientID,
+            "grant_type": "refresh_token"
+        ]
+
+        sessionManager.request(urlString, method: .post, parameters: parameters, encoding: JSONEncoding.default)
+            .responseJSON { [weak self] response in
+                guard let strongSelf = self else { return }
+
+                if 
+                    let json = response.result.value as? [String: Any], 
+                    let accessToken = json["access_token"] as? String, 
+                    let refreshToken = json["refresh_token"] as? String 
+                {
+                    completion(true, accessToken, refreshToken)
+                } else {
+                    completion(false, nil, nil)
+                }
+
+                strongSelf.isRefreshing = false
+            }
+    }
+}
+```
+
+```swift
+let baseURLString = "https://some.domain-behind-oauth2.com"
+
+let oauthHandler = OAuth2Handler(
+    clientID: "12345678",
+    baseURLString: baseURLString,
+    accessToken: "abcd1234",
+    refreshToken: "ef56789a"
+)
+
+let sessionManager = SessionManager()
+sessionManager.adapter = oauthHandler
+sessionManager.retrier = oauthHandler
+
+let urlString = "\(baseURLString)/some/endpoint"
+
+sessionManager.request(urlString).validate().responseJSON { response in
+    debugPrint(response)
+}
+```
+
+Once the `OAuth2Handler` is applied as both the `adapter` and `retrier` for the `SessionManager`, it will handle an invalid access token error by automatically refreshing the access token and retrying all failed requests in the same order they failed.
+
+> If you needed them to execute in the same order they were created, you could sort them by their task identifiers.
+
+The example above only checks for a `401` response code which is not nearly robust enough, but does demonstrate how one could check for an invalid access token error. In a production application, one would want to check the `realm` and most likely the `www-authenticate` header response although it depends on the OAuth2 implementation.
+
+Another important note is that this authentication system could be shared between multiple session managers. For example, you may need to use both a `default` and `ephemeral` session configuration for the same set of web services. The example above allows the same `oauthHandler` instance to be shared across multiple session managers to manage the single refresh flow.
+
+### Custom Response Serialization
+
+Alamofire provides built-in response serialization for data, strings, JSON, and property lists:
+
+```swift
+Alamofire.request(...).responseData { (resp: DataResponse<Data>) in ... }
+Alamofire.request(...).responseString { (resp: DataResponse<String>) in ... }
+Alamofire.request(...).responseJSON { (resp: DataResponse<Any>) in ... }
+Alamofire.request(...).responsePropertyList { resp: DataResponse<Any>) in ... }
+```
+
+Those responses wrap deserialized *values* (Data, String, Any) or *errors* (network, validation errors), as well as *meta-data* (URL request, HTTP headers, status code, [metrics](#statistical-metrics), ...).
+
+You have several ways to customize all of those response elements:
+
+- [Response Mapping](#response-mapping)
+- [Handling Errors](#handling-errors)
+- [Creating a Custom Response Serializer](#creating-a-custom-response-serializer)
+- [Generic Response Object Serialization](#generic-response-object-serialization)
+
+#### Response Mapping
+
+Response mapping is the simplest way to produce customized responses. It transforms the value of a response, while preserving eventual errors and meta-data. For example, you can turn a json response `DataResponse<Any>` into a response that holds an application model, such as `DataResponse<User>`. You perform response mapping with the `DataResponse.map` method:
+
+```swift
+Alamofire.request("https://example.com/users/mattt").responseJSON { (response: DataResponse<Any>) in
+    let userResponse = response.map { json in
+        // We assume an existing User(json: Any) initializer
+        return User(json: json)
+    }
+
+    // Process userResponse, of type DataResponse<User>:
+    if let user = userResponse.value {
+        print("User: { username: \(user.username), name: \(user.name) }")
+    }
+}
+```
+
+When the transformation may throw an error, use `flatMap` instead:
+
+```swift
+Alamofire.request("https://example.com/users/mattt").responseJSON { response in
+    let userResponse = response.flatMap { json in
+        try User(json: json)
+    }
+}
+```
+
+Response mapping is a good fit for your custom completion handlers:
+
+```swift
+@discardableResult
+func loadUser(completionHandler: @escaping (DataResponse<User>) -> Void) -> Alamofire.DataRequest {
+    return Alamofire.request("https://example.com/users/mattt").responseJSON { response in
+        let userResponse = response.flatMap { json in
+            try User(json: json)
+        }
+
+        completionHandler(userResponse)
+    }
+}
+
+loadUser { response in
+    if let user = response.value {
+        print("User: { username: \(user.username), name: \(user.name) }")
+    }
+}
+```
+
+When the map/flatMap closure may process a big amount of data, make sure you execute it outside of the main thread:
+
+```swift
+@discardableResult
+func loadUser(completionHandler: @escaping (DataResponse<User>) -> Void) -> Alamofire.DataRequest {
+    let utilityQueue = DispatchQueue.global(qos: .utility)
+
+    return Alamofire.request("https://example.com/users/mattt").responseJSON(queue: utilityQueue) { response in
+        let userResponse = response.flatMap { json in
+            try User(json: json)
+        }
+
+        DispatchQueue.main.async {
+            completionHandler(userResponse)
+        }
+    }
+}
+```
+
+`map` and `flatMap` are also available for [download responses](#downloading-data-to-a-file).
+
+#### Handling Errors
+
+Before implementing custom response serializers or object serialization methods, it's important to consider how to handle any errors that may occur. There are two basic options: passing existing errors along unmodified, to be dealt with at response time; or, wrapping all errors in an `Error` type specific to your app.
+
+For example, here's a simple `BackendError` enum which will be used in later examples:
+
+```swift
+enum BackendError: Error {
+    case network(error: Error) // Capture any underlying Error from the URLSession API
