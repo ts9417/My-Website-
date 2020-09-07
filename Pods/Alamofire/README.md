@@ -1454,3 +1454,405 @@ For example, here's a simple `BackendError` enum which will be used in later exa
 ```swift
 enum BackendError: Error {
     case network(error: Error) // Capture any underlying Error from the URLSession API
+    case dataSerialization(error: Error)
+    case jsonSerialization(error: Error)
+    case xmlSerialization(error: Error)
+    case objectSerialization(reason: String)
+}
+```
+
+#### Creating a Custom Response Serializer
+
+Alamofire provides built-in response serialization for strings, JSON, and property lists, but others can be added in extensions on `Alamofire.DataRequest` and / or `Alamofire.DownloadRequest`.
+
+For example, here's how a response handler using [Ono](https://github.com/mattt/Ono) might be implemented:
+
+```swift
+extension DataRequest {
+    static func xmlResponseSerializer() -> DataResponseSerializer<ONOXMLDocument> {
+        return DataResponseSerializer { request, response, data, error in
+            // Pass through any underlying URLSession error to the .network case.
+            guard error == nil else { return .failure(BackendError.network(error: error!)) }
+
+            // Use Alamofire's existing data serializer to extract the data, passing the error as nil, as it has
+            // already been handled.
+            let result = Request.serializeResponseData(response: response, data: data, error: nil)
+
+            guard case let .success(validData) = result else {
+                return .failure(BackendError.dataSerialization(error: result.error! as! AFError))
+            }
+
+            do {
+                let xml = try ONOXMLDocument(data: validData)
+                return .success(xml)
+            } catch {
+                return .failure(BackendError.xmlSerialization(error: error))
+            }
+        }
+    }
+
+    @discardableResult
+    func responseXMLDocument(
+        queue: DispatchQueue? = nil,
+        completionHandler: @escaping (DataResponse<ONOXMLDocument>) -> Void)
+        -> Self
+    {
+        return response(
+            queue: queue,
+            responseSerializer: DataRequest.xmlResponseSerializer(),
+            completionHandler: completionHandler
+        )
+    }
+}
+```
+
+#### Generic Response Object Serialization
+
+Generics can be used to provide automatic, type-safe response object serialization.
+
+```swift
+protocol ResponseObjectSerializable {
+    init?(response: HTTPURLResponse, representation: Any)
+}
+
+extension DataRequest {
+    func responseObject<T: ResponseObjectSerializable>(
+        queue: DispatchQueue? = nil,
+        completionHandler: @escaping (DataResponse<T>) -> Void)
+        -> Self
+    {
+        let responseSerializer = DataResponseSerializer<T> { request, response, data, error in
+            guard error == nil else { return .failure(BackendError.network(error: error!)) }
+
+            let jsonResponseSerializer = DataRequest.jsonResponseSerializer(options: .allowFragments)
+            let result = jsonResponseSerializer.serializeResponse(request, response, data, nil)
+
+            guard case let .success(jsonObject) = result else {
+                return .failure(BackendError.jsonSerialization(error: result.error!))
+            }
+
+            guard let response = response, let responseObject = T(response: response, representation: jsonObject) else {
+                return .failure(BackendError.objectSerialization(reason: "JSON could not be serialized: \(jsonObject)"))
+            }
+
+            return .success(responseObject)
+        }
+
+        return response(queue: queue, responseSerializer: responseSerializer, completionHandler: completionHandler)
+    }
+}
+```
+
+```swift
+struct User: ResponseObjectSerializable, CustomStringConvertible {
+    let username: String
+    let name: String
+
+    var description: String {
+        return "User: { username: \(username), name: \(name) }"
+    }
+
+    init?(response: HTTPURLResponse, representation: Any) {
+        guard
+            let username = response.url?.lastPathComponent,
+            let representation = representation as? [String: Any],
+            let name = representation["name"] as? String
+        else { return nil }
+
+        self.username = username
+        self.name = name
+    }
+}
+```
+
+```swift
+Alamofire.request("https://example.com/users/mattt").responseObject { (response: DataResponse<User>) in
+    debugPrint(response)
+
+    if let user = response.result.value {
+        print("User: { username: \(user.username), name: \(user.name) }")
+    }
+}
+```
+
+The same approach can also be used to handle endpoints that return a representation of a collection of objects:
+
+```swift
+protocol ResponseCollectionSerializable {
+    static func collection(from response: HTTPURLResponse, withRepresentation representation: Any) -> [Self]
+}
+
+extension ResponseCollectionSerializable where Self: ResponseObjectSerializable {
+    static func collection(from response: HTTPURLResponse, withRepresentation representation: Any) -> [Self] {
+        var collection: [Self] = []
+
+        if let representation = representation as? [[String: Any]] {
+            for itemRepresentation in representation {
+                if let item = Self(response: response, representation: itemRepresentation) {
+                    collection.append(item)
+                }
+            }
+        }
+
+        return collection
+    }
+}
+```
+
+```swift
+extension DataRequest {
+    @discardableResult
+    func responseCollection<T: ResponseCollectionSerializable>(
+        queue: DispatchQueue? = nil,
+        completionHandler: @escaping (DataResponse<[T]>) -> Void) -> Self
+    {
+        let responseSerializer = DataResponseSerializer<[T]> { request, response, data, error in
+            guard error == nil else { return .failure(BackendError.network(error: error!)) }
+
+            let jsonSerializer = DataRequest.jsonResponseSerializer(options: .allowFragments)
+            let result = jsonSerializer.serializeResponse(request, response, data, nil)
+
+            guard case let .success(jsonObject) = result else {
+                return .failure(BackendError.jsonSerialization(error: result.error!))
+            }
+
+            guard let response = response else {
+                let reason = "Response collection could not be serialized due to nil response."
+                return .failure(BackendError.objectSerialization(reason: reason))
+            }
+
+            return .success(T.collection(from: response, withRepresentation: jsonObject))
+        }
+
+        return response(responseSerializer: responseSerializer, completionHandler: completionHandler)
+    }
+}
+```
+
+```swift
+struct User: ResponseObjectSerializable, ResponseCollectionSerializable, CustomStringConvertible {
+    let username: String
+    let name: String
+
+    var description: String {
+        return "User: { username: \(username), name: \(name) }"
+    }
+
+    init?(response: HTTPURLResponse, representation: Any) {
+        guard
+            let username = response.url?.lastPathComponent,
+            let representation = representation as? [String: Any],
+            let name = representation["name"] as? String
+        else { return nil }
+
+        self.username = username
+        self.name = name
+    }
+}
+```
+
+```swift
+Alamofire.request("https://example.com/users").responseCollection { (response: DataResponse<[User]>) in
+    debugPrint(response)
+
+    if let users = response.result.value {
+        users.forEach { print("- \($0)") }
+    }
+}
+```
+
+### Security
+
+Using a secure HTTPS connection when communicating with servers and web services is an important step in securing sensitive data. By default, Alamofire will evaluate the certificate chain provided by the server using Apple's built in validation provided by the Security framework. While this guarantees the certificate chain is valid, it does not prevent man-in-the-middle (MITM) attacks or other potential vulnerabilities. In order to mitigate MITM attacks, applications dealing with sensitive customer data or financial information should use certificate or public key pinning provided by the `ServerTrustPolicy`.
+
+#### ServerTrustPolicy
+
+The `ServerTrustPolicy` enumeration evaluates the server trust generally provided by an `URLAuthenticationChallenge` when connecting to a server over a secure HTTPS connection.
+
+```swift
+let serverTrustPolicy = ServerTrustPolicy.pinCertificates(
+    certificates: ServerTrustPolicy.certificates(),
+    validateCertificateChain: true,
+    validateHost: true
+)
+```
+
+There are many different cases of server trust evaluation giving you complete control over the validation process:
+
+* `performDefaultEvaluation`: Uses the default server trust evaluation while allowing you to control whether to validate the host provided by the challenge.
+* `pinCertificates`: Uses the pinned certificates to validate the server trust. The server trust is considered valid if one of the pinned certificates match one of the server certificates.
+* `pinPublicKeys`: Uses the pinned public keys to validate the server trust. The server trust is considered valid if one of the pinned public keys match one of the server certificate public keys.
+* `disableEvaluation`: Disables all evaluation which in turn will always consider any server trust as valid.
+* `customEvaluation`: Uses the associated closure to evaluate the validity of the server trust thus giving you complete control over the validation process. Use with caution.
+
+#### Server Trust Policy Manager
+
+The `ServerTrustPolicyManager` is responsible for storing an internal mapping of server trust policies to a particular host. This allows Alamofire to evaluate each host against a different server trust policy.
+
+```swift
+let serverTrustPolicies: [String: ServerTrustPolicy] = [
+    "test.example.com": .pinCertificates(
+        certificates: ServerTrustPolicy.certificates(),
+        validateCertificateChain: true,
+        validateHost: true
+    ),
+    "insecure.expired-apis.com": .disableEvaluation
+]
+
+let sessionManager = SessionManager(
+    serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
+)
+```
+
+> Make sure to keep a reference to the new `SessionManager` instance, otherwise your requests will all get cancelled when your `sessionManager` is deallocated.
+
+These server trust policies will result in the following behavior:
+
+- `test.example.com` will always use certificate pinning with certificate chain and host validation enabled thus requiring the following criteria to be met to allow the TLS handshake to succeed:
+	- Certificate chain MUST be valid.
+	- Certificate chain MUST include one of the pinned certificates.
+	- Challenge host MUST match the host in the certificate chain's leaf certificate.
+- `insecure.expired-apis.com` will never evaluate the certificate chain and will always allow the TLS handshake to succeed.
+- All other hosts will use the default evaluation provided by Apple.
+
+##### Subclassing Server Trust Policy Manager
+
+If you find yourself needing more flexible server trust policy matching behavior (i.e. wildcarded domains), then subclass the `ServerTrustPolicyManager` and override the `serverTrustPolicyForHost` method with your own custom implementation.
+
+```swift
+class CustomServerTrustPolicyManager: ServerTrustPolicyManager {
+    override func serverTrustPolicy(forHost host: String) -> ServerTrustPolicy? {
+        var policy: ServerTrustPolicy?
+
+        // Implement your custom domain matching behavior...
+
+        return policy
+    }
+}
+```
+
+#### Validating the Host
+
+The `.performDefaultEvaluation`, `.pinCertificates` and `.pinPublicKeys` server trust policies all take a `validateHost` parameter. Setting the value to `true` will cause the server trust evaluation to verify that hostname in the certificate matches the hostname of the challenge. If they do not match, evaluation will fail. A `validateHost` value of `false` will still evaluate the full certificate chain, but will not validate the hostname of the leaf certificate.
+
+> It is recommended that `validateHost` always be set to `true` in production environments.
+
+#### Validating the Certificate Chain
+
+Pinning certificates and public keys both have the option of validating the certificate chain using the `validateCertificateChain` parameter. By setting this value to `true`, the full certificate chain will be evaluated in addition to performing a byte equality check against the pinned certificates or public keys. A value of `false` will skip the certificate chain validation, but will still perform the byte equality check.
+
+There are several cases where it may make sense to disable certificate chain validation. The most common use cases for disabling validation are self-signed and expired certificates. The evaluation would always fail in both of these cases, but the byte equality check will still ensure you are receiving the certificate you expect from the server.
+
+> It is recommended that `validateCertificateChain` always be set to `true` in production environments.
+
+#### App Transport Security
+
+With the addition of App Transport Security (ATS) in iOS 9, it is possible that using a custom `ServerTrustPolicyManager` with several `ServerTrustPolicy` objects will have no effect. If you continuously see `CFNetwork SSLHandshake failed (-9806)` errors, you have probably run into this problem. Apple's ATS system overrides the entire challenge system unless you configure the ATS settings in your app's plist to disable enough of it to allow your app to evaluate the server trust.
+
+If you run into this problem (high probability with self-signed certificates), you can work around this issue by adding the following to your `Info.plist`.
+
+```xml
+<dict>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>example.com</key>
+            <dict>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <key>NSExceptionRequiresForwardSecrecy</key>
+                <false/>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <!-- Optional: Specify minimum TLS version -->
+                <key>NSTemporaryExceptionMinimumTLSVersion</key>
+                <string>TLSv1.2</string>
+            </dict>
+        </dict>
+    </dict>
+</dict>
+```
+
+Whether you need to set the `NSExceptionRequiresForwardSecrecy` to `NO` depends on whether your TLS connection is using an allowed cipher suite. In certain cases, it will need to be set to `NO`. The `NSExceptionAllowsInsecureHTTPLoads` MUST be set to `YES` in order to allow the `SessionDelegate` to receive challenge callbacks. Once the challenge callbacks are being called, the `ServerTrustPolicyManager` will take over the server trust evaluation. You may also need to specify the `NSTemporaryExceptionMinimumTLSVersion` if you're trying to connect to a host that only supports TLS versions less than `1.2`.
+
+> It is recommended to always use valid certificates in production environments.
+
+### Network Reachability
+
+The `NetworkReachabilityManager` listens for reachability changes of hosts and addresses for both WWAN and WiFi network interfaces.
+
+```swift
+let manager = NetworkReachabilityManager(host: "www.apple.com")
+
+manager?.listener = { status in
+    print("Network Status Changed: \(status)")
+}
+
+manager?.startListening()
+```
+
+> Make sure to remember to retain the `manager` in the above example, or no status changes will be reported.
+> Also, do not include the scheme in the `host` string or reachability won't function correctly.
+
+There are some important things to remember when using network reachability to determine what to do next.
+
+- **Do NOT** use Reachability to determine if a network request should be sent.
+    - You should **ALWAYS** send it.
+- When Reachability is restored, use the event to retry failed network requests.
+    - Even though the network requests may still fail, this is a good moment to retry them.
+- The network reachability status can be useful for determining why a network request may have failed.
+    - If a network request fails, it is more useful to tell the user that the network request failed due to being offline rather than a more technical error, such as "request timed out."
+
+> It is recommended to check out [WWDC 2012 Session 706, "Networking Best Practices"](https://developer.apple.com/videos/play/wwdc2012-706/) for more info.
+
+---
+
+## Open Radars
+
+The following radars have some effect on the current implementation of Alamofire.
+
+- [`rdar://21349340`](http://www.openradar.me/radar?id=5517037090635776) - Compiler throwing warning due to toll-free bridging issue in test case
+- [`rdar://26761490`](http://www.openradar.me/radar?id=5010235949318144) - Swift string interpolation causing memory leak with common usage
+- `rdar://26870455` - Background URL Session Configurations do not work in the simulator
+- `rdar://26849668` - Some URLProtocol APIs do not properly handle `URLRequest`
+
+## FAQ
+
+### What's the origin of the name Alamofire?
+
+Alamofire is named after the [Alamo Fire flower](https://aggie-horticulture.tamu.edu/wildseed/alamofire.html), a hybrid variant of the Bluebonnet, the official state flower of Texas.
+
+### What logic belongs in a Router vs. a Request Adapter?
+
+Simple, static data such as paths, parameters and common headers belong in the `Router`. Dynamic data such as an `Authorization` header whose value can changed based on an authentication system belongs in a `RequestAdapter`.
+
+The reason the dynamic data MUST be placed into the `RequestAdapter` is to support retry operations. When a `Request` is retried, the original request is not rebuilt meaning the `Router` will not be called again. The `RequestAdapter` is called again allowing the dynamic data to be updated on the original request before retrying the `Request`.
+
+---
+
+## Credits
+
+Alamofire is owned and maintained by the [Alamofire Software Foundation](http://alamofire.org). You can follow them on Twitter at [@AlamofireSF](https://twitter.com/AlamofireSF) for project updates and releases.
+
+### Security Disclosure
+
+If you believe you have identified a security vulnerability with Alamofire, you should report it as soon as possible via email to security@alamofire.org. Please do not post it to a public issue tracker.
+
+## Donations
+
+The [ASF](https://github.com/Alamofire/Foundation#members) is looking to raise money to officially register as a federal non-profit organization. Registering will allow us members to gain some legal protections and also allow us to put donations to use, tax free. Donating to the ASF will enable us to:
+
+- Pay our legal fees to register as a federal non-profit organization
+- Pay our yearly legal fees to keep the non-profit in good status
+- Pay for our mail servers to help us stay on top of all questions and security issues
+- Potentially fund test servers to make it easier for us to test the edge cases
+- Potentially fund developers to work on one of our projects full-time
+
+The community adoption of the ASF libraries has been amazing. We are greatly humbled by your enthusiasm around the projects, and want to continue to do everything we can to move the needle forward. With your continued support, the ASF will be able to improve its reach and also provide better legal safety for the core members. If you use any of our libraries for work, see if your employers would be interested in donating. Our initial goal is to raise $1000 to get all our legal ducks in a row and kickstart this campaign. Any amount you can donate today to help us reach our goal would be greatly appreciated.
+
+<a href='https://pledgie.com/campaigns/31474'><img alt='Click here to lend your support to: Alamofire Software Foundation and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/31474.png?skin_name=chrome' border='0' ></a>
+
+## License
+
+Alamofire is released under the MIT license. [See LICENSE](https://github.com/Alamofire/Alamofire/blob/master/LICENSE) for details.
