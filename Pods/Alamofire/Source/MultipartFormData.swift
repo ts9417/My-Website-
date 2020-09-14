@@ -66,4 +66,20 @@ open class MultipartFormData {
             case .initial:
                 boundaryText = "--\(boundary)\(EncodingCharacters.crlf)"
             case .encapsulated:
-                boundaryText = "\(EncodingChar
+                boundaryText = "\(EncodingCharacters.crlf)--\(boundary)\(EncodingCharacters.crlf)"
+            case .final:
+                boundaryText = "\(EncodingCharacters.crlf)--\(boundary)--\(EncodingCharacters.crlf)"
+            }
+
+            return boundaryText.data(using: String.Encoding.utf8, allowLossyConversion: false)!
+        }
+    }
+
+    class BodyPart {
+        let headers: HTTPHeaders
+        let bodyStream: InputStream
+        let bodyContentLength: UInt64
+        var hasInitialBoundary = false
+        var hasFinalBoundary = false
+
+     
