@@ -82,4 +82,16 @@ open class MultipartFormData {
         var hasInitialBoundary = false
         var hasFinalBoundary = false
 
-     
+        init(headers: HTTPHeaders, bodyStream: InputStream, bodyContentLength: UInt64) {
+            self.headers = headers
+            self.bodyStream = bodyStream
+            self.bodyContentLength = bodyContentLength
+        }
+    }
+
+    // MARK: - Properties
+
+    /// The `Content-Type` header value containing the boundary used to generate the `multipart/form-data`.
+    open lazy var contentType: String = "multipart/form-data; boundary=\(self.boundary)"
+
+    /// The content length of all body parts used to generate the `multipa
