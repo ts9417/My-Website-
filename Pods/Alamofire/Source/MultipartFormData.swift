@@ -94,4 +94,20 @@ open class MultipartFormData {
     /// The `Content-Type` header value containing the boundary used to generate the `multipart/form-data`.
     open lazy var contentType: String = "multipart/form-data; boundary=\(self.boundary)"
 
-    /// The content length of all body parts used to generate the `multipa
+    /// The content length of all body parts used to generate the `multipart/form-data` not including the boundaries.
+    public var contentLength: UInt64 { return bodyParts.reduce(0) { $0 + $1.bodyContentLength } }
+
+    /// The boundary used to separate the body parts in the encoded form data.
+    public let boundary: String
+
+    private var bodyParts: [BodyPart]
+    private var bodyPartError: AFError?
+    private let streamBufferSize: Int
+
+    // MARK: - Lifecycle
+
+    /// Creates a multipart form data object.
+    ///
+    /// - returns: The multipart form data object.
+    public init() {
+        self.boundary 
