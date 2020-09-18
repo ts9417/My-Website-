@@ -110,4 +110,18 @@ open class MultipartFormData {
     ///
     /// - returns: The multipart form data object.
     public init() {
-        self.boundary 
+        self.boundary = BoundaryGenerator.randomBoundary()
+        self.bodyParts = []
+
+        ///
+        /// The optimal read/write buffer size in bytes for input and output streams is 1024 (1KB). For more
+        /// information, please refer to the following article:
+        ///   - https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Streams/Articles/ReadingInputStreams.html
+        ///
+
+        self.streamBufferSize = 1024
+    }
+
+    // MARK: - Body Parts
+
+    /// Creates a body part from the data and appends it to the multipart form data o
