@@ -124,4 +124,16 @@ open class MultipartFormData {
 
     // MARK: - Body Parts
 
-    /// Creates a body part from the data and appends it to the multipart form data o
+    /// Creates a body part from the data and appends it to the multipart form data object.
+    ///
+    /// The body part data will be encoded using the following format:
+    ///
+    /// - `Content-Disposition: form-data; name=#{name}` (HTTP Header)
+    /// - Encoded data
+    /// - Multipart form boundary
+    ///
+    /// - parameter data: The data to encode into the multipart form data.
+    /// - parameter name: The name to associate with the data in the `Content-Disposition` HTTP header.
+    public func append(_ data: Data, withName name: String) {
+        let headers = contentHeaders(withName: name)
+        let stream = 
