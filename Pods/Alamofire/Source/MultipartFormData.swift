@@ -156,4 +156,19 @@ open class MultipartFormData {
     /// - parameter mimeType: The MIME type to associate with the data content type in the `Content-Type` HTTP header.
     public func append(_ data: Data, withName name: String, mimeType: String) {
         let headers = contentHeaders(withName: name, mimeType: mimeType)
-        let stream =
+        let stream = InputStream(data: data)
+        let length = UInt64(data.count)
+
+        append(stream, withLength: length, headers: headers)
+    }
+
+    /// Creates a body part from the data and appends it to the multipart form data object.
+    ///
+    /// The body part data will be encoded using the following format:
+    ///
+    /// - `Content-Disposition: form-data; name=#{name}; filename=#{filename}` (HTTP Header)
+    /// - `Content-Type: #{mimeType}` (HTTP Header)
+    /// - Encoded file data
+    /// - Multipart form boundary
+    ///
+    /// - parameter data:   
