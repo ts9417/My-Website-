@@ -197,4 +197,17 @@ open class MultipartFormData {
     /// system associated MIME type.
     ///
     /// - parameter fileURL: The URL of the file whose content will be encoded into the multipart form data.
-    /// - parameter name:    The name to associate with the 
+    /// - parameter name:    The name to associate with the file content in the `Content-Disposition` HTTP header.
+    public func append(_ fileURL: URL, withName name: String) {
+        let fileName = fileURL.lastPathComponent
+        let pathExtension = fileURL.pathExtension
+
+        if !fileName.isEmpty && !pathExtension.isEmpty {
+            let mime = mimeType(forPathExtension: pathExtension)
+            append(fileURL, withName: name, fileName: fileName, mimeType: mime)
+        } else {
+            setBodyPartError(withReason: .bodyPartFilenameInvalid(in: fileURL))
+        }
+    }
+
+    /// Creates a b
