@@ -264,4 +264,17 @@ open class MultipartFormData {
 
         //============================================================
         //          Check 4 - can the file size be extracted?
-        //=======================================
+        //============================================================
+
+        let bodyContentLength: UInt64
+
+        do {
+            guard let fileSize = try FileManager.default.attributesOfItem(atPath: path)[.size] as? NSNumber else {
+                setBodyPartError(withReason: .bodyPartFileSizeNotAvailable(at: fileURL))
+                return
+            }
+
+            bodyContentLength = fileSize.uint64Value
+        }
+        catch {
+            setBodyPartError(withReason: .bodyPartFileSizeQueryFailedWithError(forURL: fileURL, error: error))
