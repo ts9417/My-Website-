@@ -226,4 +226,18 @@ open class MultipartFormData {
     public func append(_ fileURL: URL, withName name: String, fileName: String, mimeType: String) {
         let headers = contentHeaders(withName: name, fileName: fileName, mimeType: mimeType)
 
-        //=
+        //============================================================
+        //                 Check 1 - is file URL?
+        //============================================================
+
+        guard fileURL.isFileURL else {
+            setBodyPartError(withReason: .bodyPartURLInvalid(url: fileURL))
+            return
+        }
+
+        //============================================================
+        //              Check 2 - is file URL reachable?
+        //============================================================
+
+        do {
+            let is
