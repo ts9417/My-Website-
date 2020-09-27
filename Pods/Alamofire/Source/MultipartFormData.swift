@@ -314,4 +314,17 @@ open class MultipartFormData {
         fileName: String,
         mimeType: String)
     {
-        let headers = contentHe
+        let headers = contentHeaders(withName: name, fileName: fileName, mimeType: mimeType)
+        append(stream, withLength: length, headers: headers)
+    }
+
+    /// Creates a body part with the headers, stream and length and appends it to the multipart form data object.
+    ///
+    /// The body part data will be encoded using the following format:
+    ///
+    /// - HTTP headers
+    /// - Encoded stream data
+    /// - Multipart form boundary
+    ///
+    /// - parameter stream:  The input stream to encode in the multipart form data.
+    /// - parameter length:  The content length of the
