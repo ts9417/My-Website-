@@ -347,4 +347,23 @@ open class MultipartFormData {
     /// - returns: The encoded `Data` if encoding is successful.
     public func encode() throws -> Data {
         if let bodyPartError = bodyPartError {
-            throw bodyPartErro
+            throw bodyPartError
+        }
+
+        var encoded = Data()
+
+        bodyParts.first?.hasInitialBoundary = true
+        bodyParts.last?.hasFinalBoundary = true
+
+        for bodyPart in bodyParts {
+            let encodedData = try encode(bodyPart)
+            encoded.append(encodedData)
+        }
+
+        return encoded
+    }
+
+    /// Writes the appended body parts into the given file URL.
+    ///
+    /// This process is facilitated by reading and writing with input and output streams, respectively. Thus,
+    /// this approa
