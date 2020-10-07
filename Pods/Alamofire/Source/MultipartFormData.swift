@@ -366,4 +366,16 @@ open class MultipartFormData {
     /// Writes the appended body parts into the given file URL.
     ///
     /// This process is facilitated by reading and writing with input and output streams, respectively. Thus,
-    /// this approa
+    /// this approach is very memory efficient and should be used for large body part data.
+    ///
+    /// - parameter fileURL: The file URL to write the multipart form data into.
+    ///
+    /// - throws: An `AFError` if encoding encounters an error.
+    public func writeEncodedData(to fileURL: URL) throws {
+        if let bodyPartError = bodyPartError {
+            throw bodyPartError
+        }
+
+        if FileManager.default.fileExists(atPath: fileURL.path) {
+            throw AFError.multipartEncodingFailed(reason: .outputStreamFileAlreadyExists(at: fileURL))
+    
