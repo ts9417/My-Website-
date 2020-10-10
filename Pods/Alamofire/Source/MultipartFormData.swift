@@ -429,4 +429,16 @@ open class MultipartFormData {
         return headerText.data(using: String.Encoding.utf8, allowLossyConversion: false)!
     }
 
-    private func encodeBodyStream(
+    private func encodeBodyStream(for bodyPart: BodyPart) throws -> Data {
+        let inputStream = bodyPart.bodyStream
+        inputStream.open()
+        defer { inputStream.close() }
+
+        var encoded = Data()
+
+        while inputStream.hasBytesAvailable {
+            var buffer = [UInt8](repeating: 0, count: streamBufferSize)
+            let bytesRead = inputStream.read(&buffer, maxLength: streamBufferSize)
+
+            if let error = inputStream.streamError {
+                throw AFError.multipartEncodingFailed(reason: .inputStreamRe
