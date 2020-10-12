@@ -459,4 +459,15 @@ open class MultipartFormData {
     private func write(_ bodyPart: BodyPart, to outputStream: OutputStream) throws {
         try writeInitialBoundaryData(for: bodyPart, to: outputStream)
         try writeHeaderData(for: bodyPart, to: outputStream)
-        try writeBodyStream(for: bodyPart, to: outputS
+        try writeBodyStream(for: bodyPart, to: outputStream)
+        try writeFinalBoundaryData(for: bodyPart, to: outputStream)
+    }
+
+    private func writeInitialBoundaryData(for bodyPart: BodyPart, to outputStream: OutputStream) throws {
+        let initialData = bodyPart.hasInitialBoundary ? initialBoundaryData() : encapsulatedBoundaryData()
+        return try write(initialData, to: outputStream)
+    }
+
+    private func writeHeaderData(for bodyPart: BodyPart, to outputStream: OutputStream) throws {
+        let headerData = encodeHeaders(for: bodyPart)
+        retu
