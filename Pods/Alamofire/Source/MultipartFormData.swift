@@ -483,4 +483,20 @@ open class MultipartFormData {
             var buffer = [UInt8](repeating: 0, count: streamBufferSize)
             let bytesRead = inputStream.read(&buffer, maxLength: streamBufferSize)
 
-            if let strea
+            if let streamError = inputStream.streamError {
+                throw AFError.multipartEncodingFailed(reason: .inputStreamReadFailed(error: streamError))
+            }
+
+            if bytesRead > 0 {
+                if buffer.count != bytesRead {
+                    buffer = Array(buffer[0..<bytesRead])
+                }
+
+                try write(&buffer, to: outputStream)
+            } else {
+                break
+            }
+        }
+    }
+
+    private func writeFinalBoundaryData(for bodyPart: B
