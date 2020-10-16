@@ -470,4 +470,17 @@ open class MultipartFormData {
 
     private func writeHeaderData(for bodyPart: BodyPart, to outputStream: OutputStream) throws {
         let headerData = encodeHeaders(for: bodyPart)
-        retu
+        return try write(headerData, to: outputStream)
+    }
+
+    private func writeBodyStream(for bodyPart: BodyPart, to outputStream: OutputStream) throws {
+        let inputStream = bodyPart.bodyStream
+
+        inputStream.open()
+        defer { inputStream.close() }
+
+        while inputStream.hasBytesAvailable {
+            var buffer = [UInt8](repeating: 0, count: streamBufferSize)
+            let bytesRead = inputStream.read(&buffer, maxLength: streamBufferSize)
+
+            if let strea
