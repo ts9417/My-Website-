@@ -499,4 +499,19 @@ open class MultipartFormData {
         }
     }
 
-    private func writeFinalBoundaryData(for bodyPart: B
+    private func writeFinalBoundaryData(for bodyPart: BodyPart, to outputStream: OutputStream) throws {
+        if bodyPart.hasFinalBoundary {
+            return try write(finalBoundaryData(), to: outputStream)
+        }
+    }
+
+    // MARK: - Private - Writing Buffered Data to Output Stream
+
+    private func write(_ data: Data, to outputStream: OutputStream) throws {
+        var buffer = [UInt8](repeating: 0, count: data.count)
+        data.copyBytes(to: &buffer, count: data.count)
+
+        return try write(&buffer, to: outputStream)
+    }
+
+    private fun
