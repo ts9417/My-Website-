@@ -545,4 +545,18 @@ open class MultipartFormData {
         return "application/octet-stream"
     }
 
-   
+    // MARK: - Private - Content Headers
+
+    private func contentHeaders(withName name: String, fileName: String? = nil, mimeType: String? = nil) -> [String: String] {
+        var disposition = "form-data; name=\"\(name)\""
+        if let fileName = fileName { disposition += "; filename=\"\(fileName)\"" }
+
+        var headers = ["Content-Disposition": disposition]
+        if let mimeType = mimeType { headers["Content-Type"] = mimeType }
+
+        return headers
+    }
+
+    // MARK: - Private - Boundary Encoding
+
+    private func initialBoundaryData() -> Data {
