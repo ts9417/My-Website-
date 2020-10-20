@@ -514,4 +514,35 @@ open class MultipartFormData {
         return try write(&buffer, to: outputStream)
     }
 
-    private fun
+    private func write(_ buffer: inout [UInt8], to outputStream: OutputStream) throws {
+        var bytesToWrite = buffer.count
+
+        while bytesToWrite > 0, outputStream.hasSpaceAvailable {
+            let bytesWritten = outputStream.write(buffer, maxLength: bytesToWrite)
+
+            if let error = outputStream.streamError {
+                throw AFError.multipartEncodingFailed(reason: .outputStreamWriteFailed(error: error))
+            }
+
+            bytesToWrite -= bytesWritten
+
+            if bytesToWrite > 0 {
+                buffer = Array(buffer[bytesWritten..<buffer.count])
+            }
+        }
+    }
+
+    // MARK: - Private - Mime Type
+
+    private func mimeType(forPathExtension pathExtension: String) -> String {
+        if
+            let id = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, pathExtension as CFString, nil)?.takeRetainedValue(),
+            let contentType = UTTypeCopyPreferredTagWithClass(id, kUTTagClassMIMEType)?.takeRetainedValue()
+        {
+            return contentType as String
+        }
+
+        return "application/octet-stream"
+    }
+
+   
