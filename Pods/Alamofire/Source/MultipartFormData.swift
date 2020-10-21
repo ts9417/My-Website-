@@ -560,3 +560,17 @@ open class MultipartFormData {
     // MARK: - Private - Boundary Encoding
 
     private func initialBoundaryData() -> Data {
+        return BoundaryGenerator.boundaryData(forBoundaryType: .initial, boundary: boundary)
+    }
+
+    private func encapsulatedBoundaryData() -> Data {
+        return BoundaryGenerator.boundaryData(forBoundaryType: .encapsulated, boundary: boundary)
+    }
+
+    private func finalBoundaryData() -> Data {
+        return BoundaryGenerator.boundaryData(forBoundaryType: .final, boundary: boundary)
+    }
+
+    // MARK: - Private - Errors
+
+    private func setBodyPartError(withReason reason: AFError.MultipartEncodingFailureReason) {
