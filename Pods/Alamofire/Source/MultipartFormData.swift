@@ -574,3 +574,7 @@ open class MultipartFormData {
     // MARK: - Private - Errors
 
     private func setBodyPartError(withReason reason: AFError.MultipartEncodingFailureReason) {
+        guard bodyPartError == nil else { return }
+        bodyPartError = AFError.multipartEncodingFailed(reason: reason)
+    }
+}
