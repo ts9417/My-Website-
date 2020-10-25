@@ -25,4 +25,18 @@
 import Foundation
 
 /// A type that can inspect and optionally adapt a `URLRequest` in some manner if necessary.
-public protocol Req
+public protocol RequestAdapter {
+    /// Inspects and adapts the specified `URLRequest` in some manner if necessary and returns the result.
+    ///
+    /// - parameter urlRequest: The URL request to adapt.
+    ///
+    /// - throws: An `Error` if the adaptation encounters an error.
+    ///
+    /// - returns: The adapted `URLRequest`.
+    func adapt(_ urlRequest: URLRequest) throws -> URLRequest
+}
+
+// MARK: -
+
+/// A closure executed when the `RequestRetrier` determines whether a `Request` should be retried or not.
+public typealias RequestRetryCompletion = (_ shouldRetry: Bool, _ timeDelay: Tim
