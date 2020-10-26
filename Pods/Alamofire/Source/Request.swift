@@ -39,4 +39,13 @@ public protocol RequestAdapter {
 // MARK: -
 
 /// A closure executed when the `RequestRetrier` determines whether a `Request` should be retried or not.
-public typealias RequestRetryCompletion = (_ shouldRetry: Bool, _ timeDelay: Tim
+public typealias RequestRetryCompletion = (_ shouldRetry: Bool, _ timeDelay: TimeInterval) -> Void
+
+/// A type that determines whether a request should be retried after being executed by the specified session manager
+/// and encountering an error.
+public protocol RequestRetrier {
+    /// Determines whether the `Request` should be retried by calling the `completion` closure.
+    ///
+    /// This operation is fully asynchronous. Any amount of time can be taken to determine whether the request needs
+    /// to be retried. The one requirement is that the completion closure is called to ensure the request is properly
+    /// cleaned up aft
