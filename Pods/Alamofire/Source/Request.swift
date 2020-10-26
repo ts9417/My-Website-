@@ -48,4 +48,15 @@ public protocol RequestRetrier {
     ///
     /// This operation is fully asynchronous. Any amount of time can be taken to determine whether the request needs
     /// to be retried. The one requirement is that the completion closure is called to ensure the request is properly
-    /// cleaned up aft
+    /// cleaned up after.
+    ///
+    /// - parameter manager:    The session manager the request was executed on.
+    /// - parameter request:    The request that failed due to the encountered error.
+    /// - parameter error:      The error encountered when executing the request.
+    /// - parameter completion: The completion closure to be executed when retry decision has been determined.
+    func should(_ manager: SessionManager, retry request: Request, with error: Error, completion: @escaping RequestRetryCompletion)
+}
+
+// MARK: -
+
+pro
