@@ -74,4 +74,19 @@ open class Request {
 
     // MARK: Helper Types
 
-    /// A closure executed when monitoring
+    /// A closure executed when monitoring upload or download progress of a request.
+    public typealias ProgressHandler = (Progress) -> Void
+
+    enum RequestTask {
+        case data(TaskConvertible?, URLSessionTask?)
+        case download(TaskConvertible?, URLSessionTask?)
+        case upload(TaskConvertible?, URLSessionTask?)
+        case stream(TaskConvertible?, URLSessionTask?)
+    }
+
+    // MARK: Properties
+
+    /// The delegate for the underlying task.
+    open internal(set) var delegate: TaskDelegate {
+        get {
+            taskDelegateLock.lock() ; defer { taskDelegateLock.unlock(
