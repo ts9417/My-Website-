@@ -107,4 +107,22 @@ open class Request {
     /// The request sent or to be sent to the server.
     open var request: URLRequest? { return task?.originalRequest }
 
-    /// The response received from t
+    /// The response received from the server, if any.
+    open var response: HTTPURLResponse? { return task?.response as? HTTPURLResponse }
+
+    /// The number of times the request has been retried.
+    open internal(set) var retryCount: UInt = 0
+
+    let originalTask: TaskConvertible?
+
+    var startTime: CFAbsoluteTime?
+    var endTime: CFAbsoluteTime?
+
+    var validations: [() -> Void] = []
+
+    private var taskDelegate: TaskDelegate
+    private var taskDelegateLock = NSLock()
+
+    // MARK: Lifecycle
+
+    init(session: URLSession, requestTask: Request
