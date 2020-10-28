@@ -89,4 +89,22 @@ open class Request {
     /// The delegate for the underlying task.
     open internal(set) var delegate: TaskDelegate {
         get {
-            taskDelegateLock.lock() ; defer { taskDelegateLock.unlock(
+            taskDelegateLock.lock() ; defer { taskDelegateLock.unlock() }
+            return taskDelegate
+        }
+        set {
+            taskDelegateLock.lock() ; defer { taskDelegateLock.unlock() }
+            taskDelegate = newValue
+        }
+    }
+
+    /// The underlying task.
+    open var task: URLSessionTask? { return delegate.task }
+
+    /// The session belonging to the underlying task.
+    open let session: URLSession
+
+    /// The request sent or to be sent to the server.
+    open var request: URLRequest? { return task?.originalRequest }
+
+    /// The response received from t
