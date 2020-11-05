@@ -153,4 +153,22 @@ open class Request {
     ///
     /// - parameter user:        The user.
     /// - parameter password:    The password.
-    /// - parameter persistence: The URL credential persistence. `.ForS
+    /// - parameter persistence: The URL credential persistence. `.ForSession` by default.
+    ///
+    /// - returns: The request.
+    @discardableResult
+    open func authenticate(
+        user: String,
+        password: String,
+        persistence: URLCredential.Persistence = .forSession)
+        -> Self
+    {
+        let credential = URLCredential(user: user, password: password, persistence: persistence)
+        return authenticate(usingCredential: credential)
+    }
+
+    /// Associates a specified credential with the request.
+    ///
+    /// - parameter credential: The credential.
+    ///
+    //
