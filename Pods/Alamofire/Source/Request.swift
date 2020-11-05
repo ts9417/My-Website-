@@ -137,4 +137,20 @@ open class Request {
             self.originalTask = originalTask
         case .upload(let originalTask, let task):
             taskDelegate = UploadTaskDelegate(task: task)
-            self.originalTa
+            self.originalTask = originalTask
+        case .stream(let originalTask, let task):
+            taskDelegate = TaskDelegate(task: task)
+            self.originalTask = originalTask
+        }
+
+        delegate.error = error
+        delegate.queue.addOperation { self.endTime = CFAbsoluteTimeGetCurrent() }
+    }
+
+    // MARK: Authentication
+
+    /// Associates an HTTP Basic credential with the request.
+    ///
+    /// - parameter user:        The user.
+    /// - parameter password:    The password.
+    /// - parameter persistence: The URL credential persistence. `.ForS
