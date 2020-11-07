@@ -171,4 +171,17 @@ open class Request {
     ///
     /// - parameter credential: The credential.
     ///
-    //
+    /// - returns: The request.
+    @discardableResult
+    open func authenticate(usingCredential credential: URLCredential) -> Self {
+        delegate.credential = credential
+        return self
+    }
+
+    /// Returns a base64 encoded basic authentication credential as an authorization header tuple.
+    ///
+    /// - parameter user:     The user.
+    /// - parameter password: The password.
+    ///
+    /// - returns: A tuple with Authorization header and credential value if encoding succeeds, `nil` otherwise.
+    open static func authorizationHeade
