@@ -200,4 +200,26 @@ open class Request {
 
         if startTime == nil { startTime = CFAbsoluteTimeGetCurrent() }
 
-        task.resume
+        task.resume()
+
+        NotificationCenter.default.post(
+            name: Notification.Name.Task.DidResume,
+            object: self,
+            userInfo: [Notification.Key.Task: task]
+        )
+    }
+
+    /// Suspends the request.
+    open func suspend() {
+        guard let task = task else { return }
+
+        task.suspend()
+
+        NotificationCenter.default.post(
+            name: Notification.Name.Task.DidSuspend,
+            object: self,
+            userInfo: [Notification.Key.Task: task]
+        )
+    }
+
+    /// Cancels the r
