@@ -222,4 +222,22 @@ open class Request {
         )
     }
 
-    /// Cancels the r
+    /// Cancels the request.
+    open func cancel() {
+        guard let task = task else { return }
+
+        task.cancel()
+
+        NotificationCenter.default.post(
+            name: Notification.Name.Task.DidCancel,
+            object: self,
+            userInfo: [Notification.Key.Task: task]
+        )
+    }
+}
+
+// MARK: - CustomStringConvertible
+
+extension Request: CustomStringConvertible {
+    /// The textual representation used when written to an output stream, which includes the HTTP method and URL, as
+    /// well as the response stat
