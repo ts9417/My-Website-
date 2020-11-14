@@ -276,4 +276,19 @@ extension Request: CustomDebugStringConvertible {
               let host = url.host
         else {
             return "$ curl command could not be created"
-        
+        }
+
+        if let httpMethod = request.httpMethod, httpMethod != "GET" {
+            components.append("-X \(httpMethod)")
+        }
+
+        if let credentialStorage = self.session.configuration.urlCredentialStorage {
+            let protectionSpace = URLProtectionSpace(
+                host: host,
+                port: url.port ?? 0,
+                protocol: url.scheme,
+                realm: host,
+                authenticationMethod: NSURLAuthenticationMethodHTTPBasic
+            )
+
+            if let credentials = credentialStorage.credentials(for: protectionSpa
