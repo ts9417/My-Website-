@@ -260,4 +260,20 @@ extension Request: CustomStringConvertible {
     }
 }
 
-// MARK: - CustomDebu
+// MARK: - CustomDebugStringConvertible
+
+extension Request: CustomDebugStringConvertible {
+    /// The textual representation used when written to an output stream, in the form of a cURL command.
+    open var debugDescription: String {
+        return cURLRepresentation()
+    }
+
+    func cURLRepresentation() -> String {
+        var components = ["$ curl -v"]
+
+        guard let request = self.request,
+              let url = request.url,
+              let host = url.host
+        else {
+            return "$ curl command could not be created"
+        
