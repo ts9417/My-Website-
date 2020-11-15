@@ -291,4 +291,18 @@ extension Request: CustomDebugStringConvertible {
                 authenticationMethod: NSURLAuthenticationMethodHTTPBasic
             )
 
-            if let credentials = credentialStorage.credentials(for: protectionSpa
+            if let credentials = credentialStorage.credentials(for: protectionSpace)?.values {
+                for credential in credentials {
+                    components.append("-u \(credential.user!):\(credential.password!)")
+                }
+            } else {
+                if let credential = delegate.credential {
+                    components.append("-u \(credential.user!):\(credential.password!)")
+                }
+            }
+        }
+
+        if session.configuration.httpShouldSetCookies {
+            if
+                let cookieStorage = session.configuration.httpCookieStorage,
+     
