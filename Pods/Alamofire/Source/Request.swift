@@ -305,4 +305,14 @@ extension Request: CustomDebugStringConvertible {
         if session.configuration.httpShouldSetCookies {
             if
                 let cookieStorage = session.configuration.httpCookieStorage,
-     
+                let cookies = cookieStorage.cookies(for: url), !cookies.isEmpty
+            {
+                let string = cookies.reduce("") { $0 + "\($1.name)=\($1.value);" }
+                components.append("-b \"\(string.substring(to: string.characters.index(before: string.endIndex)))\"")
+            }
+        }
+
+        var headers: [AnyHashable: Any] = [:]
+
+        if let additionalHeaders = session.configuration.httpAdditionalHeaders {
+            for (field, value) in additionalHeaders where field != AnyHa
