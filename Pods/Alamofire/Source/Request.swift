@@ -331,4 +331,23 @@ extension Request: CustomDebugStringConvertible {
         }
 
         if let httpBodyData = request.httpBody, let httpBody = String(data: httpBodyData, encoding: .utf8) {
-            var
+            var escapedBody = httpBody.replacingOccurrences(of: "\\\"", with: "\\\\\"")
+            escapedBody = escapedBody.replacingOccurrences(of: "\"", with: "\\\"")
+
+            components.append("-d \"\(escapedBody)\"")
+        }
+
+        components.append("\"\(url.absoluteString)\"")
+
+        return components.joined(separator: " \\\n\t")
+    }
+}
+
+// MARK: -
+
+/// Specific type of `Request` that manages an underlying `URLSessionDataTask`.
+open class DataRequest: Request {
+
+    // MARK: Helper Types
+
+    struct Requestable: Tas
