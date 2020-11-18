@@ -315,4 +315,20 @@ extension Request: CustomDebugStringConvertible {
         var headers: [AnyHashable: Any] = [:]
 
         if let additionalHeaders = session.configuration.httpAdditionalHeaders {
-            for (field, value) in additionalHeaders where field != AnyHa
+            for (field, value) in additionalHeaders where field != AnyHashable("Cookie") {
+                headers[field] = value
+            }
+        }
+
+        if let headerFields = request.allHTTPHeaderFields {
+            for (field, value) in headerFields where field != "Cookie" {
+                headers[field] = value
+            }
+        }
+
+        for (field, value) in headers {
+            components.append("-H \"\(field): \(value)\"")
+        }
+
+        if let httpBodyData = request.httpBody, let httpBody = String(data: httpBodyData, encoding: .utf8) {
+            var
