@@ -350,4 +350,20 @@ open class DataRequest: Request {
 
     // MARK: Helper Types
 
-    struct Requestable: Tas
+    struct Requestable: TaskConvertible {
+        let urlRequest: URLRequest
+
+        func task(session: URLSession, adapter: RequestAdapter?, queue: DispatchQueue) throws -> URLSessionTask {
+            do {
+                let urlRequest = try self.urlRequest.adapt(using: adapter)
+                return queue.sync { session.dataTask(with: urlRequest) }
+            } catch {
+                throw AdaptError(error: error)
+            }
+        }
+    }
+
+    // MARK: Properties
+
+    /// The request sent or to be sent to the server.
+    
