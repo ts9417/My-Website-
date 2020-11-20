@@ -366,4 +366,18 @@ open class DataRequest: Request {
     // MARK: Properties
 
     /// The request sent or to be sent to the server.
-    
+    open override var request: URLRequest? {
+        if let request = super.request { return request }
+        if let requestable = originalTask as? Requestable { return requestable.urlRequest }
+
+        return nil
+    }
+
+    /// The progress of fetching the response data from the server for the request.
+    open var progress: Progress { return dataDelegate.progress }
+
+    var dataDelegate: DataTaskDelegate { return delegate as! DataTaskDelegate }
+
+    // MARK: Stream
+
+    /// Sets a c
