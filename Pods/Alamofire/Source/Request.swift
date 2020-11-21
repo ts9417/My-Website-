@@ -386,4 +386,18 @@ open class DataRequest: Request {
     /// If this closure is set, data will only be available within this closure, and will not be saved elsewhere. It is
     /// also important to note that the server data in any `Response` object will be `nil`.
     ///
-    /// - parameter closure: The code to be executed periodically during t
+    /// - parameter closure: The code to be executed periodically during the lifecycle of the request.
+    ///
+    /// - returns: The request.
+    @discardableResult
+    open func stream(closure: ((Data) -> Void)? = nil) -> Self {
+        dataDelegate.dataStream = closure
+        return self
+    }
+
+    // MARK: Progress
+
+    /// Sets a closure to be called periodically during the lifecycle of the `Request` as data is read from the server.
+    ///
+    /// - parameter queue:   The dispatch queue to execute the closure on.
+    /// - parameter closure: The code to be executed periodical
