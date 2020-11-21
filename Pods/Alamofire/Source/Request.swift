@@ -380,4 +380,10 @@ open class DataRequest: Request {
 
     // MARK: Stream
 
-    /// Sets a c
+    /// Sets a closure to be called periodically during the lifecycle of the request as data is read from the server.
+    ///
+    /// This closure returns the bytes most recently received from the server, not including data from previous calls.
+    /// If this closure is set, data will only be available within this closure, and will not be saved elsewhere. It is
+    /// also important to note that the server data in any `Response` object will be `nil`.
+    ///
+    /// - parameter closure: The code to be executed periodically during t
