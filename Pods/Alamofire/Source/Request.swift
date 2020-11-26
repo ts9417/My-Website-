@@ -400,4 +400,21 @@ open class DataRequest: Request {
     /// Sets a closure to be called periodically during the lifecycle of the `Request` as data is read from the server.
     ///
     /// - parameter queue:   The dispatch queue to execute the closure on.
-    /// - parameter closure: The code to be executed periodical
+    /// - parameter closure: The code to be executed periodically as data is read from the server.
+    ///
+    /// - returns: The request.
+    @discardableResult
+    open func downloadProgress(queue: DispatchQueue = DispatchQueue.main, closure: @escaping ProgressHandler) -> Self {
+        dataDelegate.progressHandler = (closure, queue)
+        return self
+    }
+}
+
+// MARK: -
+
+/// Specific type of `Request` that manages an underlying `URLSessionDownloadTask`.
+open class DownloadRequest: Request {
+
+    // MARK: Helper Types
+
+    /// A collection of options to be executed prior to moving a downloaded file from the temp
