@@ -417,4 +417,14 @@ open class DownloadRequest: Request {
 
     // MARK: Helper Types
 
-    /// A collection of options to be executed prior to moving a downloaded file from the temp
+    /// A collection of options to be executed prior to moving a downloaded file from the temporary URL to the
+    /// destination URL.
+    public struct DownloadOptions: OptionSet {
+        /// Returns the raw bitmask value of the option and satisfies the `RawRepresentable` protocol.
+        public let rawValue: UInt
+
+        /// A `DownloadOptions` flag that creates intermediate directories for the destination URL if specified.
+        public static let createIntermediateDirectories = DownloadOptions(rawValue: 1 << 0)
+
+        /// A `DownloadOptions` flag that removes a previous file from the destination URL if specified.
+        public static let re
