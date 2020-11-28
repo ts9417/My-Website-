@@ -440,4 +440,16 @@ open class DownloadRequest: Request {
     }
 
     /// A closure executed once a download request has successfully completed in order to determine where to move the
-    /// temporary fil
+    /// temporary file written to during the download process. The closure takes two arguments: the temporary file URL
+    /// and the URL response, and returns a two arguments: the file URL where the temporary file should be moved and
+    /// the options defining how the file should be moved.
+    public typealias DownloadFileDestination = (
+        _ temporaryURL: URL,
+        _ response: HTTPURLResponse)
+        -> (destinationURL: URL, options: DownloadOptions)
+
+    enum Downloadable: TaskConvertible {
+        case request(URLRequest)
+        case resumeData(Data)
+
+        func task(
