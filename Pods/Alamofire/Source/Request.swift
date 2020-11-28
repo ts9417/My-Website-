@@ -427,4 +427,17 @@ open class DownloadRequest: Request {
         public static let createIntermediateDirectories = DownloadOptions(rawValue: 1 << 0)
 
         /// A `DownloadOptions` flag that removes a previous file from the destination URL if specified.
-        public static let re
+        public static let removePreviousFile = DownloadOptions(rawValue: 1 << 1)
+
+        /// Creates a `DownloadFileDestinationOptions` instance with the specified raw value.
+        ///
+        /// - parameter rawValue: The raw bitmask value for the option.
+        ///
+        /// - returns: A new log level instance.
+        public init(rawValue: UInt) {
+            self.rawValue = rawValue
+        }
+    }
+
+    /// A closure executed once a download request has successfully completed in order to determine where to move the
+    /// temporary fil
