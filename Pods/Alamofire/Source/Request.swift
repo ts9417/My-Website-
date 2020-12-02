@@ -461,4 +461,22 @@ open class DownloadRequest: Request {
                     let urlRequest = try urlRequest.adapt(using: adapter)
                     task = queue.sync { session.downloadTask(with: urlRequest) }
                 case let .resumeData(resumeData):
-                    task = queue.sync { session.downloadTa
+                    task = queue.sync { session.downloadTask(withResumeData: resumeData) }
+                }
+
+                return task
+            } catch {
+                throw AdaptError(error: error)
+            }
+        }
+    }
+
+    // MARK: Properties
+
+    /// The request sent or to be sent to the server.
+    open override var request: URLRequest? {
+        if let request = super.request { return request }
+
+        if let downloadable = originalTask as? Downloadable, case let .request(urlRequest) = downloadable {
+            return urlRequest
+       
