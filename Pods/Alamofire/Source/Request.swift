@@ -452,4 +452,13 @@ open class DownloadRequest: Request {
         case request(URLRequest)
         case resumeData(Data)
 
-        func task(
+        func task(session: URLSession, adapter: RequestAdapter?, queue: DispatchQueue) throws -> URLSessionTask {
+            do {
+                let task: URLSessionTask
+
+                switch self {
+                case let .request(urlRequest):
+                    let urlRequest = try urlRequest.adapt(using: adapter)
+                    task = queue.sync { session.downloadTask(with: urlRequest) }
+                case let .resumeData(resumeData):
+                    task = queue.sync { session.downloadTa
