@@ -479,4 +479,21 @@ open class DownloadRequest: Request {
 
         if let downloadable = originalTask as? Downloadable, case let .request(urlRequest) = downloadable {
             return urlRequest
-       
+        }
+
+        return nil
+    }
+
+    /// The resume data of the underlying download task if available after a failure.
+    open var resumeData: Data? { return downloadDelegate.resumeData }
+
+    /// The progress of downloading the response data from the server for the request.
+    open var progress: Progress { return downloadDelegate.progress }
+
+    var downloadDelegate: DownloadTaskDelegate { return delegate as! DownloadTaskDelegate }
+
+    // MARK: State
+
+    /// Cancels the request.
+    open override func cancel() {
+        downloadDelegate.downloadTask.cancel { self.dow
