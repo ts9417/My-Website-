@@ -496,4 +496,19 @@ open class DownloadRequest: Request {
 
     /// Cancels the request.
     open override func cancel() {
-        downloadDelegate.downloadTask.cancel { self.dow
+        downloadDelegate.downloadTask.cancel { self.downloadDelegate.resumeData = $0 }
+
+        NotificationCenter.default.post(
+            name: Notification.Name.Task.DidCancel,
+            object: self,
+            userInfo: [Notification.Key.Task: task as Any]
+        )
+    }
+
+    // MARK: Progress
+
+    /// Sets a closure to be called periodically during the lifecycle of the `Request` as data is read from the server.
+    ///
+    /// - parameter queue:   The dispatch queue to execute the closure on.
+    /// - parameter closure: The code to be executed periodically as data is read from the server.
+    /
