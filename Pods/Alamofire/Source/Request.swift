@@ -524,4 +524,14 @@ open class DownloadRequest: Request {
     /// Creates a download file destination closure which uses the default file manager to move the temporary file to a
     /// file URL in the first available directory with the specified search path directory and search path domain mask.
     ///
-    /// - par
+    /// - parameter directory: The search path directory. `.DocumentDirectory` by default.
+    /// - parameter domain:    The search path domain mask. `.UserDomainMask` by default.
+    ///
+    /// - returns: A download file destination closure.
+    open class func suggestedDownloadDestination(
+        for directory: FileManager.SearchPathDirectory = .documentDirectory,
+        in domain: FileManager.SearchPathDomainMask = .userDomainMask)
+        -> DownloadFileDestination
+    {
+        return { temporaryURL, response in
+            let directoryURLs = Fil
