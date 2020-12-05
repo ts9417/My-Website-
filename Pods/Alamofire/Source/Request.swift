@@ -511,4 +511,17 @@ open class DownloadRequest: Request {
     ///
     /// - parameter queue:   The dispatch queue to execute the closure on.
     /// - parameter closure: The code to be executed periodically as data is read from the server.
-    /
+    ///
+    /// - returns: The request.
+    @discardableResult
+    open func downloadProgress(queue: DispatchQueue = DispatchQueue.main, closure: @escaping ProgressHandler) -> Self {
+        downloadDelegate.progressHandler = (closure, queue)
+        return self
+    }
+
+    // MARK: Destination
+
+    /// Creates a download file destination closure which uses the default file manager to move the temporary file to a
+    /// file URL in the first available directory with the specified search path directory and search path domain mask.
+    ///
+    /// - par
