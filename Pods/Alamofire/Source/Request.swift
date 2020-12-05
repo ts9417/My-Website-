@@ -555,4 +555,14 @@ open class UploadRequest: DataRequest {
     enum Uploadable: TaskConvertible {
         case data(Data, URLRequest)
         case file(URL, URLRequest)
-        case st
+        case stream(InputStream, URLRequest)
+
+        func task(session: URLSession, adapter: RequestAdapter?, queue: DispatchQueue) throws -> URLSessionTask {
+            do {
+                let task: URLSessionTask
+
+                switch self {
+                case let .data(data, urlRequest):
+                    let urlRequest = try urlRequest.adapt(using: adapter)
+                    task = queue.sync { session.uploadTask(with: urlRequest, from: data) }
+                case let .file(url, urlRequest):
