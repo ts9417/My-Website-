@@ -534,4 +534,25 @@ open class DownloadRequest: Request {
         -> DownloadFileDestination
     {
         return { temporaryURL, response in
-            let directoryURLs = Fil
+            let directoryURLs = FileManager.default.urls(for: directory, in: domain)
+
+            if !directoryURLs.isEmpty {
+                return (directoryURLs[0].appendingPathComponent(response.suggestedFilename!), [])
+            }
+
+            return (temporaryURL, [])
+        }
+    }
+}
+
+// MARK: -
+
+/// Specific type of `Request` that manages an underlying `URLSessionUploadTask`.
+open class UploadRequest: DataRequest {
+
+    // MARK: Helper Types
+
+    enum Uploadable: TaskConvertible {
+        case data(Data, URLRequest)
+        case file(URL, URLRequest)
+        case st
