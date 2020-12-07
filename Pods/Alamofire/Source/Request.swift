@@ -582,4 +582,17 @@ open class UploadRequest: DataRequest {
 
     // MARK: Properties
 
-  
+    /// The request sent or to be sent to the server.
+    open override var request: URLRequest? {
+        if let request = super.request { return request }
+
+        guard let uploadable = originalTask as? Uploadable else { return nil }
+
+        switch uploadable {
+        case .data(_, let urlRequest), .file(_, let urlRequest), .stream(_, let urlRequest):
+            return urlRequest
+        }
+    }
+
+    /// The progress of uploading the payload to the server for the upload request.
+    open var up
