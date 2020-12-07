@@ -566,3 +566,20 @@ open class UploadRequest: DataRequest {
                     let urlRequest = try urlRequest.adapt(using: adapter)
                     task = queue.sync { session.uploadTask(with: urlRequest, from: data) }
                 case let .file(url, urlRequest):
+                    let urlRequest = try urlRequest.adapt(using: adapter)
+                    task = queue.sync { session.uploadTask(with: urlRequest, fromFile: url) }
+                case let .stream(_, urlRequest):
+                    let urlRequest = try urlRequest.adapt(using: adapter)
+                    task = queue.sync { session.uploadTask(withStreamedRequest: urlRequest) }
+                }
+
+                return task
+            } catch {
+                throw AdaptError(error: error)
+            }
+        }
+    }
+
+    // MARK: Properties
+
+  
