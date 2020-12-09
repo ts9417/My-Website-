@@ -595,4 +595,16 @@ open class UploadRequest: DataRequest {
     }
 
     /// The progress of uploading the payload to the server for the upload request.
-    open var up
+    open var uploadProgress: Progress { return uploadDelegate.uploadProgress }
+
+    var uploadDelegate: UploadTaskDelegate { return delegate as! UploadTaskDelegate }
+
+    // MARK: Upload Progress
+
+    /// Sets a closure to be called periodically during the lifecycle of the `UploadRequest` as data is sent to
+    /// the server.
+    ///
+    /// After the data is sent to the server, the `progress(queue:closure:)` APIs can be used to monitor the progress
+    /// of data being read from the server.
+    ///
+    /// - pa
