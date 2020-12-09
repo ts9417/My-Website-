@@ -607,4 +607,19 @@ open class UploadRequest: DataRequest {
     /// After the data is sent to the server, the `progress(queue:closure:)` APIs can be used to monitor the progress
     /// of data being read from the server.
     ///
-    /// - pa
+    /// - parameter queue:   The dispatch queue to execute the closure on.
+    /// - parameter closure: The code to be executed periodically as data is sent to the server.
+    ///
+    /// - returns: The request.
+    @discardableResult
+    open func uploadProgress(queue: DispatchQueue = DispatchQueue.main, closure: @escaping ProgressHandler) -> Self {
+        uploadDelegate.uploadProgressHandler = (closure, queue)
+        return self
+    }
+}
+
+// MARK: -
+
+#if !os(watchOS)
+
+/// Specific type of `Request` that manages an underlying `URLSe
