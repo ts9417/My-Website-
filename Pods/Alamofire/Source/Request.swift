@@ -634,4 +634,14 @@ open class StreamRequest: Request {
 
             switch self {
             case let .stream(hostName, port):
-                task = queue.sync { session.streamTask(withHos
+                task = queue.sync { session.streamTask(withHostName: hostName, port: port) }
+            case let .netService(netService):
+                task = queue.sync { session.streamTask(with: netService) }
+            }
+
+            return task
+        }
+    }
+}
+
+#endif
