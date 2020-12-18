@@ -51,4 +51,24 @@ public struct DefaultDataResponse {
     ///   - data:     The data returned by the server.
     ///   - error:    The error encountered while executing or validating the request.
     ///   - timeline: The timeline of the complete lifecycle of the request. `Timeline()` by default.
-    ///   - metrics:  The task metrics 
+    ///   - metrics:  The task metrics containing the request / response statistics. `nil` by default.
+    public init(
+        request: URLRequest?,
+        response: HTTPURLResponse?,
+        data: Data?,
+        error: Error?,
+        timeline: Timeline = Timeline(),
+        metrics: AnyObject? = nil)
+    {
+        self.request = request
+        self.response = response
+        self.data = data
+        self.error = error
+        self.timeline = timeline
+    }
+}
+
+// MARK: -
+
+/// Used to store all data associated with a serialized response of a data or upload request.
+public struct DataResponse<Va
