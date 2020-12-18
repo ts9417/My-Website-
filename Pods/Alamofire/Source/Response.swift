@@ -24,4 +24,19 @@
 
 import Foundation
 
-/// Used to store all data associated with an non-serialized response o
+/// Used to store all data associated with an non-serialized response of a data or upload request.
+public struct DefaultDataResponse {
+    /// The URL request sent to the server.
+    public let request: URLRequest?
+
+    /// The server's response to the URL request.
+    public let response: HTTPURLResponse?
+
+    /// The data returned by the server.
+    public let data: Data?
+
+    /// The error encountered while executing or validating the request.
+    public let error: Error?
+
+    /// The timeline of the complete lifecycle of the request.
+    public let timeline: 
