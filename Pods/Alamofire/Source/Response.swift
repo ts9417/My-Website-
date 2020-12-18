@@ -39,4 +39,16 @@ public struct DefaultDataResponse {
     public let error: Error?
 
     /// The timeline of the complete lifecycle of the request.
-    public let timeline: 
+    public let timeline: Timeline
+
+    var _metrics: AnyObject?
+
+    /// Creates a `DefaultDataResponse` instance from the specified parameters.
+    ///
+    /// - Parameters:
+    ///   - request:  The URL request sent to the server.
+    ///   - response: The server's response to the URL request.
+    ///   - data:     The data returned by the server.
+    ///   - error:    The error encountered while executing or validating the request.
+    ///   - timeline: The timeline of the complete lifecycle of the request. `Timeline()` by default.
+    ///   - metrics:  The task metrics 
