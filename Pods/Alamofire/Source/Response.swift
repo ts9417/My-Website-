@@ -71,4 +71,21 @@ public struct DefaultDataResponse {
 // MARK: -
 
 /// Used to store all data associated with a serialized response of a data or upload request.
-public struct DataResponse<Va
+public struct DataResponse<Value> {
+    /// The URL request sent to the server.
+    public let request: URLRequest?
+
+    /// The server's response to the URL request.
+    public let response: HTTPURLResponse?
+
+    /// The data returned by the server.
+    public let data: Data?
+
+    /// The result of response serialization.
+    public let result: Result<Value>
+
+    /// The timeline of the complete lifecycle of the request.
+    public let timeline: Timeline
+
+    /// Returns the associated value of the result if it is a success, `nil` otherwise.
+    public var value: Value? { return r
