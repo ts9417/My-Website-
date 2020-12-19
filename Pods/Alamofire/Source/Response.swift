@@ -100,4 +100,18 @@ public struct DataResponse<Value> {
     /// - parameter request:  The URL request sent to the server.
     /// - parameter response: The server's response to the URL request.
     /// - parameter data:     The data returned by the server.
-    /// - parameter result:
+    /// - parameter result:   The result of response serialization.
+    /// - parameter timeline: The timeline of the complete lifecycle of the `Request`. Defaults to `Timeline()`.
+    ///
+    /// - returns: The new `DataResponse` instance.
+    public init(
+        request: URLRequest?,
+        response: HTTPURLResponse?,
+        data: Data?,
+        result: Result<Value>,
+        timeline: Timeline = Timeline())
+    {
+        self.request = request
+        self.response = response
+        self.data = data
+       
