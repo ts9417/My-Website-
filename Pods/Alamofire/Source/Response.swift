@@ -88,4 +88,16 @@ public struct DataResponse<Value> {
     public let timeline: Timeline
 
     /// Returns the associated value of the result if it is a success, `nil` otherwise.
-    public var value: Value? { return r
+    public var value: Value? { return result.value }
+
+    /// Returns the associated error value if the result if it is a failure, `nil` otherwise.
+    public var error: Error? { return result.error }
+
+    var _metrics: AnyObject?
+
+    /// Creates a `DataResponse` instance with the specified parameters derived from response serialization.
+    ///
+    /// - parameter request:  The URL request sent to the server.
+    /// - parameter response: The server's response to the URL request.
+    /// - parameter data:     The data returned by the server.
+    /// - parameter result:
