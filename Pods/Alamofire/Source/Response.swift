@@ -129,4 +129,12 @@ extension DataResponse: CustomStringConvertible, CustomDebugStringConvertible {
     }
 
     /// The debug textual representation used when written to an output stream, which includes the URL request, the URL
-    /// response, the server data, the 
+    /// response, the server data, the response serialization result and the timeline.
+    public var debugDescription: String {
+        var output: [String] = []
+
+        output.append(request != nil ? "[Request]: \(request!.httpMethod ?? "GET") \(request!)" : "[Request]: nil")
+        output.append(response != nil ? "[Response]: \(response!)" : "[Response]: nil")
+        output.append("[Data]: \(data?.count ?? 0) bytes")
+        output.append("[Result]: \(result.debugDescription)")
+        output.append("[Timeline]: \(timeli
