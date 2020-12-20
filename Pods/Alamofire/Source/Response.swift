@@ -137,4 +137,21 @@ extension DataResponse: CustomStringConvertible, CustomDebugStringConvertible {
         output.append(response != nil ? "[Response]: \(response!)" : "[Response]: nil")
         output.append("[Data]: \(data?.count ?? 0) bytes")
         output.append("[Result]: \(result.debugDescription)")
-        output.append("[Timeline]: \(timeli
+        output.append("[Timeline]: \(timeline.debugDescription)")
+
+        return output.joined(separator: "\n")
+    }
+}
+
+// MARK: -
+
+extension DataResponse {
+    /// Evaluates the specified closure when the result of this `DataResponse` is a success, passing the unwrapped
+    /// result value as a parameter.
+    ///
+    /// Use the `map` method with a closure that does not throw. For example:
+    ///
+    ///     let possibleData: DataResponse<Data> = ...
+    ///     let possibleInt = possibleData.map { $0.count }
+    ///
+    /// - param
