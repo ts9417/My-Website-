@@ -114,4 +114,19 @@ public struct DataResponse<Value> {
         self.request = request
         self.response = response
         self.data = data
-       
+        self.result = result
+        self.timeline = timeline
+    }
+}
+
+// MARK: -
+
+extension DataResponse: CustomStringConvertible, CustomDebugStringConvertible {
+    /// The textual representation used when written to an output stream, which includes whether the result was a
+    /// success or failure.
+    public var description: String {
+        return result.debugDescription
+    }
+
+    /// The debug textual representation used when written to an output stream, which includes the URL request, the URL
+    /// response, the server data, the 
