@@ -179,4 +179,15 @@ extension DataResponse {
     ///
     ///     let possibleData: DataResponse<Data> = ...
     ///     let possibleObject = possibleData.flatMap {
-    ///         try JSONSerialization.jsonObject(wi
+    ///         try JSONSerialization.jsonObject(with: $0)
+    ///     }
+    ///
+    /// - parameter transform: A closure that takes the success value of the instance's result.
+    ///
+    /// - returns: A success or failure `DataResponse` depending on the result of the given closure. If this instance's
+    ///            result is a failure, returns the same failure.
+    public func flatMap<T>(_ transform: (Value) throws -> T) -> DataResponse<T> {
+        var response = DataResponse<T>(
+            request: request,
+            response: self.response,
+            dat
