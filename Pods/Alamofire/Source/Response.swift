@@ -154,4 +154,13 @@ extension DataResponse {
     ///     let possibleData: DataResponse<Data> = ...
     ///     let possibleInt = possibleData.map { $0.count }
     ///
-    /// - param
+    /// - parameter transform: A closure that takes the success value of the instance's result.
+    ///
+    /// - returns: A `DataResponse` whose result wraps the value returned by the given closure. If this instance's
+    ///            result is a failure, returns a response wrapping the same failure.
+    public func map<T>(_ transform: (Value) -> T) -> DataResponse<T> {
+        var response = DataResponse<T>(
+            request: request,
+            response: self.response,
+            data: data,
+            result: res
