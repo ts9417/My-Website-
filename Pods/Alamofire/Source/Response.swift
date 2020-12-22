@@ -163,4 +163,20 @@ extension DataResponse {
             request: request,
             response: self.response,
             data: data,
-            result: res
+            result: result.map(transform),
+            timeline: timeline
+        )
+
+        response._metrics = _metrics
+
+        return response
+    }
+
+    /// Evaluates the given closure when the result of this `DataResponse` is a success, passing the unwrapped result
+    /// value as a parameter.
+    ///
+    /// Use the `flatMap` method with a closure that may throw an error. For example:
+    ///
+    ///     let possibleData: DataResponse<Data> = ...
+    ///     let possibleObject = possibleData.flatMap {
+    ///         try JSONSerialization.jsonObject(wi
