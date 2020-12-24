@@ -211,4 +211,19 @@ public struct DefaultDownloadResponse {
     /// The server's response to the URL request.
     public let response: HTTPURLResponse?
 
-    /// The temporary dest
+    /// The temporary destination URL of the data returned from the server.
+    public let temporaryURL: URL?
+
+    /// The final destination URL of the data returned from the server if it was moved.
+    public let destinationURL: URL?
+
+    /// The resume data generated if the request was cancelled.
+    public let resumeData: Data?
+
+    /// The error encountered while executing or validating the request.
+    public let error: Error?
+
+    /// The timeline of the complete lifecycle of the request.
+    public let timeline: Timeline
+
+    var _metrics: AnyObject
