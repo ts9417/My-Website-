@@ -190,4 +190,25 @@ extension DataResponse {
         var response = DataResponse<T>(
             request: request,
             response: self.response,
-            dat
+            data: data,
+            result: result.flatMap(transform),
+            timeline: timeline
+        )
+
+        response._metrics = _metrics
+
+        return response
+    }
+}
+
+// MARK: -
+
+/// Used to store all data associated with an non-serialized response of a download request.
+public struct DefaultDownloadResponse {
+    /// The URL request sent to the server.
+    public let request: URLRequest?
+
+    /// The server's response to the URL request.
+    public let response: HTTPURLResponse?
+
+    /// The temporary dest
