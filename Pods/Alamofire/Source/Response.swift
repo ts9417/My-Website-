@@ -226,4 +226,13 @@ public struct DefaultDownloadResponse {
     /// The timeline of the complete lifecycle of the request.
     public let timeline: Timeline
 
-    var _metrics: AnyObject
+    var _metrics: AnyObject?
+
+    /// Creates a `DefaultDownloadResponse` instance from the specified parameters.
+    ///
+    /// - Parameters:
+    ///   - request:        The URL request sent to the server.
+    ///   - response:       The server's response to the URL request.
+    ///   - temporaryURL:   The temporary destination URL of the data returned from the server.
+    ///   - destinationURL: The final destination URL of the data returned from the server if it was moved.
+    ///   - resumeData:     The resume data generated if the request w
