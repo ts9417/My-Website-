@@ -235,4 +235,15 @@ public struct DefaultDownloadResponse {
     ///   - response:       The server's response to the URL request.
     ///   - temporaryURL:   The temporary destination URL of the data returned from the server.
     ///   - destinationURL: The final destination URL of the data returned from the server if it was moved.
-    ///   - resumeData:     The resume data generated if the request w
+    ///   - resumeData:     The resume data generated if the request was cancelled.
+    ///   - error:          The error encountered while executing or validating the request.
+    ///   - timeline:       The timeline of the complete lifecycle of the request. `Timeline()` by default.
+    ///   - metrics:        The task metrics containing the request / response statistics. `nil` by default.
+    public init(
+        request: URLRequest?,
+        response: HTTPURLResponse?,
+        temporaryURL: URL?,
+        destinationURL: URL?,
+        resumeData: Data?,
+        error: Error?,
+        tim
