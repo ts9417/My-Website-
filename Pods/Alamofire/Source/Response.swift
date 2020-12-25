@@ -246,4 +246,22 @@ public struct DefaultDownloadResponse {
         destinationURL: URL?,
         resumeData: Data?,
         error: Error?,
-        tim
+        timeline: Timeline = Timeline(),
+        metrics: AnyObject? = nil)
+    {
+        self.request = request
+        self.response = response
+        self.temporaryURL = temporaryURL
+        self.destinationURL = destinationURL
+        self.resumeData = resumeData
+        self.error = error
+        self.timeline = timeline
+    }
+}
+
+// MARK: -
+
+/// Used to store all data associated with a serialized response of a download request.
+public struct DownloadResponse<Value> {
+    /// The URL request sent to the server.
+    public let reque
