@@ -264,4 +264,21 @@ public struct DefaultDownloadResponse {
 /// Used to store all data associated with a serialized response of a download request.
 public struct DownloadResponse<Value> {
     /// The URL request sent to the server.
-    public let reque
+    public let request: URLRequest?
+
+    /// The server's response to the URL request.
+    public let response: HTTPURLResponse?
+
+    /// The temporary destination URL of the data returned from the server.
+    public let temporaryURL: URL?
+
+    /// The final destination URL of the data returned from the server if it was moved.
+    public let destinationURL: URL?
+
+    /// The resume data generated if the request was cancelled.
+    public let resumeData: Data?
+
+    /// The result of response serialization.
+    public let result: Result<Value>
+
+    /// The 
