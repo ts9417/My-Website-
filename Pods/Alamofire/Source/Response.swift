@@ -300,4 +300,19 @@ public struct DownloadResponse<Value> {
     /// - parameter destinationURL: The final destination URL of the data returned from the server if it was moved.
     /// - parameter resumeData:     The resume data generated if the request was cancelled.
     /// - parameter result:         The result of response serialization.
-    /// - parameter timeline:      
+    /// - parameter timeline:       The timeline of the complete lifecycle of the `Request`. Defaults to `Timeline()`.
+    ///
+    /// - returns: The new `DownloadResponse` instance.
+    public init(
+        request: URLRequest?,
+        response: HTTPURLResponse?,
+        temporaryURL: URL?,
+        destinationURL: URL?,
+        resumeData: Data?,
+        result: Result<Value>,
+        timeline: Timeline = Timeline())
+    {
+        self.request = request
+        self.response = response
+        self.temporaryURL = temporaryURL
+        
