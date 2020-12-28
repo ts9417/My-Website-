@@ -294,4 +294,10 @@ public struct DownloadResponse<Value> {
 
     /// Creates a `DownloadResponse` instance with the specified parameters derived from response serialization.
     ///
-    /// - parameter 
+    /// - parameter request:        The URL request sent to the server.
+    /// - parameter response:       The server's response to the URL request.
+    /// - parameter temporaryURL:   The temporary destination URL of the data returned from the server.
+    /// - parameter destinationURL: The final destination URL of the data returned from the server if it was moved.
+    /// - parameter resumeData:     The resume data generated if the request was cancelled.
+    /// - parameter result:         The result of response serialization.
+    /// - parameter timeline:      
