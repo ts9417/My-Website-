@@ -315,4 +315,20 @@ public struct DownloadResponse<Value> {
         self.request = request
         self.response = response
         self.temporaryURL = temporaryURL
-        
+        self.destinationURL = destinationURL
+        self.resumeData = resumeData
+        self.result = result
+        self.timeline = timeline
+    }
+}
+
+// MARK: -
+
+extension DownloadResponse: CustomStringConvertible, CustomDebugStringConvertible {
+    /// The textual representation used when written to an output stream, which includes whether the result was a
+    /// success or failure.
+    public var description: String {
+        return result.debugDescription
+    }
+
+    /// The debug textual representation used when writt
