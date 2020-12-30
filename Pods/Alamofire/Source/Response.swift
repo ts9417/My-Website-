@@ -339,4 +339,18 @@ extension DownloadResponse: CustomStringConvertible, CustomDebugStringConvertibl
 
         output.append(request != nil ? "[Request]: \(request!.httpMethod ?? "GET") \(request!)" : "[Request]: nil")
         output.append(response != nil ? "[Response]: \(response!)" : "[Response]: nil")
-        output.append("[TemporaryURL]: \(tempora
+        output.append("[TemporaryURL]: \(temporaryURL?.path ?? "nil")")
+        output.append("[DestinationURL]: \(destinationURL?.path ?? "nil")")
+        output.append("[ResumeData]: \(resumeData?.count ?? 0) bytes")
+        output.append("[Result]: \(result.debugDescription)")
+        output.append("[Timeline]: \(timeline.debugDescription)")
+
+        return output.joined(separator: "\n")
+    }
+}
+
+// MARK: -
+
+extension DownloadResponse {
+    /// Evaluates the given closure when the result of this `DownloadResponse` is a success, passing the unwrapped
+    /// result value as 
