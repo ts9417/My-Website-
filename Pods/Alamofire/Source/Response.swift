@@ -331,4 +331,12 @@ extension DownloadResponse: CustomStringConvertible, CustomDebugStringConvertibl
         return result.debugDescription
     }
 
-    /// The debug textual representation used when writt
+    /// The debug textual representation used when written to an output stream, which includes the URL request, the URL
+    /// response, the temporary and destination URLs, the resume data, the response serialization result and the
+    /// timeline.
+    public var debugDescription: String {
+        var output: [String] = []
+
+        output.append(request != nil ? "[Request]: \(request!.httpMethod ?? "GET") \(request!)" : "[Request]: nil")
+        output.append(response != nil ? "[Response]: \(response!)" : "[Response]: nil")
+        output.append("[TemporaryURL]: \(tempora
