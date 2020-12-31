@@ -353,4 +353,14 @@ extension DownloadResponse: CustomStringConvertible, CustomDebugStringConvertibl
 
 extension DownloadResponse {
     /// Evaluates the given closure when the result of this `DownloadResponse` is a success, passing the unwrapped
-    /// result value as 
+    /// result value as a parameter.
+    ///
+    /// Use the `map` method with a closure that does not throw. For example:
+    ///
+    ///     let possibleData: DownloadResponse<Data> = ...
+    ///     let possibleInt = possibleData.map { $0.count }
+    ///
+    /// - parameter transform: A closure that takes the success value of the instance's result.
+    ///
+    /// - returns: A `DownloadResponse` whose result wraps the value returned by the given closure. If this instance's
+    ///            result is a failure, r
