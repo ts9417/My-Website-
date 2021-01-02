@@ -363,4 +363,21 @@ extension DownloadResponse {
     /// - parameter transform: A closure that takes the success value of the instance's result.
     ///
     /// - returns: A `DownloadResponse` whose result wraps the value returned by the given closure. If this instance's
-    ///            result is a failure, r
+    ///            result is a failure, returns a response wrapping the same failure.
+    public func map<T>(_ transform: (Value) -> T) -> DownloadResponse<T> {
+        var response = DownloadResponse<T>(
+            request: request,
+            response: self.response,
+            temporaryURL: temporaryURL,
+            destinationURL: destinationURL,
+            resumeData: resumeData,
+            result: result.map(transform),
+            timeline: timeline
+        )
+
+        response._metrics = _metrics
+
+        return response
+    }
+
+    /// Evaluates the 
