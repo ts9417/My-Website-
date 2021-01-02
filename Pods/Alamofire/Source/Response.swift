@@ -380,4 +380,14 @@ extension DownloadResponse {
         return response
     }
 
-    /// Evaluates the 
+    /// Evaluates the given closure when the result of this `DownloadResponse` is a success, passing the unwrapped
+    /// result value as a parameter.
+    ///
+    /// Use the `flatMap` method with a closure that may throw an error. For example:
+    ///
+    ///     let possibleData: DownloadResponse<Data> = ...
+    ///     let possibleObject = possibleData.flatMap {
+    ///         try JSONSerialization.jsonObject(with: $0)
+    ///     }
+    ///
+    /// - parameter transform: A closure that takes the success value of the instance's result.
