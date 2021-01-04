@@ -401,4 +401,26 @@ extension DownloadResponse {
             temporaryURL: temporaryURL,
             destinationURL: destinationURL,
             resumeData: resumeData,
-            result: re
+            result: result.flatMap(transform),
+            timeline: timeline
+        )
+
+        response._metrics = _metrics
+
+        return response
+    }
+}
+
+// MARK: -
+
+protocol Response {
+    /// The task metrics containing the request / response statistics.
+    var _metrics: AnyObject? { get set }
+    mutating func add(_ metrics: AnyObject?)
+}
+
+extension Response {
+    mutating func add(_ metrics: AnyObject?) {
+        #if !os(watchOS)
+            guard #available(iOS 10.0, macOS 10.12, tvOS 10.0, *) else { return }
+            guard let metrics = metrics as? URLSessi
