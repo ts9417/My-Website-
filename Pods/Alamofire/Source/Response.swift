@@ -391,3 +391,14 @@ extension DownloadResponse {
     ///     }
     ///
     /// - parameter transform: A closure that takes the success value of the instance's result.
+    ///
+    /// - returns: A success or failure `DownloadResponse` depending on the result of the given closure. If this
+    /// instance's result is a failure, returns the same failure.
+    public func flatMap<T>(_ transform: (Value) throws -> T) -> DownloadResponse<T> {
+        var response = DownloadResponse<T>(
+            request: request,
+            response: self.response,
+            temporaryURL: temporaryURL,
+            destinationURL: destinationURL,
+            resumeData: resumeData,
+            result: re
