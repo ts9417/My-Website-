@@ -423,4 +423,24 @@ extension Response {
     mutating func add(_ metrics: AnyObject?) {
         #if !os(watchOS)
             guard #available(iOS 10.0, macOS 10.12, tvOS 10.0, *) else { return }
-            guard let metrics = metrics as? URLSessi
+            guard let metrics = metrics as? URLSessionTaskMetrics else { return }
+
+            _metrics = metrics
+        #endif
+    }
+}
+
+// MARK: -
+
+@available(iOS 10.0, macOS 10.12, tvOS 10.0, *)
+extension DefaultDataResponse: Response {
+#if !os(watchOS)
+    /// The task metrics containing the request / response statistics.
+    public var metrics: URLSessionTaskMetrics? { return _metrics as? URLSessionTaskMetrics }
+#endif
+}
+
+@available(iOS 10.0, macOS 10.12, tvOS 10.0, *)
+extension DataResponse: Response {
+#if !os(watchOS)
+    /// The task metrics containing the request / response statis
