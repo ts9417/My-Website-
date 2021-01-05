@@ -443,4 +443,20 @@ extension DefaultDataResponse: Response {
 @available(iOS 10.0, macOS 10.12, tvOS 10.0, *)
 extension DataResponse: Response {
 #if !os(watchOS)
-    /// The task metrics containing the request / response statis
+    /// The task metrics containing the request / response statistics.
+    public var metrics: URLSessionTaskMetrics? { return _metrics as? URLSessionTaskMetrics }
+#endif
+}
+
+@available(iOS 10.0, macOS 10.12, tvOS 10.0, *)
+extension DefaultDownloadResponse: Response {
+#if !os(watchOS)
+    /// The task metrics containing the request / response statistics.
+    public var metrics: URLSessionTaskMetrics? { return _metrics as? URLSessionTaskMetrics }
+#endif
+}
+
+@available(iOS 10.0, macOS 10.12, tvOS 10.0, *)
+extension DownloadResponse: Response {
+#if !os(watchOS)
+    /// The task metrics containing the re
