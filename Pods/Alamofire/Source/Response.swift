@@ -459,4 +459,7 @@ extension DefaultDownloadResponse: Response {
 @available(iOS 10.0, macOS 10.12, tvOS 10.0, *)
 extension DownloadResponse: Response {
 #if !os(watchOS)
-    /// The task metrics containing the re
+    /// The task metrics containing the request / response statistics.
+    public var metrics: URLSessionTaskMetrics? { return _metrics as? URLSessionTaskMetrics }
+#endif
+}
