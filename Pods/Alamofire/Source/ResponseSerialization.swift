@@ -27,4 +27,15 @@ import Foundation
 /// The type in which all data response serializers must conform to in order to serialize a response.
 public protocol DataResponseSerializerProtocol {
     /// The type of serialized object to be created by this `DataResponseSerializerType`.
-    associatedtype Seria
+    associatedtype SerializedObject
+
+    /// A closure used by response handlers that takes a request, response, data and error and returns a result.
+    var serializeResponse: (URLRequest?, HTTPURLResponse?, Data?, Error?) -> Result<SerializedObject> { get }
+}
+
+// MARK: -
+
+/// A generic `DataResponseSerializerType` used to serialize a request, response, and data into a serialized object.
+public struct DataResponseSerializer<Value>: DataResponseSerializerProtocol {
+    /// The type of serialized object to be created by this `DataResponseSerializer`.
+    public typealias Se
