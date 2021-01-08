@@ -38,4 +38,14 @@ public protocol DataResponseSerializerProtocol {
 /// A generic `DataResponseSerializerType` used to serialize a request, response, and data into a serialized object.
 public struct DataResponseSerializer<Value>: DataResponseSerializerProtocol {
     /// The type of serialized object to be created by this `DataResponseSerializer`.
-    public typealias Se
+    public typealias SerializedObject = Value
+
+    /// A closure used by response handlers that takes a request, response, data and error and returns a result.
+    public var serializeResponse: (URLRequest?, HTTPURLResponse?, Data?, Error?) -> Result<Value>
+
+    /// Initializes the `ResponseSerializer` instance with the given serialize response closure.
+    ///
+    /// - parameter serializeResponse: The closure used to serialize the response.
+    ///
+    /// - returns: The new generic response serializer instance.
+    public init(serial
