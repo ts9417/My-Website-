@@ -60,4 +60,15 @@ public protocol DownloadResponseSerializerProtocol {
     /// The type of serialized object to be created by this `DownloadResponseSerializerType`.
     associatedtype SerializedObject
 
-    /// A closure used by response handlers that takes a request, response, url and error and
+    /// A closure used by response handlers that takes a request, response, url and error and returns a result.
+    var serializeResponse: (URLRequest?, HTTPURLResponse?, URL?, Error?) -> Result<SerializedObject> { get }
+}
+
+// MARK: -
+
+/// A generic `DownloadResponseSerializerType` used to serialize a request, response, and data into a serialized object.
+public struct DownloadResponseSerializer<Value>: DownloadResponseSerializerProtocol {
+    /// The type of serialized object to be created by this `DownloadResponseSerializer`.
+    public typealias SerializedObject = Value
+
+    /// A closure used by resp
