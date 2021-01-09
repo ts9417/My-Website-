@@ -48,4 +48,16 @@ public struct DataResponseSerializer<Value>: DataResponseSerializerProtocol {
     /// - parameter serializeResponse: The closure used to serialize the response.
     ///
     /// - returns: The new generic response serializer instance.
-    public init(serial
+    public init(serializeResponse: @escaping (URLRequest?, HTTPURLResponse?, Data?, Error?) -> Result<Value>) {
+        self.serializeResponse = serializeResponse
+    }
+}
+
+// MARK: -
+
+/// The type in which all download response serializers must conform to in order to serialize a response.
+public protocol DownloadResponseSerializerProtocol {
+    /// The type of serialized object to be created by this `DownloadResponseSerializerType`.
+    associatedtype SerializedObject
+
+    /// A closure used by response handlers that takes a request, response, url and error and
