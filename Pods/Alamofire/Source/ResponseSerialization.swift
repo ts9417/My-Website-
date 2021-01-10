@@ -79,4 +79,20 @@ public struct DownloadResponseSerializer<Value>: DownloadResponseSerializerProto
     /// - parameter serializeResponse: The closure used to serialize the response.
     ///
     /// - returns: The new generic response serializer instance.
-    public init(serializeResponse: @escaping (URLRequest?, HTTPURLResponse?, URL?, Error?) -> Result<Val
+    public init(serializeResponse: @escaping (URLRequest?, HTTPURLResponse?, URL?, Error?) -> Result<Value>) {
+        self.serializeResponse = serializeResponse
+    }
+}
+
+// MARK: - Timeline
+
+extension Request {
+    var timeline: Timeline {
+        let requestStartTime = self.startTime ?? CFAbsoluteTimeGetCurrent()
+        let requestCompletedTime = self.endTime ?? CFAbsoluteTimeGetCurrent()
+        let initialResponseTime = self.delegate.initialResponseTime ?? requestCompletedTime
+
+        return Timeline(
+            requestStartTime: requestStartTime,
+            initialResponseTime: initialResponseTime,
+     
