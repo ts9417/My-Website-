@@ -71,4 +71,12 @@ public struct DownloadResponseSerializer<Value>: DownloadResponseSerializerProto
     /// The type of serialized object to be created by this `DownloadResponseSerializer`.
     public typealias SerializedObject = Value
 
-    /// A closure used by resp
+    /// A closure used by response handlers that takes a request, response, url and error and returns a result.
+    public var serializeResponse: (URLRequest?, HTTPURLResponse?, URL?, Error?) -> Result<Value>
+
+    /// Initializes the `ResponseSerializer` instance with the given serialize response closure.
+    ///
+    /// - parameter serializeResponse: The closure used to serialize the response.
+    ///
+    /// - returns: The new generic response serializer instance.
+    public init(serializeResponse: @escaping (URLRequest?, HTTPURLResponse?, URL?, Error?) -> Result<Val
