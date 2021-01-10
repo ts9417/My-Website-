@@ -95,4 +95,20 @@ extension Request {
         return Timeline(
             requestStartTime: requestStartTime,
             initialResponseTime: initialResponseTime,
-     
+            requestCompletedTime: requestCompletedTime,
+            serializationCompletedTime: CFAbsoluteTimeGetCurrent()
+        )
+    }
+}
+
+// MARK: - Default
+
+extension DataRequest {
+    /// Adds a handler to be called once the request has finished.
+    ///
+    /// - parameter queue:             The queue on which the completion handler is dispatched.
+    /// - parameter completionHandler: The code to be executed once the request has finished.
+    ///
+    /// - returns: The request.
+    @discardableResult
+    public func r
