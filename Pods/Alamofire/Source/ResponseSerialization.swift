@@ -151,4 +151,24 @@ extension DataRequest {
                 self.request,
                 self.response,
                 self.delegate.data,
- 
+                self.delegate.error
+            )
+
+            var dataResponse = DataResponse<T.SerializedObject>(
+                request: self.request,
+                response: self.response,
+                data: self.delegate.data,
+                result: result,
+                timeline: self.timeline
+            )
+
+            dataResponse.add(self.delegate.metrics)
+
+            (queue ?? DispatchQueue.main).async { completionHandler(dataResponse) }
+        }
+
+        return self
+    }
+}
+
+extension DownloadReque
