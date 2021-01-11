@@ -136,4 +136,19 @@ extension DataRequest {
     /// - parameter queue:              The queue on which the completion handler is dispatched.
     /// - parameter responseSerializer: The response serializer responsible for serializing the request, response,
     ///                                 and data.
-    /// - parameter completionHandl
+    /// - parameter completionHandler:  The code to be executed once the request has finished.
+    ///
+    /// - returns: The request.
+    @discardableResult
+    public func response<T: DataResponseSerializerProtocol>(
+        queue: DispatchQueue? = nil,
+        responseSerializer: T,
+        completionHandler: @escaping (DataResponse<T.SerializedObject>) -> Void)
+        -> Self
+    {
+        delegate.queue.addOperation {
+            let result = responseSerializer.serializeResponse(
+                self.request,
+                self.response,
+                self.delegate.data,
+ 
