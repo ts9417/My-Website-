@@ -122,4 +122,18 @@ extension DataRequest {
                     timeline: self.timeline
                 )
 
-                dataRespo
+                dataResponse.add(self.delegate.metrics)
+
+                completionHandler(dataResponse)
+            }
+        }
+
+        return self
+    }
+
+    /// Adds a handler to be called once the request has finished.
+    ///
+    /// - parameter queue:              The queue on which the completion handler is dispatched.
+    /// - parameter responseSerializer: The response serializer responsible for serializing the request, response,
+    ///                                 and data.
+    /// - parameter completionHandl
