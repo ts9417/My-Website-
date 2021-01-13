@@ -171,4 +171,14 @@ extension DataRequest {
     }
 }
 
-extension DownloadReque
+extension DownloadRequest {
+    /// Adds a handler to be called once the request has finished.
+    ///
+    /// - parameter queue:             The queue on which the completion handler is dispatched.
+    /// - parameter completionHandler: The code to be executed once the request has finished.
+    ///
+    /// - returns: The request.
+    @discardableResult
+    public func response(
+        queue: DispatchQueue? = nil,
+        completionHandler: @escaping (DefaultDownloadResponse) -> Void)
