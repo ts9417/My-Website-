@@ -192,4 +192,20 @@ extension DownloadRequest {
                     temporaryURL: self.downloadDelegate.temporaryURL,
                     destinationURL: self.downloadDelegate.destinationURL,
                     resumeData: self.downloadDelegate.resumeData,
-                    error:
+                    error: self.downloadDelegate.error,
+                    timeline: self.timeline
+                )
+
+                downloadResponse.add(self.delegate.metrics)
+
+                completionHandler(downloadResponse)
+            }
+        }
+
+        return self
+    }
+
+    /// Adds a handler to be called once the request has finished.
+    ///
+    /// - parameter queue:              The queue on which the completion handler is dispatched.
+    /// - parameter responseSerializer: The response serializer respon
