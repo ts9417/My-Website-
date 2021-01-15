@@ -182,3 +182,14 @@ extension DownloadRequest {
     public func response(
         queue: DispatchQueue? = nil,
         completionHandler: @escaping (DefaultDownloadResponse) -> Void)
+        -> Self
+    {
+        delegate.queue.addOperation {
+            (queue ?? DispatchQueue.main).async {
+                var downloadResponse = DefaultDownloadResponse(
+                    request: self.request,
+                    response: self.response,
+                    temporaryURL: self.downloadDelegate.temporaryURL,
+                    destinationURL: self.downloadDelegate.destinationURL,
+                    resumeData: self.downloadDelegate.resumeData,
+                    error:
