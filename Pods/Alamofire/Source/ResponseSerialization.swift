@@ -232,4 +232,24 @@ extension DownloadRequest {
                 request: self.request,
                 response: self.response,
                 temporaryURL: self.downloadDelegate.temporaryURL,
-        
+                destinationURL: self.downloadDelegate.destinationURL,
+                resumeData: self.downloadDelegate.resumeData,
+                result: result,
+                timeline: self.timeline
+            )
+
+            downloadResponse.add(self.delegate.metrics)
+
+            (queue ?? DispatchQueue.main).async { completionHandler(downloadResponse) }
+        }
+
+        return self
+    }
+}
+
+// MARK: - Data
+
+extension Request {
+    /// Returns a result data type that contains the response data as-is.
+    ///
+    /// - parameter
