@@ -219,4 +219,17 @@ extension DownloadRequest {
         responseSerializer: T,
         completionHandler: @escaping (DownloadResponse<T.SerializedObject>) -> Void)
         -> Self
-   
+    {
+        delegate.queue.addOperation {
+            let result = responseSerializer.serializeResponse(
+                self.request,
+                self.response,
+                self.downloadDelegate.fileURL,
+                self.downloadDelegate.error
+            )
+
+            var downloadResponse = DownloadResponse<T.SerializedObject>(
+                request: self.request,
+                response: self.response,
+                temporaryURL: self.downloadDelegate.temporaryURL,
+        
