@@ -208,4 +208,15 @@ extension DownloadRequest {
     /// Adds a handler to be called once the request has finished.
     ///
     /// - parameter queue:              The queue on which the completion handler is dispatched.
-    /// - parameter responseSerializer: The response serializer respon
+    /// - parameter responseSerializer: The response serializer responsible for serializing the request, response,
+    ///                                 and data contained in the destination url.
+    /// - parameter completionHandler:  The code to be executed once the request has finished.
+    ///
+    /// - returns: The request.
+    @discardableResult
+    public func response<T: DownloadResponseSerializerProtocol>(
+        queue: DispatchQueue? = nil,
+        responseSerializer: T,
+        completionHandler: @escaping (DownloadResponse<T.SerializedObject>) -> Void)
+        -> Self
+   
