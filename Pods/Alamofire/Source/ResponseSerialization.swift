@@ -252,4 +252,14 @@ extension DownloadRequest {
 extension Request {
     /// Returns a result data type that contains the response data as-is.
     ///
-    /// - parameter
+    /// - parameter response: The response from the server.
+    /// - parameter data:     The data returned from the server.
+    /// - parameter error:    The error already encountered if it exists.
+    ///
+    /// - returns: The result data type.
+    public static func serializeResponseData(response: HTTPURLResponse?, data: Data?, error: Error?) -> Result<Data> {
+        guard error == nil else { return .failure(error!) }
+
+        if let response = response, emptyDataStatusCodes.contains(response.statusCode) { return .success(Data()) }
+
+        guard let validData = data
