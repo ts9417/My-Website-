@@ -262,4 +262,18 @@ extension Request {
 
         if let response = response, emptyDataStatusCodes.contains(response.statusCode) { return .success(Data()) }
 
-        guard let validData = data
+        guard let validData = data else {
+            return .failure(AFError.responseSerializationFailed(reason: .inputDataNil))
+        }
+
+        return .success(validData)
+    }
+}
+
+extension DataRequest {
+    /// Creates a response serializer that returns the associated data as-is.
+    ///
+    /// - returns: A data response serializer.
+    public static func dataResponseSerializer() -> DataResponseSerializer<Data> {
+        return DataResponseSerializer { _, response, data, error in
+            return Request.serializeResponseData(response: response, data: data, e
