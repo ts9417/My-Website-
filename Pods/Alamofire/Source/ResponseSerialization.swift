@@ -322,4 +322,24 @@ extension DownloadRequest {
 
     /// Adds a handler to be called once the request has finished.
     ///
-    /// - parameter completionHandler: The code to be executed once th
+    /// - parameter completionHandler: The code to be executed once the request has finished.
+    ///
+    /// - returns: The request.
+    @discardableResult
+    public func responseData(
+        queue: DispatchQueue? = nil,
+        completionHandler: @escaping (DownloadResponse<Data>) -> Void)
+        -> Self
+    {
+        return response(
+            queue: queue,
+            responseSerializer: DownloadRequest.dataResponseSerializer(),
+            completionHandler: completionHandler
+        )
+    }
+}
+
+// MARK: - String
+
+extension Request {
+    /// Returns a result string type in
