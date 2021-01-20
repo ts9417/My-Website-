@@ -308,4 +308,18 @@ extension DownloadRequest {
             guard error == nil else { return .failure(error!) }
 
             guard let fileURL = fileURL else {
-                return .failure(AFError.respo
+                return .failure(AFError.responseSerializationFailed(reason: .inputFileNil))
+            }
+
+            do {
+                let data = try Data(contentsOf: fileURL)
+                return Request.serializeResponseData(response: response, data: data, error: error)
+            } catch {
+                return .failure(AFError.responseSerializationFailed(reason: .inputFileReadFailed(at: fileURL)))
+            }
+        }
+    }
+
+    /// Adds a handler to be called once the request has finished.
+    ///
+    /// - parameter completionHandler: The code to be executed once th
