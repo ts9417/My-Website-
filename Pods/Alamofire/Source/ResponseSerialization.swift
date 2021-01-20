@@ -293,4 +293,19 @@ extension DataRequest {
     {
         return response(
             queue: queue,
-            responseSerializer: DataRequest.dataResponseS
+            responseSerializer: DataRequest.dataResponseSerializer(),
+            completionHandler: completionHandler
+        )
+    }
+}
+
+extension DownloadRequest {
+    /// Creates a response serializer that returns the associated data as-is.
+    ///
+    /// - returns: A data response serializer.
+    public static func dataResponseSerializer() -> DownloadResponseSerializer<Data> {
+        return DownloadResponseSerializer { _, response, fileURL, error in
+            guard error == nil else { return .failure(error!) }
+
+            guard let fileURL = fileURL else {
+                return .failure(AFError.respo
