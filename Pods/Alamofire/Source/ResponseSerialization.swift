@@ -342,4 +342,12 @@ extension DownloadRequest {
 // MARK: - String
 
 extension Request {
-    /// Returns a result string type in
+    /// Returns a result string type initialized from the response data with the specified string encoding.
+    ///
+    /// - parameter encoding: The string encoding. If `nil`, the string encoding will be determined from the server
+    ///                       response, falling back to the default HTTP default character set, ISO-8859-1.
+    /// - parameter response: The response from the server.
+    /// - parameter data:     The data returned from the server.
+    /// - parameter error:    The error already encountered if it exists.
+    ///
+    /// - returns: The result da
