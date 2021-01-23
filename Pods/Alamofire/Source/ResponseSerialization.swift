@@ -350,4 +350,20 @@ extension Request {
     /// - parameter data:     The data returned from the server.
     /// - parameter error:    The error already encountered if it exists.
     ///
-    /// - returns: The result da
+    /// - returns: The result data type.
+    public static func serializeResponseString(
+        encoding: String.Encoding?,
+        response: HTTPURLResponse?,
+        data: Data?,
+        error: Error?)
+        -> Result<String>
+    {
+        guard error == nil else { return .failure(error!) }
+
+        if let response = response, emptyDataStatusCodes.contains(response.statusCode) { return .success("") }
+
+        guard let validData = data else {
+            return .failure(AFError.responseSerializationFailed(reason: .inputDataNil))
+        }
+
+        var conve
