@@ -366,4 +366,15 @@ extension Request {
             return .failure(AFError.responseSerializationFailed(reason: .inputDataNil))
         }
 
-        var conve
+        var convertedEncoding = encoding
+
+        if let encodingName = response?.textEncodingName as CFString!, convertedEncoding == nil {
+            convertedEncoding = String.Encoding(rawValue: CFStringConvertEncodingToNSStringEncoding(
+                CFStringConvertIANACharSetNameToEncoding(encodingName))
+            )
+        }
+
+        let actualEncoding = convertedEncoding ?? String.Encoding.isoLatin1
+
+        if let string = String(data: validData, encoding: actualEncoding) {
+            return .success
