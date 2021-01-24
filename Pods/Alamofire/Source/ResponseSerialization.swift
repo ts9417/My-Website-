@@ -377,4 +377,15 @@ extension Request {
         let actualEncoding = convertedEncoding ?? String.Encoding.isoLatin1
 
         if let string = String(data: validData, encoding: actualEncoding) {
-            return .success
+            return .success(string)
+        } else {
+            return .failure(AFError.responseSerializationFailed(reason: .stringSerializationFailed(encoding: actualEncoding)))
+        }
+    }
+}
+
+extension DataRequest {
+    /// Creates a response serializer that returns a result string type initialized from the response data with
+    /// the specified string encoding.
+    ///
+    /// - parameter encoding: The string encoding. If `nil`, the string encoding will be determined from the 
