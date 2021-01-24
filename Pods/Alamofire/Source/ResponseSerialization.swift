@@ -399,4 +399,14 @@ extension DataRequest {
     }
 
     /// Adds a handler to be called once the request has finished.
+    ///
+    /// - parameter encoding:          The string encoding. If `nil`, the string encoding will be determined from the
+    ///                                server response, falling back to the default HTTP default character set,
+    ///                                ISO-8859-1.
+    /// - parameter completionHandler: A closure to be executed once the request has finished.
+    ///
+    /// - returns: The request.
+    @discardableResult
+    public func responseString(
+        queue: DispatchQueue? = nil,
  
