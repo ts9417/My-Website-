@@ -409,4 +409,19 @@ extension DataRequest {
     @discardableResult
     public func responseString(
         queue: DispatchQueue? = nil,
- 
+        encoding: String.Encoding? = nil,
+        completionHandler: @escaping (DataResponse<String>) -> Void)
+        -> Self
+    {
+        return response(
+            queue: queue,
+            responseSerializer: DataRequest.stringResponseSerializer(encoding: encoding),
+            completionHandler: completionHandler
+        )
+    }
+}
+
+extension DownloadRequest {
+    /// Creates a response serializer that returns a result string type initialized from the response data with
+    /// the specified string encoding.
+    ///
