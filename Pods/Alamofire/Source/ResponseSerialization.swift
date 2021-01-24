@@ -388,4 +388,15 @@ extension DataRequest {
     /// Creates a response serializer that returns a result string type initialized from the response data with
     /// the specified string encoding.
     ///
-    /// - parameter encoding: The string encoding. If `nil`, the string encoding will be determined from the 
+    /// - parameter encoding: The string encoding. If `nil`, the string encoding will be determined from the server
+    ///                       response, falling back to the default HTTP default character set, ISO-8859-1.
+    ///
+    /// - returns: A string response serializer.
+    public static func stringResponseSerializer(encoding: String.Encoding? = nil) -> DataResponseSerializer<String> {
+        return DataResponseSerializer { _, response, data, error in
+            return Request.serializeResponseString(encoding: encoding, response: response, data: data, error: error)
+        }
+    }
+
+    /// Adds a handler to be called once the request has finished.
+ 
