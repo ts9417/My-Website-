@@ -425,3 +425,10 @@ extension DownloadRequest {
     /// Creates a response serializer that returns a result string type initialized from the response data with
     /// the specified string encoding.
     ///
+    /// - parameter encoding: The string encoding. If `nil`, the string encoding will be determined from the server
+    ///                       response, falling back to the default HTTP default character set, ISO-8859-1.
+    ///
+    /// - returns: A string response serializer.
+    public static func stringResponseSerializer(encoding: String.Encoding? = nil) -> DownloadResponseSerializer<String> {
+        return DownloadResponseSerializer { _, response, fileURL, error in
+            guard error == nil else { return .failure(er
