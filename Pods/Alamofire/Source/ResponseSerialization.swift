@@ -431,4 +431,16 @@ extension DownloadRequest {
     /// - returns: A string response serializer.
     public static func stringResponseSerializer(encoding: String.Encoding? = nil) -> DownloadResponseSerializer<String> {
         return DownloadResponseSerializer { _, response, fileURL, error in
-            guard error == nil else { return .failure(er
+            guard error == nil else { return .failure(error!) }
+
+            guard let fileURL = fileURL else {
+                return .failure(AFError.responseSerializationFailed(reason: .inputFileNil))
+            }
+
+            do {
+                let data = try Data(contentsOf: fileURL)
+                return Request.serializeResponseString(encoding: encoding, response: response, data: data, error: error)
+            } catch {
+                return .failure(AFError.responseSerializationFailed(reason: .inputFileReadFailed(at: fileURL)))
+            }
+        
