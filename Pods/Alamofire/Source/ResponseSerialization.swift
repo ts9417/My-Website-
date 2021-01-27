@@ -472,4 +472,14 @@ extension DownloadRequest {
 // MARK: - JSON
 
 extension Request {
-    /// Returns a JSON object contained in a result type constructed from the response 
+    /// Returns a JSON object contained in a result type constructed from the response data using `JSONSerialization`
+    /// with the specified reading options.
+    ///
+    /// - parameter options:  The JSON serialization reading options. Defaults to `.allowFragments`.
+    /// - parameter response: The response from the server.
+    /// - parameter data:     The data returned from the server.
+    /// - parameter error:    The error already encountered if it exists.
+    ///
+    /// - returns: The result data type.
+    public static func serializeResponseJSON(
+        options: JSONSerializ
