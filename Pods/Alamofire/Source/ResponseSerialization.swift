@@ -455,4 +455,21 @@ extension DownloadRequest {
     ///
     /// - returns: The request.
     @discardableResult
-    public func respon
+    public func responseString(
+        queue: DispatchQueue? = nil,
+        encoding: String.Encoding? = nil,
+        completionHandler: @escaping (DownloadResponse<String>) -> Void)
+        -> Self
+    {
+        return response(
+            queue: queue,
+            responseSerializer: DownloadRequest.stringResponseSerializer(encoding: encoding),
+            completionHandler: completionHandler
+        )
+    }
+}
+
+// MARK: - JSON
+
+extension Request {
+    /// Returns a JSON object contained in a result type constructed from the response 
