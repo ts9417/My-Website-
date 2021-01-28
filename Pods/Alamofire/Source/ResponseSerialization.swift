@@ -507,4 +507,15 @@ extension Request {
 
 extension DataRequest {
     /// Creates a response serializer that returns a JSON object result type constructed from the response data using
-    /// `JSONSerialization` with the specified readi
+    /// `JSONSerialization` with the specified reading options.
+    ///
+    /// - parameter options: The JSON serialization reading options. Defaults to `.allowFragments`.
+    ///
+    /// - returns: A JSON object response serializer.
+    public static func jsonResponseSerializer(
+        options: JSONSerialization.ReadingOptions = .allowFragments)
+        -> DataResponseSerializer<Any>
+    {
+        return DataResponseSerializer { _, response, data, error in
+            return Request.serializeResponseJSON(options: options, response: response, data: data, error: error)
+        
