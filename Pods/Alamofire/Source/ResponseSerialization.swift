@@ -496,4 +496,15 @@ extension Request {
             return .failure(AFError.responseSerializationFailed(reason: .inputDataNilOrZeroLength))
         }
 
-        do
+        do {
+            let json = try JSONSerialization.jsonObject(with: validData, options: options)
+            return .success(json)
+        } catch {
+            return .failure(AFError.responseSerializationFailed(reason: .jsonSerializationFailed(error: error)))
+        }
+    }
+}
+
+extension DataRequest {
+    /// Creates a response serializer that returns a JSON object result type constructed from the response data using
+    /// `JSONSerialization` with the specified readi
