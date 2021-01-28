@@ -482,4 +482,18 @@ extension Request {
     ///
     /// - returns: The result data type.
     public static func serializeResponseJSON(
-        options: JSONSerializ
+        options: JSONSerialization.ReadingOptions,
+        response: HTTPURLResponse?,
+        data: Data?,
+        error: Error?)
+        -> Result<Any>
+    {
+        guard error == nil else { return .failure(error!) }
+
+        if let response = response, emptyDataStatusCodes.contains(response.statusCode) { return .success(NSNull()) }
+
+        guard let validData = data, validData.count > 0 else {
+            return .failure(AFError.responseSerializationFailed(reason: .inputDataNilOrZeroLength))
+        }
+
+        do
