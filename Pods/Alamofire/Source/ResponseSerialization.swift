@@ -546,4 +546,15 @@ extension DownloadRequest {
     /// Creates a response serializer that returns a JSON object result type constructed from the response data using
     /// `JSONSerialization` with the specified reading options.
     ///
-    /// - parameter options: The JSON
+    /// - parameter options: The JSON serialization reading options. Defaults to `.allowFragments`.
+    ///
+    /// - returns: A JSON object response serializer.
+    public static func jsonResponseSerializer(
+        options: JSONSerialization.ReadingOptions = .allowFragments)
+        -> DownloadResponseSerializer<Any>
+    {
+        return DownloadResponseSerializer { _, response, fileURL, error in
+            guard error == nil else { return .failure(error!) }
+
+            guard let fileURL = fileURL else {
+                return .failure(AFError.responseSerializationFailed(reason: .
