@@ -531,4 +531,19 @@ extension DataRequest {
     public func responseJSON(
         queue: DispatchQueue? = nil,
         options: JSONSerialization.ReadingOptions = .allowFragments,
-        completionHandler: @escaping (Data
+        completionHandler: @escaping (DataResponse<Any>) -> Void)
+        -> Self
+    {
+        return response(
+            queue: queue,
+            responseSerializer: DataRequest.jsonResponseSerializer(options: options),
+            completionHandler: completionHandler
+        )
+    }
+}
+
+extension DownloadRequest {
+    /// Creates a response serializer that returns a JSON object result type constructed from the response data using
+    /// `JSONSerialization` with the specified reading options.
+    ///
+    /// - parameter options: The JSON
