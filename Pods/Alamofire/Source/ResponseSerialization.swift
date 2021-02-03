@@ -582,4 +582,19 @@ extension DownloadRequest {
         completionHandler: @escaping (DownloadResponse<Any>) -> Void)
         -> Self
     {
-        return respons
+        return response(
+            queue: queue,
+            responseSerializer: DownloadRequest.jsonResponseSerializer(options: options),
+            completionHandler: completionHandler
+        )
+    }
+}
+
+// MARK: - Property List
+
+extension Request {
+    /// Returns a plist object contained in a result type constructed from the response data using
+    /// `PropertyListSerialization` with the specified reading options.
+    ///
+    /// - parameter options:  The property list reading options. Defaults to `[]`.
+    /// - parameter response: The respons
