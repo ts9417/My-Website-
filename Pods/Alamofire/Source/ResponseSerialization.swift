@@ -611,4 +611,14 @@ extension Request {
     {
         guard error == nil else { return .failure(error!) }
 
-        if let respons
+        if let response = response, emptyDataStatusCodes.contains(response.statusCode) { return .success(NSNull()) }
+
+        guard let validData = data, validData.count > 0 else {
+            return .failure(AFError.responseSerializationFailed(reason: .inputDataNilOrZeroLength))
+        }
+
+        do {
+            let plist = try PropertyListSerialization.propertyList(from: validData, options: options, format: nil)
+            return .success(plist)
+        } catch {
+            return .failure(AFError.responseSerializationFailed(reason: .propertyListSerializationFailed
