@@ -597,4 +597,18 @@ extension Request {
     /// `PropertyListSerialization` with the specified reading options.
     ///
     /// - parameter options:  The property list reading options. Defaults to `[]`.
-    /// - parameter response: The respons
+    /// - parameter response: The response from the server.
+    /// - parameter data:     The data returned from the server.
+    /// - parameter error:    The error already encountered if it exists.
+    ///
+    /// - returns: The result data type.
+    public static func serializeResponsePropertyList(
+        options: PropertyListSerialization.ReadOptions,
+        response: HTTPURLResponse?,
+        data: Data?,
+        error: Error?)
+        -> Result<Any>
+    {
+        guard error == nil else { return .failure(error!) }
+
+        if let respons
