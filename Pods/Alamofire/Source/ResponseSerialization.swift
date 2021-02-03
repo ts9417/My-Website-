@@ -571,4 +571,15 @@ extension DownloadRequest {
 
     /// Adds a handler to be called once the request has finished.
     ///
-    /// - parameter options:      
+    /// - parameter options:           The JSON serialization reading options. Defaults to `.allowFragments`.
+    /// - parameter completionHandler: A closure to be executed once the request has finished.
+    ///
+    /// - returns: The request.
+    @discardableResult
+    public func responseJSON(
+        queue: DispatchQueue? = nil,
+        options: JSONSerialization.ReadingOptions = .allowFragments,
+        completionHandler: @escaping (DownloadResponse<Any>) -> Void)
+        -> Self
+    {
+        return respons
