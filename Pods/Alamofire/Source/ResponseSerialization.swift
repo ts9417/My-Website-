@@ -635,4 +635,17 @@ extension DataRequest {
     /// - returns: A property list object response serializer.
     public static func propertyListResponseSerializer(
         options: PropertyListSerialization.ReadOptions = [])
-        -> 
+        -> DataResponseSerializer<Any>
+    {
+        return DataResponseSerializer { _, response, data, error in
+            return Request.serializeResponsePropertyList(options: options, response: response, data: data, error: error)
+        }
+    }
+
+    /// Adds a handler to be called once the request has finished.
+    ///
+    /// - parameter options:           The property list reading options. Defaults to `[]`.
+    /// - parameter completionHandler: A closure to be executed once the request has finished.
+    ///
+    /// - returns: The request.
+  
