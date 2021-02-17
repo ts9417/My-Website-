@@ -621,4 +621,18 @@ extension Request {
             let plist = try PropertyListSerialization.propertyList(from: validData, options: options, format: nil)
             return .success(plist)
         } catch {
-            return .failure(AFError.responseSerializationFailed(reason: .propertyListSerializationFailed
+            return .failure(AFError.responseSerializationFailed(reason: .propertyListSerializationFailed(error: error)))
+        }
+    }
+}
+
+extension DataRequest {
+    /// Creates a response serializer that returns an object constructed from the response data using
+    /// `PropertyListSerialization` with the specified reading options.
+    ///
+    /// - parameter options: The property list reading options. Defaults to `[]`.
+    ///
+    /// - returns: A property list object response serializer.
+    public static func propertyListResponseSerializer(
+        options: PropertyListSerialization.ReadOptions = [])
+        -> 
