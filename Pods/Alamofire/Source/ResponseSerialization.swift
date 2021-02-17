@@ -648,4 +648,20 @@ extension DataRequest {
     /// - parameter completionHandler: A closure to be executed once the request has finished.
     ///
     /// - returns: The request.
-  
+    @discardableResult
+    public func responsePropertyList(
+        queue: DispatchQueue? = nil,
+        options: PropertyListSerialization.ReadOptions = [],
+        completionHandler: @escaping (DataResponse<Any>) -> Void)
+        -> Self
+    {
+        return response(
+            queue: queue,
+            responseSerializer: DataRequest.propertyListResponseSerializer(options: options),
+            completionHandler: completionHandler
+        )
+    }
+}
+
+extension DownloadRequest {
+    /// Creates a response serializer that returns 
