@@ -674,4 +674,15 @@ extension DownloadRequest {
         options: PropertyListSerialization.ReadOptions = [])
         -> DownloadResponseSerializer<Any>
     {
-        return DownloadResponseSerializer { _, response, fileURL
+        return DownloadResponseSerializer { _, response, fileURL, error in
+            guard error == nil else { return .failure(error!) }
+
+            guard let fileURL = fileURL else {
+                return .failure(AFError.responseSerializationFailed(reason: .inputFileNil))
+            }
+
+            do {
+                let data = try Data(contentsOf: fileURL)
+                return Request.serializeResponsePropertyList(options: options, response: response, data: data, error: error)
+            } catch {
+                return .failure(AFError.responseSerializationFailed(reason: .input
