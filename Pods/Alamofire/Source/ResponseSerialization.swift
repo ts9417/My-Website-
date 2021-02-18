@@ -664,4 +664,14 @@ extension DataRequest {
 }
 
 extension DownloadRequest {
-    /// Creates a response serializer that returns 
+    /// Creates a response serializer that returns an object constructed from the response data using
+    /// `PropertyListSerialization` with the specified reading options.
+    ///
+    /// - parameter options: The property list reading options. Defaults to `[]`.
+    ///
+    /// - returns: A property list object response serializer.
+    public static func propertyListResponseSerializer(
+        options: PropertyListSerialization.ReadOptions = [])
+        -> DownloadResponseSerializer<Any>
+    {
+        return DownloadResponseSerializer { _, response, fileURL
