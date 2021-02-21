@@ -700,4 +700,16 @@ extension DownloadRequest {
     public func responsePropertyList(
         queue: DispatchQueue? = nil,
         options: PropertyListSerialization.ReadOptions = [],
-        completionHandler: 
+        completionHandler: @escaping (DownloadResponse<Any>) -> Void)
+        -> Self
+    {
+        return response(
+            queue: queue,
+            responseSerializer: DownloadRequest.propertyListResponseSerializer(options: options),
+            completionHandler: completionHandler
+        )
+    }
+}
+
+/// A set of HTTP response status code that do not contain response data.
+private let emptyDataStatusCodes: Set<Int> = [204, 205]
