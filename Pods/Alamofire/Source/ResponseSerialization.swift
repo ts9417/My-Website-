@@ -685,4 +685,19 @@ extension DownloadRequest {
                 let data = try Data(contentsOf: fileURL)
                 return Request.serializeResponsePropertyList(options: options, response: response, data: data, error: error)
             } catch {
-                return .failure(AFError.responseSerializationFailed(reason: .input
+                return .failure(AFError.responseSerializationFailed(reason: .inputFileReadFailed(at: fileURL)))
+            }
+        }
+    }
+
+    /// Adds a handler to be called once the request has finished.
+    ///
+    /// - parameter options:           The property list reading options. Defaults to `[]`.
+    /// - parameter completionHandler: A closure to be executed once the request has finished.
+    ///
+    /// - returns: The request.
+    @discardableResult
+    public func responsePropertyList(
+        queue: DispatchQueue? = nil,
+        options: PropertyListSerialization.ReadOptions = [],
+        completionHandler: 
