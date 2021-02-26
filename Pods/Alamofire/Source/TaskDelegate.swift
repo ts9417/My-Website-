@@ -18,4 +18,19 @@
 //  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 //  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-//  OUT OF OR IN CONNECTION W
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
+//
+
+import Foundation
+
+/// The task delegate is responsible for handling all delegate callbacks for the underlying task as well as
+/// executing all operations attached to the serial operation queue upon task completion.
+open class TaskDelegate: NSObject {
+
+    // MARK: Properties
+
+    /// The serial operation queue used to execute all operations after the task completes.
+    open let queue: OperationQueue
+
+    /// The data returned by the 
