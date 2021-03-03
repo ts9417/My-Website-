@@ -81,4 +81,19 @@ open class TaskDelegate: NSObject {
         task: URLSessionTask,
         willPerformHTTPRedirection response: HTTPURLResponse,
         newRequest request: URLRequest,
-        completionHandler: @escapi
+        completionHandler: @escaping (URLRequest?) -> Void)
+    {
+        var redirectRequest: URLRequest? = request
+
+        if let taskWillPerformHTTPRedirection = taskWillPerformHTTPRedirection {
+            redirectRequest = taskWillPerformHTTPRedirection(session, task, response, request)
+        }
+
+        completionHandler(redirectRequest)
+    }
+
+    @objc(URLSession:task:didReceiveChallenge:completionHandler:)
+    func urlSession(
+        _ session: URLSession,
+        task: URLSessionTask,
+        didReceive challenge: URLAuthenticationChallen
