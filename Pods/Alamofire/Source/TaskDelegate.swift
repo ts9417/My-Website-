@@ -55,4 +55,20 @@ open class TaskDelegate: NSObject {
         self.queue = {
             let operationQueue = OperationQueue()
 
-            operation
+            operationQueue.maxConcurrentOperationCount = 1
+            operationQueue.isSuspended = true
+            operationQueue.qualityOfService = .utility
+
+            return operationQueue
+        }()
+    }
+
+    func reset() {
+        error = nil
+        initialResponseTime = nil
+    }
+
+    // MARK: URLSessionTaskDelegate
+
+    var taskWillPerformHTTPRedirection: ((URLSession, URLSessionTask, HTTPURLResponse, URLRequest) -> URLRequest?)?
+    var taskDidReceiveChallenge: ((URLSession, URLSessionTask, URLAuthenticationChall
