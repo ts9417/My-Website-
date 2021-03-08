@@ -117,3 +117,20 @@ open class TaskDelegate: NSObject {
                 } else {
                     disposition = .cancelAuthenticationChallenge
                 }
+            }
+        } else {
+            if challenge.previousFailureCount > 0 {
+                disposition = .rejectProtectionSpace
+            } else {
+                credential = self.credential ?? session.configuration.urlCredentialStorage?.defaultCredential(for: challenge.protectionSpace)
+
+                if credential != nil {
+                    disposition = .useCredential
+                }
+            }
+        }
+
+        completionHandler(disposition, credential)
+    }
+
+    @objc(URLSession:task:needNewB
