@@ -133,4 +133,21 @@ open class TaskDelegate: NSObject {
         completionHandler(disposition, credential)
     }
 
-    @objc(URLSession:task:needNewB
+    @objc(URLSession:task:needNewBodyStream:)
+    func urlSession(
+        _ session: URLSession,
+        task: URLSessionTask,
+        needNewBodyStream completionHandler: @escaping (InputStream?) -> Void)
+    {
+        var bodyStream: InputStream?
+
+        if let taskNeedNewBodyStream = taskNeedNewBodyStream {
+            bodyStream = taskNeedNewBodyStream(session, task)
+        }
+
+        completionHandler(bodyStream)
+    }
+
+    @objc(URLSession:task:didCompleteWithError:)
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        if let taskDidCo
