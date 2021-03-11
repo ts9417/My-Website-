@@ -164,4 +164,30 @@ open class TaskDelegate: NSObject {
                 }
             }
 
-            queue.isSusp
+            queue.isSuspended = false
+        }
+    }
+}
+
+// MARK: -
+
+class DataTaskDelegate: TaskDelegate, URLSessionDataDelegate {
+
+    // MARK: Properties
+
+    var dataTask: URLSessionDataTask { return task as! URLSessionDataTask }
+
+    override var data: Data? {
+        if dataStream != nil {
+            return nil
+        } else {
+            return mutableData
+        }
+    }
+
+    var progress: Progress
+    var progressHandler: (closure: Request.ProgressHandler, queue: DispatchQueue)?
+
+    var dataStream: ((_ data: Data) -> Void)?
+
+    private var totalByte
