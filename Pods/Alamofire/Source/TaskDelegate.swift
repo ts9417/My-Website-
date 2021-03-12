@@ -215,4 +215,13 @@ class DataTaskDelegate: TaskDelegate, URLSessionDataDelegate {
 
     // MARK: URLSessionDataDelegate
 
-    var dataTaskDidReceiveRe
+    var dataTaskDidReceiveResponse: ((URLSession, URLSessionDataTask, URLResponse) -> URLSession.ResponseDisposition)?
+    var dataTaskDidBecomeDownloadTask: ((URLSession, URLSessionDataTask, URLSessionDownloadTask) -> Void)?
+    var dataTaskDidReceiveData: ((URLSession, URLSessionDataTask, Data) -> Void)?
+    var dataTaskWillCacheResponse: ((URLSession, URLSessionDataTask, CachedURLResponse) -> CachedURLResponse?)?
+
+    func urlSession(
+        _ session: URLSession,
+        dataTask: URLSessionDataTask,
+        didReceive response: URLResponse,
+   
