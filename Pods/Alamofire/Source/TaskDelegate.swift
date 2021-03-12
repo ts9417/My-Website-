@@ -190,4 +190,29 @@ class DataTaskDelegate: TaskDelegate, URLSessionDataDelegate {
 
     var dataStream: ((_ data: Data) -> Void)?
 
-    private var totalByte
+    private var totalBytesReceived: Int64 = 0
+    private var mutableData: Data
+
+    private var expectedContentLength: Int64?
+
+    // MARK: Lifecycle
+
+    override init(task: URLSessionTask?) {
+        mutableData = Data()
+        progress = Progress(totalUnitCount: 0)
+
+        super.init(task: task)
+    }
+
+    override func reset() {
+        super.reset()
+
+        progress = Progress(totalUnitCount: 0)
+        totalBytesReceived = 0
+        mutableData = Data()
+        expectedContentLength = nil
+    }
+
+    // MARK: URLSessionDataDelegate
+
+    var dataTaskDidReceiveRe
