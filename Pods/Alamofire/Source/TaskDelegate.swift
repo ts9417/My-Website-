@@ -224,4 +224,20 @@ class DataTaskDelegate: TaskDelegate, URLSessionDataDelegate {
         _ session: URLSession,
         dataTask: URLSessionDataTask,
         didReceive response: URLResponse,
-   
+        completionHandler: @escaping (URLSession.ResponseDisposition) -> Void)
+    {
+        var disposition: URLSession.ResponseDisposition = .allow
+
+        expectedContentLength = response.expectedContentLength
+
+        if let dataTaskDidReceiveResponse = dataTaskDidReceiveResponse {
+            disposition = dataTaskDidReceiveResponse(session, dataTask, response)
+        }
+
+        completionHandler(disposition)
+    }
+
+    func urlSession(
+        _ session: URLSession,
+        dataTask: URLSessionDataTask,
+        didBecome downloadTask: URLSessionDownloadTask
