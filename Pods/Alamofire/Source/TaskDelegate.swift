@@ -240,4 +240,17 @@ class DataTaskDelegate: TaskDelegate, URLSessionDataDelegate {
     func urlSession(
         _ session: URLSession,
         dataTask: URLSessionDataTask,
-        didBecome downloadTask: URLSessionDownloadTask
+        didBecome downloadTask: URLSessionDownloadTask)
+    {
+        dataTaskDidBecomeDownloadTask?(session, dataTask, downloadTask)
+    }
+
+    func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
+        if initialResponseTime == nil { initialResponseTime = CFAbsoluteTimeGetCurrent() }
+
+        if let dataTaskDidReceiveData = dataTaskDidReceiveData {
+            dataTaskDidReceiveData(session, dataTask, data)
+        } else {
+            if let dataStream = dataStream {
+                dataStream(data)
+   
