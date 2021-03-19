@@ -265,4 +265,19 @@ class DataTaskDelegate: TaskDelegate, URLSessionDataDelegate {
             progress.completedUnitCount = totalBytesReceived
 
             if let progressHandler = progressHandler {
-                progressHandler.queue.async { progressHandler.closure(se
+                progressHandler.queue.async { progressHandler.closure(self.progress) }
+            }
+        }
+    }
+
+    func urlSession(
+        _ session: URLSession,
+        dataTask: URLSessionDataTask,
+        willCacheResponse proposedResponse: CachedURLResponse,
+        completionHandler: @escaping (CachedURLResponse?) -> Void)
+    {
+        var cachedResponse: CachedURLResponse? = proposedResponse
+
+        if let dataTaskWillCacheResponse = dataTaskWillCacheResponse {
+            cachedResponse = dataTaskWillCacheResponse(session, dataTask, proposedResponse)
+   
