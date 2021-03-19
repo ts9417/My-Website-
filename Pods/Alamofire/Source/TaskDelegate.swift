@@ -253,4 +253,16 @@ class DataTaskDelegate: TaskDelegate, URLSessionDataDelegate {
         } else {
             if let dataStream = dataStream {
                 dataStream(data)
-   
+            } else {
+                mutableData.append(data)
+            }
+
+            let bytesReceived = Int64(data.count)
+            totalBytesReceived += bytesReceived
+            let totalBytesExpected = dataTask.response?.expectedContentLength ?? NSURLSessionTransferSizeUnknown
+
+            progress.totalUnitCount = totalBytesExpected
+            progress.completedUnitCount = totalBytesReceived
+
+            if let progressHandler = progressHandler {
+                progressHandler.queue.async { progressHandler.closure(se
