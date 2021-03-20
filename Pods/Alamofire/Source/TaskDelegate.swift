@@ -280,4 +280,27 @@ class DataTaskDelegate: TaskDelegate, URLSessionDataDelegate {
 
         if let dataTaskWillCacheResponse = dataTaskWillCacheResponse {
             cachedResponse = dataTaskWillCacheResponse(session, dataTask, proposedResponse)
-   
+        }
+
+        completionHandler(cachedResponse)
+    }
+}
+
+// MARK: -
+
+class DownloadTaskDelegate: TaskDelegate, URLSessionDownloadDelegate {
+
+    // MARK: Properties
+
+    var downloadTask: URLSessionDownloadTask { return task as! URLSessionDownloadTask }
+
+    var progress: Progress
+    var progressHandler: (closure: Request.ProgressHandler, queue: DispatchQueue)?
+
+    var resumeData: Data?
+    override var data: Data? { return resumeData }
+
+    var destination: DownloadRequest.DownloadFileDestination?
+
+    var temporaryURL: URL?
+    var desti
