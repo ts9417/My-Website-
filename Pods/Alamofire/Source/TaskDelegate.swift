@@ -336,4 +336,18 @@ class DownloadTaskDelegate: TaskDelegate, URLSessionDownloadDelegate {
 
         guard
             let destination = destination,
-            let response = downloadTask.response
+            let response = downloadTask.response as? HTTPURLResponse
+        else { return }
+
+        let result = destination(location, response)
+        let destinationURL = result.destinationURL
+        let options = result.options
+
+        self.destinationURL = destinationURL
+
+        do {
+            if options.contains(.removePreviousFile), FileManager.default.fileExists(atPath: destinationURL.path) {
+                try FileManager.default.removeItem(at: destinationURL)
+            }
+
+            if options.contains(.createIntermediateDirector
