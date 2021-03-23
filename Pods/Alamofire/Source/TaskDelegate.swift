@@ -366,4 +366,18 @@ class DownloadTaskDelegate: TaskDelegate, URLSessionDownloadDelegate {
         downloadTask: URLSessionDownloadTask,
         didWriteData bytesWritten: Int64,
         totalBytesWritten: Int64,
-        to
+        totalBytesExpectedToWrite: Int64)
+    {
+        if initialResponseTime == nil { initialResponseTime = CFAbsoluteTimeGetCurrent() }
+
+        if let downloadTaskDidWriteData = downloadTaskDidWriteData {
+            downloadTaskDidWriteData(
+                session,
+                downloadTask,
+                bytesWritten,
+                totalBytesWritten,
+                totalBytesExpectedToWrite
+            )
+        } else {
+            progress.totalUnitCount = totalBytesExpectedToWrite
+            progress.completedUnitC
