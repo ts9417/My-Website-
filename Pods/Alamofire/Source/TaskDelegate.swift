@@ -395,4 +395,21 @@ class DownloadTaskDelegate: TaskDelegate, URLSessionDownloadDelegate {
         expectedTotalBytes: Int64)
     {
         if let downloadTaskDidResumeAtOffset = downloadTaskDidResumeAtOffset {
-            downloadTaskDidResumeAtOf
+            downloadTaskDidResumeAtOffset(session, downloadTask, fileOffset, expectedTotalBytes)
+        } else {
+            progress.totalUnitCount = expectedTotalBytes
+            progress.completedUnitCount = fileOffset
+        }
+    }
+}
+
+// MARK: -
+
+class UploadTaskDelegate: DataTaskDelegate {
+
+    // MARK: Properties
+
+    var uploadTask: URLSessionUploadTask { return task as! URLSessionUploadTask }
+
+    var uploadProgress: Progress
+    var uploadProgressHandler: (closure: Request.ProgressHandler, queue
