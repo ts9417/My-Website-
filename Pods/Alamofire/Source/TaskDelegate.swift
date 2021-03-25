@@ -412,4 +412,25 @@ class UploadTaskDelegate: DataTaskDelegate {
     var uploadTask: URLSessionUploadTask { return task as! URLSessionUploadTask }
 
     var uploadProgress: Progress
-    var uploadProgressHandler: (closure: Request.ProgressHandler, queue
+    var uploadProgressHandler: (closure: Request.ProgressHandler, queue: DispatchQueue)?
+
+    // MARK: Lifecycle
+
+    override init(task: URLSessionTask?) {
+        uploadProgress = Progress(totalUnitCount: 0)
+        super.init(task: task)
+    }
+
+    override func reset() {
+        super.reset()
+        uploadProgress = Progress(totalUnitCount: 0)
+    }
+
+    // MARK: URLSessionTaskDelegate
+
+    var taskDidSendBodyData: ((URLSession, URLSessionTask, Int64, Int64, Int64) -> Void)?
+
+    func URLSession(
+        _ session: URLSession,
+        task: URLSessionTask,
+        didSendBody
