@@ -433,4 +433,16 @@ class UploadTaskDelegate: DataTaskDelegate {
     func URLSession(
         _ session: URLSession,
         task: URLSessionTask,
-        didSendBody
+        didSendBodyData bytesSent: Int64,
+        totalBytesSent: Int64,
+        totalBytesExpectedToSend: Int64)
+    {
+        if initialResponseTime == nil { initialResponseTime = CFAbsoluteTimeGetCurrent() }
+
+        if let taskDidSendBodyData = taskDidSendBodyData {
+            taskDidSendBodyData(session, task, bytesSent, totalBytesSent, totalBytesExpectedToSend)
+        } else {
+            uploadProgress.totalUnitCount = totalBytesExpectedToSend
+            uploadProgress.completedUnitCount = totalBytesSent
+
+            if let uploadProgressHandl
