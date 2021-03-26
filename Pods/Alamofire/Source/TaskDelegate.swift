@@ -445,4 +445,9 @@ class UploadTaskDelegate: DataTaskDelegate {
             uploadProgress.totalUnitCount = totalBytesExpectedToSend
             uploadProgress.completedUnitCount = totalBytesSent
 
-            if let uploadProgressHandl
+            if let uploadProgressHandler = uploadProgressHandler {
+                uploadProgressHandler.queue.async { uploadProgressHandler.closure(self.uploadProgress) }
+            }
+        }
+    }
+}
