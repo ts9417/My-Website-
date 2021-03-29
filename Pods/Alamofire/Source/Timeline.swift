@@ -27,4 +27,16 @@ import Foundation
 /// Responsible for computing the timing metrics for the complete lifecycle of a `Request`.
 public struct Timeline {
     /// The time the request was initialized.
-    pub
+    public let requestStartTime: CFAbsoluteTime
+
+    /// The time the first bytes were received from or sent to the server.
+    public let initialResponseTime: CFAbsoluteTime
+
+    /// The time when the request was completed.
+    public let requestCompletedTime: CFAbsoluteTime
+
+    /// The time when the response serialization was completed.
+    public let serializationCompletedTime: CFAbsoluteTime
+
+    /// The time interval in seconds from the time the request started to the initial response from the server.
+    public let latency
