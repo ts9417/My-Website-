@@ -39,4 +39,15 @@ public struct Timeline {
     public let serializationCompletedTime: CFAbsoluteTime
 
     /// The time interval in seconds from the time the request started to the initial response from the server.
-    public let latency
+    public let latency: TimeInterval
+
+    /// The time interval in seconds from the time the request started to the time the request completed.
+    public let requestDuration: TimeInterval
+
+    /// The time interval in seconds from the time the request completed to the time response serialization completed.
+    public let serializationDuration: TimeInterval
+
+    /// The time interval in seconds from the time the request started to the time response serialization completed.
+    public let totalDuration: TimeInterval
+
+    /// Creates a new `Timeline` instance wi
