@@ -69,4 +69,16 @@ public struct Timeline {
         self.requestStartTime = requestStartTime
         self.initialResponseTime = initialResponseTime
         self.requestCompletedTime = requestCompletedTime
-        
+        self.serializationCompletedTime = serializationCompletedTime
+
+        self.latency = initialResponseTime - requestStartTime
+        self.requestDuration = requestCompletedTime - requestStartTime
+        self.serializationDuration = serializationCompletedTime - requestCompletedTime
+        self.totalDuration = serializationCompletedTime - requestStartTime
+    }
+}
+
+// MARK: - CustomStringConvertible
+
+extension Timeline: CustomStringConvertible {
+    /// The textual representation used when written to an output stream, which includes t
