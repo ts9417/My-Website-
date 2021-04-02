@@ -90,4 +90,19 @@ extension Timeline: CustomStringConvertible {
         let totalDuration = String(format: "%.3f", self.totalDuration)
 
         // NOTE: Had to move to string concatenation due to memory leak filed as rdar://26761490. Once memory leak is
-        // fixed, we
+        // fixed, we should move back to string interpolation by reverting commit 7d4a43b1.
+        let timings = [
+            "\"Latency\": " + latency + " secs",
+            "\"Request Duration\": " + requestDuration + " secs",
+            "\"Serialization Duration\": " + serializationDuration + " secs",
+            "\"Total Duration\": " + totalDuration + " secs"
+        ]
+
+        return "Timeline: { " + timings.joined(separator: ", ") + " }"
+    }
+}
+
+// MARK: - CustomDebugStringConvertible
+
+extension Timeline: CustomDebugStringConvertible {
+    /// The textual representa
