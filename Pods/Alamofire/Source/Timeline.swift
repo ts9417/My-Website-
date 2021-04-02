@@ -81,4 +81,13 @@ public struct Timeline {
 // MARK: - CustomStringConvertible
 
 extension Timeline: CustomStringConvertible {
-    /// The textual representation used when written to an output stream, which includes t
+    /// The textual representation used when written to an output stream, which includes the latency, the request
+    /// duration and the total duration.
+    public var description: String {
+        let latency = String(format: "%.3f", self.latency)
+        let requestDuration = String(format: "%.3f", self.requestDuration)
+        let serializationDuration = String(format: "%.3f", self.serializationDuration)
+        let totalDuration = String(format: "%.3f", self.totalDuration)
+
+        // NOTE: Had to move to string concatenation due to memory leak filed as rdar://26761490. Once memory leak is
+        // fixed, we
