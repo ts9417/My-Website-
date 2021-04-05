@@ -105,4 +105,10 @@ extension Timeline: CustomStringConvertible {
 // MARK: - CustomDebugStringConvertible
 
 extension Timeline: CustomDebugStringConvertible {
-    /// The textual representa
+    /// The textual representation used when written to an output stream, which includes the request start time, the
+    /// initial response time, the request completed time, the serialization completed time, the latency, the request
+    /// duration and the total duration.
+    public var debugDescription: String {
+        let requestStartTime = String(format: "%.3f", self.requestStartTime)
+        let initialResponseTime = String(format: "%.3f", self.initialResponseTime)
+        let requestCompletedTime = String(format: "%.3f", self.requestCompletedTi
