@@ -111,4 +111,12 @@ extension Timeline: CustomDebugStringConvertible {
     public var debugDescription: String {
         let requestStartTime = String(format: "%.3f", self.requestStartTime)
         let initialResponseTime = String(format: "%.3f", self.initialResponseTime)
-        let requestCompletedTime = String(format: "%.3f", self.requestCompletedTi
+        let requestCompletedTime = String(format: "%.3f", self.requestCompletedTime)
+        let serializationCompletedTime = String(format: "%.3f", self.serializationCompletedTime)
+        let latency = String(format: "%.3f", self.latency)
+        let requestDuration = String(format: "%.3f", self.requestDuration)
+        let serializationDuration = String(format: "%.3f", self.serializationDuration)
+        let totalDuration = String(format: "%.3f", self.totalDuration)
+
+        // NOTE: Had to move to string concatenation due to memory leak filed as rdar://26761490. Once memory leak is
+        // fixed, we should mov
