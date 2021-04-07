@@ -127,4 +127,10 @@ extension Timeline: CustomDebugStringConvertible {
             "\"Serialization Completed Time\": " + serializationCompletedTime,
             "\"Latency\": " + latency + " secs",
             "\"Request Duration\": " + requestDuration + " secs",
-            "\"Serialization Duratio
+            "\"Serialization Duration\": " + serializationDuration + " secs",
+            "\"Total Duration\": " + totalDuration + " secs"
+        ]
+
+        return "Timeline: { " + timings.joined(separator: ", ") + " }"
+    }
+}
