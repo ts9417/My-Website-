@@ -20,4 +20,5 @@
   },
   "frameworks": "UIKit",
   "source_files": "NTComponents/**/*.{swift}",
-  "resources": "NTComponents/
+  "resources": "NTComponents/**/*.{xcassets,otf,ttf,xib,storyboard}"
+}

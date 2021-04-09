@@ -1,0 +1,12 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0047E20CF78558DD2AE4098F512707A7 /* Pods-StockKitTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ACA6C4836C7D113C2478407CBC234BE5 /* Pods-StockKitTests-dummy.m */; };
+		01767091C540272059A7D540A85484BC /* NTCollectionViewDefaultCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA9CB894EF10D2E5CF6BBDB935DA8A /* NTCollectionViewDefaultCells.swift */; };
+		03407188AD2CF961F5F47
