@@ -9,4 +9,7 @@
 /* Begin PBXBuildFile section */
 		0047E20CF78558DD2AE4098F512707A7 /* Pods-StockKitTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ACA6C4836C7D113C2478407CBC234BE5 /* Pods-StockKitTests-dummy.m */; };
 		01767091C540272059A7D540A85484BC /* NTCollectionViewDefaultCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AA9CB894EF10D2E5CF6BBDB935DA8A /* NTCollectionViewDefaultCells.swift */; };
-		03407188AD2CF961F5F47
+		03407188AD2CF961F5F47AAC8E19A548 /* NTTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366EA2119EB24010F4359F669B9493BA /* NTTabBarItem.swift */; };
+		03B94952D2BDBD47F12FA8CA0086F9AD /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF517FC70DC219ACF1666AD0DD583D6 /* Color.swift */; };
+		04518EF7D0774CA2DB7B9651ED0F452F /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 466511960B4C76EF9762C98AA509DB82 /* Roboto-Light.ttf */; };
+		04D870AE6E835A1C27341252F11F05F3 /* NTTimelineTableViewCell.swift in Sources */ = {isa = PBX
