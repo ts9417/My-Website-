@@ -12,4 +12,7 @@
 		03407188AD2CF961F5F47AAC8E19A548 /* NTTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366EA2119EB24010F4359F669B9493BA /* NTTabBarItem.swift */; };
 		03B94952D2BDBD47F12FA8CA0086F9AD /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF517FC70DC219ACF1666AD0DD583D6 /* Color.swift */; };
 		04518EF7D0774CA2DB7B9651ED0F452F /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 466511960B4C76EF9762C98AA509DB82 /* Roboto-Light.ttf */; };
-		04D870AE6E835A1C27341252F11F05F3 /* NTTimelineTableViewCell.swift in Sources */ = {isa = PBX
+		04D870AE6E835A1C27341252F11F05F3 /* NTTimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B22A9AFA481660AD10DB9E70C4F948 /* NTTimelineTableViewCell.swift */; };
+		05D26556F8F3C0A3CA81A53FCDF8A08F /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6E58EDC69EF7749790B4657D7FF4F /* UIButton.swift */; };
+		06623FFB5AF064AAE9706B1E7DCA1C59 /* NTCredentialPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBC2DF3D11930E7A4E8DB14B684D36B /* NTCredentialPromptViewController.swift */; };
+		06B08D62457F6F203E80A2E711DDC9D3 /* NTAnimatedView.sw
