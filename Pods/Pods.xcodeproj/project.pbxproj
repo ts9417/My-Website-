@@ -15,4 +15,7 @@
 		04D870AE6E835A1C27341252F11F05F3 /* NTTimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B22A9AFA481660AD10DB9E70C4F948 /* NTTimelineTableViewCell.swift */; };
 		05D26556F8F3C0A3CA81A53FCDF8A08F /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D6E58EDC69EF7749790B4657D7FF4F /* UIButton.swift */; };
 		06623FFB5AF064AAE9706B1E7DCA1C59 /* NTCredentialPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBC2DF3D11930E7A4E8DB14B684D36B /* NTCredentialPromptViewController.swift */; };
-		06B08D62457F6F203E80A2E711DDC9D3 /* NTAnimatedView.sw
+		06B08D62457F6F203E80A2E711DDC9D3 /* NTAnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA21089A340D6956C9AF458261D54E /* NTAnimatedView.swift */; };
+		0960FD68C2284E5E5F8620C8B149D7FD /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACE4E0653402A454DDDF63EFC8CF73 /* UIView.swift */; };
+		0B37448A1213EC3CF35EF57355137450 /* ScaleBackTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BBCB94CD248C0230905D875ACE974A /* ScaleBackTransitionAnimator.swift */; };
+		0C70B6BD2319AE5B68A52BBA14BB50DA /* UIKit.fra
