@@ -18,4 +18,7 @@
 		06B08D62457F6F203E80A2E711DDC9D3 /* NTAnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA21089A340D6956C9AF458261D54E /* NTAnimatedView.swift */; };
 		0960FD68C2284E5E5F8620C8B149D7FD /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ACE4E0653402A454DDDF63EFC8CF73 /* UIView.swift */; };
 		0B37448A1213EC3CF35EF57355137450 /* ScaleBackTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BBCB94CD248C0230905D875ACE974A /* ScaleBackTransitionAnimator.swift */; };
-		0C70B6BD2319AE5B68A52BBA14BB50DA /* UIKit.fra
+		0C70B6BD2319AE5B68A52BBA14BB50DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		0D4BC33C31B903297A658389F9C801D9 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB2D3E98F1F76AA0AC67CA8993FD2F25 /* Roboto-Thin.ttf */; };
+		0DFEA9A5528506F227FCBA93F0E0356B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = P
