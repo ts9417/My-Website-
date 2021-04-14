@@ -24,4 +24,7 @@
 		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5008BDAE7FFAACBECBF6BD4A7776E9DA /* Timeline.swift */; };
 		112E9C0D293608C919B18BE58193C886 /* NTEULAController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B09C5F5DEE5EE696D27A4179793C0D /* NTEULAController.swift */; };
 		121A20C3ED18F8F873AD0BF2F52AA61C /* NTToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C1D098A0C3DCEF4ADBFC0EACA2B1B7 /* NTToast.swift */; };
-		18A91F2CA8596562296079D2A00D0462 /* NTSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EA4236E58E3C99D3B3E67
+		18A91F2CA8596562296079D2A00D0462 /* NTSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EA4236E58E3C99D3B3E67CC9B968D6 /* NTSearchBar.swift */; };
+		190651B19023354389063A77FBAE4F4E /* JTAppleCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AC9B381F7F9462B4A692752988D79C /* JTAppleCalendarView.swift */; };
+		1B0D1C4CD11641324B989F228C334CA6 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4D03C3B8E2D2A1B43180ED4243F45A3 /* Roboto-BoldItalic.ttf */; };
+		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 375478815B27BEFF2DD35C5F6DF
