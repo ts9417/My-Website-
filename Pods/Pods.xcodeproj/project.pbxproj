@@ -27,4 +27,7 @@
 		18A91F2CA8596562296079D2A00D0462 /* NTSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EA4236E58E3C99D3B3E67CC9B968D6 /* NTSearchBar.swift */; };
 		190651B19023354389063A77FBAE4F4E /* JTAppleCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AC9B381F7F9462B4A692752988D79C /* JTAppleCalendarView.swift */; };
 		1B0D1C4CD11641324B989F228C334CA6 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4D03C3B8E2D2A1B43180ED4243F45A3 /* Roboto-BoldItalic.ttf */; };
-		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 375478815B27BEFF2DD35C5F6DF
+		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 375478815B27BEFF2DD35C5F6DF5C9F7 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1CF2D7F3C2EEE63C63CD62E05FB17A3B /* NTCalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7347F4D6AA9963DB78A73D0FAEFEBDD /* NTCalendarHeaderView.swift */; };
+		1D8CF45EA9664717B0384C0138D8B9A8 /* NTCollectionDatasourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B485E28146B5F32B095B677A7DBBF4 /* NTCollectionDatasourceCell.swift */; };
+		1E9F487BF40945D7878CAA23E69A9EF4 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef 
