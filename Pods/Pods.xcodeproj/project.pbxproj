@@ -30,4 +30,7 @@
 		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 375478815B27BEFF2DD35C5F6DF5C9F7 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1CF2D7F3C2EEE63C63CD62E05FB17A3B /* NTCalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7347F4D6AA9963DB78A73D0FAEFEBDD /* NTCalendarHeaderView.swift */; };
 		1D8CF45EA9664717B0384C0138D8B9A8 /* NTCollectionDatasourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B485E28146B5F32B095B677A7DBBF4 /* NTCollectionDatasourceCell.swift */; };
-		1E9F487BF40945D7878CAA23E69A9EF4 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef 
+		1E9F487BF40945D7878CAA23E69A9EF4 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEFBD8627E46568854D07AB9BB7447D /* UITextView.swift */; };
+		1EDE5061B2CE5DA859A9821B68B16000 /* GlobalFunctionsAndExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FFA008291E289763C66FE2BE3E3FE /* GlobalFunctionsAndExtensions.swift */; };
+		21BDC4F3CF027EC5DA3F215F784F3D31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DB0342B5130BD5984E97A1B22724CA5 /* Assets.xcassets */; };
+		21C87B9EA779B9575932B9C8B8BF8A7A /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78056116FBF5F56C4C16A2E
