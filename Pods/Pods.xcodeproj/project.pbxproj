@@ -33,4 +33,7 @@
 		1E9F487BF40945D7878CAA23E69A9EF4 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEFBD8627E46568854D07AB9BB7447D /* UITextView.swift */; };
 		1EDE5061B2CE5DA859A9821B68B16000 /* GlobalFunctionsAndExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5FFA008291E289763C66FE2BE3E3FE /* GlobalFunctionsAndExtensions.swift */; };
 		21BDC4F3CF027EC5DA3F215F784F3D31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DB0342B5130BD5984E97A1B22724CA5 /* Assets.xcassets */; };
-		21C87B9EA779B9575932B9C8B8BF8A7A /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78056116FBF5F56C4C16A2E
+		21C87B9EA779B9575932B9C8B8BF8A7A /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78056116FBF5F56C4C16A2EFCED69631 /* Roboto-ThinItalic.ttf */; };
+		21D3B1C35302D9CA8B654D1F04CC4003 /* NTNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA070DDE7A26A076271E47E97E59D87E /* NTNavigationViewController.swift */; };
+		226C9755B23F63FCB678D1F4016ACBD8 /* NTEmailAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E6BA5DEFD6DF838C6FEA05483ED082 /* NTEmailAuthViewController.swift */; };
+		2362C75AB9B0A43F353FABBFD5234720 /* NTCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C4E0647BC248B0
