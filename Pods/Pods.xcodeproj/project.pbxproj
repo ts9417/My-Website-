@@ -39,4 +39,7 @@
 		2362C75AB9B0A43F353FABBFD5234720 /* NTCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C4E0647BC248B0762C9163F038E72 /* NTCarouselView.swift */; };
 		25A1725FA2AAC8D7D5586F56A91598C9 /* NTExpandableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126687D0470DC9F8F1EEAB9FDBE02AC0 /* NTExpandableView.swift */; };
 		2742AF79A17118914E75ED13E4F1A215 /* NTEmailRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BC2DC6440155E1BCC474B8245820A /* NTEmailRegisterViewController.swift */; };
-		283C063D5AAB330BC07364FED12D3F2D /* NTInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381313DAA544EC5C58D61E8B5C6
+		283C063D5AAB330BC07364FED12D3F2D /* NTInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381313DAA544EC5C58D61E8B5C6DB60F /* NTInputAccessoryView.swift */; };
+		2987E1527A353609F87F0C496F2A6057 /* NTMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F23C2D173CD867ED8C7A6ECF00B31 /* NTMapView.swift */; };
+		2A238724A8CDBB52BAB34E3557B216B8 /* RippleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD77CE99D1C176830F0A37E16C69E0D /* RippleView.swift */; };
+		2A30F32596473AF2AF2232A22CF9E742 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EE283F6D2656E3D8CE15DEBD5E9898 /* SwiftyJSO
