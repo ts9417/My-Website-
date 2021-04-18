@@ -36,4 +36,7 @@
 		21C87B9EA779B9575932B9C8B8BF8A7A /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78056116FBF5F56C4C16A2EFCED69631 /* Roboto-ThinItalic.ttf */; };
 		21D3B1C35302D9CA8B654D1F04CC4003 /* NTNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA070DDE7A26A076271E47E97E59D87E /* NTNavigationViewController.swift */; };
 		226C9755B23F63FCB678D1F4016ACBD8 /* NTEmailAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E6BA5DEFD6DF838C6FEA05483ED082 /* NTEmailAuthViewController.swift */; };
-		2362C75AB9B0A43F353FABBFD5234720 /* NTCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C4E0647BC248B0
+		2362C75AB9B0A43F353FABBFD5234720 /* NTCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C4E0647BC248B0762C9163F038E72 /* NTCarouselView.swift */; };
+		25A1725FA2AAC8D7D5586F56A91598C9 /* NTExpandableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126687D0470DC9F8F1EEAB9FDBE02AC0 /* NTExpandableView.swift */; };
+		2742AF79A17118914E75ED13E4F1A215 /* NTEmailRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BC2DC6440155E1BCC474B8245820A /* NTEmailRegisterViewController.swift */; };
+		283C063D5AAB330BC07364FED12D3F2D /* NTInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381313DAA544EC5C58D61E8B5C6
