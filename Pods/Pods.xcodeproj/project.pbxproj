@@ -46,4 +46,7 @@
 		2A3F0F654EAF1FB4AF28649F493074D4 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81595C1E17EB09112E82CBBC0F4AFF2 /* Log.swift */; };
 		2CCFD151BFA9C2CF9B711393C5100860 /* JTAppleCalendarVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754D02667F5F98C87A52E65A921F30D /* JTAppleCalendarVariables.swift */; };
 		2CCFF2C0AC41098B2CA8BDF8183F625A /* JTAppleCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDEC251416314E8726E9508E36125CF /* JTAppleCollectionReusableView.swift */; };
-		30A
+		30A6ABFCF803DB47DBC65BE9C920F6B3 /* NTTextInputBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65375357AD8EF2E00605305E2CE75057 /* NTTextInputBar.swift */; };
+		3364225196CC37A1713B003E18A127C1 /* JTCalendarProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15788481E8BCF6B60EE8A7B4BB8AF64D /* JTCalendarProtocols.swift */; };
+		34A3CB77D674BB5EDB2B0BCF1B4807F0 /* NTCalendarViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0912752AA665223D51862D91BBB4D641 /* NTCalendarViewCell.swift */; };
+		3626B94094672CB1C9D
