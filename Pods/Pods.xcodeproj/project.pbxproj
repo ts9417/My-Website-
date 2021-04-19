@@ -42,4 +42,8 @@
 		283C063D5AAB330BC07364FED12D3F2D /* NTInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381313DAA544EC5C58D61E8B5C6DB60F /* NTInputAccessoryView.swift */; };
 		2987E1527A353609F87F0C496F2A6057 /* NTMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F23C2D173CD867ED8C7A6ECF00B31 /* NTMapView.swift */; };
 		2A238724A8CDBB52BAB34E3557B216B8 /* RippleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD77CE99D1C176830F0A37E16C69E0D /* RippleView.swift */; };
-		2A30F32596473AF2AF2232A22CF9E742 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EE283F6D2656E3D8CE15DEBD5E9898 /* SwiftyJSO
+		2A30F32596473AF2AF2232A22CF9E742 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2EE283F6D2656E3D8CE15DEBD5E9898 /* SwiftyJSON-dummy.m */; };
+		2A3F0F654EAF1FB4AF28649F493074D4 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81595C1E17EB09112E82CBBC0F4AFF2 /* Log.swift */; };
+		2CCFD151BFA9C2CF9B711393C5100860 /* JTAppleCalendarVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D754D02667F5F98C87A52E65A921F30D /* JTAppleCalendarVariables.swift */; };
+		2CCFF2C0AC41098B2CA8BDF8183F625A /* JTAppleCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDEC251416314E8726E9508E36125CF /* JTAppleCollectionReusableView.swift */; };
+		30A
