@@ -52,4 +52,7 @@
 		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D029C5F2CFE8FE2E74F1488E1D731F /* TaskDelegate.swift */; };
 		39802A623C44841E1615D78ED5BE1846 /* NTChime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FE57FB15BCE71B90B68F237BC18459 /* NTChime.swift */; };
 		3BC278A2B51516BFACABF922EEE8CFFD /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B206AB208D172E20BED277CEA6B5F35 /* Chart.swift */; };
-		3C769545663FE2F62D527EC9B26C214B /* UIViewController.swift in Sources */ = {is
+		3C769545663FE2F62D527EC9B26C214B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53CECA5FA7D23834933EE99BD00B30A /* UIViewController.swift */; };
+		40C21651046B3420B81FC1A4E9C59D56 /* NTFormImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FB43F6677CAAC53D3EB794D7ECBA46 /* NTFormImageViewCell.swift */; };
+		4255B37A3D714AECA75F4D2D7311AE0F /* NTLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0147510E802C1F1E66FED48EBC915438 /* NTLoginViewController.swift */; };
+		428ADB127EF655B0FF992B085B687900 /* Date.swift in Sourc
