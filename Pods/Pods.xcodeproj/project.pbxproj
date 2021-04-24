@@ -58,4 +58,7 @@
 		428ADB127EF655B0FF992B085B687900 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB77095A5FC287B580A961C69100DAE /* Date.swift */; };
 		436B140676F6A00C3CEF8DD21E7F5C8E /* Pods-StockKitTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2145BC017B28C3FD0B7E8731BE8486BA /* Pods-StockKitTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45B3F1C1DCE22CB38CC7697446DBE9C8 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84484D01FA01A3098378EC8594F992 /* UITextField.swift */; };
-		4DB10D3D30B671D6590387E2C1B0DFC4 /* Foundation.framewor
+		4DB10D3D30B671D6590387E2C1B0DFC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		5117DBBAA9C494AE6980DDF353E007C3 /* UIImage+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28015EB5A2C673756861CBBEA523FDB2 /* UIImage+UIImageView.swift */; };
+		5299CE0293D8494876C7C2563DF17334 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5391033CE84C00CD01FE7A15D1334905 /* Roboto-Medium.ttf */; };
+		5387216E723A3C68E851CA15573CDD71 
