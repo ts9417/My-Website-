@@ -61,4 +61,7 @@
 		4DB10D3D30B671D6590387E2C1B0DFC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		5117DBBAA9C494AE6980DDF353E007C3 /* UIImage+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28015EB5A2C673756861CBBEA523FDB2 /* UIImage+UIImageView.swift */; };
 		5299CE0293D8494876C7C2563DF17334 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5391033CE84C00CD01FE7A15D1334905 /* Roboto-Medium.ttf */; };
-		5387216E723A3C68E851CA15573CDD71 
+		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0762AFB82E64B0896617E6035748237B /* Request.swift */; };
+		554E6DD77150C25728BD0DFAFC00DEF1 /* Lorem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E53FAC2EDF8356485286484F144FDE /* Lorem.swift */; };
+		5694C43012E6867B38D863710CC177D8 /* NTAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AA925AF402C02D7528C1E7D3B382BA /* NTAlertViewController.swift */; };
+		5ED49942BAA0140A4FB5002DE1DBF4C0 /* NTImagePickerController.swift in Sources
