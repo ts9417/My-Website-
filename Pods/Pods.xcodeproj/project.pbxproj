@@ -72,4 +72,8 @@
 		637BEB6708CA513A32EED5BF35B637ED /* NTMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BA7AEF00BF53BEB80A2249B47CE645 /* NTMapViewController.swift */; };
 		63C43C62B2270035FBA25028C3D1AAAF /* MultiThreading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CCCE8B061BBAB3F0AA76EDEE88BBF6 /* MultiThreading.swift */; };
 		6400E12C452FC4D6BB35B1A8FDC984C0 /* NTComponents-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07728DBEE04A13EFF6E2674E3D84F909 /* NTComponents-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		640284127B23311A7A71914E2352AA8F /* NTCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC82BFE212482C1C51668B9A69D5157 /* NTCollectionViewCell.
+		640284127B23311A7A71914E2352AA8F /* NTCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC82BFE212482C1C51668B9A69D5157 /* NTCollectionViewCell.swift */; };
+		689B5D35211F951FBA4DF69EA79C276A /* NTCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C428B40699DE13326A8F4BF29CF6AC /* NTCalendarViewController.swift */; };
+		69CF93B42E0909FB7D7F4888F518B19A /* JTAppleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867D821C0CBD99ACA296D3B95A946335 /* JTAppleCell.swift */; };
+		6A006AC103650093A446A496E69FF8BF /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F5BE0B6450D99FEB628A720009149F /* UIColor.swift */; };
+		6B8CAF65884BDD7ABE024E5CB1132D7F /* Roboto-Me
