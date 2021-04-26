@@ -70,4 +70,6 @@
 		62BB874C272D8D8B503A6C3793BD0B10 /* JTAppleCalendarLayoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BA2C833CAEC50E5A0D9278D48B5241 /* JTAppleCalendarLayoutProtocol.swift */; };
 		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B6748FFEB124282B543E52811B0314 /* ServerTrustPolicy.swift */; };
 		637BEB6708CA513A32EED5BF35B637ED /* NTMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BA7AEF00BF53BEB80A2249B47CE645 /* NTMapViewController.swift */; };
-		63C43C62B2270035FBA25028C3D1AAAF /* MultiThreading.
+		63C43C62B2270035FBA25028C3D1AAAF /* MultiThreading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CCCE8B061BBAB3F0AA76EDEE88BBF6 /* MultiThreading.swift */; };
+		6400E12C452FC4D6BB35B1A8FDC984C0 /* NTComponents-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07728DBEE04A13EFF6E2674E3D84F909 /* NTComponents-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		640284127B23311A7A71914E2352AA8F /* NTCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC82BFE212482C1C51668B9A69D5157 /* NTCollectionViewCell.
