@@ -76,4 +76,7 @@
 		689B5D35211F951FBA4DF69EA79C276A /* NTCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C428B40699DE13326A8F4BF29CF6AC /* NTCalendarViewController.swift */; };
 		69CF93B42E0909FB7D7F4888F518B19A /* JTAppleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867D821C0CBD99ACA296D3B95A946335 /* JTAppleCell.swift */; };
 		6A006AC103650093A446A496E69FF8BF /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F5BE0B6450D99FEB628A720009149F /* UIColor.swift */; };
-		6B8CAF65884BDD7ABE024E5CB1132D7F /* Roboto-Me
+		6B8CAF65884BDD7ABE024E5CB1132D7F /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E52CE69B7CEDFB6215291967B888BD4C /* Roboto-MediumItalic.ttf */; };
+		6CD1FEF9E601E1ED2EA5054C5FFF3F45 /* FAType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862B6BD20108EEECB9E308D7271C3505 /* FAType.swift */; };
+		6FC3E8A60CDB296A5799CD228560C2BF /* NTTagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737DB5FF4700518135DFB9E9D238D99 /* NTTagListView.swift */; };
+		713F87504096DA40C12F2706DC82CC41 /* NTTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D
