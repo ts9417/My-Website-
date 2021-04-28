@@ -79,4 +79,7 @@
 		6B8CAF65884BDD7ABE024E5CB1132D7F /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E52CE69B7CEDFB6215291967B888BD4C /* Roboto-MediumItalic.ttf */; };
 		6CD1FEF9E601E1ED2EA5054C5FFF3F45 /* FAType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862B6BD20108EEECB9E308D7271C3505 /* FAType.swift */; };
 		6FC3E8A60CDB296A5799CD228560C2BF /* NTTagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737DB5FF4700518135DFB9E9D238D99 /* NTTagListView.swift */; };
-		713F87504096DA40C12F2706DC82CC41 /* NTTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D
+		713F87504096DA40C12F2706DC82CC41 /* NTTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3090F3FEE51E2B72102274B88E57811 /* NTTabBarController.swift */; };
+		71966F48295A15ED60AA38A8D715DB6C /* NTSearchSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E684AC7BCBF9C0B66E4EB043E9C0710B /* NTSearchSelectViewController.swift */; };
+		72C0F3A3B182D7D6C6407CEA9D487465 /* NTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB043E22A7EADE02A24F756FCA5029 /* NTView.swift */; };
+		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa
