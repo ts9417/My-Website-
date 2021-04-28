@@ -82,4 +82,7 @@
 		713F87504096DA40C12F2706DC82CC41 /* NTTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3090F3FEE51E2B72102274B88E57811 /* NTTabBarController.swift */; };
 		71966F48295A15ED60AA38A8D715DB6C /* NTSearchSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E684AC7BCBF9C0B66E4EB043E9C0710B /* NTSearchSelectViewController.swift */; };
 		72C0F3A3B182D7D6C6407CEA9D487465 /* NTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB043E22A7EADE02A24F756FCA5029 /* NTView.swift */; };
-		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa
+		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		747B3BA0AD81B9A2A4A124F587808877 /* UserInteractionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AAE9090353E886412F9A7F74E2290E /* UserInteractionFunctions.swift */; };
+		7686485563237E9B8045B47CFE98BADC /* UICollectionViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E941A0753313B097798A6AA7A0C890 /* UICollectionViewDelegates.swift */; };
+		76F7E75011845E875B22E4C49D557B75 /* SwiftyJSON.swift in Sources */ = 
