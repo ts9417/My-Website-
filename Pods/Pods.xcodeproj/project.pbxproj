@@ -85,4 +85,7 @@
 		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		747B3BA0AD81B9A2A4A124F587808877 /* UserInteractionFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AAE9090353E886412F9A7F74E2290E /* UserInteractionFunctions.swift */; };
 		7686485563237E9B8045B47CFE98BADC /* UICollectionViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E941A0753313B097798A6AA7A0C890 /* UICollectionViewDelegates.swift */; };
-		76F7E75011845E875B22E4C49D557B75 /* SwiftyJSON.swift in Sources */ = 
+		76F7E75011845E875B22E4C49D557B75 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91BA56C38D3BCAED2012AE8A099FC14 /* SwiftyJSON.swift */; };
+		7737B3072AA7D8837C7D4336D94BB94D /* NTSlideShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DBD82C238316F46B42EE85A7CBD651 /* NTSlideShowViewController.swift */; };
+		7754CBEA4F7CAEF4FC83543D4DA253E6 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F5A8781AD24D29DB736171B463C79A /* Person.swift */; };
+		794E4B8AE9603BE00298D84409420FD1 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B
