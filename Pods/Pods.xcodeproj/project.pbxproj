@@ -88,4 +88,7 @@
 		76F7E75011845E875B22E4C49D557B75 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91BA56C38D3BCAED2012AE8A099FC14 /* SwiftyJSON.swift */; };
 		7737B3072AA7D8837C7D4336D94BB94D /* NTSlideShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DBD82C238316F46B42EE85A7CBD651 /* NTSlideShowViewController.swift */; };
 		7754CBEA4F7CAEF4FC83543D4DA253E6 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F5A8781AD24D29DB736171B463C79A /* Person.swift */; };
-		794E4B8AE9603BE00298D84409420FD1 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B
+		794E4B8AE9603BE00298D84409420FD1 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10D219DAF4DA12C1941594A5DCAE15 /* Icon.swift */; };
+		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15190D970FFF8BB5686C837A151D30D7 /* SessionDelegate.swift */; };
+		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE0D7E159329A43AF1C7AF5A2764240 /* Result.swift */; };
+		7E1AD4437CEBDBFC64F87BDCD50B1DAD /* JTAppleCalendarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A250DA4DD2BE3A4E3F484A0C8E78C /* JTAppleC
