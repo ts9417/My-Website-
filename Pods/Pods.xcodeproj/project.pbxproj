@@ -91,4 +91,7 @@
 		794E4B8AE9603BE00298D84409420FD1 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC10D219DAF4DA12C1941594A5DCAE15 /* Icon.swift */; };
 		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15190D970FFF8BB5686C837A151D30D7 /* SessionDelegate.swift */; };
 		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE0D7E159329A43AF1C7AF5A2764240 /* Result.swift */; };
-		7E1AD4437CEBDBFC64F87BDCD50B1DAD /* JTAppleCalendarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A250DA4DD2BE3A4E3F484A0C8E78C /* JTAppleC
+		7E1AD4437CEBDBFC64F87BDCD50B1DAD /* JTAppleCalendarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A250DA4DD2BE3A4E3F484A0C8E78C /* JTAppleCalendarLayout.swift */; };
+		7F582B9BC6D1FD38C30D69ED74E97AD4 /* NTScrollableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E7A33DDD871C8FF50DDA4A3B3AEAD /* NTScrollableTabBarController.swift */; };
+		80020AD1D420DEA3AD1C5E36A7DA13B6 /* NTComponents-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1CCE49FCBE67ECC91FB4269BAA329 /* NTComponents-dummy.m */; };
+		847626F61E77081F93CECED269169116 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FFE57850EC4BF931
