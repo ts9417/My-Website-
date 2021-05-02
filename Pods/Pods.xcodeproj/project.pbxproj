@@ -94,4 +94,7 @@
 		7E1AD4437CEBDBFC64F87BDCD50B1DAD /* JTAppleCalendarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A250DA4DD2BE3A4E3F484A0C8E78C /* JTAppleCalendarLayout.swift */; };
 		7F582B9BC6D1FD38C30D69ED74E97AD4 /* NTScrollableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897E7A33DDD871C8FF50DDA4A3B3AEAD /* NTScrollableTabBarController.swift */; };
 		80020AD1D420DEA3AD1C5E36A7DA13B6 /* NTComponents-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AB1CCE49FCBE67ECC91FB4269BAA329 /* NTComponents-dummy.m */; };
-		847626F61E77081F93CECED269169116 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FFE57850EC4BF931
+		847626F61E77081F93CECED269169116 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FFE57850EC4BF931C822DBB1E458E9 /* UIApplication.swift */; };
+		8524C5FECB6EB647D04A97488932F56E /* AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0121EA034326819370A4B0898838577A /* AutoLayout.swift */; };
+		85B0A175FF48725FD09D7A7460DD0A7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		85EF41CCFAA7337F0DE0248B488484EB /* NTFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0708409920A7075EEC6B7D70DFAD7
