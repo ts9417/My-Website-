@@ -97,4 +97,7 @@
 		847626F61E77081F93CECED269169116 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FFE57850EC4BF931C822DBB1E458E9 /* UIApplication.swift */; };
 		8524C5FECB6EB647D04A97488932F56E /* AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0121EA034326819370A4B0898838577A /* AutoLayout.swift */; };
 		85B0A175FF48725FD09D7A7460DD0A7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		85EF41CCFAA7337F0DE0248B488484EB /* NTFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0708409920A7075EEC6B7D70DFAD7
+		85EF41CCFAA7337F0DE0248B488484EB /* NTFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0708409920A7075EEC6B7D70DFAD720 /* NTFormViewController.swift */; };
+		87674F7A22B7E974D1E641B88D47AB46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		8AE4CECC627DC70F02D3F0137E9E9DCD /* NTPing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7AAE4AE6B72850E43EB52D9BE015F0 /* NTPing.swift */; };
+		8B4DBF7ED41CA13C05130F04615518A5 /* NTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DA5C835CCB8C8EE2DF0C
