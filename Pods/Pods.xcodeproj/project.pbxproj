@@ -103,4 +103,7 @@
 		8B4DBF7ED41CA13C05130F04615518A5 /* NTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DA5C835CCB8C8EE2DF0C59C41CC59B /* NTNavigationController.swift */; };
 		8B6DFAA944A048B245F209AC18E9A7A3 /* NTCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A7458CB013B92F5EFFFB693DFCB4AB /* NTCollectionViewController.swift */; };
 		8E64A037DFFF4E994C04CBE5BA2E48E2 /* JTAppleCalendarDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E555FB3910A15C53D0D5ED2B8AE24AB /* JTAppleCalendarDelegateProtocol.swift */; };
-		8FAD4BA595C6F9238F825077F2A444CE /* Array
+		8FAD4BA595C6F9238F825077F2A444CE /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D069A9B12C7AE873F623EA939F62D12 /* Array.swift */; };
+		8FF3E38DE181ADA6DB0E71F7DB11C8F5 /* NTTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C0F69E5EF4B0DFBA7D8E8B58CFE20 /* NTTextView.swift */; };
+		90B27825DCA4EBD2C03F3AA4F194A819 /* NTActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F8FF58831541229601B71A2740BDA5 /* NTActionSheetViewController.swift */; };
+		9497554FA29203D1C20F9F0BFCE712C5 /* NTFormCell.swift in Sources */ = {isa = PBXBuildFile; fi
