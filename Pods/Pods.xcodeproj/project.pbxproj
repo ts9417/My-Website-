@@ -106,4 +106,7 @@
 		8FAD4BA595C6F9238F825077F2A444CE /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D069A9B12C7AE873F623EA939F62D12 /* Array.swift */; };
 		8FF3E38DE181ADA6DB0E71F7DB11C8F5 /* NTTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C0F69E5EF4B0DFBA7D8E8B58CFE20 /* NTTextView.swift */; };
 		90B27825DCA4EBD2C03F3AA4F194A819 /* NTActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F8FF58831541229601B71A2740BDA5 /* NTActionSheetViewController.swift */; };
-		9497554FA29203D1C20F9F0BFCE712C5 /* NTFormCell.swift in Sources */ = {isa = PBXBuildFile; fi
+		9497554FA29203D1C20F9F0BFCE712C5 /* NTFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF13FB6828A0345660FD106C5B596592 /* NTFormCell.swift */; };
+		969711D1F17E1DB333A08188D5F45274 /* NTLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87BAC5A16BE66438BD24D076E1EE7D1 /* NTLabel.swift */; };
+		969D187845A11F335564CC6F451D9FA9 /* NTTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3183EFFC22236D1B0166743EBEE36243 /* NTTableViewController.swift */; };
+		98E710F848E15CD0ADDCAA2C5BE7AC75 /* NTMagicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D30378679
