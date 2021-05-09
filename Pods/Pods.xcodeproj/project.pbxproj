@@ -109,4 +109,7 @@
 		9497554FA29203D1C20F9F0BFCE712C5 /* NTFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF13FB6828A0345660FD106C5B596592 /* NTFormCell.swift */; };
 		969711D1F17E1DB333A08188D5F45274 /* NTLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87BAC5A16BE66438BD24D076E1EE7D1 /* NTLabel.swift */; };
 		969D187845A11F335564CC6F451D9FA9 /* NTTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3183EFFC22236D1B0166743EBEE36243 /* NTTableViewController.swift */; };
-		98E710F848E15CD0ADDCAA2C5BE7AC75 /* NTMagicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D30378679
+		98E710F848E15CD0ADDCAA2C5BE7AC75 /* NTMagicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3037867983AAD482CDF5FC2D1E5205 /* NTMagicView.swift */; };
+		9A14E17E05156FEF9ABE3228AE53760B /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADFE726B0B0F86591698E99402CD604 /* UISearchBar.swift */; };
+		9A6353B422E1BB225A39B27DBD780FE4 /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 411ADFDAE44C04D862E8E4BB585DF576 /* BebasNeue.otf */; };
+		9C7FECD085ABCFB0DA29028A10A45240 /* DiscardableImageCacheItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DC8EEDCC64D1175A172C5A7BEDA75C /* DiscardableImageCacheItem.swift *
