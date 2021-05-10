@@ -112,4 +112,7 @@
 		98E710F848E15CD0ADDCAA2C5BE7AC75 /* NTMagicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3037867983AAD482CDF5FC2D1E5205 /* NTMagicView.swift */; };
 		9A14E17E05156FEF9ABE3228AE53760B /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADFE726B0B0F86591698E99402CD604 /* UISearchBar.swift */; };
 		9A6353B422E1BB225A39B27DBD780FE4 /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 411ADFDAE44C04D862E8E4BB585DF576 /* BebasNeue.otf */; };
-		9C7FECD085ABCFB0DA29028A10A45240 /* DiscardableImageCacheItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DC8EEDCC64D1175A172C5A7BEDA75C /* DiscardableImageCacheItem.swift *
+		9C7FECD085ABCFB0DA29028A10A45240 /* DiscardableImageCacheItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DC8EEDCC64D1175A172C5A7BEDA75C /* DiscardableImageCacheItem.swift */; };
+		9D1AB4AF456666944921BB7288225DD3 /* ChartSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A286F66A33E2445A4B752171A5E074 /* ChartSeries.swift */; };
+		9EC527865ED3CCDA99AE483870A91C80 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB2A5D43103B8EFB90387CE5209E60A1 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BE5417291749CEC56B2C6F
