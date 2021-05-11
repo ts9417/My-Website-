@@ -115,4 +115,7 @@
 		9C7FECD085ABCFB0DA29028A10A45240 /* DiscardableImageCacheItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DC8EEDCC64D1175A172C5A7BEDA75C /* DiscardableImageCacheItem.swift */; };
 		9D1AB4AF456666944921BB7288225DD3 /* ChartSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A286F66A33E2445A4B752171A5E074 /* ChartSeries.swift */; };
 		9EC527865ED3CCDA99AE483870A91C80 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB2A5D43103B8EFB90387CE5209E60A1 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BE5417291749CEC56B2C6F
+		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BE5417291749CEC56B2C6FD300F7CE /* AFError.swift */; };
+		9EE4EDC8A984D32B854C2C4DBE73C7BD /* NTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B488576F8A813705196ED4CE54F65D63 /* NTTableViewCell.swift */; };
+		9F717EA5EE4AC604C925165E2C365CCF /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA85EE3FA5E004EA86166913112F4B /* Int.swift */; };
+		A0831558D61850E38924FDEE2987AE57 /* SwiftChart-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EDFAF8295CE3CAC17EF6C3A437201679 /* SwiftChart-umbrella.h */; settings = {ATTR
