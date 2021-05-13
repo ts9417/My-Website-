@@ -118,4 +118,7 @@
 		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BE5417291749CEC56B2C6FD300F7CE /* AFError.swift */; };
 		9EE4EDC8A984D32B854C2C4DBE73C7BD /* NTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B488576F8A813705196ED4CE54F65D63 /* NTTableViewCell.swift */; };
 		9F717EA5EE4AC604C925165E2C365CCF /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA85EE3FA5E004EA86166913112F4B /* Int.swift */; };
-		A0831558D61850E38924FDEE2987AE57 /* SwiftChart-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EDFAF8295CE3CAC17EF6C3A437201679 /* SwiftChart-umbrella.h */; settings = {ATTR
+		A0831558D61850E38924FDEE2987AE57 /* SwiftChart-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EDFAF8295CE3CAC17EF6C3A437201679 /* SwiftChart-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D3FCCC0B98945D2610372CAA9E34C69 /* NetworkReachabilityManager.swift */; };
+		A2F73EFA9509383DBCDC7A38AD838199 /* GMDType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50359B796CF0C13E3664CA1ECBCA5FC7 /* GMDType.swift */; };
+		A33140A1CABAED350E132A0808A70F77 /* NTActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF9BF061111AB5F77776F046F4AD00C /* NTActivityView
