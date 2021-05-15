@@ -128,4 +128,7 @@
 		AA58B48F9190B92E6EE87416048E1F6E /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA86DAD034D7E792D1B1C4E4EBD0917 /* CALayer.swift */; };
 		AC095D148945C189995F957A7AB4AD49 /* NTImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4569C4BD227EF707CC20EFD328A16720 /* NTImageView.swift */; };
 		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C32F523CC060C5B1708A0158B7158A5 /* SessionManager.swift */; };
-		AECA57CE337D653100D962F05F9ED616 /* NTFormActionCell.sw
+		AECA57CE337D653100D962F05F9ED616 /* NTFormActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E453CF0B2259CAFD8354A5D00BEA4E94 /* NTFormActionCell.swift */; };
+		B278D23225D95E2A795E81B62345A9C4 /* NTToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF088EA7CB3F7B54EB8B6C7E20F62EE /* NTToolbar.swift */; };
+		B382C6BA01D5294EF4F5D26D4B52854D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		B57B2351D9A3B55640404FA9BD286544 /* NTFormInputCell.swift in Sources */ = {isa = PBXBuildFile
