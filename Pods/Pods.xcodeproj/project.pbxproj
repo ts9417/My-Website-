@@ -137,4 +137,7 @@
 		B6A8D6FA876E017562FAD01A4E777180 /* NTTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B251BD58ED1D10C85F206495BE9F11B /* NTTableViewHeaderFooterView.swift */; };
 		B8FA60314A8A19E02AC807C2237C1208 /* NTSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C7BFCDCC9492DA0EA5789FA511400 /* NTSearchViewController.swift */; };
 		BA4E6C87F77B25CA647FF02BD407A03B /* NTFormDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7E49FF56FDE3491CE5A60C3269F315 /* NTFormDatasource.swift */; };
-		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileR
+		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD9802E7CCD894E40D776AF98315744 /* Validation.swift */; };
+		BCFF9642D4203C747E20F75969A10740 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7F835F9C5337EA6FCFD598E7BB12601 /* Roboto-LightItalic.ttf */; };
+		BD004558F60F5A08299025D3F8B225FC /* PulleyPassthroughScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB6C507337C979F565CD47DBBEB2AF6 /* PulleyPassthroughScrollView.swift */; };
+		BD7A0517155C15394203AC00E5F03169 /* NTProgressLineIndicator.swift in Sour
