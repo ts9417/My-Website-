@@ -140,4 +140,7 @@
 		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD9802E7CCD894E40D776AF98315744 /* Validation.swift */; };
 		BCFF9642D4203C747E20F75969A10740 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7F835F9C5337EA6FCFD598E7BB12601 /* Roboto-LightItalic.ttf */; };
 		BD004558F60F5A08299025D3F8B225FC /* PulleyPassthroughScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB6C507337C979F565CD47DBBEB2AF6 /* PulleyPassthroughScrollView.swift */; };
-		BD7A0517155C15394203AC00E5F03169 /* NTProgressLineIndicator.swift in Sour
+		BD7A0517155C15394203AC00E5F03169 /* NTProgressLineIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A230B28F1105B42E84995EF8124FAC03 /* NTProgressLineIndicator.swift */; };
+		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB93AA1376FB21FB8444EAFFCBFFFBF3 /* ParameterEncoding.swift */; };
+		BE7C9D23B69FBFD13276F45572D2CD9C /* NTSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEA24C076A78E269879BE19AB548194 /* NTSearchBarView.swift */; };
+		BFDF75D23E561D96AE41D18DBB7DD2F3 /* NTProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB547E1AC7
