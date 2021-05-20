@@ -143,4 +143,8 @@
 		BD7A0517155C15394203AC00E5F03169 /* NTProgressLineIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A230B28F1105B42E84995EF8124FAC03 /* NTProgressLineIndicator.swift */; };
 		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB93AA1376FB21FB8444EAFFCBFFFBF3 /* ParameterEncoding.swift */; };
 		BE7C9D23B69FBFD13276F45572D2CD9C /* NTSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAEA24C076A78E269879BE19AB548194 /* NTSearchBarView.swift */; };
-		BFDF75D23E561D96AE41D18DBB7DD2F3 /* NTProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB547E1AC7
+		BFDF75D23E561D96AE41D18DBB7DD2F3 /* NTProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB547E1AC7FCDCAF95827F8ED50366EB /* NTProgressHUD.swift */; };
+		BFF697F01CE10B940AB8B22C05CCBB39 /* UIScrollViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FB7703DA32FF136DD59317DFB7BF6D /* UIScrollViewDelegates.swift */; };
+		C2808A269FE1B71B43F6DC8D73F444D4 /* NTFormDateInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8206277308F4BD8F49AEF2B30C6C71FA /* NTFormDateInputCell.swift */; };
+		C4B479CECD2FD402ECADD4E96754C41F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3BE6E65D3744FA5798751FCDCCD0F /* String.swift */; };
+		
