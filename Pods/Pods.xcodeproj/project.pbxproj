@@ -147,4 +147,7 @@
 		BFF697F01CE10B940AB8B22C05CCBB39 /* UIScrollViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FB7703DA32FF136DD59317DFB7BF6D /* UIScrollViewDelegates.swift */; };
 		C2808A269FE1B71B43F6DC8D73F444D4 /* NTFormDateInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8206277308F4BD8F49AEF2B30C6C71FA /* NTFormDateInputCell.swift */; };
 		C4B479CECD2FD402ECADD4E96754C41F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3BE6E65D3744FA5798751FCDCCD0F /* String.swift */; };
-		
+		C556D6C222923B5A90EE7866FC5F8981 /* SwiftChart-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8FE01ACBE2D1894E370C00188C536EF /* SwiftChart-dummy.m */; };
+		C7F3C09CAF5F8D3BBB0F1D8E42F251AD /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B59B35175046714B45AF96830A10A7BB /* Roboto-Bold.ttf */; };
+		C8AA8AA4B092E17C2AB412D3874C66F2 /* NTScrollableTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423DED8724AF5B4358D63EBA50F042D /* NTScrollableTabBar.swift */; };
+		CA396CEF828E260BC23A62D49BBF2
