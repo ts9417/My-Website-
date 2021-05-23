@@ -150,4 +150,7 @@
 		C556D6C222923B5A90EE7866FC5F8981 /* SwiftChart-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C8FE01ACBE2D1894E370C00188C536EF /* SwiftChart-dummy.m */; };
 		C7F3C09CAF5F8D3BBB0F1D8E42F251AD /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B59B35175046714B45AF96830A10A7BB /* Roboto-Bold.ttf */; };
 		C8AA8AA4B092E17C2AB412D3874C66F2 /* NTScrollableTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B423DED8724AF5B4358D63EBA50F042D /* NTScrollableTabBar.swift */; };
-		CA396CEF828E260BC23A62D49BBF2
+		CA396CEF828E260BC23A62D49BBF20B1 /* NTRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A6DE1F1FEDB85CCF93B38874453B9A /* NTRefreshControl.swift */; };
+		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A02F19649A406ADD3FF00E28DC3C7AD /* Response.swift */; };
+		CC1561E936FB8F5008CA4CF500903ABF /* NTFormSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56115D6D04F24CE6C51538E824A8086A /* NTFormSection.swift */; };
+		CD8003AF497800CBD61AD860F5A65ABA /* Roboto-Black.ttf in Resources */ = {
