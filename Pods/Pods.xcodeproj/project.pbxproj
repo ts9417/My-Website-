@@ -153,4 +153,7 @@
 		CA396CEF828E260BC23A62D49BBF20B1 /* NTRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A6DE1F1FEDB85CCF93B38874453B9A /* NTRefreshControl.swift */; };
 		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A02F19649A406ADD3FF00E28DC3C7AD /* Response.swift */; };
 		CC1561E936FB8F5008CA4CF500903ABF /* NTFormSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56115D6D04F24CE6C51538E824A8086A /* NTFormSection.swift */; };
-		CD8003AF497800CBD61AD860F5A65ABA /* Roboto-Black.ttf in Resources */ = {
+		CD8003AF497800CBD61AD860F5A65ABA /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 951AC698C8D752472BF6FCE89E85E6A0 /* Roboto-Black.ttf */; };
+		CEF39FF7875FEC9AC54077632023349A /* NTCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DEB8D7762AFA8FE505728908C12CF2 /* NTCalendarView.swift */; };
+		CF0E39B54E2B8C82C605D128174CF2CA /* NTFormTagInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF750E11FD7E4BC75433DCBEBFAD26F /* NTFormTagInputCell.swift */; };
+		D4CA57DBA73A5B0737DB6103E4B0E6DF /* Pods-StockKit-dummy.m in Sources */ = {isa 
