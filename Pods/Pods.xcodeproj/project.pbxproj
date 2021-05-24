@@ -156,4 +156,7 @@
 		CD8003AF497800CBD61AD860F5A65ABA /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 951AC698C8D752472BF6FCE89E85E6A0 /* Roboto-Black.ttf */; };
 		CEF39FF7875FEC9AC54077632023349A /* NTCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DEB8D7762AFA8FE505728908C12CF2 /* NTCalendarView.swift */; };
 		CF0E39B54E2B8C82C605D128174CF2CA /* NTFormTagInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF750E11FD7E4BC75433DCBEBFAD26F /* NTFormTagInputCell.swift */; };
-		D4CA57DBA73A5B0737DB6103E4B0E6DF /* Pods-StockKit-dummy.m in Sources */ = {isa 
+		D4CA57DBA73A5B0737DB6103E4B0E6DF /* Pods-StockKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F5705E82C7843DCE9461B07832FD10 /* Pods-StockKit-dummy.m */; };
+		D4F2184B58F2651DF3AC37512F0D0568 /* NTTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116FE86B8B669EF792139A2013760335 /* NTTabBar.swift */; };
+		D64D54A3E7E97DFB4F753F752780E319 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A58B5EDBD439464A84EE6CD2BF0BA7D8 /* MaterialIcons.ttf */; };
+		D9707250710C349423FE02BA78309DDD /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1119094ECD0
