@@ -162,4 +162,7 @@
 		D9707250710C349423FE02BA78309DDD /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1119094ECD015A314E7A9361A171ABC /* Roboto-BlackItalic.ttf */; };
 		D9D933038D380135E270E73C88E9D572 /* NTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD26267863232CA0D3ABFEE897A6EF /* NTViewController.swift */; };
 		DB503C22DAB35EEA4B735B8B18C234C4 /* CircularTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D639A01A4731BF835E43E77EFC60CB /* CircularTransitionAnimator.swift */; };
-		DD11E1AE2F4274631C7DA4EE608DFCC9 /* NTFormLongInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5574E1719D936596D
+		DD11E1AE2F4274631C7DA4EE608DFCC9 /* NTFormLongInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5574E1719D936596DDE01F61309D5758 /* NTFormLongInputCell.swift */; };
+		DEC291596C0D624513643182D7042FC5 /* NTFormAnimatedInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12AADCD884D237F89FFC5620BD9DCBD /* NTFormAnimatedInputCell.swift */; };
+		E10CB6F3925DB00C3EA4682147E0EA6E /* NTMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D44FF170C92AB432C08E0480FF25940 /* NTMapAnnotation.swift */; };
+		E1E7D3C39F53903A11ACD3A7E966525E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D28F75FA8BBA0A2F4C84DE
