@@ -168,4 +168,8 @@
 		E1E7D3C39F53903A11ACD3A7E966525E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D28F75FA8BBA0A2F4C84DE8A3C37AE /* Font.swift */; };
 		E23E024B50B5C475E28DB0C2283365FF /* NTScrollableTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E2B125632A417B7295E67ECEADE349 /* NTScrollableTabBarItem.swift */; };
 		E5D5E59F486EC3AA695F6E1946B39F00 /* NTCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133DF782B83F62B312731747DF313BF8 /* NTCheckbox.swift */; };
-		E5E292C952711698B32A24FADDD48FC6 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8789CE2B2CD8A15FC4FC273BB105AAB /* Roboto-Italic.ttf *
+		E5E292C952711698B32A24FADDD48FC6 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8789CE2B2CD8A15FC4FC273BB105AAB /* Roboto-Italic.ttf */; };
+		E6B6AC616CF48D91874A29E87EAB0FF3 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 099F7B2C7A0DD78A4BC0EABC8E6E76B7 /* Roboto-Regular.ttf */; };
+		E70202FE7666C1FF0BA8AEC794141391 /* NTPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A687DBA2602AE3687BF692AADF54056 /* NTPageViewController.swift */; };
+		E816C8B4A702E7454B8A20248186CDFB /* NTMapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5694091408503D6DFF6B572A72CCC3A4 /* NTMapAnnotationView.swift */; };
+		EA039F30E925994BB19
