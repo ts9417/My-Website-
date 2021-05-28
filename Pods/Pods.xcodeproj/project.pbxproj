@@ -174,4 +174,8 @@
 		E816C8B4A702E7454B8A20248186CDFB /* NTMapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5694091408503D6DFF6B572A72CCC3A4 /* NTMapAnnotationView.swift */; };
 		EA039F30E925994BB19ACC8AC65986A2 /* Pods-StockKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A11A34C96044266C75F7014C7A10B5D /* Pods-StockKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EA48B99B25CCC4761FAAFCBC7382CE6C /* NTDrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71068517ED0A48312EC8B1D8507BF2 /* NTDrawerController.swift */; };
-		EB3FAC4D1794D8A2BE8666D07B6F2D0E /* PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C9BF56FAF2318F54E80019116B24A /* PulleyViewController.sw
+		EB3FAC4D1794D8A2BE8666D07B6F2D0E /* PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C9BF56FAF2318F54E80019116B24A /* PulleyViewController.swift */; };
+		EBB1FDA13C50351E536D42DE2B4DEE86 /* NTFormControlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC055F14AA50348AEC9097A30E17268B /* NTFormControlCell.swift */; };
+		EC702E2A5F9BE11C8E9952A21BEA5D0A /* NTSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D35CFA7D61D67E9D04A84AB14446A40 /* NTSwitch.swift */; };
+		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C629397D9890AC3CC053F49CDC4C363 /* Notifications.swift */; };
+	
