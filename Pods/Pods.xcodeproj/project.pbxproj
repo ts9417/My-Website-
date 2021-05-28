@@ -172,4 +172,6 @@
 		E6B6AC616CF48D91874A29E87EAB0FF3 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 099F7B2C7A0DD78A4BC0EABC8E6E76B7 /* Roboto-Regular.ttf */; };
 		E70202FE7666C1FF0BA8AEC794141391 /* NTPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A687DBA2602AE3687BF692AADF54056 /* NTPageViewController.swift */; };
 		E816C8B4A702E7454B8A20248186CDFB /* NTMapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5694091408503D6DFF6B572A72CCC3A4 /* NTMapAnnotationView.swift */; };
-		EA039F30E925994BB19
+		EA039F30E925994BB19ACC8AC65986A2 /* Pods-StockKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A11A34C96044266C75F7014C7A10B5D /* Pods-StockKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA48B99B25CCC4761FAAFCBC7382CE6C /* NTDrawerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE71068517ED0A48312EC8B1D8507BF2 /* NTDrawerController.swift */; };
+		EB3FAC4D1794D8A2BE8666D07B6F2D0E /* PulleyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C9BF56FAF2318F54E80019116B24A /* PulleyViewController.sw
