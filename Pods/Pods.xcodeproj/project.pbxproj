@@ -178,4 +178,6 @@
 		EBB1FDA13C50351E536D42DE2B4DEE86 /* NTFormControlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC055F14AA50348AEC9097A30E17268B /* NTFormControlCell.swift */; };
 		EC702E2A5F9BE11C8E9952A21BEA5D0A /* NTSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D35CFA7D61D67E9D04A84AB14446A40 /* NTSwitch.swift */; };
 		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C629397D9890AC3CC053F49CDC4C363 /* Notifications.swift */; };
-	
+		F0747D62245689351D740D47E86FF76A /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F258BA908A947FAD7BDF2B3685617E /* NSMutableAttributedString.swift */; };
+		F13EED3195A17A7FEAB286F5BA802E73 /* NTCollectionDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E380B3DF0AE14FAE2978AA4FC89235 /* NTCollectionDatasource.swift */; };
+		F1661B937B078B03AFCA09C97F3B6618 /* CalendarEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6B03400C15070377028F07BD326279 /* Calenda
