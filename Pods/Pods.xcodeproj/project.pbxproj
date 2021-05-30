@@ -180,4 +180,8 @@
 		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C629397D9890AC3CC053F49CDC4C363 /* Notifications.swift */; };
 		F0747D62245689351D740D47E86FF76A /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F258BA908A947FAD7BDF2B3685617E /* NSMutableAttributedString.swift */; };
 		F13EED3195A17A7FEAB286F5BA802E73 /* NTCollectionDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E380B3DF0AE14FAE2978AA4FC89235 /* NTCollectionDatasource.swift */; };
-		F1661B937B078B03AFCA09C97F3B6618 /* CalendarEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6B03400C15070377028F07BD326279 /* Calenda
+		F1661B937B078B03AFCA09C97F3B6618 /* CalendarEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6B03400C15070377028F07BD326279 /* CalendarEnums.swift */; };
+		F48D01DD16F4EF7CED4302611F6CB8C3 /* NTSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B983DDAD75D190471C272A14E019CF75 /* NTSegmentedControl.swift */; };
+		F503166F80EAE34CFCE05B64D821E26E /* ChartColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F2EA65A4445912282451ADE33D9ED /* ChartColors.swift */; };
+		F528A7C4F880A28F8DBA28D038878DA6 /* NTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF8C52D17DF6FEA4B8153DD13A6802 /* NTButton.swift */; };
+		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* Resp
