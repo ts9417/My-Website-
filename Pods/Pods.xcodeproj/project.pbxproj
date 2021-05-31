@@ -184,4 +184,7 @@
 		F48D01DD16F4EF7CED4302611F6CB8C3 /* NTSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B983DDAD75D190471C272A14E019CF75 /* NTSegmentedControl.swift */; };
 		F503166F80EAE34CFCE05B64D821E26E /* ChartColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F2EA65A4445912282451ADE33D9ED /* ChartColors.swift */; };
 		F528A7C4F880A28F8DBA28D038878DA6 /* NTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF8C52D17DF6FEA4B8153DD13A6802 /* NTButton.swift */; };
-		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* Resp
+		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425F953857DC1E691B3F96DDC2067EF3 /* ResponseSerialization.swift */; };
+		F8562C13E84F1244ED71ADB2B9800ABE /* NTLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196323B17F3CDBC6991920710D7FAA76 /* NTLandingViewController.swift */; };
+		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED5C5581EFE6928DD02BDDE550A4B69 /* Alamofire.swift */; };
+		F992A27DF3E56C408A2723221479BCEA /* NTAnimatedColle
