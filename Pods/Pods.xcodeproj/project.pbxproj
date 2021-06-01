@@ -190,4 +190,6 @@
 		F992A27DF3E56C408A2723221479BCEA /* NTAnimatedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E17BA11C3ADBC9B727C76CB7643AD90 /* NTAnimatedCollectionViewCell.swift */; };
 		FC119FCC0158DFF3133E05B08E1922AA /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A28AC33A2F1FD4163300BF9722D16995 /* FontAwesome.ttf */; };
 		FC1C76B23EEF5AAEADAA10809EED979F /* NTCollectionUserHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E787523ADBC3C77A3B30CC32280267 /* NTCollectionUserHeaderCell.swift */; };
-		FE
+		FE65F641559E293D1CC6AFE26EF3D117 /* CalendarStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFD5B5D55B645A08A797BE46DE7900C /* CalendarStructs.swift */; };
+		FF20E1D976799FCEF68A267061C68F91 /* NTDrawerBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDCA98E3240D2ED2E9F8583A5538E6B /* NTDrawerBarButtonItem.swift */; };
+		FF4CD8A42AE9F497C83B26A8416CDD3B /* NTTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1677FBC840FB1BB4F9936DBA3AAF9
