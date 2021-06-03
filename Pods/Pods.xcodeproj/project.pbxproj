@@ -192,4 +192,14 @@
 		FC1C76B23EEF5AAEADAA10809EED979F /* NTCollectionUserHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E787523ADBC3C77A3B30CC32280267 /* NTCollectionUserHeaderCell.swift */; };
 		FE65F641559E293D1CC6AFE26EF3D117 /* CalendarStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFD5B5D55B645A08A797BE46DE7900C /* CalendarStructs.swift */; };
 		FF20E1D976799FCEF68A267061C68F91 /* NTDrawerBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDCA98E3240D2ED2E9F8583A5538E6B /* NTDrawerBarButtonItem.swift */; };
-		FF4CD8A42AE9F497C83B26A8416CDD3B /* NTTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1677FBC840FB1BB4F9936DBA3AAF9
+		FF4CD8A42AE9F497C83B26A8416CDD3B /* NTTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1677FBC840FB1BB4F9936DBA3AAF92C /* NTTableView.swift */; };
+		FF55804365F972A791933140C60604F0 /* NTAnimatedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF029FD7F21CBE167CB28F3A65FBD4D /* NTAnimatedTextField.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07FA6CCD65AC864863068003BCCC9D04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 761A843AC76B9967F1B70EAC3FC04E02;
+			remote
