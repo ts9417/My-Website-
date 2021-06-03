@@ -202,4 +202,18 @@
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 761A843AC76B9967F1B70EAC3FC04E02;
-			remote
+			remoteInfo = NTComponents;
+		};
+		2BA289674AC15E8487ED59C1B30C7931 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88E9EC28B8B46C3631E6B242B50F4442;
+			remoteInfo = Alamofire;
+		};
+		3500B0CEF0280300F8EE5EA78AED3F3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 507A81C8DC0A61147394FEB1EE317808;
+			remoteInfo =
