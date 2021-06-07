@@ -233,4 +233,7 @@
 		0396CD71B2F69E1047E6DEF890E062A9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03C428B40699DE13326A8F4BF29CF6AC /* NTCalendarViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTCalendarViewController.swift; sourceTree = "<group>"; };
 		0521092C7149569650BC1A457468047F /* NTComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NTComponents.framework; path = NTComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		058C7BFCDCC9492DA0EA5789FA511400 /* NTSearchViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTSearchView
+		058C7BFCDCC9492DA0EA5789FA511400 /* NTSearchViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTSearchViewController.swift; sourceTree = "<group>"; };
+		067C0F69E5EF4B0DFBA7D8E8B58CFE20 /* NTTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTTextView.swift; sourceTree = "<group>"; };
+		0762AFB82E64B0896617E6035748237B /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		07728DBEE04A13EFF6E2674E3D84F909 /* NTComponents-umbrella.h */ = {isa = PBXFileReference; includeInIndex
