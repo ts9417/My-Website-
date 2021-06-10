@@ -239,4 +239,7 @@
 		07728DBEE04A13EFF6E2674E3D84F909 /* NTComponents-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NTComponents-umbrella.h"; sourceTree = "<group>"; };
 		0912752AA665223D51862D91BBB4D641 /* NTCalendarViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTCalendarViewCell.swift; sourceTree = "<group>"; };
 		099F7B2C7A0DD78A4BC0EABC8E6E76B7 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
-		0AD77CE99D1C176830F0A37E16C69E0D /* RippleView.swift */ = {isa = PBXFileReference
+		0AD77CE99D1C176830F0A37E16C69E0D /* RippleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RippleView.swift; sourceTree = "<group>"; };
+		0ADFE726B0B0F86591698E99402CD604 /* UISearchBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UISearchBar.swift; sourceTree = "<group>"; };
+		0EFD26267863232CA0D3ABFEE897A6EF /* NTViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTViewController.swift; sourceTree = "<group>"; };
+		
