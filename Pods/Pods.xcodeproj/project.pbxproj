@@ -247,4 +247,6 @@
 		11AA9CB894EF10D2E5CF6BBDB935DA8A /* NTCollectionViewDefaultCells.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTCollectionViewDefaultCells.swift; sourceTree = "<group>"; };
 		11FB43F6677CAAC53D3EB794D7ECBA46 /* NTFormImageViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTFormImageViewCell.swift; sourceTree = "<group>"; };
 		126687D0470DC9F8F1EEAB9FDBE02AC0 /* NTExpandableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTExpandableView.swift; sourceTree = "<group>"; };
-		133DF782B83F62B312
+		133DF782B83F62B312731747DF313BF8 /* NTCheckbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTCheckbox.swift; sourceTree = "<group>"; };
+		15190D970FFF8BB5686C837A151D30D7 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		15788481E8BCF6B60EE8A7B4BB8AF64D /* JTCalendarProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift;
