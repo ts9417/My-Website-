@@ -249,4 +249,7 @@
 		126687D0470DC9F8F1EEAB9FDBE02AC0 /* NTExpandableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTExpandableView.swift; sourceTree = "<group>"; };
 		133DF782B83F62B312731747DF313BF8 /* NTCheckbox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTCheckbox.swift; sourceTree = "<group>"; };
 		15190D970FFF8BB5686C837A151D30D7 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
-		15788481E8BCF6B60EE8A7B4BB8AF64D /* JTCalendarProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift;
+		15788481E8BCF6B60EE8A7B4BB8AF64D /* JTCalendarProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JTCalendarProtocols.swift; sourceTree = "<group>"; };
+		16E6BA5DEFD6DF838C6FEA05483ED082 /* NTEmailAuthViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTEmailAuthViewController.swift; sourceTree = "<group>"; };
+		17AA85EE3FA5E004EA86166913112F4B /* Int.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		196323B17F3CDBC6991920710D7FAA76 /* NTLand
