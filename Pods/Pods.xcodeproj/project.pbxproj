@@ -252,4 +252,6 @@
 		15788481E8BCF6B60EE8A7B4BB8AF64D /* JTCalendarProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JTCalendarProtocols.swift; sourceTree = "<group>"; };
 		16E6BA5DEFD6DF838C6FEA05483ED082 /* NTEmailAuthViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTEmailAuthViewController.swift; sourceTree = "<group>"; };
 		17AA85EE3FA5E004EA86166913112F4B /* Int.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
-		196323B17F3CDBC6991920710D7FAA76 /* NTLand
+		196323B17F3CDBC6991920710D7FAA76 /* NTLandingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTLandingViewController.swift; sourceTree = "<group>"; };
+		1CAB043E22A7EADE02A24F756FCA5029 /* NTView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTView.swift; sourceTree = "<group>"; };
+		1CDEC251416314E8726E9508E36125CF /* JTAppleCollectionReusableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path 
