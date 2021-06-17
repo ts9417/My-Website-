@@ -254,4 +254,7 @@
 		17AA85EE3FA5E004EA86166913112F4B /* Int.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		196323B17F3CDBC6991920710D7FAA76 /* NTLandingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTLandingViewController.swift; sourceTree = "<group>"; };
 		1CAB043E22A7EADE02A24F756FCA5029 /* NTView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTView.swift; sourceTree = "<group>"; };
-		1CDEC251416314E8726E9508E36125CF /* JTAppleCollectionReusableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path 
+		1CDEC251416314E8726E9508E36125CF /* JTAppleCollectionReusableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JTAppleCollectionReusableView.swift; sourceTree = "<group>"; };
+		1D44FF170C92AB432C08E0480FF25940 /* NTMapAnnotation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTMapAnnotation.swift; sourceTree = "<group>"; };
+		1F05D2E8442A50BC8C85D95D30F3D4D5 /* Pods-StockKit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StockKit-acknowledgements.markdown"; sourceTree = "<group>"; };
+		20A
