@@ -257,4 +257,6 @@
 		1CDEC251416314E8726E9508E36125CF /* JTAppleCollectionReusableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JTAppleCollectionReusableView.swift; sourceTree = "<group>"; };
 		1D44FF170C92AB432C08E0480FF25940 /* NTMapAnnotation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTMapAnnotation.swift; sourceTree = "<group>"; };
 		1F05D2E8442A50BC8C85D95D30F3D4D5 /* Pods-StockKit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StockKit-acknowledgements.markdown"; sourceTree = "<group>"; };
-		20A
+		20AC9B381F7F9462B4A692752988D79C /* JTAppleCalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JTAppleCalendarView.swift; sourceTree = "<group>"; };
+		2145BC017B28C3FD0B7E8731BE8486BA /* Pods-StockKitTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StockKitTests-umbrella.h"; sourceTree = "<group>"; };
+		21D639A01A4731BF835E43E77EFC60CB /* CircularTransitionAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnow
