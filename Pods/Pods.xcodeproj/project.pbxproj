@@ -259,4 +259,7 @@
 		1F05D2E8442A50BC8C85D95D30F3D4D5 /* Pods-StockKit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StockKit-acknowledgements.markdown"; sourceTree = "<group>"; };
 		20AC9B381F7F9462B4A692752988D79C /* JTAppleCalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JTAppleCalendarView.swift; sourceTree = "<group>"; };
 		2145BC017B28C3FD0B7E8731BE8486BA /* Pods-StockKitTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StockKitTests-umbrella.h"; sourceTree = "<group>"; };
-		21D639A01A4731BF835E43E77EFC60CB /* CircularTransitionAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnow
+		21D639A01A4731BF835E43E77EFC60CB /* CircularTransitionAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CircularTransitionAnimator.swift; sourceTree = "<group>"; };
+		21DA5C835CCB8C8EE2DF0C59C41CC59B /* NTNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTNavigationController.swift; sourceTree = "<group>"; };
+		23A6DE1F1FEDB85CCF93B38874453B9A /* NTRefreshControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTRefreshControl.swift; sourceTree = "<group>"; };
+		25D6E58EDC69EF7749790B4657D7
