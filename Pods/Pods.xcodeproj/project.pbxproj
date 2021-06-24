@@ -267,4 +267,6 @@
 		27EA4236E58E3C99D3B3E67CC9B968D6 /* NTSearchBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTSearchBar.swift; sourceTree = "<group>"; };
 		28015EB5A2C673756861CBBEA523FDB2 /* UIImage+UIImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImage+UIImageView.swift"; sourceTree = "<group>"; };
 		2D069A9B12C7AE873F623EA939F62D12 /* Array.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
-		2E17BA11C3ADBC9B727C76CB7643AD90 /* NTAnimatedCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sour
+		2E17BA11C3ADBC9B727C76CB7643AD90 /* NTAnimatedCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTAnimatedCollectionViewCell.swift; sourceTree = "<group>"; };
+		3152FFD71B05BED60F8B1E55B17B138B /* Pods-StockKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StockKit.release.xcconfig"; sourceTree = "<group>"; };
+		3183EFFC22236D1B0166743EBEE36243 /* NTTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTTableViewController.swift;
