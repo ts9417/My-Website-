@@ -269,4 +269,7 @@
 		2D069A9B12C7AE873F623EA939F62D12 /* Array.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		2E17BA11C3ADBC9B727C76CB7643AD90 /* NTAnimatedCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTAnimatedCollectionViewCell.swift; sourceTree = "<group>"; };
 		3152FFD71B05BED60F8B1E55B17B138B /* Pods-StockKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StockKit.release.xcconfig"; sourceTree = "<group>"; };
-		3183EFFC22236D1B0166743EBEE36243 /* NTTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTTableViewController.swift;
+		3183EFFC22236D1B0166743EBEE36243 /* NTTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTTableViewController.swift; sourceTree = "<group>"; };
+		3477C7317E21F2A814B106D62F023B87 /* NTFormProfileCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTFormProfileCell.swift; sourceTree = "<group>"; };
+		34DF3DE8BFF4ACC370B524D7C4C6C6D4 /* Pods-StockKitTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StockKitTests-frameworks.sh"; sourceTree = "<group>"; };
+		366EA2119EB24010F4359F669B9493BA /* NTTabBarItem.s
