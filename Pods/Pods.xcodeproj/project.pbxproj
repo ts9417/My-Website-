@@ -277,4 +277,7 @@
 		375478815B27BEFF2DD35C5F6DF5C9F7 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		381313DAA544EC5C58D61E8B5C6DB60F /* NTInputAccessoryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTInputAccessoryView.swift; sourceTree = "<group>"; };
 		397B7B3E5E982224C7D71691E726E1D9 /* Pods-StockKit-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StockKit-resources.sh"; sourceTree = "<group>"; };
-		399BF83BAB705EC6AA1569331EA1590D /* Pods-StockKit-acknowledgements.plist */ = {isa = PBX
+		399BF83BAB705EC6AA1569331EA1590D /* Pods-StockKit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StockKit-acknowledgements.plist"; sourceTree = "<group>"; };
+		3A5645714F41C338F2C52C60D7B3BBE7 /* Pods-StockKitTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-StockKitTests.modulemap"; sourceTree = "<group>"; };
+		3EEA21089A340D6956C9AF458261D54E /* NTAnimatedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTAnimatedView.swift; sourceTree = "<group>"; };
+		3F7F0C1A053CCA97330
