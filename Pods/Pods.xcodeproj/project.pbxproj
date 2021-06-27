@@ -280,4 +280,7 @@
 		399BF83BAB705EC6AA1569331EA1590D /* Pods-StockKit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StockKit-acknowledgements.plist"; sourceTree = "<group>"; };
 		3A5645714F41C338F2C52C60D7B3BBE7 /* Pods-StockKitTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-StockKitTests.modulemap"; sourceTree = "<group>"; };
 		3EEA21089A340D6956C9AF458261D54E /* NTAnimatedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTAnimatedView.swift; sourceTree = "<group>"; };
-		3F7F0C1A053CCA97330
+		3F7F0C1A053CCA973308BFE062D08550 /* NTFormImageSelectorCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTFormImageSelectorCell.swift; sourceTree = "<group>"; };
+		40081030560740EB719DA73B644CBC1E /* Pods-StockKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-StockKit.modulemap"; sourceTree = "<group>"; };
+		411ADFDAE44C04D862E8E4BB585DF576 /* BebasNeue.otf */ = {isa = PBXFileReference; includeInIndex = 1; path = BebasNeue.otf; sourceTree = "<group>"; };
+		42
