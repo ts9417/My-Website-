@@ -285,4 +285,7 @@
 		411ADFDAE44C04D862E8E4BB585DF576 /* BebasNeue.otf */ = {isa = PBXFileReference; includeInIndex = 1; path = BebasNeue.otf; sourceTree = "<group>"; };
 		425F953857DC1E691B3F96DDC2067EF3 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		44B22A9AFA481660AD10DB9E70C4F948 /* NTTimelineTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTTimelineTableViewCell.swift; sourceTree = "<group>"; };
-		4569C4BD227EF707CC20EFD328
+		4569C4BD227EF707CC20EFD328A16720 /* NTImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTImageView.swift; sourceTree = "<group>"; };
+		45A7458CB013B92F5EFFFB693DFCB4AB /* NTCollectionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTCollectionViewController.swift; sourceTree = "<group>"; };
+		466511960B4C76EF9762C98AA509DB82 /* Roboto-Light.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		4A878C7C876AD8555F5FDDE0164E
