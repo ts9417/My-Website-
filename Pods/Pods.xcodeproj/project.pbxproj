@@ -283,4 +283,6 @@
 		3F7F0C1A053CCA973308BFE062D08550 /* NTFormImageSelectorCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTFormImageSelectorCell.swift; sourceTree = "<group>"; };
 		40081030560740EB719DA73B644CBC1E /* Pods-StockKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-StockKit.modulemap"; sourceTree = "<group>"; };
 		411ADFDAE44C04D862E8E4BB585DF576 /* BebasNeue.otf */ = {isa = PBXFileReference; includeInIndex = 1; path = BebasNeue.otf; sourceTree = "<group>"; };
-		42
+		425F953857DC1E691B3F96DDC2067EF3 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		44B22A9AFA481660AD10DB9E70C4F948 /* NTTimelineTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTTimelineTableViewCell.swift; sourceTree = "<group>"; };
+		4569C4BD227EF707CC20EFD328
