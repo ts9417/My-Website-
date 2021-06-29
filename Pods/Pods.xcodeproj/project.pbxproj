@@ -290,4 +290,7 @@
 		466511960B4C76EF9762C98AA509DB82 /* Roboto-Light.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		4A878C7C876AD8555F5FDDE0164E5A04 /* NTTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTTextField.swift; sourceTree = "<group>"; };
 		4BB6C507337C979F565CD47DBBEB2AF6 /* PulleyPassthroughScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PulleyPassthroughScrollView.swift; sourceTree = "<group>"; };
-		4BC7EC41D4C3AB25E3810DD658AD0E2F /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "
+		4BC7EC41D4C3AB25E3810DD658AD0E2F /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		4C3A74652FB2FD067312160CDE9171F1 /* NTComponents.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = NTComponents.modulemap; sourceTree = "<group>"; };
+		4D6817C4E4952F969636587613DC5FB4 /* Pods-StockKitTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StockKitTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5008BDAE7FFAACBECBF6BD4A7776E9DA /* Timeline.swift */ = {isa = 
