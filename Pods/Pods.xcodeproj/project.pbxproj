@@ -288,4 +288,6 @@
 		4569C4BD227EF707CC20EFD328A16720 /* NTImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTImageView.swift; sourceTree = "<group>"; };
 		45A7458CB013B92F5EFFFB693DFCB4AB /* NTCollectionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTCollectionViewController.swift; sourceTree = "<group>"; };
 		466511960B4C76EF9762C98AA509DB82 /* Roboto-Light.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
-		4A878C7C876AD8555F5FDDE0164E
+		4A878C7C876AD8555F5FDDE0164E5A04 /* NTTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTTextField.swift; sourceTree = "<group>"; };
+		4BB6C507337C979F565CD47DBBEB2AF6 /* PulleyPassthroughScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PulleyPassthroughScrollView.swift; sourceTree = "<group>"; };
+		4BC7EC41D4C3AB25E3810DD658AD0E2F /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "
