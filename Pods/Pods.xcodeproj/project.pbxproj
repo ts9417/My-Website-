@@ -293,4 +293,6 @@
 		4BC7EC41D4C3AB25E3810DD658AD0E2F /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		4C3A74652FB2FD067312160CDE9171F1 /* NTComponents.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = NTComponents.modulemap; sourceTree = "<group>"; };
 		4D6817C4E4952F969636587613DC5FB4 /* Pods-StockKitTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StockKitTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		5008BDAE7FFAACBECBF6BD4A7776E9DA /* Timeline.swift */ = {isa = 
+		5008BDAE7FFAACBECBF6BD4A7776E9DA /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		50359B796CF0C13E3664CA1ECBCA5FC7 /* GMDType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GMDType.swift; sourceTree = "<group>"; };
+		51F811AA645EA818ABB48500F2363EE8 /* Pods-StockKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-St
