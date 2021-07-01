@@ -298,4 +298,7 @@
 		51F811AA645EA818ABB48500F2363EE8 /* Pods-StockKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StockKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		52F5705E82C7843DCE9461B07832FD10 /* Pods-StockKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StockKit-dummy.m"; sourceTree = "<group>"; };
 		5391033CE84C00CD01FE7A15D1334905 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
-		540BC2DC6440155E1BCC474B8245820A /* NTEmailRegisterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1
+		540BC2DC6440155E1BCC474B8245820A /* NTEmailRegisterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTEmailRegisterViewController.swift; sourceTree = "<group>"; };
+		54E941A0753313B097798A6AA7A0C890 /* UICollectionViewDelegates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UICollectionViewDelegates.swift; sourceTree = "<group>"; };
+		5574E1719D936596DDE01F61309D5758 /* NTFormLongInputCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTFormLongInputCell.swift; sourceTree = "<group>"; };
+		56115
