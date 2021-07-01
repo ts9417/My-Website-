@@ -295,4 +295,7 @@
 		4D6817C4E4952F969636587613DC5FB4 /* Pods-StockKitTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StockKitTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		5008BDAE7FFAACBECBF6BD4A7776E9DA /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 		50359B796CF0C13E3664CA1ECBCA5FC7 /* GMDType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GMDType.swift; sourceTree = "<group>"; };
-		51F811AA645EA818ABB48500F2363EE8 /* Pods-StockKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-St
+		51F811AA645EA818ABB48500F2363EE8 /* Pods-StockKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StockKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		52F5705E82C7843DCE9461B07832FD10 /* Pods-StockKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StockKit-dummy.m"; sourceTree = "<group>"; };
+		5391033CE84C00CD01FE7A15D1334905 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		540BC2DC6440155E1BCC474B8245820A /* NTEmailRegisterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1
