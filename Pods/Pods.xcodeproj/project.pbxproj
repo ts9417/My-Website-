@@ -301,4 +301,6 @@
 		540BC2DC6440155E1BCC474B8245820A /* NTEmailRegisterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTEmailRegisterViewController.swift; sourceTree = "<group>"; };
 		54E941A0753313B097798A6AA7A0C890 /* UICollectionViewDelegates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UICollectionViewDelegates.swift; sourceTree = "<group>"; };
 		5574E1719D936596DDE01F61309D5758 /* NTFormLongInputCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTFormLongInputCell.swift; sourceTree = "<group>"; };
-		56115
+		56115D6D04F24CE6C51538E824A8086A /* NTFormSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTFormSection.swift; sourceTree = "<group>"; };
+		5694091408503D6DFF6B572A72CCC3A4 /* NTMapAnnotationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTMapAnnotationView.swift; sourceTree = "<group>"; };
+		56A286F66A33E2445A4B752171A5E074 /* ChartSeries.swift */ = {isa = PBXFileReference; includeInIndex = 
