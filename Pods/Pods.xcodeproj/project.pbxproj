@@ -303,4 +303,7 @@
 		5574E1719D936596DDE01F61309D5758 /* NTFormLongInputCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTFormLongInputCell.swift; sourceTree = "<group>"; };
 		56115D6D04F24CE6C51538E824A8086A /* NTFormSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTFormSection.swift; sourceTree = "<group>"; };
 		5694091408503D6DFF6B572A72CCC3A4 /* NTMapAnnotationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTMapAnnotationView.swift; sourceTree = "<group>"; };
-		56A286F66A33E2445A4B752171A5E074 /* ChartSeries.swift */ = {isa = PBXFileReference; includeInIndex = 
+		56A286F66A33E2445A4B752171A5E074 /* ChartSeries.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartSeries.swift; path = Source/ChartSeries.swift; sourceTree = "<group>"; };
+		5737DB5FF4700518135DFB9E9D238D99 /* NTTagListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTTagListView.swift; sourceTree = "<group>"; };
+		580C4E0647BC248B0762C9163F038E72 /* NTCarouselView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTCarouselView.swift; sourceTree = "<group>"; };
+		5BC3BE6
