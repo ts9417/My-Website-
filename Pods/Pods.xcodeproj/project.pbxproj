@@ -306,4 +306,6 @@
 		56A286F66A33E2445A4B752171A5E074 /* ChartSeries.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartSeries.swift; path = Source/ChartSeries.swift; sourceTree = "<group>"; };
 		5737DB5FF4700518135DFB9E9D238D99 /* NTTagListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTTagListView.swift; sourceTree = "<group>"; };
 		580C4E0647BC248B0762C9163F038E72 /* NTCarouselView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTCarouselView.swift; sourceTree = "<group>"; };
-		5BC3BE6
+		5BC3BE6E65D3744FA5798751FCDCCD0F /* String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		5C629397D9890AC3CC053F49CDC4C363 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		5D6B03400C15070377028F07BD326279 /* CalendarEnums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnow
