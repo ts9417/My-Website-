@@ -308,4 +308,7 @@
 		580C4E0647BC248B0762C9163F038E72 /* NTCarouselView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTCarouselView.swift; sourceTree = "<group>"; };
 		5BC3BE6E65D3744FA5798751FCDCCD0F /* String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		5C629397D9890AC3CC053F49CDC4C363 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		5D6B03400C15070377028F07BD326279 /* CalendarEnums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnow
+		5D6B03400C15070377028F07BD326279 /* CalendarEnums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CalendarEnums.swift; sourceTree = "<group>"; };
+		6079406A601F9233A20AFE1991EAC8EF /* Pods-StockKitTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StockKitTests-resources.sh"; sourceTree = "<group>"; };
+		609535D1D4D378443D235B721E6F950A /* Pods-StockKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StockKit.debug.xcconfig"; sourceTree = "<group>"; };
+		62B09C5F5DEE5EE696D27A4179793C0D /* NTEULAController.swift 
