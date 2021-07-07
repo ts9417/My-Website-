@@ -313,4 +313,7 @@
 		609535D1D4D378443D235B721E6F950A /* Pods-StockKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StockKit.debug.xcconfig"; sourceTree = "<group>"; };
 		62B09C5F5DEE5EE696D27A4179793C0D /* NTEULAController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTEULAController.swift; sourceTree = "<group>"; };
 		62DC8EEDCC64D1175A172C5A7BEDA75C /* DiscardableImageCacheItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DiscardableImageCacheItem.swift; sourceTree = "<group>"; };
-		632F23C2D173CD867ED8C7A6ECF00B31 /* NTMapView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTMapView.swift; sourceT
+		632F23C2D173CD867ED8C7A6ECF00B31 /* NTMapView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTMapView.swift; sourceTree = "<group>"; };
+		63B485E28146B5F32B095B677A7DBBF4 /* NTCollectionDatasourceCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTCollectionDatasourceCell.swift; sourceTree = "<group>"; };
+		65375357AD8EF2E00605305E2CE75057 /* NTTextInputBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTTextInputBar.swift; sourceTree = "<group>"; };
+		67FB7703DA32FF136DD59317DFB7BF6D /* UIScrollViewDelegates.swift */ = {isa = PBXFileReference; 
