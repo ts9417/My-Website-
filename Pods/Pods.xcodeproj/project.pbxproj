@@ -316,4 +316,6 @@
 		632F23C2D173CD867ED8C7A6ECF00B31 /* NTMapView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTMapView.swift; sourceTree = "<group>"; };
 		63B485E28146B5F32B095B677A7DBBF4 /* NTCollectionDatasourceCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTCollectionDatasourceCell.swift; sourceTree = "<group>"; };
 		65375357AD8EF2E00605305E2CE75057 /* NTTextInputBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTTextInputBar.swift; sourceTree = "<group>"; };
-		67FB7703DA32FF136DD59317DFB7BF6D /* UIScrollViewDelegates.swift */ = {isa = PBXFileReference; 
+		67FB7703DA32FF136DD59317DFB7BF6D /* UIScrollViewDelegates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIScrollViewDelegates.swift; sourceTree = "<group>"; };
+		681C8B36073FC7A8F8F64C58657DF773 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		6A02F19649A406ADD3FF00E28DC3C7AD /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Res
