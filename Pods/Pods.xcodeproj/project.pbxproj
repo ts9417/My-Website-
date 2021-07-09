@@ -318,4 +318,7 @@
 		65375357AD8EF2E00605305E2CE75057 /* NTTextInputBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTTextInputBar.swift; sourceTree = "<group>"; };
 		67FB7703DA32FF136DD59317DFB7BF6D /* UIScrollViewDelegates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIScrollViewDelegates.swift; sourceTree = "<group>"; };
 		681C8B36073FC7A8F8F64C58657DF773 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		6A02F19649A406ADD3FF00E28DC3C7AD /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Res
+		6A02F19649A406ADD3FF00E28DC3C7AD /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		6A11A34C96044266C75F7014C7A10B5D /* Pods-StockKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StockKit-umbrella.h"; sourceTree = "<group>"; };
+		6AEFBD8627E46568854D07AB9BB7447D /* UITextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
+		6B206AB208D172E20BED277CEA6B5F35 /* Chart.swift */ = {isa = PBXFileReference; inclu
