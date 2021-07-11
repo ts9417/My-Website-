@@ -323,4 +323,7 @@
 		6AEFBD8627E46568854D07AB9BB7447D /* UITextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		6B206AB208D172E20BED277CEA6B5F35 /* Chart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Chart.swift; path = Source/Chart.swift; sourceTree = "<group>"; };
 		6B251BD58ED1D10C85F206495BE9F11B /* NTTableViewHeaderFooterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTTableViewHeaderFooterView.swift; sourceTree = "<group>"; };
-		6C0345A3ABEC42DA0A0FDE557C022114 /* Pods-StockKit-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh
+		6C0345A3ABEC42DA0A0FDE557C022114 /* Pods-StockKit-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StockKit-frameworks.sh"; sourceTree = "<group>"; };
+		6C69FD6C9F5F83B2F143133D21FC67F9 /* NTComponents-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NTComponents-prefix.pch"; sourceTree = "<group>"; };
+		6D3037867983AAD482CDF5FC2D1E5205 /* NTMagicView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTMagicView.swift; sourceTree = "<group>"; };
+		6D3FCCC0B98945D2610372CAA9E34C69 /* NetworkReachabilityManage
