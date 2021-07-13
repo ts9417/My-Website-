@@ -326,4 +326,6 @@
 		6C0345A3ABEC42DA0A0FDE557C022114 /* Pods-StockKit-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StockKit-frameworks.sh"; sourceTree = "<group>"; };
 		6C69FD6C9F5F83B2F143133D21FC67F9 /* NTComponents-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NTComponents-prefix.pch"; sourceTree = "<group>"; };
 		6D3037867983AAD482CDF5FC2D1E5205 /* NTMagicView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTMagicView.swift; sourceTree = "<group>"; };
-		6D3FCCC0B98945D2610372CAA9E34C69 /* NetworkReachabilityManage
+		6D3FCCC0B98945D2610372CAA9E34C69 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		6DB0342B5130BD5984E97A1B22724CA5 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		70951A97C853C0C00605BF71621A3B2C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; las
