@@ -328,4 +328,7 @@
 		6D3037867983AAD482CDF5FC2D1E5205 /* NTMagicView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTMagicView.swift; sourceTree = "<group>"; };
 		6D3FCCC0B98945D2610372CAA9E34C69 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		6DB0342B5130BD5984E97A1B22724CA5 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		70951A97C853C0C00605BF71621A3B2C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; las
+		70951A97C853C0C00605BF71621A3B2C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71DF1A64966CCED2EBF2A96DB16E8A03 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		72457AEF566C0D979B0EE4DC2706646B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72E380B3DF0AE14FAE2978AA4FC89235 /* NTCollectionDatasource.swift */ = {isa = PBXFileReference; includeInIndex = 1; 
