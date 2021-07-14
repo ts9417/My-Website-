@@ -334,4 +334,6 @@
 		72E380B3DF0AE14FAE2978AA4FC89235 /* NTCollectionDatasource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTCollectionDatasource.swift; sourceTree = "<group>"; };
 		73DBD82C238316F46B42EE85A7CBD651 /* NTSlideShowViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTSlideShowViewController.swift; sourceTree = "<group>"; };
 		74F5BE0B6450D99FEB628A720009149F /* UIColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		7
+		78056116FBF5F56C4C16A2EFCED69631 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		7A5FFA008291E289763C66FE2BE3E3FE /* GlobalFunctionsAndExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GlobalFunctionsAndExtensions.swift; sourceTree = "<group>"; };
+		7FD9802E7CCD894E40D776AF98315744 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Valida
