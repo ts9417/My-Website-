@@ -331,4 +331,7 @@
 		70951A97C853C0C00605BF71621A3B2C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71DF1A64966CCED2EBF2A96DB16E8A03 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		72457AEF566C0D979B0EE4DC2706646B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		72E380B3DF0AE14FAE2978AA4FC89235 /* NTCollectionDatasource.swift */ = {isa = PBXFileReference; includeInIndex = 1; 
+		72E380B3DF0AE14FAE2978AA4FC89235 /* NTCollectionDatasource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTCollectionDatasource.swift; sourceTree = "<group>"; };
+		73DBD82C238316F46B42EE85A7CBD651 /* NTSlideShowViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTSlideShowViewController.swift; sourceTree = "<group>"; };
+		74F5BE0B6450D99FEB628A720009149F /* UIColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		7
