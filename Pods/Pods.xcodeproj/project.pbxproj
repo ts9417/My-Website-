@@ -339,4 +339,7 @@
 		7FD9802E7CCD894E40D776AF98315744 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		8206277308F4BD8F49AEF2B30C6C71FA /* NTFormDateInputCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTFormDateInputCell.swift; sourceTree = "<group>"; };
 		85C1D098A0C3DCEF4ADBFC0EACA2B1B7 /* NTToast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTToast.swift; sourceTree = "<group>"; };
-		862B6BD20108EEECB9E308D7271C3505 /* FAType.swif
+		862B6BD20108EEECB9E308D7271C3505 /* FAType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FAType.swift; sourceTree = "<group>"; };
+		867D821C0CBD99ACA296D3B95A946335 /* JTAppleCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JTAppleCell.swift; sourceTree = "<group>"; };
+		88F5A8781AD24D29DB736171B463C79A /* Person.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		897E7A33DDD871C8F
