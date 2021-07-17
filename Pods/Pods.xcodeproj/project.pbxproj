@@ -344,4 +344,7 @@
 		88F5A8781AD24D29DB736171B463C79A /* Person.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		897E7A33DDD871C8FF50DDA4A3B3AEAD /* NTScrollableTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTScrollableTabBarController.swift; sourceTree = "<group>"; };
 		8A687DBA2602AE3687BF692AADF54056 /* NTPageViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTPageViewController.swift; sourceTree = "<group>"; };
-		8B7AAE4AE6B72850E43EB52D9BE015F0 /* NTPing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift;
+		8B7AAE4AE6B72850E43EB52D9BE015F0 /* NTPing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTPing.swift; sourceTree = "<group>"; };
+		8BBC2DF3D11930E7A4E8DB14B684D36B /* NTCredentialPromptViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTCredentialPromptViewController.swift; sourceTree = "<group>"; };
+		8C32F523CC060C5B1708A0158B7158A5 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		8D35CFA7D6
