@@ -342,4 +342,6 @@
 		862B6BD20108EEECB9E308D7271C3505 /* FAType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FAType.swift; sourceTree = "<group>"; };
 		867D821C0CBD99ACA296D3B95A946335 /* JTAppleCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JTAppleCell.swift; sourceTree = "<group>"; };
 		88F5A8781AD24D29DB736171B463C79A /* Person.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		897E7A33DDD871C8F
+		897E7A33DDD871C8FF50DDA4A3B3AEAD /* NTScrollableTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTScrollableTabBarController.swift; sourceTree = "<group>"; };
+		8A687DBA2602AE3687BF692AADF54056 /* NTPageViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTPageViewController.swift; sourceTree = "<group>"; };
+		8B7AAE4AE6B72850E43EB52D9BE015F0 /* NTPing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift;
