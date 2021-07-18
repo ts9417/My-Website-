@@ -347,4 +347,6 @@
 		8B7AAE4AE6B72850E43EB52D9BE015F0 /* NTPing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTPing.swift; sourceTree = "<group>"; };
 		8BBC2DF3D11930E7A4E8DB14B684D36B /* NTCredentialPromptViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTCredentialPromptViewController.swift; sourceTree = "<group>"; };
 		8C32F523CC060C5B1708A0158B7158A5 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
-		8D35CFA7D6
+		8D35CFA7D61D67E9D04A84AB14446A40 /* NTSwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTSwitch.swift; sourceTree = "<group>"; };
+		8FDCA98E3240D2ED2E9F8583A5538E6B /* NTDrawerBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTDrawerBarButtonItem.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text;
