@@ -352,4 +352,7 @@
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93CCCE8B061BBAB3F0AA76EDEE88BBF6 /* MultiThreading.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MultiThreading.swift; sourceTree = "<group>"; };
 		951AC698C8D752472BF6FCE89E85E6A0 /* Roboto-Black.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
-		97037A09DB8F2E632692676786EBD2E9 /* NTFormInputCell.swift */ = {isa =
+		97037A09DB8F2E632692676786EBD2E9 /* NTFormInputCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTFormInputCell.swift; sourceTree = "<group>"; };
+		9A2C9BF56FAF2318F54E80019116B24A /* PulleyViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PulleyViewController.swift; sourceTree = "<group>"; };
+		9AB1CCE49FCBE67ECC91FB4269BAA329 /* NTComponents-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NTComponents-dummy.m"; sourceTree = "<group>"; };
+		9E555FB3910
