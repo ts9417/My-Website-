@@ -355,4 +355,6 @@
 		97037A09DB8F2E632692676786EBD2E9 /* NTFormInputCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTFormInputCell.swift; sourceTree = "<group>"; };
 		9A2C9BF56FAF2318F54E80019116B24A /* PulleyViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PulleyViewController.swift; sourceTree = "<group>"; };
 		9AB1CCE49FCBE67ECC91FB4269BAA329 /* NTComponents-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NTComponents-dummy.m"; sourceTree = "<group>"; };
-		9E555FB3910
+		9E555FB3910A15C53D0D5ED2B8AE24AB /* JTAppleCalendarDelegateProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JTAppleCalendarDelegateProtocol.swift; sourceTree = "<group>"; };
+		9F9FE3E3BEC60D45BF557C6BCA374FE7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0708409920A7075EEC6B7D70DFAD720 /* NTFormViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; last
