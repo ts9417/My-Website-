@@ -357,4 +357,7 @@
 		9AB1CCE49FCBE67ECC91FB4269BAA329 /* NTComponents-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NTComponents-dummy.m"; sourceTree = "<group>"; };
 		9E555FB3910A15C53D0D5ED2B8AE24AB /* JTAppleCalendarDelegateProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JTAppleCalendarDelegateProtocol.swift; sourceTree = "<group>"; };
 		9F9FE3E3BEC60D45BF557C6BCA374FE7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A0708409920A7075EEC6B7D70DFAD720 /* NTFormViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; last
+		A0708409920A7075EEC6B7D70DFAD720 /* NTFormViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTFormViewController.swift; sourceTree = "<group>"; };
+		A1119094ECD015A314E7A9361A171ABC /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		A20F2EA65A4445912282451ADE33D9ED /* ChartColors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartColors.swift; path = Source/ChartColors.swift; sourceTree = "<group>"; };
+		A230B28F1105B42E84995EF8124FAC03 /*
