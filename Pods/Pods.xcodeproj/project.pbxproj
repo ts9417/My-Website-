@@ -360,4 +360,6 @@
 		A0708409920A7075EEC6B7D70DFAD720 /* NTFormViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTFormViewController.swift; sourceTree = "<group>"; };
 		A1119094ECD015A314E7A9361A171ABC /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
 		A20F2EA65A4445912282451ADE33D9ED /* ChartColors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartColors.swift; path = Source/ChartColors.swift; sourceTree = "<group>"; };
-		A230B28F1105B42E84995EF8124FAC03 /*
+		A230B28F1105B42E84995EF8124FAC03 /* NTProgressLineIndicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTProgressLineIndicator.swift; sourceTree = "<group>"; };
+		A28AC33A2F1FD4163300BF9722D16995 /* FontAwesome.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		A3BA7AEF00BF53BEB80A2249B47CE645 /* NTMapViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTMapViewController.swift; sourceTre
