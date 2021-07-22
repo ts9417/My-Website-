@@ -362,4 +362,7 @@
 		A20F2EA65A4445912282451ADE33D9ED /* ChartColors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChartColors.swift; path = Source/ChartColors.swift; sourceTree = "<group>"; };
 		A230B28F1105B42E84995EF8124FAC03 /* NTProgressLineIndicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTProgressLineIndicator.swift; sourceTree = "<group>"; };
 		A28AC33A2F1FD4163300BF9722D16995 /* FontAwesome.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = FontAwesome.ttf; sourceTree = "<group>"; };
-		A3BA7AEF00BF53BEB80A2249B47CE645 /* NTMapViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTMapViewController.swift; sourceTre
+		A3BA7AEF00BF53BEB80A2249B47CE645 /* NTMapViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTMapViewController.swift; sourceTree = "<group>"; };
+		A4F258BA908A947FAD7BDF2B3685617E /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
+		A53CECA5FA7D23834933EE99BD00B30A /* UIViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		A58B5EDBD439464A84EE6CD2BF0BA7D8 /* MaterialIcons.ttf */ = {isa = 
