@@ -368,4 +368,6 @@
 		A58B5EDBD439464A84EE6CD2BF0BA7D8 /* MaterialIcons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = MaterialIcons.ttf; sourceTree = "<group>"; };
 		A5FE57FB15BCE71B90B68F237BC18459 /* NTChime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTChime.swift; sourceTree = "<group>"; };
 		A7BA2C833CAEC50E5A0D9278D48B5241 /* JTAppleCalendarLayoutProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JTAppleCalendarLayoutProtocol.swift; sourceTree = "<group>"; };
-		A89A250D
+		A89A250DA4DD2BE3A4E3F484A0C8E78C /* JTAppleCalendarLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JTAppleCalendarLayout.swift; sourceTree = "<group>"; };
+		AB93AA1376FB21FB8444EAFFCBFFFBF3 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		ACA6C4836C7D113C2478407CBC234BE5 /* Pods-StockKitTests-dummy.m */ = {isa = PBXFileReferen
