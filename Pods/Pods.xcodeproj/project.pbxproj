@@ -365,4 +365,7 @@
 		A3BA7AEF00BF53BEB80A2249B47CE645 /* NTMapViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTMapViewController.swift; sourceTree = "<group>"; };
 		A4F258BA908A947FAD7BDF2B3685617E /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
 		A53CECA5FA7D23834933EE99BD00B30A /* UIViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		A58B5EDBD439464A84EE6CD2BF0BA7D8 /* MaterialIcons.ttf */ = {isa = 
+		A58B5EDBD439464A84EE6CD2BF0BA7D8 /* MaterialIcons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = MaterialIcons.ttf; sourceTree = "<group>"; };
+		A5FE57FB15BCE71B90B68F237BC18459 /* NTChime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTChime.swift; sourceTree = "<group>"; };
+		A7BA2C833CAEC50E5A0D9278D48B5241 /* JTAppleCalendarLayoutProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JTAppleCalendarLayoutProtocol.swift; sourceTree = "<group>"; };
+		A89A250D
