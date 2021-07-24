@@ -372,4 +372,7 @@
 		AB93AA1376FB21FB8444EAFFCBFFFBF3 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		ACA6C4836C7D113C2478407CBC234BE5 /* Pods-StockKitTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StockKitTests-dummy.m"; sourceTree = "<group>"; };
 		ACD5561FDFD367060C64BE24E00207C5 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
-		ADDFDB2A23F3C671AD3A2EBCE438F199 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.p
+		ADDFDB2A23F3C671AD3A2EBCE438F199 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFF9BF061111AB5F77776F046F4AD00C /* NTActivityView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTActivityView.swift; sourceTree = "<group>"; };
+		B25C25335A6EEC79DCC7F588964F83CD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2EE283F6D2656E3D8CE15DEBD5E9898 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; l
