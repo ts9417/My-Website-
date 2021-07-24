@@ -370,4 +370,6 @@
 		A7BA2C833CAEC50E5A0D9278D48B5241 /* JTAppleCalendarLayoutProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JTAppleCalendarLayoutProtocol.swift; sourceTree = "<group>"; };
 		A89A250DA4DD2BE3A4E3F484A0C8E78C /* JTAppleCalendarLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JTAppleCalendarLayout.swift; sourceTree = "<group>"; };
 		AB93AA1376FB21FB8444EAFFCBFFFBF3 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		ACA6C4836C7D113C2478407CBC234BE5 /* Pods-StockKitTests-dummy.m */ = {isa = PBXFileReferen
+		ACA6C4836C7D113C2478407CBC234BE5 /* Pods-StockKitTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StockKitTests-dummy.m"; sourceTree = "<group>"; };
+		ACD5561FDFD367060C64BE24E00207C5 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		ADDFDB2A23F3C671AD3A2EBCE438F199 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.p
