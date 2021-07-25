@@ -375,4 +375,7 @@
 		ADDFDB2A23F3C671AD3A2EBCE438F199 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFF9BF061111AB5F77776F046F4AD00C /* NTActivityView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTActivityView.swift; sourceTree = "<group>"; };
 		B25C25335A6EEC79DCC7F588964F83CD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2EE283F6D2656E3D8CE15DEBD5E9898 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; l
+		B2EE283F6D2656E3D8CE15DEBD5E9898 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		B423DED8724AF5B4358D63EBA50F042D /* NTScrollableTabBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTScrollableTabBar.swift; sourceTree = "<group>"; };
+		B488576F8A813705196ED4CE54F65D63 /* NTTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTTableViewCell.swift; sourceTree = "<group>"; };
+		B57063FE1F42663AF50D8ACBC486E7F1 /* Pods-StockKitTests.debug.xcconfig */ = {
