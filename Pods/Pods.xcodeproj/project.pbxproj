@@ -381,4 +381,6 @@
 		B57063FE1F42663AF50D8ACBC486E7F1 /* Pods-StockKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StockKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B59B35175046714B45AF96830A10A7BB /* Roboto-Bold.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		B5E68E61CFE38B7D699ECF9058580F50 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
-		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = 
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B6A9BE0606E4624B210AD91F827804DA /* NTImagePickerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTImagePickerController.swift; sourceTree = "<group>"; };
+		B81595C1E17EB09112E82CBBC0F4AFF2 /* Log.swift */ = {isa = PBXFileReference
