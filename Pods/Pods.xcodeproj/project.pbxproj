@@ -386,4 +386,6 @@
 		B81595C1E17EB09112E82CBBC0F4AFF2 /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		B91BA56C38D3BCAED2012AE8A099FC14 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
 		B983DDAD75D190471C272A14E019CF75 /* NTSegmentedControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTSegmentedControl.swift; sourceTree = "<group>"; };
-		B9B
+		B9BE5417291749CEC56B2C6FD300F7CE /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		B9DEB8D7762AFA8FE505728908C12CF2 /* NTCalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTCalendarView.swift; sourceTree = "<group>"; };
+		BBCCF62A0719997A42E5B9276F8BE89C /* SwiftChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = S
