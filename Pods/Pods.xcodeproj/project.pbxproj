@@ -393,4 +393,7 @@
 		BDA86DAD034D7E792D1B1C4E4EBD0917 /* CALayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
 		BED5C5581EFE6928DD02BDDE550A4B69 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		C2BBCB94CD248C0230905D875ACE974A /* ScaleBackTransitionAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleBackTransitionAnimator.swift; sourceTree = "<group>"; };
-		C7347F4D6AA9963DB78A73D0FAEFEBDD /* NTCalendarHeaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTCalendarHeader
+		C7347F4D6AA9963DB78A73D0FAEFEBDD /* NTCalendarHeaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTCalendarHeaderView.swift; sourceTree = "<group>"; };
+		C7F835F9C5337EA6FCFD598E7BB12601 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		C8FE01ACBE2D1894E370C00188C536EF /* SwiftChart-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftChart-dummy.m"; sourceTree = "<group>"; };
+		CB2A5D43103B8EFB90387CE5209E60A1 /* SwiftyJSON-umbrella.h */ = {isa = PBXF
