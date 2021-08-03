@@ -398,4 +398,7 @@
 		C8FE01ACBE2D1894E370C00188C536EF /* SwiftChart-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftChart-dummy.m"; sourceTree = "<group>"; };
 		CB2A5D43103B8EFB90387CE5209E60A1 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		CCE0D7E159329A43AF1C7AF5A2764240 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
-		CE71068517ED0A48312EC8B1D8507BF2 /* NTDrawerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift;
+		CE71068517ED0A48312EC8B1D8507BF2 /* NTDrawerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTDrawerController.swift; sourceTree = "<group>"; };
+		D1677FBC840FB1BB4F9936DBA3AAF92C /* NTTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTTableView.swift; sourceTree = "<group>"; };
+		D2F8FF58831541229601B71A2740BDA5 /* NTActionSheetViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTActionSheetViewController.swift; sourceTree = "<group>"; };
+		D3090F3FEE51E2B72102274B88E57811
