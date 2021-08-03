@@ -396,4 +396,6 @@
 		C7347F4D6AA9963DB78A73D0FAEFEBDD /* NTCalendarHeaderView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTCalendarHeaderView.swift; sourceTree = "<group>"; };
 		C7F835F9C5337EA6FCFD598E7BB12601 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
 		C8FE01ACBE2D1894E370C00188C536EF /* SwiftChart-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftChart-dummy.m"; sourceTree = "<group>"; };
-		CB2A5D43103B8EFB90387CE5209E60A1 /* SwiftyJSON-umbrella.h */ = {isa = PBXF
+		CB2A5D43103B8EFB90387CE5209E60A1 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		CCE0D7E159329A43AF1C7AF5A2764240 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		CE71068517ED0A48312EC8B1D8507BF2 /* NTDrawerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift;
