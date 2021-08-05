@@ -403,4 +403,7 @@
 		D2F8FF58831541229601B71A2740BDA5 /* NTActionSheetViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTActionSheetViewController.swift; sourceTree = "<group>"; };
 		D3090F3FEE51E2B72102274B88E57811 /* NTTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTTabBarController.swift; sourceTree = "<group>"; };
 		D4E596FDA5FD1979AC64709C41E4A925 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		D4FFE57850EC4BF931C822DBB1E458E9 /* UIApplication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; 
+		D4FFE57850EC4BF931C822DBB1E458E9 /* UIApplication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		D5AF8C52D17DF6FEA4B8153DD13A6802 /* NTButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTButton.swift; sourceTree = "<group>"; };
+		D6CADB648EA786E786BFB912F5794F01 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		D754D02667F5F98C87A52E65A921F30D /* JTAppleCalendarVariable
