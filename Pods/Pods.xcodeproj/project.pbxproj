@@ -401,4 +401,6 @@
 		CE71068517ED0A48312EC8B1D8507BF2 /* NTDrawerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTDrawerController.swift; sourceTree = "<group>"; };
 		D1677FBC840FB1BB4F9936DBA3AAF92C /* NTTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTTableView.swift; sourceTree = "<group>"; };
 		D2F8FF58831541229601B71A2740BDA5 /* NTActionSheetViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTActionSheetViewController.swift; sourceTree = "<group>"; };
-		D3090F3FEE51E2B72102274B88E57811
+		D3090F3FEE51E2B72102274B88E57811 /* NTTabBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTTabBarController.swift; sourceTree = "<group>"; };
+		D4E596FDA5FD1979AC64709C41E4A925 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		D4FFE57850EC4BF931C822DBB1E458E9 /* UIApplication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; 
