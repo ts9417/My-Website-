@@ -406,4 +406,6 @@
 		D4FFE57850EC4BF931C822DBB1E458E9 /* UIApplication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		D5AF8C52D17DF6FEA4B8153DD13A6802 /* NTButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTButton.swift; sourceTree = "<group>"; };
 		D6CADB648EA786E786BFB912F5794F01 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		D754D02667F5F98C87A52E65A921F30D /* JTAppleCalendarVariable
+		D754D02667F5F98C87A52E65A921F30D /* JTAppleCalendarVariables.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JTAppleCalendarVariables.swift; sourceTree = "<group>"; };
+		D7AA925AF402C02D7528C1E7D3B382BA /* NTAlertViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTAlertViewController.swift; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework;
