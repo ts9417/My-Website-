@@ -410,4 +410,7 @@
 		D7AA925AF402C02D7528C1E7D3B382BA /* NTAlertViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTAlertViewController.swift; sourceTree = "<group>"; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D8D029C5F2CFE8FE2E74F1488E1D731F /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
-		D8ED307FF16BE3C6A54A6B1CF9A1CD56 /* Pods_StockKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includ
+		D8ED307FF16BE3C6A54A6B1CF9A1CD56 /* Pods_StockKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_StockKit.framework; path = "Pods-StockKit.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA65E32D0556F97A5CD27DF0BE1B73DA /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAC82BFE212482C1C51668B9A69D5157 /* NTCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTCollectionViewCell.swift; sourceTree = "<group>"; };
+		
