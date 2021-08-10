@@ -413,4 +413,6 @@
 		D8ED307FF16BE3C6A54A6B1CF9A1CD56 /* Pods_StockKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_StockKit.framework; path = "Pods-StockKit.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA65E32D0556F97A5CD27DF0BE1B73DA /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC82BFE212482C1C51668B9A69D5157 /* NTCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTCollectionViewCell.swift; sourceTree = "<group>"; };
-		
+		DAEA24C076A78E269879BE19AB548194 /* NTSearchBarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTSearchBarView.swift; sourceTree = "<group>"; };
+		DB547E1AC7FCDCAF95827F8ED50366EB /* NTProgressHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTProgressHUD.swift; sourceTree = "<group>"; };
+		DCF029FD7F21CBE167CB28F3A65FBD4D /* NTAnimatedTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFile
