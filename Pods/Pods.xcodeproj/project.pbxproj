@@ -428,4 +428,7 @@
 		E6E53FAC2EDF8356485286484F144FDE /* Lorem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Lorem.swift; sourceTree = "<group>"; };
 		E87BAC5A16BE66438BD24D076E1EE7D1 /* NTLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTLabel.swift; sourceTree = "<group>"; };
 		E8ACE4E0653402A454DDDF63EFC8CF73 /* UIView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		E943300ED9F9DD55ADAC2397D05198F3 /* SwiftChart.modulemap */ = {isa = PBXFileReference
+		E943300ED9F9DD55ADAC2397D05198F3 /* SwiftChart.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftChart.modulemap; sourceTree = "<group>"; };
+		EAF088EA7CB3F7B54EB8B6C7E20F62EE /* NTToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTToolbar.swift; sourceTree = "<group>"; };
+		EB2D3E98F1F76AA0AC67CA8993FD2F25 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		ECC89DDBC582A2CB2D1A8F9ED9435CF3 /* Pods_StockKitTests.framework */ = {isa = PBXFileReference; explicitFi
