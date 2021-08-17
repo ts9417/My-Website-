@@ -431,4 +431,6 @@
 		E943300ED9F9DD55ADAC2397D05198F3 /* SwiftChart.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftChart.modulemap; sourceTree = "<group>"; };
 		EAF088EA7CB3F7B54EB8B6C7E20F62EE /* NTToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTToolbar.swift; sourceTree = "<group>"; };
 		EB2D3E98F1F76AA0AC67CA8993FD2F25 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
-		ECC89DDBC582A2CB2D1A8F9ED9435CF3 /* Pods_StockKitTests.framework */ = {isa = PBXFileReference; explicitFi
+		ECC89DDBC582A2CB2D1A8F9ED9435CF3 /* Pods_StockKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_StockKitTests.framework; path = "Pods-StockKitTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDFAF8295CE3CAC17EF6C3A437201679 /* SwiftChart-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftChart-umbrella.h"; sourceTree = "<group>"; };
+		EF13FB6828A0345660FD106C5B596592 /* NTFormCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.sw
