@@ -436,4 +436,6 @@
 		EF13FB6828A0345660FD106C5B596592 /* NTFormCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTFormCell.swift; sourceTree = "<group>"; };
 		F12AADCD884D237F89FFC5620BD9DCBD /* NTFormAnimatedInputCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTFormAnimatedInputCell.swift; sourceTree = "<group>"; };
 		F2777CC944934C52E30CC904ED3E65B6 /* SwiftChart.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftChart.xcconfig; sourceTree = "<group>"; };
-		F2AAE9090353E886412F9A7F74E2290E /* UserInteractionFunctions.swift */ = {isa = PBXFileRefe
+		F2AAE9090353E886412F9A7F74E2290E /* UserInteractionFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserInteractionFunctions.swift; sourceTree = "<group>"; };
+		F2DB8CD1E1657B0EC920348221A6399F /* Pods-StockKitTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StockKitTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F4D03C3B8E2D2A1B43180ED4243F45A3 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = "Roboto-BoldItalic.ttf"; sourceTree = 
