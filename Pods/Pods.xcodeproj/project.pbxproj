@@ -441,4 +441,7 @@
 		F4D03C3B8E2D2A1B43180ED4243F45A3 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
 		F7BBE47A4082BC9ED5888983F700ABEF /* SwiftChart-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftChart-prefix.pch"; sourceTree = "<group>"; };
 		F8789CE2B2CD8A15FC4FC273BB105AAB /* Roboto-Italic.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
-		F9B6748FFEB124282B543E52811B0314 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPo
+		F9B6748FFEB124282B543E52811B0314 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		FA070DDE7A26A076271E47E97E59D87E /* NTNavigationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTNavigationViewController.swift; sourceTree = "<group>"; };
+		FB84484D01FA01A3098378EC8594F992 /* UITextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		FC055F14AA50348AEC9097A30E1726
