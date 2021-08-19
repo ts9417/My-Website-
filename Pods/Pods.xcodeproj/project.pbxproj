@@ -438,4 +438,7 @@
 		F2777CC944934C52E30CC904ED3E65B6 /* SwiftChart.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftChart.xcconfig; sourceTree = "<group>"; };
 		F2AAE9090353E886412F9A7F74E2290E /* UserInteractionFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserInteractionFunctions.swift; sourceTree = "<group>"; };
 		F2DB8CD1E1657B0EC920348221A6399F /* Pods-StockKitTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StockKitTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F4D03C3B8E2D2A1B43180ED4243F45A3 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = "Roboto-BoldItalic.ttf"; sourceTree = 
+		F4D03C3B8E2D2A1B43180ED4243F45A3 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F7BBE47A4082BC9ED5888983F700ABEF /* SwiftChart-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftChart-prefix.pch"; sourceTree = "<group>"; };
+		F8789CE2B2CD8A15FC4FC273BB105AAB /* Roboto-Italic.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		F9B6748FFEB124282B543E52811B0314 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPo
