@@ -444,4 +444,6 @@
 		F9B6748FFEB124282B543E52811B0314 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		FA070DDE7A26A076271E47E97E59D87E /* NTNavigationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTNavigationViewController.swift; sourceTree = "<group>"; };
 		FB84484D01FA01A3098378EC8594F992 /* UITextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
-		FC055F14AA50348AEC9097A30E1726
+		FC055F14AA50348AEC9097A30E17268B /* NTFormControlCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NTFormControlCell.swift; sourceTree = "<group>"; };
+		FCF517FC70DC219ACF1666AD0DD583D6 /* Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		FDB004FF7B2C229816253A3D985B730F /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.
