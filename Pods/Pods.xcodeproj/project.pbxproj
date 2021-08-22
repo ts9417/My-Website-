@@ -457,3 +457,19 @@
 			files = (
 				4DB10D3D30B671D6590387E2C1B0DFC4 /* Foundation.framework in Frameworks */,
 			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B01B26337B7AA4A5C1D4CC324C0B5A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B382C6BA01D5294EF4F5D26D4B52854D /* Foundation.framework in Frameworks */,
+				0C70B6BD2319AE5B68A52BBA14BB50DA /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BABD2BAB324C2C1D069A0E3DB1D6457 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87674F7A22B7E974D1E641B88D47AB46 /* F
