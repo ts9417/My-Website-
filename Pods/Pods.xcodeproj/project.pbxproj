@@ -486,4 +486,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		99195E4207764744AEC07ECCBCD550EB /* Frameworks */ = {
-			isa = 
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B49C5A42B39E545C2493D6C7AE29F4E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8662504AB011B3833021122A68C1C57 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase se
