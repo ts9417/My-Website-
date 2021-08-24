@@ -517,4 +517,14 @@
 			path = Controls;
 			sourceTree = "<group>";
 		};
-		067B84D056C6402E6E00598319
+		067B84D056C6402E6E005983198E513F /* Pods-StockKit */ = {
+			isa = PBXGroup;
+			children = (
+				0396CD71B2F69E1047E6DEF890E062A9 /* Info.plist */,
+				40081030560740EB719DA73B644CBC1E /* Pods-StockKit.modulemap */,
+				1F05D2E8442A50BC8C85D95D30F3D4D5 /* Pods-StockKit-acknowledgements.markdown */,
+				399BF83BAB705EC6AA1569331EA1590D /* Pods-StockKit-acknowledgements.plist */,
+				52F5705E82C7843DCE9461B07832FD10 /* Pods-StockKit-dummy.m */,
+				6C0345A3ABEC42DA0A0FDE557C022114 /* Pods-StockKit-frameworks.sh */,
+				397B7B3E5E982224C7D71691E726E1D9 /* Pods-StockKit-resources.sh */,
+				6A11A34
