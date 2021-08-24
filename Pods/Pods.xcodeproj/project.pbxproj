@@ -501,4 +501,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXFrameworksBuildPhase se
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01CB6CA02233A04F1AA5ACDC518A31E1 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				D5AF8C52D17DF6FEA4B8153DD13A6802 /* NTButton.swift */,
+				133DF782B83F62B312731747DF313BF8 /* NTCheckbox.swift */,
+				8FDCA98E3240D2ED2E9F8583A5538E6B /* NTDrawerBarButtonItem.swift */,
+				B983DDAD75D190471C272A14E019CF75 /* NTSegmentedControl.swift */,
+				8D35CFA7D61D67E9D04A84AB14446A40 /* NTSwitch.swift */,
+			);
+			name = Controls;
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		067B84D056C6402E6E00598319
