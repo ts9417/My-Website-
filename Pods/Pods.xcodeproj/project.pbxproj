@@ -527,4 +527,17 @@
 				52F5705E82C7843DCE9461B07832FD10 /* Pods-StockKit-dummy.m */,
 				6C0345A3ABEC42DA0A0FDE557C022114 /* Pods-StockKit-frameworks.sh */,
 				397B7B3E5E982224C7D71691E726E1D9 /* Pods-StockKit-resources.sh */,
-				6A11A34
+				6A11A34C96044266C75F7014C7A10B5D /* Pods-StockKit-umbrella.h */,
+				609535D1D4D378443D235B721E6F950A /* Pods-StockKit.debug.xcconfig */,
+				3152FFD71B05BED60F8B1E55B17B138B /* Pods-StockKit.release.xcconfig */,
+			);
+			name = "Pods-StockKit";
+			path = "Target Support Files/Pods-StockKit";
+			sourceTree = "<group>";
+		};
+		1612BC2DFC20D604929EAE2B1E714055 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				27EA4236E58E3C99D3B3E67CC9B968D6 /* NTSearchBar.swift */,
+				DAEA24C076A78E269879BE19AB548194 /* NTSearchBarView.swift */,
+				E684AC7BCBF9C0B66
