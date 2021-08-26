@@ -540,4 +540,21 @@
 			children = (
 				27EA4236E58E3C99D3B3E67CC9B968D6 /* NTSearchBar.swift */,
 				DAEA24C076A78E269879BE19AB548194 /* NTSearchBarView.swift */,
-				E684AC7BCBF9C0B66
+				E684AC7BCBF9C0B66E4EB043E9C0710B /* NTSearchSelectViewController.swift */,
+				058C7BFCDCC9492DA0EA5789FA511400 /* NTSearchViewController.swift */,
+			);
+			name = Search;
+			path = Search;
+			sourceTree = "<group>";
+		};
+		17ED436025A2F1FCE8D1EBF86EE75865 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				8A687DBA2602AE3687BF692AADF54056 /* NTPageViewController.swift */,
+			);
+			name = Page;
+			path = Page;
+			sourceTree = "<group>";
+		};
+		1EBE985F1E0686C91953D4483A1B3792 /* Styling */ = {
+			isa = PBXG
