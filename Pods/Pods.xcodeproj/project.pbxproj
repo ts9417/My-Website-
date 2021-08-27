@@ -557,4 +557,19 @@
 			sourceTree = "<group>";
 		};
 		1EBE985F1E0686C91953D4483A1B3792 /* Styling */ = {
-			isa = PBXG
+			isa = PBXGroup;
+			children = (
+				FCF517FC70DC219ACF1666AD0DD583D6 /* Color.swift */,
+				862B6BD20108EEECB9E308D7271C3505 /* FAType.swift */,
+				26D28F75FA8BBA0A2F4C84DE8A3C37AE /* Font.swift */,
+				50359B796CF0C13E3664CA1ECBCA5FC7 /* GMDType.swift */,
+				BC10D219DAF4DA12C1941594A5DCAE15 /* Icon.swift */,
+			);
+			name = Styling;
+			path = Styling;
+			sourceTree = "<group>";
+		};
+		1F94AA9008098207DC25A55C7B2D0210 /* NTComponents */ = {
+			isa = PBXGroup;
+			children = (
+				9A18CFD347FC6E1BA4B6EA8FC127A34E 
