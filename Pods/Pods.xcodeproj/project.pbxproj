@@ -586,4 +586,17 @@
 				D2F8FF58831541229601B71A2740BDA5 /* NTActionSheetViewController.swift */,
 				D7AA925AF402C02D7528C1E7D3B382BA /* NTAlertViewController.swift */,
 				A5FE57FB15BCE71B90B68F237BC18459 /* NTChime.swift */,
-	
+				8BBC2DF3D11930E7A4E8DB14B684D36B /* NTCredentialPromptViewController.swift */,
+				8B7AAE4AE6B72850E43EB52D9BE015F0 /* NTPing.swift */,
+				DB547E1AC7FCDCAF95827F8ED50366EB /* NTProgressHUD.swift */,
+				A230B28F1105B42E84995EF8124FAC03 /* NTProgressLineIndicator.swift */,
+				85C1D098A0C3DCEF4ADBFC0EACA2B1B7 /* NTToast.swift */,
+			);
+			name = Alerts;
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		219C5E56D8CC944FBD0226CAFC051E88 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				71DF1A64966CCED2EBF2A96DB16E8A03 /* Alamofire
