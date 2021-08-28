@@ -572,4 +572,18 @@
 		1F94AA9008098207DC25A55C7B2D0210 /* NTComponents */ = {
 			isa = PBXGroup;
 			children = (
-				9A18CFD347FC6E1BA4B6EA8FC127A34E 
+				9A18CFD347FC6E1BA4B6EA8FC127A34E /* NTComponents */,
+				CD32427F1B9C034E0E1EA98475A12B0E /* Resources */,
+				AE101DE9494BA3D9D92A21EF80A0F0E6 /* Support Files */,
+			);
+			name = NTComponents;
+			path = /Users/nathantannar/Documents/NTComponents;
+			sourceTree = "<absolute>";
+		};
+		21884A58C53B2E31294A2E7DE5615733 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				D2F8FF58831541229601B71A2740BDA5 /* NTActionSheetViewController.swift */,
+				D7AA925AF402C02D7528C1E7D3B382BA /* NTAlertViewController.swift */,
+				A5FE57FB15BCE71B90B68F237BC18459 /* NTChime.swift */,
+	
