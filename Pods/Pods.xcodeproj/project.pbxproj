@@ -599,4 +599,17 @@
 		219C5E56D8CC944FBD0226CAFC051E88 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				71DF1A64966CCED2EBF2A96DB16E8A03 /* Alamofire
+				71DF1A64966CCED2EBF2A96DB16E8A03 /* Alamofire.modulemap */,
+				D4E596FDA5FD1979AC64709C41E4A925 /* Alamofire.xcconfig */,
+				681C8B36073FC7A8F8F64C58657DF773 /* Alamofire-dummy.m */,
+				D6CADB648EA786E786BFB912F5794F01 /* Alamofire-prefix.pch */,
+				375478815B27BEFF2DD35C5F6DF5C9F7 /* Alamofire-umbrella.h */,
+				ADDFDB2A23F3C671AD3A2EBCE438F199 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		264EF9C02E2B31DD32705D5D1FB911D0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
