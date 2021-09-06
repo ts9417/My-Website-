@@ -677,4 +677,18 @@
 		};
 		3F23225C37F1793D5C516F81879881AD /* SwiftyJSON */ = {
 			isa = PBXGroup;
-			children =
+			children = (
+				B91BA56C38D3BCAED2012AE8A099FC14 /* SwiftyJSON.swift */,
+				D195725460DE381BE570DF15D24EE9E5 /* Support Files */,
+			);
+			name = SwiftyJSON;
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		4130E9F779783A1DDB6589E5BA685541 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				B9BE5417291749CEC56B2C6FD300F7CE /* AFError.swift */,
+				BED5C5581EFE6928DD02BDDE550A4B69 /* Alamofire.swift */,
+				E60908D068553C93B98E7FF68CB55533 /* DispatchQueue+Alamofire.swift */,
+				ACD5561FDFD367060
