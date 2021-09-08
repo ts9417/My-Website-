@@ -699,3 +699,15 @@
 				6A02F19649A406ADD3FF00E28DC3C7AD /* Response.swift */,
 				425F953857DC1E691B3F96DDC2067EF3 /* ResponseSerialization.swift */,
 				CCE0D7E159329A43AF1C7AF5A2764240 /* Result.swift */,
+				F9B6748FFEB124282B543E52811B0314 /* ServerTrustPolicy.swift */,
+				15190D970FFF8BB5686C837A151D30D7 /* SessionDelegate.swift */,
+				8C32F523CC060C5B1708A0158B7158A5 /* SessionManager.swift */,
+				D8D029C5F2CFE8FE2E74F1488E1D731F /* TaskDelegate.swift */,
+				5008BDAE7FFAACBECBF6BD4A7776E9DA /* Timeline.swift */,
+				7FD9802E7CCD894E40D776AF98315744 /* Validation.swift */,
+				219C5E56D8CC944FBD0226CAFC051E88 /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
+			sourceTree = "<group>";
+	
