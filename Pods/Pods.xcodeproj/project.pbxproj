@@ -739,4 +739,23 @@
 				11FB43F6677CAAC53D3EB794D7ECBA46 /* NTFormImageViewCell.swift */,
 				97037A09DB8F2E632692676786EBD2E9 /* NTFormInputCell.swift */,
 				5574E1719D936596DDE01F61309D5758 /* NTFormLongInputCell.swift */,
-				
+				3477C7317E21F2A814B106D62F023B87 /* NTFormProfileCell.swift */,
+				FDF750E11FD7E4BC75433DCBEBFAD26F /* NTFormTagInputCell.swift */,
+			);
+			name = Cells;
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4F07B7EC82614C5291C3C2AEB6011EBC /* NTComponents */ = {
+			isa = PBXGroup;
+			children = (
+				2AD1EEAD232A88FE2097AD249134D462 /* Assets */,
+			);
+			name = NTComponents;
+			path = NTComponents;
+			sourceTree = "<group>";
+		};
+		5A1A1676B98157604DD97558B6130FA7 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				D1677FBC840FB1BB4F9936DBA3AA
