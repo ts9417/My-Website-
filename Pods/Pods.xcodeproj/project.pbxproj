@@ -773,4 +773,15 @@
 				B6A9BE0606E4624B210AD91F827804DA /* NTImagePickerController.swift */,
 			);
 			name = Camera;
-			path = Camer
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		69F1F9EBEF34BF42FB6C72001B858C47 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2E17BA11C3ADBC9B727C76CB7643AD90 /* NTAnimatedCollectionViewCell.swift */,
+				63B485E28146B5F32B095B677A7DBBF4 /* NTCollectionDatasourceCell.swift */,
+				36E787523ADBC3C77A3B30CC32280267 /* NTCollectionUserHeaderCell.swift */,
+				DAC82BFE212482C1C51668B9A69D5157 /* NTCollectionViewCell.swift */,
+				11AA9CB894EF10D2E5CF6BBDB935DA8A /* NTCollectionViewDefaultCells.swift */,
+				E453CF0B2259CAFD8354A5D00BEA4E94 /* NTFo
