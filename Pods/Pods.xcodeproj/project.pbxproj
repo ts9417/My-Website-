@@ -758,4 +758,19 @@
 		5A1A1676B98157604DD97558B6130FA7 /* Table */ = {
 			isa = PBXGroup;
 			children = (
-				D1677FBC840FB1BB4F9936DBA3AA
+				D1677FBC840FB1BB4F9936DBA3AAF92C /* NTTableView.swift */,
+				B488576F8A813705196ED4CE54F65D63 /* NTTableViewCell.swift */,
+				3183EFFC22236D1B0166743EBEE36243 /* NTTableViewController.swift */,
+				6B251BD58ED1D10C85F206495BE9F11B /* NTTableViewHeaderFooterView.swift */,
+			);
+			name = Table;
+			path = Table;
+			sourceTree = "<group>";
+		};
+		6056D1E074718B47B5ECDA14838A0D4F /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				B6A9BE0606E4624B210AD91F827804DA /* NTImagePickerController.swift */,
+			);
+			name = Camera;
+			path = Camer
