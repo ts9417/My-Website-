@@ -816,4 +816,17 @@
 		8253AD7A7F0B9EF92A681D59E1E17BEF /* SwiftChart */ = {
 			isa = PBXGroup;
 			children = (
-				6B206AB208D172
+				6B206AB208D172E20BED277CEA6B5F35 /* Chart.swift */,
+				A20F2EA65A4445912282451ADE33D9ED /* ChartColors.swift */,
+				56A286F66A33E2445A4B752171A5E074 /* ChartSeries.swift */,
+				AC50F193F33F61C3866B38E89B31B63E /* Support Files */,
+			);
+			name = SwiftChart;
+			path = SwiftChart;
+			sourceTree = "<group>";
+		};
+		9072082EC17C2F69C091097EB4516EB5 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				21D639A01A4731BF835E43E77EFC60CB /* CircularTransitionAnimator.swift */,
+				C2BBCB94CD248C0230905D875ACE974A /* ScaleBackTransitionAnimator.swift */,
