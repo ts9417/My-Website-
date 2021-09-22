@@ -857,4 +857,14 @@
 				F2DB8CD1E1657B0EC920348221A6399F /* Pods-StockKitTests-acknowledgements.markdown */,
 				4D6817C4E4952F969636587613DC5FB4 /* Pods-StockKitTests-acknowledgements.plist */,
 				ACA6C4836C7D113C2478407CBC234BE5 /* Pods-StockKitTests-dummy.m */,
-				34D
+				34DF3DE8BFF4ACC370B524D7C4C6C6D4 /* Pods-StockKitTests-frameworks.sh */,
+				6079406A601F9233A20AFE1991EAC8EF /* Pods-StockKitTests-resources.sh */,
+				2145BC017B28C3FD0B7E8731BE8486BA /* Pods-StockKitTests-umbrella.h */,
+				B57063FE1F42663AF50D8ACBC486E7F1 /* Pods-StockKitTests.debug.xcconfig */,
+				51F811AA645EA818ABB48500F2363EE8 /* Pods-StockKitTests.release.xcconfig */,
+			);
+			name = "Pods-StockKitTests";
+			path = "Target Support Files/Pods-StockKitTests";
+			sourceTree = "<group>";
+		};
+		9D2067FC98CA54999691
