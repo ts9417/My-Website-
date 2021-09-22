@@ -846,3 +846,15 @@
 				FFE435BA40B08CF7C4BCCF007A9CADCE /* UI Kit */,
 			);
 			name = NTComponents;
+			path = NTComponents;
+			sourceTree = "<group>";
+		};
+		9A1D5FD240C1F0A270DC2F0C79F1DB26 /* Pods-StockKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				B25C25335A6EEC79DCC7F588964F83CD /* Info.plist */,
+				3A5645714F41C338F2C52C60D7B3BBE7 /* Pods-StockKitTests.modulemap */,
+				F2DB8CD1E1657B0EC920348221A6399F /* Pods-StockKitTests-acknowledgements.markdown */,
+				4D6817C4E4952F969636587613DC5FB4 /* Pods-StockKitTests-acknowledgements.plist */,
+				ACA6C4836C7D113C2478407CBC234BE5 /* Pods-StockKitTests-dummy.m */,
+				34D
