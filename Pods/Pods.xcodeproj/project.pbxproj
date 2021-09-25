@@ -867,4 +867,16 @@
 			path = "Target Support Files/Pods-StockKitTests";
 			sourceTree = "<group>";
 		};
-		9D2067FC98CA54999691
+		9D2067FC98CA54999691B0A84805EFCE /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				16E6BA5DEFD6DF838C6FEA05483ED082 /* NTEmailAuthViewController.swift */,
+				540BC2DC6440155E1BCC474B8245820A /* NTEmailRegisterViewController.swift */,
+				62B09C5F5DEE5EE696D27A4179793C0D /* NTEULAController.swift */,
+				196323B17F3CDBC6991920710D7FAA76 /* NTLandingViewController.swift */,
+				0147510E802C1F1E66FED48EBC915438 /* NTLoginViewController.swift */,
+				73DBD82C238316F46B42EE85A7CBD651 /* NTSlideShowViewController.swift */,
+			);
+			name = Other;
+			path = Other;
+			s
