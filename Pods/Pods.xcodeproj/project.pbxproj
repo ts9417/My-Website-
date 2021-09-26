@@ -879,4 +879,14 @@
 			);
 			name = Other;
 			path = Other;
-			s
+			sourceTree = "<group>";
+		};
+		A6B026DEF8444F44AAF35406BB71EF24 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AFF9BF061111AB5F77776F046F4AD00C /* NTActivityView.swift */,
+				3EEA21089A340D6956C9AF458261D54E /* NTAnimatedView.swift */,
+				580C4E0647BC248B0762C9163F038E72 /* NTCarouselView.swift */,
+				126687D0470DC9F8F1EEAB9FDBE02AC0 /* NTExpandableView.swift */,
+				4569C4BD227EF707CC20EFD328A16720 /* NTImageView.swift */,
+				381313DAA544EC5C58D61E8B5C6DB60F /* NTInputAccessoryView.swift */,
