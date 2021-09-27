@@ -890,3 +890,17 @@
 				126687D0470DC9F8F1EEAB9FDBE02AC0 /* NTExpandableView.swift */,
 				4569C4BD227EF707CC20EFD328A16720 /* NTImageView.swift */,
 				381313DAA544EC5C58D61E8B5C6DB60F /* NTInputAccessoryView.swift */,
+				6D3037867983AAD482CDF5FC2D1E5205 /* NTMagicView.swift */,
+				23A6DE1F1FEDB85CCF93B38874453B9A /* NTRefreshControl.swift */,
+				5737DB5FF4700518135DFB9E9D238D99 /* NTTagListView.swift */,
+				EAF088EA7CB3F7B54EB8B6C7E20F62EE /* NTToolbar.swift */,
+				1CAB043E22A7EADE02A24F756FCA5029 /* NTView.swift */,
+			);
+			name = Views;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AC50F193F33F61C3866B38E89B31B63E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				72457AEF566C0D979B0EE4DC2706646B /*
