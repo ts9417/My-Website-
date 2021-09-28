@@ -916,4 +916,16 @@
 		};
 		AE101DE9494BA3D9D92A21EF80A0F0E6 /* Support Files */ = {
 			isa = PBXGroup;
-			chi
+			children = (
+				70951A97C853C0C00605BF71621A3B2C /* Info.plist */,
+				4C3A74652FB2FD067312160CDE9171F1 /* NTComponents.modulemap */,
+				DD31648E3C894C19E6ACA59FA2CC89AC /* NTComponents.xcconfig */,
+				9AB1CCE49FCBE67ECC91FB4269BAA329 /* NTComponents-dummy.m */,
+				6C69FD6C9F5F83B2F143133D21FC67F9 /* NTComponents-prefix.pch */,
+				07728DBEE04A13EFF6E2674E3D84F909 /* NTComponents-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../StockKit/Pods/Target Support Files/NTComponents";
+			sourceTree = "<group>";
+		};
+		B36BDECD5F83C7F558D4
