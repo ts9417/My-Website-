@@ -903,4 +903,17 @@
 		AC50F193F33F61C3866B38E89B31B63E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				72457AEF566C0D979B0EE4DC2706646B /*
+				72457AEF566C0D979B0EE4DC2706646B /* Info.plist */,
+				E943300ED9F9DD55ADAC2397D05198F3 /* SwiftChart.modulemap */,
+				F2777CC944934C52E30CC904ED3E65B6 /* SwiftChart.xcconfig */,
+				C8FE01ACBE2D1894E370C00188C536EF /* SwiftChart-dummy.m */,
+				F7BBE47A4082BC9ED5888983F700ABEF /* SwiftChart-prefix.pch */,
+				EDFAF8295CE3CAC17EF6C3A437201679 /* SwiftChart-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftChart";
+			sourceTree = "<group>";
+		};
+		AE101DE9494BA3D9D92A21EF80A0F0E6 /* Support Files */ = {
+			isa = PBXGroup;
+			chi
