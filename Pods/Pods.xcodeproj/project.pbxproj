@@ -928,4 +928,14 @@
 			path = "../StockKit/Pods/Target Support Files/NTComponents";
 			sourceTree = "<group>";
 		};
-		B36BDECD5F83C7F558D4
+		B36BDECD5F83C7F558D47F6594C1287F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2D069A9B12C7AE873F623EA939F62D12 /* Array.swift */,
+				0121EA034326819370A4B0898838577A /* AutoLayout.swift */,
+				BDA86DAD034D7E792D1B1C4E4EBD0917 /* CALayer.swift */,
+				DFB77095A5FC287B580A961C69100DAE /* Date.swift */,
+				62DC8EEDCC64D1175A172C5A7BEDA75C /* DiscardableImageCacheItem.swift */,
+				17AA85EE3FA5E004EA86166913112F4B /* Int.swift */,
+				93CCCE8B061BBAB3F0AA76EDEE88BBF6 /* MultiThreading.swift */,
+				A4F258BA908A947FAD7BDF
