@@ -946,4 +946,18 @@
 				28015EB5A2C673756861CBBEA523FDB2 /* UIImage+UIImageView.swift */,
 				0ADFE726B0B0F86591698E99402CD604 /* UISearchBar.swift */,
 				FB84484D01FA01A3098378EC8594F992 /* UITextField.swift */,
-				6AEFBD8627E46568854D07AB9BB7447D /* UITextView.sw
+				6AEFBD8627E46568854D07AB9BB7447D /* UITextView.swift */,
+				E8ACE4E0653402A454DDDF63EFC8CF73 /* UIView.swift */,
+				A53CECA5FA7D23834933EE99BD00B30A /* UIViewController.swift */,
+			);
+			name = Extensions;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B840B2F27893420AD2D2D761E4C2575C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E23C938A7B51F7A836AB9C2BF0CD7DC5 /* Alamofire.framework */,
+				0521092C7149569650BC1A457468047F /* NTComponents.framework */,
+				D8ED307FF16BE3C6A54A6B1CF9A1CD56 /* Pods_StockKit.framework */,
+				ECC89DDBC582A2CB2D1A8F9ED9435CF
