@@ -960,4 +960,19 @@
 				E23C938A7B51F7A836AB9C2BF0CD7DC5 /* Alamofire.framework */,
 				0521092C7149569650BC1A457468047F /* NTComponents.framework */,
 				D8ED307FF16BE3C6A54A6B1CF9A1CD56 /* Pods_StockKit.framework */,
-				ECC89DDBC582A2CB2D1A8F9ED9435CF
+				ECC89DDBC582A2CB2D1A8F9ED9435CF3 /* Pods_StockKitTests.framework */,
+				BBCCF62A0719997A42E5B9276F8BE89C /* SwiftChart.framework */,
+				DA65E32D0556F97A5CD27DF0BE1B73DA /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B925C0B90C0953FFC4479D3889AF2C7C /* Pully */ = {
+			isa = PBXGroup;
+			children = (
+				4BB6C507337C979F565CD47DBBEB2AF6 /* PulleyPassthroughScrollView.swift */,
+				9A2C9BF56FAF2318F54E80019116B24A /* PulleyViewController.swift */,
+			);
+			name = Pully;
+			path = Pully;
+			sourceTree = "<group>
