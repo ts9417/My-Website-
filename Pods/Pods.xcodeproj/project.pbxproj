@@ -975,4 +975,21 @@
 			);
 			name = Pully;
 			path = Pully;
-			sourceTree = "<group>
+			sourceTree = "<group>";
+		};
+		BAE2F7FDB682C5CEC25CB94F460A09EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4130E9F779783A1DDB6589E5BA685541 /* Alamofire */,
+				8253AD7A7F0B9EF92A681D59E1E17BEF /* SwiftChart */,
+				3F23225C37F1793D5C516F81879881AD /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BEB3A1FFC688878C0D8869F0CA72DF40 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				411ADFDAE44C04D862E8E4BB585DF576 /* BebasNeue.otf */,
+				A28AC33A2F1FD4163300BF9722D16995 /* FontAwesome.ttf */,
+				A58B5EDBD439464A84EE6CD2BF0BA7D8 /* MaterialI
