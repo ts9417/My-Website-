@@ -1001,4 +1001,17 @@
 				466511960B4C76EF9762C98AA509DB82 /* Roboto-Light.ttf */,
 				C7F835F9C5337EA6FCFD598E7BB12601 /* Roboto-LightItalic.ttf */,
 				5391033CE84C00CD01FE7A15D1334905 /* Roboto-Medium.ttf */,
-				E52CE6
+				E52CE69B7CEDFB6215291967B888BD4C /* Roboto-MediumItalic.ttf */,
+				099F7B2C7A0DD78A4BC0EABC8E6E76B7 /* Roboto-Regular.ttf */,
+				EB2D3E98F1F76AA0AC67CA8993FD2F25 /* Roboto-Thin.ttf */,
+				78056116FBF5F56C4C16A2EFCED69631 /* Roboto-ThinItalic.ttf */,
+			);
+			name = fonts;
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		C6107956A021F7F7986BA411C0FD0E0A /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				E6E53FAC2EDF8356485286484F144FDE /* Lorem.swift */,
+				88F5A8781AD24D29DB736171B463C79A /* 
