@@ -1032,4 +1032,18 @@
 		};
 		D195725460DE381BE570DF15D24EE9E5 /* Support Files */ = {
 			isa = PBXGroup;
-			c
+			children = (
+				9F9FE3E3BEC60D45BF557C6BCA374FE7 /* Info.plist */,
+				4BC7EC41D4C3AB25E3810DD658AD0E2F /* SwiftyJSON.modulemap */,
+				B5E68E61CFE38B7D699ECF9058580F50 /* SwiftyJSON.xcconfig */,
+				B2EE283F6D2656E3D8CE15DEBD5E9898 /* SwiftyJSON-dummy.m */,
+				FDB004FF7B2C229816253A3D985B730F /* SwiftyJSON-prefix.pch */,
+				CB2A5D43103B8EFB90387CE5209E60A1 /* SwiftyJSON-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		D41491283574A31646329D6147141923 /* Text */ = {
+			isa = PBXGroup;
+			child
