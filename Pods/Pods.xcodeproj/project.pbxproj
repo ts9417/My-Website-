@@ -1014,4 +1014,22 @@
 			isa = PBXGroup;
 			children = (
 				E6E53FAC2EDF8356485286484F144FDE /* Lorem.swift */,
-				88F5A8781AD24D29DB736171B463C79A /* 
+				88F5A8781AD24D29DB736171B463C79A /* Person.swift */,
+				0AD77CE99D1C176830F0A37E16C69E0D /* RippleView.swift */,
+				9072082EC17C2F69C091097EB4516EB5 /* Transitions */,
+			);
+			name = Miscellaneous;
+			path = Miscellaneous;
+			sourceTree = "<group>";
+		};
+		CD32427F1B9C034E0E1EA98475A12B0E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4F07B7EC82614C5291C3C2AEB6011EBC /* NTComponents */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D195725460DE381BE570DF15D24EE9E5 /* Support Files */ = {
+			isa = PBXGroup;
+			c
