@@ -1046,4 +1046,18 @@
 		};
 		D41491283574A31646329D6147141923 /* Text */ = {
 			isa = PBXGroup;
-			child
+			children = (
+				DCF029FD7F21CBE167CB28F3A65FBD4D /* NTAnimatedTextField.swift */,
+				E87BAC5A16BE66438BD24D076E1EE7D1 /* NTLabel.swift */,
+				4A878C7C876AD8555F5FDDE0164E5A04 /* NTTextField.swift */,
+				65375357AD8EF2E00605305E2CE75057 /* NTTextInputBar.swift */,
+				067C0F69E5EF4B0DFBA7D8E8B58CFE20 /* NTTextView.swift */,
+			);
+			name = Text;
+			path = Text;
+			sourceTree = "<group>";
+		};
+		D9BA2290A4082B291A6FC6CDDBB6F54B /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				CE71068517ED0A48312EC8B1D8507BF2 /* NTDrawerController.s
