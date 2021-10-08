@@ -1060,4 +1060,17 @@
 		D9BA2290A4082B291A6FC6CDDBB6F54B /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				CE71068517ED0A48312EC8B1D8507BF2 /* NTDrawerController.s
+				CE71068517ED0A48312EC8B1D8507BF2 /* NTDrawerController.swift */,
+				21DA5C835CCB8C8EE2DF0C59C41CC59B /* NTNavigationController.swift */,
+				FA070DDE7A26A076271E47E97E59D87E /* NTNavigationViewController.swift */,
+			);
+			name = Navigation;
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		F317A8AFCC7A4887CB7B5F812FBEFC69 /* JTAppleCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				5D6B03400C15070377028F07BD326279 /* CalendarEnums.swift */,
+				DDFD5B5D55B645A08A797BE46DE7900C /* CalendarStructs.swift */,
+				7A5FFA008291E289763C66FE2BE3E3FE /* GlobalFunctionsAndExtensions.swift
