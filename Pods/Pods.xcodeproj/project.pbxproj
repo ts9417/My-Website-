@@ -1081,4 +1081,19 @@
 				20AC9B381F7F9462B4A692752988D79C /* JTAppleCalendarView.swift */,
 				867D821C0CBD99ACA296D3B95A946335 /* JTAppleCell.swift */,
 				1CDEC251416314E8726E9508E36125CF /* JTAppleCollectionReusableView.swift */,
-			
+				15788481E8BCF6B60EE8A7B4BB8AF64D /* JTCalendarProtocols.swift */,
+				54E941A0753313B097798A6AA7A0C890 /* UICollectionViewDelegates.swift */,
+				67FB7703DA32FF136DD59317DFB7BF6D /* UIScrollViewDelegates.swift */,
+				F2AAE9090353E886412F9A7F74E2290E /* UserInteractionFunctions.swift */,
+			);
+			name = JTAppleCalendar;
+			path = JTAppleCalendar;
+			sourceTree = "<group>";
+		};
+		F6FB2F8336172212EB0A7624733E6147 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F94AA9008098207DC25A55C7B2D0210 /* NTComponents */,
+			);
+			name = "Development Pods";
+			sourceTree = "
