@@ -1073,4 +1073,12 @@
 			children = (
 				5D6B03400C15070377028F07BD326279 /* CalendarEnums.swift */,
 				DDFD5B5D55B645A08A797BE46DE7900C /* CalendarStructs.swift */,
-				7A5FFA008291E289763C66FE2BE3E3FE /* GlobalFunctionsAndExtensions.swift
+				7A5FFA008291E289763C66FE2BE3E3FE /* GlobalFunctionsAndExtensions.swift */,
+				9E555FB3910A15C53D0D5ED2B8AE24AB /* JTAppleCalendarDelegateProtocol.swift */,
+				A89A250DA4DD2BE3A4E3F484A0C8E78C /* JTAppleCalendarLayout.swift */,
+				A7BA2C833CAEC50E5A0D9278D48B5241 /* JTAppleCalendarLayoutProtocol.swift */,
+				D754D02667F5F98C87A52E65A921F30D /* JTAppleCalendarVariables.swift */,
+				20AC9B381F7F9462B4A692752988D79C /* JTAppleCalendarView.swift */,
+				867D821C0CBD99ACA296D3B95A946335 /* JTAppleCell.swift */,
+				1CDEC251416314E8726E9508E36125CF /* JTAppleCollectionReusableView.swift */,
+			
