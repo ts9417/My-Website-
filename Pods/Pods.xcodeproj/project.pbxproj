@@ -1096,4 +1096,17 @@
 				1F94AA9008098207DC25A55C7B2D0210 /* NTComponents */,
 			);
 			name = "Development Pods";
-			sourceTree = "
+			sourceTree = "<group>";
+		};
+		FCA2A38D82EE4AEDA912EAFDDE5921AB /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B423DED8724AF5B4358D63EBA50F042D /* NTScrollableTabBar.swift */,
+				897E7A33DDD871C8FF50DDA4A3B3AEAD /* NTScrollableTabBarController.swift */,
+				E4E2B125632A417B7295E67ECEADE349 /* NTScrollableTabBarItem.swift */,
+				116FE86B8B669EF792139A2013760335 /* NTTabBar.swift */,
+				D3090F3FEE51E2B72102274B88E57811 /* NTTabBarController.swift */,
+				366EA2119EB24010F4359F669B9493BA /* NTTabBarItem.swift */,
+			);
+			name = TabBar;
+			path = TabBar;
