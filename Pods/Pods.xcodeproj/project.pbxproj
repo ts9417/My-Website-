@@ -1139,4 +1139,21 @@
 		};
 /* End PBXGroup section */
 
-/* Begin 
+/* Begin PBXHeadersBuildPhase section */
+		4AAE156723E3DEFBC6D66F558CA32EA3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EC527865ED3CCDA99AE483870A91C80 /* SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50B99B5254BDC492685C7D5C026F44E9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6400E12C452FC4D6BB35B1A8FDC984C0 /* NTComponents-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A
