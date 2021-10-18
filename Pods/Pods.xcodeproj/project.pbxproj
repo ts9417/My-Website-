@@ -1156,4 +1156,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A
+		6AA32E4C1EF6A137AEF944DB8F72BFC5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA039F30E925994BB19ACC8AC65986A2 /* Pods-StockKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7959A957D00020F35F199E7B304A51F9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0831558D61850E38924FDEE2987AE57 /* SwiftChart-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */ = {
+			isa = PBXHeade
