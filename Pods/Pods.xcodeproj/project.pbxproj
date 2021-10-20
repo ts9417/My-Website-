@@ -1191,4 +1191,18 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		02
+		029C53EF2F4692005F45C2D84E40F173 /* SwiftChart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C741CB093DF68DC0FD4E45B6980CE42C /* Build configuration list for PBXNativeTarget "SwiftChart" */;
+			buildPhases = (
+				581E314B5CE07D3412215DEF6651F9C2 /* Sources */,
+				3BABD2BAB324C2C1D069A0E3DB1D6457 /* Frameworks */,
+				7959A957D00020F35F199E7B304A51F9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftChart;
+			productName = SwiftChart;
+			productReference = BBCCF62A0719997A42E5B9276F8BE89
