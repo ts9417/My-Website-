@@ -1205,4 +1205,20 @@
 			);
 			name = SwiftChart;
 			productName = SwiftChart;
-			productReference = BBCCF62A0719997A42E5B9276F8BE89
+			productReference = BBCCF62A0719997A42E5B9276F8BE89C /* SwiftChart.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		507A81C8DC0A61147394FEB1EE317808 /* SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0809365E20383B93A3DDE1D65D681A4F /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildPhases = (
+				65D1DA64E9D1E1814A2A770C69740A74 /* Sources */,
+				B49C5A42B39E545C2493D6C7AE29F4E1 /* Frameworks */,
+				4AAE156723E3DEFBC6D66F558CA32EA3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyJSON;
+			produc
