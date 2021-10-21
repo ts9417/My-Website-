@@ -1232,4 +1232,19 @@
 				C508C2DC3D3269ED0B3BACBE5B09EEDB /* Sources */,
 				3B01B26337B7AA4A5C1D4CC324C0B5A8 /* Frameworks */,
 				6BFA7F2C3578EF159A5D9F04D632B3E5 /* Resources */,
-				50B99
+				50B99B5254BDC492685C7D5C026F44E9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NTComponents;
+			productName = NTComponents;
+			productReference = 0521092C7149569650BC1A457468047F /* NTComponents.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+			
