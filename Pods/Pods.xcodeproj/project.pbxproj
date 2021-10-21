@@ -1221,4 +1221,15 @@
 			dependencies = (
 			);
 			name = SwiftyJSON;
-			produc
+			productName = SwiftyJSON;
+			productReference = DA65E32D0556F97A5CD27DF0BE1B73DA /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		761A843AC76B9967F1B70EAC3FC04E02 /* NTComponents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F18FDD7D8499E1D5F6475D611C68C757 /* Build configuration list for PBXNativeTarget "NTComponents" */;
+			buildPhases = (
+				C508C2DC3D3269ED0B3BACBE5B09EEDB /* Sources */,
+				3B01B26337B7AA4A5C1D4CC324C0B5A8 /* Frameworks */,
+				6BFA7F2C3578EF159A5D9F04D632B3E5 /* Resources */,
+				50B99
