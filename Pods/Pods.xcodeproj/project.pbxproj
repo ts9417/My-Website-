@@ -1262,4 +1262,16 @@
 		};
 		8DE295E1D9E4B98CF6A8D1296200806F /* Pods-StockKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E3A0DA7E53F301312241A56096E5112A /* Build c
+			buildConfigurationList = E3A0DA7E53F301312241A56096E5112A /* Build configuration list for PBXNativeTarget "Pods-StockKit" */;
+			buildPhases = (
+				7073A4C951CF10A44A2A79238E612310 /* Sources */,
+				31221E1CABF903FADE0807213C51759C /* Frameworks */,
+				6AA32E4C1EF6A137AEF944DB8F72BFC5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F51301047A5910D223A9FD76090099CE /* PBXTargetDependency */,
+				99603569997C065B12871125024955A2 /* PBXTargetDependency */,
+				43986FFBA2E83102FA8707CBF37DE2E4 /* PBXTargetDependency */,
+				EAAE554712A6AA32052D9D0FEA4BEA39 /* PBXTargetDep
