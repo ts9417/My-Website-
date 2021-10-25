@@ -1247,4 +1247,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */;
 			buildPhases = (
-			
+				32B9974868188C4803318E36329C87FE /* Sources */,
+				99195E4207764744AEC07ECCBCD550EB /* Frameworks */,
+				B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = E23C938A7B51F7A836AB9C2BF0CD7DC5 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8DE295E1D9E4B98CF6A8D1296200806F /* Pods-StockKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3A0DA7E53F301312241A56096E5112A /* Build c
