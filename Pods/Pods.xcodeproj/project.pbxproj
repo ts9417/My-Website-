@@ -1286,4 +1286,22 @@
 			buildConfigurationList = 57A50CA300899F46EE91A2086DFAE555 /* Build configuration list for PBXNativeTarget "Pods-StockKitTests" */;
 			buildPhases = (
 				43236EF8A34006A84EF6BD923D10F0C0 /* Sources */,
-				8DF4FF0B3214F3C9EF162B1AE14DFAF4 /* 
+				8DF4FF0B3214F3C9EF162B1AE14DFAF4 /* Frameworks */,
+				F8882260B22BD563827D0BBD3D8B5242 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-StockKitTests";
+			productName = "Pods-StockKitTests";
+			productReference = ECC89DDBC582A2CB2D1A8F9ED9435CF3 /* Pods_StockKitTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
