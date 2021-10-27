@@ -1274,4 +1274,16 @@
 				F51301047A5910D223A9FD76090099CE /* PBXTargetDependency */,
 				99603569997C065B12871125024955A2 /* PBXTargetDependency */,
 				43986FFBA2E83102FA8707CBF37DE2E4 /* PBXTargetDependency */,
-				EAAE554712A6AA32052D9D0FEA4BEA39 /* PBXTargetDep
+				EAAE554712A6AA32052D9D0FEA4BEA39 /* PBXTargetDependency */,
+			);
+			name = "Pods-StockKit";
+			productName = "Pods-StockKit";
+			productReference = D8ED307FF16BE3C6A54A6B1CF9A1CD56 /* Pods_StockKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FF2610FEA047DC18DFB617A64AFEA100 /* Pods-StockKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57A50CA300899F46EE91A2086DFAE555 /* Build configuration list for PBXNativeTarget "Pods-StockKitTests" */;
+			buildPhases = (
+				43236EF8A34006A84EF6BD923D10F0C0 /* Sources */,
+				8DF4FF0B3214F3C9EF162B1AE14DFAF4 /* 
