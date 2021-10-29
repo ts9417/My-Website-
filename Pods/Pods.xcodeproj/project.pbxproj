@@ -1320,4 +1320,18 @@
 			projectRoot = "";
 			targets = (
 				88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */,
-				761A843AC76B9967F1B70EAC
+				761A843AC76B9967F1B70EAC3FC04E02 /* NTComponents */,
+				8DE295E1D9E4B98CF6A8D1296200806F /* Pods-StockKit */,
+				FF2610FEA047DC18DFB617A64AFEA100 /* Pods-StockKitTests */,
+				029C53EF2F4692005F45C2D84E40F173 /* SwiftChart */,
+				507A81C8DC0A61147394FEB1EE317808 /* SwiftyJSON */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6BFA7F2C3578EF159A5D9F04D632B3E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21BDC4F3CF027EC5DA3F215F784F3D3
