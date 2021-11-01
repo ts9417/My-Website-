@@ -1334,4 +1334,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21BDC4F3CF027EC5DA3F215F784F3D3
+				21BDC4F3CF027EC5DA3F215F784F3D31 /* Assets.xcassets in Resources */,
+				9A6353B422E1BB225A39B27DBD780FE4 /* BebasNeue.otf in Resources */,
+				FC119FCC0158DFF3133E05B08E1922AA /* FontAwesome.ttf in Resources */,
+				D64D54A3E7E97DFB4F753F752780E319 /* MaterialIcons.ttf in Resources */,
+				CD8003AF497800CBD61AD860F5A65ABA /* Roboto-Black.ttf in Resources */,
+				D9707250710C349423FE02BA78309DDD /* Roboto-BlackItalic.ttf in Resources */,
+				C7F3C09CAF5F8D3BBB0F1D8E42F251AD /* Roboto-Bold.ttf in Resources */,
+				1B0D1C4CD11641324B989F228C334CA6 /* Roboto-BoldItalic.ttf i
