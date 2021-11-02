@@ -1341,4 +1341,11 @@
 				CD8003AF497800CBD61AD860F5A65ABA /* Roboto-Black.ttf in Resources */,
 				D9707250710C349423FE02BA78309DDD /* Roboto-BlackItalic.ttf in Resources */,
 				C7F3C09CAF5F8D3BBB0F1D8E42F251AD /* Roboto-Bold.ttf in Resources */,
-				1B0D1C4CD11641324B989F228C334CA6 /* Roboto-BoldItalic.ttf i
+				1B0D1C4CD11641324B989F228C334CA6 /* Roboto-BoldItalic.ttf in Resources */,
+				E5E292C952711698B32A24FADDD48FC6 /* Roboto-Italic.ttf in Resources */,
+				04518EF7D0774CA2DB7B9651ED0F452F /* Roboto-Light.ttf in Resources */,
+				BCFF9642D4203C747E20F75969A10740 /* Roboto-LightItalic.ttf in Resources */,
+				5299CE0293D8494876C7C2563DF17334 /* Roboto-Medium.ttf in Resources */,
+				6B8CAF65884BDD7ABE024E5CB1132D7F /* Roboto-MediumItalic.ttf in Resources */,
+				E6B6AC616CF48D91874A29E87EAB0FF3 /* Roboto-Regular.ttf in Resources */,
+				0D4BC33C31B903297A658389F9C801D9 /* Roboto-Thin.ttf in Resourc
