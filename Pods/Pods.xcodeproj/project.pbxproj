@@ -1348,4 +1348,18 @@
 				5299CE0293D8494876C7C2563DF17334 /* Roboto-Medium.ttf in Resources */,
 				6B8CAF65884BDD7ABE024E5CB1132D7F /* Roboto-MediumItalic.ttf in Resources */,
 				E6B6AC616CF48D91874A29E87EAB0FF3 /* Roboto-Regular.ttf in Resources */,
-				0D4BC33C31B903297A658389F9C801D9 /* Roboto-Thin.ttf in Resourc
+				0D4BC33C31B903297A658389F9C801D9 /* Roboto-Thin.ttf in Resources */,
+				21C87B9EA779B9575932B9C8B8BF8A7A /* Roboto-ThinItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32B9974868188C4803318E36329C87FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */,
+				A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */,
+				F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources *
