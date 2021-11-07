@@ -1391,4 +1391,17 @@
 		};
 		581E314B5CE07D3412215DEF6651F9C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483
+			buildActionMask = 2147483647;
+			files = (
+				3BC278A2B51516BFACABF922EEE8CFFD /* Chart.swift in Sources */,
+				F503166F80EAE34CFCE05B64D821E26E /* ChartColors.swift in Sources */,
+				9D1AB4AF456666944921BB7288225DD3 /* ChartSeries.swift in Sources */,
+				C556D6C222923B5A90EE7866FC5F8981 /* SwiftChart-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65D1DA64E9D1E1814A2A770C69740A74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A30F32596473AF2AF2232A22CF9E742 /* SwiftyJSON-dummy.m in S
