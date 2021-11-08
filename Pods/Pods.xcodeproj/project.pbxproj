@@ -1404,4 +1404,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A30F32596473AF2AF2232A22CF9E742 /* SwiftyJSON-dummy.m in S
+				2A30F32596473AF2AF2232A22CF9E742 /* SwiftyJSON-dummy.m in Sources */,
+				76F7E75011845E875B22E4C49D557B75 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7073A4C951CF10A44A2A79238E612310 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4CA57DBA73A5B0737DB6103E4B0E6DF /* Pods-StockKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C508C2DC3D3269ED0B3BACBE5B09EEDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FAD4BA595C6F9238F8250
