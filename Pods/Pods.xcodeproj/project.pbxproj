@@ -1421,4 +1421,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FAD4BA595C6F9238F8250
+				8FAD4BA595C6F9238F825077F2A444CE /* Array.swift in Sources */,
+				8524C5FECB6EB647D04A97488932F56E /* AutoLayout.swift in Sources */,
+				AA58B48F9190B92E6EE87416048E1F6E /* CALayer.swift in Sources */,
+				F1661B937B078B03AFCA09C97F3B6618 /* CalendarEnums.swift in Sources */,
+				FE65F641559E293D1CC6AFE26EF3D117 /* CalendarStructs.swift in Sources */,
+				DB503C22DAB35EEA4B735B8B18C234C4 /* CircularTransitionAnimator.swift in Sources */,
+				03B94952D2BDBD47F12FA8CA0086F9AD /* Color.swift in Sources */,
+				428ADB127EF655B0FF992B085B687900 /* Date.s
