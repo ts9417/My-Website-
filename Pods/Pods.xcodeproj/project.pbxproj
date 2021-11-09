@@ -1428,4 +1428,11 @@
 				FE65F641559E293D1CC6AFE26EF3D117 /* CalendarStructs.swift in Sources */,
 				DB503C22DAB35EEA4B735B8B18C234C4 /* CircularTransitionAnimator.swift in Sources */,
 				03B94952D2BDBD47F12FA8CA0086F9AD /* Color.swift in Sources */,
-				428ADB127EF655B0FF992B085B687900 /* Date.s
+				428ADB127EF655B0FF992B085B687900 /* Date.swift in Sources */,
+				9C7FECD085ABCFB0DA29028A10A45240 /* DiscardableImageCacheItem.swift in Sources */,
+				6CD1FEF9E601E1ED2EA5054C5FFF3F45 /* FAType.swift in Sources */,
+				E1E7D3C39F53903A11ACD3A7E966525E /* Font.swift in Sources */,
+				1EDE5061B2CE5DA859A9821B68B16000 /* GlobalFunctionsAndExtensions.swift in Sources */,
+				A2F73EFA9509383DBCDC7A38AD838199 /* GMDType.swift in Sources */,
+				794E4B8AE9603BE00298D84409420FD1 /* Icon.swift in Sources */,
+				9F717EA5EE4AC604C925165E2C
