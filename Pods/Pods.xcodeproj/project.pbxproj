@@ -1441,4 +1441,11 @@
 				62BB874C272D8D8B503A6C3793BD0B10 /* JTAppleCalendarLayoutProtocol.swift in Sources */,
 				2CCFD151BFA9C2CF9B711393C5100860 /* JTAppleCalendarVariables.swift in Sources */,
 				190651B19023354389063A77FBAE4F4E /* JTAppleCalendarView.swift in Sources */,
-				69CF93B42E0909FB7D7F4888F518B19A /
+				69CF93B42E0909FB7D7F4888F518B19A /* JTAppleCell.swift in Sources */,
+				2CCFF2C0AC41098B2CA8BDF8183F625A /* JTAppleCollectionReusableView.swift in Sources */,
+				3364225196CC37A1713B003E18A127C1 /* JTCalendarProtocols.swift in Sources */,
+				2A3F0F654EAF1FB4AF28649F493074D4 /* Log.swift in Sources */,
+				554E6DD77150C25728BD0DFAFC00DEF1 /* Lorem.swift in Sources */,
+				63C43C62B2270035FBA25028C3D1AAAF /* MultiThreading.swift in Sources */,
+				F0747D62245689351D740D47E86FF76A /* NSMutableAttributedString.swift in Sources */,
+				90B27825DCA4EBD2C03F3AA4F194A819 /* N
