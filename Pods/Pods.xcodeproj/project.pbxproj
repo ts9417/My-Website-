@@ -1435,4 +1435,10 @@
 				1EDE5061B2CE5DA859A9821B68B16000 /* GlobalFunctionsAndExtensions.swift in Sources */,
 				A2F73EFA9509383DBCDC7A38AD838199 /* GMDType.swift in Sources */,
 				794E4B8AE9603BE00298D84409420FD1 /* Icon.swift in Sources */,
-				9F717EA5EE4AC604C925165E2C
+				9F717EA5EE4AC604C925165E2C365CCF /* Int.swift in Sources */,
+				8E64A037DFFF4E994C04CBE5BA2E48E2 /* JTAppleCalendarDelegateProtocol.swift in Sources */,
+				7E1AD4437CEBDBFC64F87BDCD50B1DAD /* JTAppleCalendarLayout.swift in Sources */,
+				62BB874C272D8D8B503A6C3793BD0B10 /* JTAppleCalendarLayoutProtocol.swift in Sources */,
+				2CCFD151BFA9C2CF9B711393C5100860 /* JTAppleCalendarVariables.swift in Sources */,
+				190651B19023354389063A77FBAE4F4E /* JTAppleCalendarView.swift in Sources */,
+				69CF93B42E0909FB7D7F4888F518B19A /
