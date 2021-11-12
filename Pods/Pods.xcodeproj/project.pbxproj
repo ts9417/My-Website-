@@ -1448,4 +1448,10 @@
 				554E6DD77150C25728BD0DFAFC00DEF1 /* Lorem.swift in Sources */,
 				63C43C62B2270035FBA25028C3D1AAAF /* MultiThreading.swift in Sources */,
 				F0747D62245689351D740D47E86FF76A /* NSMutableAttributedString.swift in Sources */,
-				90B27825DCA4EBD2C03F3AA4F194A819 /* N
+				90B27825DCA4EBD2C03F3AA4F194A819 /* NTActionSheetViewController.swift in Sources */,
+				A33140A1CABAED350E132A0808A70F77 /* NTActivityView.swift in Sources */,
+				5694C43012E6867B38D863710CC177D8 /* NTAlertViewController.swift in Sources */,
+				F992A27DF3E56C408A2723221479BCEA /* NTAnimatedCollectionViewCell.swift in Sources */,
+				FF55804365F972A791933140C60604F0 /* NTAnimatedTextField.swift in Sources */,
+				06B08D62457F6F203E80A2E711DDC9D3 /* NTAnimatedView.swift in Sources */,
+				F528A7C4F880A28F8DBA28D038878DA6 /* NTButton.swift in Sources */,
