@@ -1461,4 +1461,11 @@
 				689B5D35211F951FBA4DF69EA79C276A /* NTCalendarViewController.swift in Sources */,
 				2362C75AB9B0A43F353FABBFD5234720 /* NTCarouselView.swift in Sources */,
 				E5D5E59F486EC3AA695F6E1946B39F00 /* NTCheckbox.swift in Sources */,
-				39802A623C44841E1615D78ED5BE1846 
+				39802A623C44841E1615D78ED5BE1846 /* NTChime.swift in Sources */,
+				F13EED3195A17A7FEAB286F5BA802E73 /* NTCollectionDatasource.swift in Sources */,
+				1D8CF45EA9664717B0384C0138D8B9A8 /* NTCollectionDatasourceCell.swift in Sources */,
+				FC1C76B23EEF5AAEADAA10809EED979F /* NTCollectionUserHeaderCell.swift in Sources */,
+				640284127B23311A7A71914E2352AA8F /* NTCollectionViewCell.swift in Sources */,
+				8B6DFAA944A048B245F209AC18E9A7A3 /* NTCollectionViewController.swift in Sources */,
+				01767091C540272059A7D540A85484BC /* NTCollectionViewDefaultCells.swift in Sources */,
+				80020AD1D420DEA3AD1C5E36A7DA1
