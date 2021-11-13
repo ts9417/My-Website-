@@ -1455,3 +1455,10 @@
 				FF55804365F972A791933140C60604F0 /* NTAnimatedTextField.swift in Sources */,
 				06B08D62457F6F203E80A2E711DDC9D3 /* NTAnimatedView.swift in Sources */,
 				F528A7C4F880A28F8DBA28D038878DA6 /* NTButton.swift in Sources */,
+				1CF2D7F3C2EEE63C63CD62E05FB17A3B /* NTCalendarHeaderView.swift in Sources */,
+				CEF39FF7875FEC9AC54077632023349A /* NTCalendarView.swift in Sources */,
+				34A3CB77D674BB5EDB2B0BCF1B4807F0 /* NTCalendarViewCell.swift in Sources */,
+				689B5D35211F951FBA4DF69EA79C276A /* NTCalendarViewController.swift in Sources */,
+				2362C75AB9B0A43F353FABBFD5234720 /* NTCarouselView.swift in Sources */,
+				E5D5E59F486EC3AA695F6E1946B39F00 /* NTCheckbox.swift in Sources */,
+				39802A623C44841E1615D78ED5BE1846 
