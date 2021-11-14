@@ -1468,4 +1468,10 @@
 				640284127B23311A7A71914E2352AA8F /* NTCollectionViewCell.swift in Sources */,
 				8B6DFAA944A048B245F209AC18E9A7A3 /* NTCollectionViewController.swift in Sources */,
 				01767091C540272059A7D540A85484BC /* NTCollectionViewDefaultCells.swift in Sources */,
-				80020AD1D420DEA3AD1C5E36A7DA1
+				80020AD1D420DEA3AD1C5E36A7DA13B6 /* NTComponents-dummy.m in Sources */,
+				06623FFB5AF064AAE9706B1E7DCA1C59 /* NTCredentialPromptViewController.swift in Sources */,
+				FF20E1D976799FCEF68A267061C68F91 /* NTDrawerBarButtonItem.swift in Sources */,
+				EA48B99B25CCC4761FAAFCBC7382CE6C /* NTDrawerController.swift in Sources */,
+				226C9755B23F63FCB678D1F4016ACBD8 /* NTEmailAuthViewController.swift in Sources */,
+				2742AF79A17118914E75ED13E4F1A215 /* NTEmailRegisterViewController.swift in Sources */,
+				112E9C0D293608C919B18BE58193C886 /* NTEULAC
