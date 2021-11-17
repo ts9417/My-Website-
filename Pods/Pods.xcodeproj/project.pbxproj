@@ -1481,4 +1481,11 @@
 				9497554FA29203D1C20F9F0BFCE712C5 /* NTFormCell.swift in Sources */,
 				EBB1FDA13C50351E536D42DE2B4DEE86 /* NTFormControlCell.swift in Sources */,
 				BA4E6C87F77B25CA647FF02BD407A03B /* NTFormDatasource.swift in Sources */,
-				C2808A269FE1B71B43F6DC8D73F444D4 /* NTFormD
+				C2808A269FE1B71B43F6DC8D73F444D4 /* NTFormDateInputCell.swift in Sources */,
+				A643A7201720854517A3BF1311C738E3 /* NTFormImageSelectorCell.swift in Sources */,
+				40C21651046B3420B81FC1A4E9C59D56 /* NTFormImageViewCell.swift in Sources */,
+				B57B2351D9A3B55640404FA9BD286544 /* NTFormInputCell.swift in Sources */,
+				DD11E1AE2F4274631C7DA4EE608DFCC9 /* NTFormLongInputCell.swift in Sources */,
+				61DDDDA52B5614919D24B17E7448547E /* NTFormProfileCell.swift in Sources */,
+				CC1561E936FB8F5008CA4CF500903ABF /* NTFormSection.swift in Sources */,
+				CF0E39B
