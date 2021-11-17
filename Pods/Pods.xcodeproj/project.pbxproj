@@ -1488,4 +1488,10 @@
 				DD11E1AE2F4274631C7DA4EE608DFCC9 /* NTFormLongInputCell.swift in Sources */,
 				61DDDDA52B5614919D24B17E7448547E /* NTFormProfileCell.swift in Sources */,
 				CC1561E936FB8F5008CA4CF500903ABF /* NTFormSection.swift in Sources */,
-				CF0E39B
+				CF0E39B54E2B8C82C605D128174CF2CA /* NTFormTagInputCell.swift in Sources */,
+				85EF41CCFAA7337F0DE0248B488484EB /* NTFormViewController.swift in Sources */,
+				5ED49942BAA0140A4FB5002DE1DBF4C0 /* NTImagePickerController.swift in Sources */,
+				AC095D148945C189995F957A7AB4AD49 /* NTImageView.swift in Sources */,
+				283C063D5AAB330BC07364FED12D3F2D /* NTInputAccessoryView.swift in Sources */,
+				969711D1F17E1DB333A08188D5F45274 /* NTLabel.swift in Sources */,
+				F8562C13E84F1244ED71ADB2B9800ABE /* NTLandingViewController.swift in Sources
