@@ -1501,4 +1501,11 @@
 				E816C8B4A702E7454B8A20248186CDFB /* NTMapAnnotationView.swift in Sources */,
 				2987E1527A353609F87F0C496F2A6057 /* NTMapView.swift in Sources */,
 				637BEB6708CA513A32EED5BF35B637ED /* NTMapViewController.swift in Sources */,
-				8B4DBF7ED41CA13C05130F04615518A5 /* NTNavigationController.swift in
+				8B4DBF7ED41CA13C05130F04615518A5 /* NTNavigationController.swift in Sources */,
+				21D3B1C35302D9CA8B654D1F04CC4003 /* NTNavigationViewController.swift in Sources */,
+				E70202FE7666C1FF0BA8AEC794141391 /* NTPageViewController.swift in Sources */,
+				8AE4CECC627DC70F02D3F0137E9E9DCD /* NTPing.swift in Sources */,
+				BFDF75D23E561D96AE41D18DBB7DD2F3 /* NTProgressHUD.swift in Sources */,
+				BD7A0517155C15394203AC00E5F03169 /* NTProgressLineIndicator.swift in Sources */,
+				CA396CEF828E260BC23A62D49BBF20B1 /* NTRefreshControl.swift in Sources */,
+				C8AA8AA4B092E17C2AB412D3874C66F2 /* NTScrollableTabBar.swift 
