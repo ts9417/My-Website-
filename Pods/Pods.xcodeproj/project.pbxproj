@@ -1494,4 +1494,11 @@
 				AC095D148945C189995F957A7AB4AD49 /* NTImageView.swift in Sources */,
 				283C063D5AAB330BC07364FED12D3F2D /* NTInputAccessoryView.swift in Sources */,
 				969711D1F17E1DB333A08188D5F45274 /* NTLabel.swift in Sources */,
-				F8562C13E84F1244ED71ADB2B9800ABE /* NTLandingViewController.swift in Sources
+				F8562C13E84F1244ED71ADB2B9800ABE /* NTLandingViewController.swift in Sources */,
+				4255B37A3D714AECA75F4D2D7311AE0F /* NTLoginViewController.swift in Sources */,
+				98E710F848E15CD0ADDCAA2C5BE7AC75 /* NTMagicView.swift in Sources */,
+				E10CB6F3925DB00C3EA4682147E0EA6E /* NTMapAnnotation.swift in Sources */,
+				E816C8B4A702E7454B8A20248186CDFB /* NTMapAnnotationView.swift in Sources */,
+				2987E1527A353609F87F0C496F2A6057 /* NTMapView.swift in Sources */,
+				637BEB6708CA513A32EED5BF35B637ED /* NTMapViewController.swift in Sources */,
+				8B4DBF7ED41CA13C05130F04615518A5 /* NTNavigationController.swift in
