@@ -1508,4 +1508,11 @@
 				BFDF75D23E561D96AE41D18DBB7DD2F3 /* NTProgressHUD.swift in Sources */,
 				BD7A0517155C15394203AC00E5F03169 /* NTProgressLineIndicator.swift in Sources */,
 				CA396CEF828E260BC23A62D49BBF20B1 /* NTRefreshControl.swift in Sources */,
-				C8AA8AA4B092E17C2AB412D3874C66F2 /* NTScrollableTabBar.swift 
+				C8AA8AA4B092E17C2AB412D3874C66F2 /* NTScrollableTabBar.swift in Sources */,
+				7F582B9BC6D1FD38C30D69ED74E97AD4 /* NTScrollableTabBarController.swift in Sources */,
+				E23E024B50B5C475E28DB0C2283365FF /* NTScrollableTabBarItem.swift in Sources */,
+				18A91F2CA8596562296079D2A00D0462 /* NTSearchBar.swift in Sources */,
+				BE7C9D23B69FBFD13276F45572D2CD9C /* NTSearchBarView.swift in Sources */,
+				71966F48295A15ED60AA38A8D715DB6C /* NTSearchSelectViewController.swift in Sources */,
+				B8FA60314A8A19E02AC807C2237C1208 /* NTSearchViewController.swift in Sources */,
+	
