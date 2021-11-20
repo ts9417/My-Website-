@@ -1515,4 +1515,11 @@
 				BE7C9D23B69FBFD13276F45572D2CD9C /* NTSearchBarView.swift in Sources */,
 				71966F48295A15ED60AA38A8D715DB6C /* NTSearchSelectViewController.swift in Sources */,
 				B8FA60314A8A19E02AC807C2237C1208 /* NTSearchViewController.swift in Sources */,
-	
+				F48D01DD16F4EF7CED4302611F6CB8C3 /* NTSegmentedControl.swift in Sources */,
+				7737B3072AA7D8837C7D4336D94BB94D /* NTSlideShowViewController.swift in Sources */,
+				EC702E2A5F9BE11C8E9952A21BEA5D0A /* NTSwitch.swift in Sources */,
+				D4F2184B58F2651DF3AC37512F0D0568 /* NTTabBar.swift in Sources */,
+				713F87504096DA40C12F2706DC82CC41 /* NTTabBarController.swift in Sources */,
+				03407188AD2CF961F5F47AAC8E19A548 /* NTTabBarItem.swift in Sources */,
+				FF4CD8A42AE9F497C83B26A8416CDD3B /* NTTableView.swift in Sources */,
+				9EE4EDC8A984D32B854C2C4DBE73C7BD /* NTTab
