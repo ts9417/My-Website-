@@ -1536,4 +1536,11 @@
 				D9D933038D380135E270E73C88E9D572 /* NTViewController.swift in Sources */,
 				7754CBEA4F7CAEF4FC83543D4DA253E6 /* Person.swift in Sources */,
 				BD004558F60F5A08299025D3F8B225FC /* PulleyPassthroughScrollView.swift in Sources */,
-				EB3FAC4D1794D8A2BE8666D07B6F2D0E /* PulleyViewCo
+				EB3FAC4D1794D8A2BE8666D07B6F2D0E /* PulleyViewController.swift in Sources */,
+				2A238724A8CDBB52BAB34E3557B216B8 /* RippleView.swift in Sources */,
+				0B37448A1213EC3CF35EF57355137450 /* ScaleBackTransitionAnimator.swift in Sources */,
+				C4B479CECD2FD402ECADD4E96754C41F /* String.swift in Sources */,
+				847626F61E77081F93CECED269169116 /* UIApplication.swift in Sources */,
+				05D26556F8F3C0A3CA81A53FCDF8A08F /* UIButton.swift in Sources */,
+				7686485563237E9B8045B47CFE98BADC /* UICollectionViewDelegates.swift in Sources */,
+				6A006AC103650093A4
