@@ -1550,4 +1550,18 @@
 				45B3F1C1DCE22CB38CC7697446DBE9C8 /* UITextField.swift in Sources */,
 				1E9F487BF40945D7878CAA23E69A9EF4 /* UITextView.swift in Sources */,
 				0960FD68C2284E5E5F8620C8B149D7FD /* UIView.swift in Sources */,
-				3C769545663FE2F62D527EC9B26C214
+				3C769545663FE2F62D527EC9B26C214B /* UIViewController.swift in Sources */,
+				747B3BA0AD81B9A2A4A124F587808877 /* UserInteractionFunctions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		43986FFBA2E83102FA8707CBF37DE2E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftChart;
+			target = 029C53EF2F4692005F45C2D84E40F173 /* SwiftChart */;
+			targetProxy = 8D891F0C2442EED4214A9176AC477CF5 /* PBXContainerItemProxy */;
+		};
+		99603569997C065B128711250
