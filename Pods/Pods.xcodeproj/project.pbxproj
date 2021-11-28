@@ -1564,4 +1564,16 @@
 			target = 029C53EF2F4692005F45C2D84E40F173 /* SwiftChart */;
 			targetProxy = 8D891F0C2442EED4214A9176AC477CF5 /* PBXContainerItemProxy */;
 		};
-		99603569997C065B128711250
+		99603569997C065B12871125024955A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NTComponents;
+			target = 761A843AC76B9967F1B70EAC3FC04E02 /* NTComponents */;
+			targetProxy = 07FA6CCD65AC864863068003BCCC9D04 /* PBXContainerItemProxy */;
+		};
+		EAAE554712A6AA32052D9D0FEA4BEA39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = 507A81C8DC0A61147394FEB1EE317808 /* SwiftyJSON */;
+			targetProxy = 3500B0CEF0280300F8EE5EA78AED3F3C /* PBXContainerItemProxy */;
+		};
+		F51301047A
