@@ -1576,4 +1576,17 @@
 			target = 507A81C8DC0A61147394FEB1EE317808 /* SwiftyJSON */;
 			targetProxy = 3500B0CEF0280300F8EE5EA78AED3F3C /* PBXContainerItemProxy */;
 		};
-		F51301047A
+		F51301047A5910D223A9FD76090099CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
+			targetProxy = 2BA289674AC15E8487ED59C1B30C7931 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		07E925C481DDD32B742C8B0D765D951D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = 
