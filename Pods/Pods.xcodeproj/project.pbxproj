@@ -1975,4 +1975,20 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = NTComponents;
 				SDKROOT = iphoneos;
-				SKIP_INSTA
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C5931DEC1DA478E1D4FECE3F60059366 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD31648E3C894C19E6ACA59FA2CC89AC /* NTComponents.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_I
