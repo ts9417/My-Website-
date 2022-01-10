@@ -2128,3 +2128,17 @@
 			buildConfigurations = (
 				C9660A42FEDD040185578ADA021EC8E0 /* Debug */,
 				7D072D0D174F12EAACC1862DA756E67A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57A50CA300899F46EE91A2086DFAE555 /* Build configuration list for PBXNativeTarget "Pods-StockKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EF55600DD65FFE512D0506E543BC6E6 /* Debug */,
+				B42BAD2EDF6B5B6C52B055A4C9363BF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C741CB093DF68DC0FD4E45B6980CE42C /* Build configuration list for PBXNativeTarget "SwiftCha
