@@ -2141,4 +2141,17 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C741CB093DF68DC0FD4E45B6980CE42C /* Build configuration list for PBXNativeTarget "SwiftCha
+		C741CB093DF68DC0FD4E45B6980CE42C /* Build configuration list for PBXNativeTarget "SwiftChart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D9FE445809560A6B6856A7E289E5142 /* Debug */,
+				AE49DCE7AE0B0E375E8F61263C69746C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3A0DA7E53F301312241A56096E5112A /* Build configuration list for PBXNativeTarget "Pods-StockKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7342FB1A8AD0CC73AF6F2265CD1E43C /* Debug */,
+				8C5192A78BA716E91FB3DACE7AF48F36 /* Release */,
