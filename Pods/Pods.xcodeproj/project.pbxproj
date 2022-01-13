@@ -2155,3 +2155,19 @@
 			buildConfigurations = (
 				B7342FB1A8AD0CC73AF6F2265CD1E43C /* Debug */,
 				8C5192A78BA716E91FB3DACE7AF48F36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F18FDD7D8499E1D5F6475D611C68C757 /* Build configuration list for PBXNativeTarget "NTComponents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5931DEC1DA478E1D4FECE3F60059366 /* Debug */,
+				BCE0CA8120AEFD8E9C23D016E1C4BBD0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9
