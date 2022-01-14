@@ -2170,4 +2170,5 @@
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
