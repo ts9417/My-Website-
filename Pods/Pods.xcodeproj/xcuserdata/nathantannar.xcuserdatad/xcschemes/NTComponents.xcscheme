@@ -14,4 +14,16 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintI
+               BlueprintIdentifier = '761A843AC76B9967F1B70EAC3FC04E02'
+               BlueprintName = 'NTComponents'
+               ReferencedContainer = 'container:Pods.xcodeproj'
+               BuildableName = 'NTComponents.framework'>
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      buildConfiguration = "De
