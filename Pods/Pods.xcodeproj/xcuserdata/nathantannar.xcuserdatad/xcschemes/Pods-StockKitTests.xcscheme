@@ -46,4 +46,18 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FF2610FEA047DC18DFB617A64AFEA100"
-      
+            BuildableName = "Pods_StockKitTests.framework"
+            BlueprintName = "Pods-StockKitTests"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+   </ProfileActi
