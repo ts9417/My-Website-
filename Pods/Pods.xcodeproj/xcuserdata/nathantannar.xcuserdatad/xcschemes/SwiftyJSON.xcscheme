@@ -8,4 +8,18 @@
       <BuildActionEntries>
          <BuildActionEntry
             buildForAnalyzing = "YES"
-            buildForT
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES">
+            <BuildableReference
+               BuildableIdentifier = 'primary'
+               BlueprintIdentifier = '507A81C8DC0A61147394FEB1EE317808'
+               BlueprintName = 'SwiftyJSON'
+               ReferencedContainer = 'container:Pods.xcodeproj'
+               BuildableName = 'SwiftyJSON.framework'>
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestActio
