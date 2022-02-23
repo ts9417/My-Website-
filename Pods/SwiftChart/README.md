@@ -31,4 +31,13 @@ pod "SwiftChart"
 
 ### Manually
 
-1. Download **SwiftChart.zip** from the [last release](https://github.com/gpbl/SwiftChart/releases/latest) and extra
+1. Download **SwiftChart.zip** from the [last release](https://github.com/gpbl/SwiftChart/releases/latest) and extract its content in your project's folder.
+2. From the Xcode project, choose *Add Files to <ProjectName>...* from the *File* menu and add the extracted files.
+
+## Usage
+
+The library includes:
+
+- the [Chart](Source/Chart.swift#L40) main class, to initialize and configure the chart’s content, e.g. for adding series or setting up the its appearance
+- the [ChartSeries](Source/ChartSeries.swift) class, for creating datasets and configure their appearance
+- the [ChartDelegate](Source/Chart.swift#L10-L32) protocol, which tells other objects about th
