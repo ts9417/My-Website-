@@ -58,4 +58,20 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 #### From the Interface Builder
 
-The chart can be initialized from the Interface Builder. Drag a normal View into a View Controller and
+The chart can be initialized from the Interface Builder. Drag a normal View into a View Controller and assign to it the `Chart` Custom Class from the Identity Inspector:
+ 
+![Example](https://cloud.githubusercontent.com/assets/120693/5063826/c01f26d2-6df6-11e4-8122-cb086709d96c.png)
+
+> Parts of the chart’s appearance can be set from the Attribute Inspector.
+
+#### By coding
+
+To initialize a chart programmatically, use the `Chart(frame: ...)` initializer, which requires a `frame`:
+
+```swift
+let chart = Chart(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
+```
+
+If you prefer to use Autolayout, set the frame to `0` and add the constraints later:
+
+```s
