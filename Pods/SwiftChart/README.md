@@ -40,4 +40,22 @@ The library includes:
 
 - the [Chart](Source/Chart.swift#L40) main class, to initialize and configure the chart’s content, e.g. for adding series or setting up the its appearance
 - the [ChartSeries](Source/ChartSeries.swift) class, for creating datasets and configure their appearance
-- the [ChartDelegate](Source/Chart.swift#L10-L32) protocol, which tells other objects about th
+- the [ChartDelegate](Source/Chart.swift#L10-L32) protocol, which tells other objects about the chart’s touch events
+- the [ChartColor](Source/ChartColors.swift) struct, containing some predefined colors
+
+**Example**
+
+```swift
+let chart = Chart()
+let series = ChartSeries([0, 6, 2, 8, 4, 7, 3, 10, 8])
+series.color = ChartColors.greenColor()
+chart.add(series)
+```
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+### To initialize a chart
+
+#### From the Interface Builder
+
+The chart can be initialized from the Interface Builder. Drag a normal View into a View Controller and
