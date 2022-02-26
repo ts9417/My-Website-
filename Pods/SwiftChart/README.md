@@ -74,4 +74,21 @@ let chart = Chart(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
 
 If you prefer to use Autolayout, set the frame to `0` and add the constraints later:
 
-```s
+```swift
+let chart = Chart(frame: CGRectZero)
+// add constraints now
+```
+
+### Adding series
+
+Initialize each series before adding them to the chart. To do so, pass an array to initialize a `ChartSeries` object:
+
+```swift
+let series = ChartSeries([0, 6.5, 2, 8, 4.1, 7, -3.1, 10, 8])
+chart.add(series)
+```
+
+By default, the values on the x-axis are the progressive indexes of the passed array. You can customize those values by passing an array of `(x: Float, y: Float)` touples to the series’ initializer:
+
+```swift
+// Create
