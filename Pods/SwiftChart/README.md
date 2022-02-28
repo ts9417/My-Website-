@@ -132,4 +132,22 @@ class MyViewController: UIViewController, ChartDelegate {
     
     // Chart delegate
     func didTouchChart(chart: Chart, indexes: Array<Int?>, x: Float, left: CGFloat) {
-     
+        // Do something on touch
+    }
+    
+    func didFinishTouchingChart(chart: Chart) {
+        // Do something when finished
+    }
+
+    func didEndTouchingChart(chart: Chart) {
+        // Do something when ending touching chart
+    }
+}
+```
+
+The `didTouchChart` method passes an array of indexes, one for each series, with an optional `Int` referring to the data’s index:
+
+```swift
+ func didTouchChart(chart: Chart, indexes: Array<Int?>, x: Float, left: CGFloat) {
+        for (serieIndex, dataIndex) in enumerate(indexes) {
+        
