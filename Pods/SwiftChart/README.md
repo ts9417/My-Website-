@@ -91,4 +91,16 @@ chart.add(series)
 By default, the values on the x-axis are the progressive indexes of the passed array. You can customize those values by passing an array of `(x: Float, y: Float)` touples to the series’ initializer:
 
 ```swift
-// Create
+// Create a new series specifying x and y values
+let data = [(x: 0, y: 0), (x: 0.5, y: 3.1), (x: 1.2, y: 2), (x: 2.1, y: -4.2), (x: 2.6, y: 1.1)]
+let series = ChartSeries(data)
+chart.add(series)
+```
+
+#### Multiple series
+
+Using the `chart.add(series: ChartSeries)` and `chart.add(series: Array<ChartSeries>)` methods you can add more series. Those will be indentified with a progressive index in the chart’s `series` property.
+
+#### Partially filled series
+
+Use the `chart.xLabels` property to make 
