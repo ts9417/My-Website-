@@ -117,4 +117,19 @@ chart.add(series)
 
 will render:
 
-<img width="443" alt="" src="https://cloud.githubusercontent.com/assets/120693/17461649/26510f96-5c94
+<img width="443" alt="" src="https://cloud.githubusercontent.com/assets/120693/17461649/26510f96-5c94-11e6-8324-46df266558dd.png">
+
+## Touch events
+
+To make the chart respond to touch events, implement the `ChartDelegate` protocol in your classes, as a View Controller, and set the chart’s `delegate` property:
+
+```swift
+class MyViewController: UIViewController, ChartDelegate {
+    override func viewDidLoad() {
+        let chart = Chart(frame: CGRect(x: 0, y: 0, width: 100, height: 200))
+        chart.delegate = self
+    }
+    
+    // Chart delegate
+    func didTouchChart(chart: Chart, indexes: Array<Int?>, x: Float, left: CGFloat) {
+     
