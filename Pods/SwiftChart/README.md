@@ -162,4 +162,14 @@ You can use `chart.valueForSeries()` to access the value for the touched positio
 
 The `x: Float` argument refers to the value on the x-axis: it is inferred from the horizontal position of the touch event, and may be not part of the series values.
 
-The `left: CGFloat` is the x position on the chart’s view, starting from the left side. It 
+The `left: CGFloat` is the x position on the chart’s view, starting from the left side. It may be used to set the  position for a label moving above the chart: 
+
+<img src="https://cloud.githubusercontent.com/assets/120693/11602678/660d660e-9adc-11e5-8a67-0c3036c20862.gif" height="200">
+
+## Common issues and solutions
+
+If you have issue with this library, please tag your question with `swiftcharts` on [Stack Overflow](http://stackoverflow.com/tags/swiftcharts/info).
+
+### The chart is not showing
+
+The `Chart` class inherits from `UIView`, so if your chart is not displaying it is likely a problem related to the view's size. Check your view constrai
