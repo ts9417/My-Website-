@@ -172,4 +172,16 @@ If you have issue with this library, please tag your question with `swiftcharts`
 
 ### The chart is not showing
 
-The `Chart` class inherits from `UIView`, so if your chart is not displaying it is likely a problem related to the view's size. Check your view constrai
+The `Chart` class inherits from `UIView`, so if your chart is not displaying it is likely a problem related to the view's size. Check your view constraints and make sure you initialize it on `viewDidLoad`, when UIKit can calculate the view dimensions.
+
+Some tips for debugging an hidden chart:
+
+* start your app and then debug the UI Hierarchy from the Debug navigator
+* initialize a simple UIView with a colored background instead of the chart to easily see how the view is positioned
+* try to not to nest the chart in a subview for better debugging
+
+## Reference
+
+![reference](https://cloud.githubusercontent.com/assets/120693/5094993/e3a3e10e-6f65-11e4-8619-b7a05d18190e.png)
+
+### Chart 
