@@ -184,4 +184,18 @@ Some tips for debugging an hidden chart:
 
 ![reference](https://cloud.githubusercontent.com/assets/120693/5094993/e3a3e10e-6f65-11e4-8619-b7a05d18190e.png)
 
-### Chart 
+### Chart class
+
+#### Chart options
+
+* `areaAlphaComponent` – alpha factor for the area’s color.
+* `axesColor` – the axes’ color.
+* `bottomInset` – height of the area at the bottom of the chart, containing the labels for the x-axis.
+* `delegate` – the delegate for listening to touch events.
+* `highlightLineColor` – color of the highlight line.
+* `highlightLineWidth` – width of the highlight line.
+* `gridColor` – the grid color.
+* `labelColor` – the color of the labels.
+* `labelFont` – the font used for the labels.
+* `lineWidth` – width of the chart’s lines.
+* `maxX` – custom
