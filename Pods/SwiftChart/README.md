@@ -219,4 +219,12 @@ Some tips for debugging an hidden chart:
 
 ### ChartSeries class
 
-* `area` – draws an area below the series’ 
+* `area` – draws an area below the series’ line.
+* `line` – set it to `false` to hide the line (useful for drawing only the area).
+* `color` – the series color.
+* `colors` – a touple to specify the color above or below the zero. For example, `(above: ChartsColors.redColor(), below: ChartsColors.blueColor(), -4)` will use red for values above `-4`, and blue for values below -4. 
+
+### ChartDelegate
+
+* `didTouchChart` – tells the delegate that the specified chart has been touched.
+* `didFinishTouchingChart` – tells the delegate that the user finished touching the cha
