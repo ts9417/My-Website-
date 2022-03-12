@@ -198,4 +198,12 @@ Some tips for debugging an hidden chart:
 * `labelColor` – the color of the labels.
 * `labelFont` – the font used for the labels.
 * `lineWidth` – width of the chart’s lines.
-* `maxX` – custom
+* `maxX` – custom maximum x-value.
+* `maxY` – custom maximum y-value.
+* `minX` – minimum x-value.
+* `minY` – minimum y-value.
+* `topInset` – height of the area at the top of the chart, acting a padding to make place for the top y-axis label.
+* `xLabelsFormatter` – formats the labels on the x-axis.
+* `xLabelsOrientation` – sets the x-axis labels orientation to vertical or horizontal.
+* `xLabelsTextAlignment` – text-alignment for the x-labels.
+* `xLabelsSkipLast` (default `true`) - Skip the last x-label. Setting this to `false` will make the label overflow the frame
