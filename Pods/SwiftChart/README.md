@@ -206,4 +206,17 @@ Some tips for debugging an hidden chart:
 * `xLabelsFormatter` – formats the labels on the x-axis.
 * `xLabelsOrientation` – sets the x-axis labels orientation to vertical or horizontal.
 * `xLabelsTextAlignment` – text-alignment for the x-labels.
-* `xLabelsSkipLast` (default `true`) - Skip the last x-label. Setting this to `false` will make the label overflow the frame
+* `xLabelsSkipLast` (default `true`) - Skip the last x-label. Setting this to `false` will make the label overflow the frame width, so use carefully!
+* `yLabelsFormatter` – formats the labels on the y-axis.
+* `yLabelsOnRightSide` – place the y-labels on the right side.
+
+#### Methods
+
+* `add(series: ChartSeries)` – add a series to the chart.
+* `removeSeries()` – remove all the series from the chart.
+* `removeSeriesAtIndex(index: Int)` – remove a series at the specified index. 
+* `valueForSeries()` – get the value of the specified series at the specified index.
+
+### ChartSeries class
+
+* `area` – draws an area below the series’ 
