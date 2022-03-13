@@ -227,4 +227,10 @@ Some tips for debugging an hidden chart:
 ### ChartDelegate
 
 * `didTouchChart` – tells the delegate that the specified chart has been touched.
-* `didFinishTouchingChart` – tells the delegate that the user finished touching the cha
+* `didFinishTouchingChart` – tells the delegate that the user finished touching the chart. The user will "finish" touching the chart only swiping left/right outside the chart.
+* `didEndTouchingChart` – tells the delegate that the user ended touching the chart. The user will "end" touching the chart whenever the touchesDidEnd method is being called. 
+
+
+## License
+
+SwiftChart is available under the MIT license. See the LICENSE file for more info.
