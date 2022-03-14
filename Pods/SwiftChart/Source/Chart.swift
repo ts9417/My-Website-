@@ -64,3 +64,21 @@ open class Chart: UIControl {
     open var series: [ChartSeries] = [] {
         didSet {
             setNeedsDisplay()
+        }
+    }
+
+    /**
+    The values to display as labels on the x-axis. You can format these values  with the `xLabelFormatter` attribute. 
+    As default, it will display the values of the series which has the most data.
+    */
+    open var xLabels: [Float]?
+
+    /**
+    Formatter for the labels on the x-axis. The `index` represents the `xLabels` index, `value` its value:
+    */
+    open var xLabelsFormatter = { (labelIndex: Int, labelValue: Float) -> String in
+        String(Int(labelValue))
+    }
+
+    /**
+  
