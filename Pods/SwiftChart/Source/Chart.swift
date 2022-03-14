@@ -35,4 +35,32 @@ public protocol ChartDelegate: class {
      being called.
      
      - parameter chart: The chart that has been touched.
-  
+     
+     */
+    func didEndTouchingChart(_ chart: Chart)
+}
+
+/**
+Represent the x- and the y-axis values for each point in a chart series.
+*/
+typealias ChartPoint = (x: Float, y: Float)
+
+public enum ChartLabelOrientation {
+    case horizontal
+    case vertical
+}
+
+@IBDesignable
+open class Chart: UIControl {
+
+    // MARK: Options
+
+    @IBInspectable
+    open var identifier: String?
+
+    /**
+    Series to display in the chart.
+    */
+    open var series: [ChartSeries] = [] {
+        didSet {
+            setNeedsDisplay()
