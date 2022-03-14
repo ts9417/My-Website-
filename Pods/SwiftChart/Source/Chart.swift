@@ -19,4 +19,20 @@ public protocol ChartDelegate: class {
     - parameter left: The distance from the left side of the chart.
 
     */
-    func didTouchChart(_ chart: Chart, indexes: [In
+    func didTouchChart(_ chart: Chart, indexes: [Int?], x: Float, left: CGFloat)
+
+    /**
+    Tells the delegate that the user finished touching the chart. The user will 
+    "finish" touching the chart only swiping left/right outside the chart.
+
+    - parameter chart: The chart that has been touched.
+
+    */
+    func didFinishTouchingChart(_ chart: Chart)
+    /**
+     Tells the delegate that the user ended touching the chart. The user 
+     will "end" touching the chart whenever the touchesDidEnd method is 
+     being called.
+     
+     - parameter chart: The chart that has been touched.
+  
