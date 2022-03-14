@@ -81,4 +81,21 @@ open class Chart: UIControl {
     }
 
     /**
-  
+    Text alignment for the x-labels
+    */
+    open var xLabelsTextAlignment: NSTextAlignment = .left
+
+    /**
+     Orientation for the x-labels
+     */
+    open var xLabelsOrientation: ChartLabelOrientation = .horizontal
+
+    /**
+     Skip the last x-label. Setting this to false may make the label overflow the frame width.
+     */
+    open var xLabelsSkipLast: Bool = true
+
+    /**
+    Values to display as labels of the y-axis. If not specified, will display the
+    lowest, the middle and the highest values.
+    */
