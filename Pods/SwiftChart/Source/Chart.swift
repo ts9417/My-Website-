@@ -122,4 +122,27 @@ open class Chart: UIControl {
     Font used for the labels.
     */
     @IBInspectable
- 
+    open var labelColor: UIColor = UIColor.black
+
+    /**
+    Color for the axes.
+    */
+    @IBInspectable
+    open var axesColor: UIColor = UIColor.gray.withAlphaComponent(0.3)
+
+    /**
+    Color for the grid.
+    */
+    @IBInspectable
+    open var gridColor: UIColor = UIColor.gray.withAlphaComponent(0.3)
+    /**
+     Should draw lines for labels on X axis.
+     */
+    open var showXLabelsAndGrid: Bool = true
+    /**
+     Should draw lines for labels on Y axis.
+     */
+    open var showYLabelsAndGrid: Bool = true
+
+    /**
+    Height of the area 
