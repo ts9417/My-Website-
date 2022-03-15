@@ -99,3 +99,27 @@ open class Chart: UIControl {
     Values to display as labels of the y-axis. If not specified, will display the
     lowest, the middle and the highest values.
     */
+    open var yLabels: [Float]?
+
+    /**
+    Formatter for the labels on the y-axis.
+    */
+    open var yLabelsFormatter = { (labelIndex: Int, labelValue: Float) -> String in
+        String(Int(labelValue))
+    }
+
+    /**
+    Displays the y-axis labels on the right side of the chart.
+    */
+    open var yLabelsOnRightSide: Bool = false
+
+    /**
+    Font used for the labels.
+    */
+    open var labelFont: UIFont? = UIFont.systemFont(ofSize: 12)
+
+    /**
+    Font used for the labels.
+    */
+    @IBInspectable
+ 
