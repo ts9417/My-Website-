@@ -145,4 +145,25 @@ open class Chart: UIControl {
     open var showYLabelsAndGrid: Bool = true
 
     /**
-    Height of the area 
+    Height of the area at the bottom of the chart, containing the labels for the x-axis.
+    */
+    open var bottomInset: CGFloat = 20
+
+    /**
+    Height of the area at the top of the chart, acting a padding to make place for the top y-axis label.
+    */
+    open var topInset: CGFloat = 20
+
+    /**
+    Width of the chart's lines.
+    */
+    @IBInspectable
+    open var lineWidth: CGFloat = 2
+
+    /**
+    Delegate for listening to Chart touch events.
+    */
+    weak open var delegate: ChartDelegate?
+
+    /**
+    Custom minimum value fo
