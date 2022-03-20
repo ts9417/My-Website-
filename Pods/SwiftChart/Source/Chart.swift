@@ -166,4 +166,36 @@ open class Chart: UIControl {
     weak open var delegate: ChartDelegate?
 
     /**
-    Custom minimum value fo
+    Custom minimum value for the x-axis.
+    */
+    open var minX: Float?
+
+    /**
+    Custom minimum value for the y-axis.
+    */
+    open var minY: Float?
+
+    /**
+    Custom maximum value for the x-axis.
+    */
+    open var maxX: Float?
+
+    /**
+    Custom maximum value for the y-axis.
+    */
+    open var maxY: Float?
+
+    /**
+    Color for the highlight line.
+    */
+    open var highlightLineColor = UIColor.gray
+
+    /**
+    Width for the highlight line.
+    */
+    open var highlightLineWidth: CGFloat = 0.5
+
+    /**
+    Alpha component for the area's color.
+    */
+    open var areaAl
