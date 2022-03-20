@@ -198,4 +198,23 @@ open class Chart: UIControl {
     /**
     Alpha component for the area's color.
     */
-    open var areaAl
+    open var areaAlphaComponent: CGFloat = 0.1
+
+    // MARK: Private variables
+
+    fileprivate var highlightShapeLayer: CAShapeLayer!
+    fileprivate var layerStore: [CAShapeLayer] = []
+
+    fileprivate var drawingHeight: CGFloat!
+    fileprivate var drawingWidth: CGFloat!
+
+    // Minimum and maximum values represented in the chart
+    fileprivate var min: ChartPoint!
+    fileprivate var max: ChartPoint!
+
+    // Represent a set of points corresponding to a segment line on the chart.
+    typealias ChartLineSegment = [ChartPoint]
+
+    // MARK: initializations
+
+    override public init(fra
