@@ -217,4 +217,26 @@ open class Chart: UIControl {
 
     // MARK: initializations
 
-    override public init(fra
+    override public init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+
+    convenience public init() {
+        self.init(frame: .zero)
+        commonInit()
+    }
+
+    private func commonInit() {
+        backgroundColor = UIColor.clear
+        contentMode = .redraw // redraw rects on bounds change
+    }
+
+    override open func draw(_ rect: CGRect) {
+        #if TARGET_INTERFACE_BUILDER
+            drawIBPlaceholder()
