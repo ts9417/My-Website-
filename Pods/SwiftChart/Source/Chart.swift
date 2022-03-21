@@ -240,3 +240,34 @@ open class Chart: UIControl {
     override open func draw(_ rect: CGRect) {
         #if TARGET_INTERFACE_BUILDER
             drawIBPlaceholder()
+            #else
+            drawChart()
+        #endif
+    }
+
+    /**
+    Adds a chart series.
+    */
+    open func add(_ series: ChartSeries) {
+        self.series.append(series)
+    }
+
+    /**
+    Adds multiple series.
+    */
+    open func add(_ series: [ChartSeries]) {
+        for s in series {
+            add(s)
+        }
+    }
+
+    /**
+    Remove the series at the specified index.
+    */
+    open func removeSeriesAt(_ index: Int) {
+        series.remove(at: index)
+    }
+
+    /**
+    Remove all the series.
+    */
