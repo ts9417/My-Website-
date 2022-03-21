@@ -287,4 +287,19 @@ open class Chart: UIControl {
     fileprivate func drawIBPlaceholder() {
         let placeholder = UIView(frame: self.frame)
         placeholder.backgroundColor = UIColor(red: 0.93, green: 0.93, blue: 0.93, alpha: 1)
-        let label = UILabel
+        let label = UILabel()
+        label.text = "Chart"
+        label.font = UIFont.systemFont(ofSize: 28)
+        label.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
+        label.sizeToFit()
+        label.frame.origin.x += frame.width/2 - (label.frame.width / 2)
+        label.frame.origin.y += frame.height/2 - (label.frame.height / 2)
+
+        placeholder.addSubview(label)
+        addSubview(placeholder)
+    }
+
+    fileprivate func drawChart() {
+
+        drawingHeight = bounds.height - bottomInset - topInset
+        drawingWidth = bounds.w
