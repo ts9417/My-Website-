@@ -302,4 +302,26 @@ open class Chart: UIControl {
     fileprivate func drawChart() {
 
         drawingHeight = bounds.height - bottomInset - topInset
-        drawingWidth = bounds.w
+        drawingWidth = bounds.width
+
+        let minMax = getMinMax()
+        min = minMax.min
+        max = minMax.max
+
+        highlightShapeLayer = nil
+
+        // Remove things before drawing, e.g. when changing orientation
+
+        for view in self.subviews {
+            view.removeFromSuperview()
+        }
+        for layer in layerStore {
+            layer.removeFromSuperlayer()
+        }
+        layerStore.removeAll()
+
+        // Draw content
+
+        for (index, series) in self.series.enumerated() {
+
+            // Separate each line in multiple segments over and below the x axis
