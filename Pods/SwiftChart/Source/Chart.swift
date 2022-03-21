@@ -271,3 +271,20 @@ open class Chart: UIControl {
     /**
     Remove all the series.
     */
+    open func removeAllSeries() {
+        series = []
+    }
+
+    /**
+    Returns the value for the specified series at the given index
+    */
+    open func valueForSeries(_ seriesIndex: Int, atIndex dataIndex: Int?) -> Float? {
+        if dataIndex == nil { return nil }
+        let series = self.series[seriesIndex] as ChartSeries
+        return series.data[dataIndex!].y
+    }
+
+    fileprivate func drawIBPlaceholder() {
+        let placeholder = UIView(frame: self.frame)
+        placeholder.backgroundColor = UIColor(red: 0.93, green: 0.93, blue: 0.93, alpha: 1)
+        let label = UILabel
