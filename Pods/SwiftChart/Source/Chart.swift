@@ -335,4 +335,27 @@ open class Chart: UIControl {
                     drawLine(scaledXValues, yValues: scaledYValues, seriesIndex: index)
                 }
                 if series.area {
-                    drawArea(scaledXVa
+                    drawArea(scaledXValues, yValues: scaledYValues, seriesIndex: index)
+                }
+            })
+        }
+
+        drawAxes()
+
+        if showXLabelsAndGrid && (xLabels != nil || series.count > 0) {
+            drawLabelsAndGridOnXAxis()
+        }
+        if showYLabelsAndGrid && (yLabels != nil || series.count > 0) {
+            drawLabelsAndGridOnYAxis()
+        }
+
+    }
+
+    // MARK: - Scaling
+
+    fileprivate func getMinMax() -> (min: ChartPoint, max: ChartPoint) {
+
+        // Start with user-provided values
+
+        var min = (x: minX, y: minY)
+        var max = (x
