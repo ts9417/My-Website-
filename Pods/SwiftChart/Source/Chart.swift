@@ -325,3 +325,14 @@ open class Chart: UIControl {
         for (index, series) in self.series.enumerated() {
 
             // Separate each line in multiple segments over and below the x axis
+            let segments = Chart.segmentLine(series.data as ChartLineSegment, zeroLevel: series.colors.zeroLevel)
+
+            segments.forEach({ segment in
+                let scaledXValues = scaleValuesOnXAxis( segment.map({ return $0.x }) )
+                let scaledYValues = scaleValuesOnYAxis( segment.map({ return $0.y }) )
+
+                if series.line {
+                    drawLine(scaledXValues, yValues: scaledYValues, seriesIndex: index)
+                }
+                if series.area {
+                    drawArea(scaledXVa
