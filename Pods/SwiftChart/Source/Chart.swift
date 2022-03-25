@@ -373,4 +373,17 @@ open class Chart: UIControl {
             let newMaxX = xValues.max()!
             let newMaxY = yValues.max()!
 
-            if min.x ==
+            if min.x == nil || newMinX < min.x! { min.x = newMinX }
+            if min.y == nil || newMinY < min.y! { min.y = newMinY }
+            if max.x == nil || newMaxX > max.x! { max.x = newMaxX }
+            if max.y == nil || newMaxY > max.y! { max.y = newMaxY }
+        }
+
+        // Check in labels
+
+        if xLabels != nil {
+            let newMinX = (xLabels!).min()!
+            let newMaxX = (xLabels!).max()!
+            if min.x == nil || newMinX < min.x! { min.x = newMinX }
+            if max.x == nil || newMaxX > max.x! { max.x = newMaxX }
+    
