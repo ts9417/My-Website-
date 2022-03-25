@@ -358,4 +358,19 @@ open class Chart: UIControl {
         // Start with user-provided values
 
         var min = (x: minX, y: minY)
-        var max = (x
+        var max = (x: maxX, y: maxY)
+
+        // Check in datasets
+
+        for series in self.series {
+            let xValues =  series.data.map({ (point: ChartPoint) -> Float in
+                return point.x })
+            let yValues =  series.data.map({ (point: ChartPoint) -> Float in
+                return point.y })
+
+            let newMinX = xValues.min()!
+            let newMinY = yValues.min()!
+            let newMaxX = xValues.max()!
+            let newMaxY = yValues.max()!
+
+            if min.x ==
