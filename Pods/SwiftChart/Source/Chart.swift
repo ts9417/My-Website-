@@ -386,4 +386,22 @@ open class Chart: UIControl {
             let newMaxX = (xLabels!).max()!
             if min.x == nil || newMinX < min.x! { min.x = newMinX }
             if max.x == nil || newMaxX > max.x! { max.x = newMaxX }
-    
+        }
+
+        if yLabels != nil {
+            let newMinY = (yLabels!).min()!
+            let newMaxY = (yLabels!).max()!
+            if min.y == nil || newMinY < min.y! { min.y = newMinY }
+            if max.y == nil || newMaxY > max.y! { max.y = newMaxY }
+        }
+
+        if min.x == nil { min.x = 0 }
+        if min.y == nil { min.y = 0 }
+        if max.x == nil { max.x = 0 }
+        if max.y == nil { max.y = 0 }
+
+        return (min: (x: min.x!, y: min.y!), max: (x: max.x!, max.y!))
+
+    }
+
+    fileprivat
