@@ -423,4 +423,24 @@ open class Chart: UIControl {
         let height = Float(drawingHeight)
         var factor: Float
         if max.y - min.y == 0 {
-            factor =
+            factor = 0
+        } else {
+            factor = height / (max.y - min.y)
+        }
+
+        let scaled = values.map { Float(self.topInset) + height - factor * ($0 - self.min.y) }
+
+        return scaled
+    }
+
+    fileprivate func scaleValueOnYAxis(_ value: Float) -> Float {
+
+        let height = Float(drawingHeight)
+        var factor: Float
+        if max.y - min.y == 0 {
+            factor = 0
+        } else {
+            factor = height / (max.y - min.y)
+        }
+
+        let scaled = Float(self.topInset) + height - fact
