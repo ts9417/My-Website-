@@ -404,4 +404,23 @@ open class Chart: UIControl {
 
     }
 
-    fileprivat
+    fileprivate func scaleValuesOnXAxis(_ values: [Float]) -> [Float] {
+        let width = Float(drawingWidth)
+
+        var factor: Float
+        if max.x - min.x == 0 {
+            factor = 0
+        } else {
+            factor = width / (max.x - min.x)
+        }
+
+        let scaled = values.map { factor * ($0 - self.min.x) }
+        return scaled
+    }
+
+    fileprivate func scaleValuesOnYAxis(_ values: [Float]) -> [Float] {
+
+        let height = Float(drawingHeight)
+        var factor: Float
+        if max.y - min.y == 0 {
+            factor =
