@@ -487,4 +487,15 @@ open class Chart: UIControl {
     }
 
     fileprivate func drawArea(_ xValues: [Float], yValues: [Float], seriesIndex: Int) {
-        // YValues are "reverted" from top to bottom, so 'above' mea
+        // YValues are "reverted" from top to bottom, so 'above' means <= level
+        let isAboveZeroLine = yValues.max()! <= self.scaleValueOnYAxis(series[seriesIndex].colors.zeroLevel)
+        let area = CGMutablePath()
+        let zero = CGFloat(getZeroValueOnYAxis(zeroLevel: series[seriesIndex].colors.zeroLevel))
+
+        area.move(to: CGPoint(x: CGFloat(xValues[0]), y: zero))
+        for i in 0..<xValues.count {
+            area.addLine(to: CGPoint(x: CGFloat(xValues[i]), y: CGFloat(yValues[i])))
+        }
+        area.addLine(to: CGPoint(x: CGFloat(xValues.last!), y: zero))
+        let areaLayer = CAShapeLayer()
+        areaLayer.frame = self.bo
