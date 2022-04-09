@@ -460,4 +460,17 @@ open class Chart: UIControl {
 
     fileprivate func drawLine(_ xValues: [Float], yValues: [Float], seriesIndex: Int) {
         // YValues are "reverted" from top to bottom, so 'above' means <= level
-        let isAboveZeroLine = yValues.max()
+        let isAboveZeroLine = yValues.max()! <= self.scaleValueOnYAxis(series[seriesIndex].colors.zeroLevel)
+        let path = CGMutablePath()
+        path.move(to: CGPoint(x: CGFloat(xValues.first!), y: CGFloat(yValues.first!)))
+        for i in 1..<yValues.count {
+            let y = yValues[i]
+            path.addLine(to: CGPoint(x: CGFloat(xValues[i]), y: CGFloat(y)))
+        }
+
+        let lineLayer = CAShapeLayer()
+        lineLayer.frame = self.bounds
+        lineLayer.path = path
+
+        if isAboveZeroLine {
+            li
