@@ -443,4 +443,21 @@ open class Chart: UIControl {
             factor = height / (max.y - min.y)
         }
 
-        let scaled = Float(self.topInset) + height - fact
+        let scaled = Float(self.topInset) + height - factor * (value - min.y)
+        return scaled
+    }
+
+    fileprivate func getZeroValueOnYAxis(zeroLevel: Float) -> Float {
+        if min.y > zeroLevel {
+            return scaleValueOnYAxis(min.y)
+        } else {
+            return scaleValueOnYAxis(zeroLevel)
+        }
+
+    }
+
+    // MARK: - Drawings
+
+    fileprivate func drawLine(_ xValues: [Float], yValues: [Float], seriesIndex: Int) {
+        // YValues are "reverted" from top to bottom, so 'above' means <= level
+        let isAboveZeroLine = yValues.max()
