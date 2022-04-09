@@ -473,4 +473,18 @@ open class Chart: UIControl {
         lineLayer.path = path
 
         if isAboveZeroLine {
-            li
+            lineLayer.strokeColor = series[seriesIndex].colors.above.cgColor
+        } else {
+            lineLayer.strokeColor = series[seriesIndex].colors.below.cgColor
+        }
+        lineLayer.fillColor = nil
+        lineLayer.lineWidth = lineWidth
+        lineLayer.lineJoin = kCALineJoinBevel
+
+        self.layer.addSublayer(lineLayer)
+
+        layerStore.append(lineLayer)
+    }
+
+    fileprivate func drawArea(_ xValues: [Float], yValues: [Float], seriesIndex: Int) {
+        // YValues are "reverted" from top to bottom, so 'above' mea
