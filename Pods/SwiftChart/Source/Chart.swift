@@ -527,4 +527,17 @@ open class Chart: UIControl {
         // horizontal axis at the top
         context.move(to: CGPoint(x: CGFloat(0), y: CGFloat(0)))
         context.addLine(to: CGPoint(x: CGFloat(drawingWidth), y: CGFloat(0)))
-        context.str
+        context.strokePath()
+
+        // horizontal axis when y = 0
+        if min.y < 0 && max.y > 0 {
+            let y = CGFloat(getZeroValueOnYAxis(zeroLevel: 0))
+            context.move(to: CGPoint(x: CGFloat(0), y: y))
+            context.addLine(to: CGPoint(x: CGFloat(drawingWidth), y: y))
+            context.strokePath()
+        }
+
+        // vertical axis on the left
+        context.move(to: CGPoint(x: CGFloat(0), y: CGFloat(0)))
+        context.addLine(to: CGPoint(x: CGFloat(0), y: drawingHeight + topInset))
+        context.stro
