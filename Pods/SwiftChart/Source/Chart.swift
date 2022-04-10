@@ -515,4 +515,16 @@ open class Chart: UIControl {
 
     fileprivate func drawAxes() {
 
-        let conte
+        let context = UIGraphicsGetCurrentContext()!
+        context.setStrokeColor(axesColor.cgColor)
+        context.setLineWidth(0.5)
+
+        // horizontal axis at the bottom
+        context.move(to: CGPoint(x: CGFloat(0), y: drawingHeight + topInset))
+        context.addLine(to: CGPoint(x: CGFloat(drawingWidth), y: drawingHeight + topInset))
+        context.strokePath()
+
+        // horizontal axis at the top
+        context.move(to: CGPoint(x: CGFloat(0), y: CGFloat(0)))
+        context.addLine(to: CGPoint(x: CGFloat(drawingWidth), y: CGFloat(0)))
+        context.str
