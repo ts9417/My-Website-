@@ -498,4 +498,21 @@ open class Chart: UIControl {
         }
         area.addLine(to: CGPoint(x: CGFloat(xValues.last!), y: zero))
         let areaLayer = CAShapeLayer()
-        areaLayer.frame = self.bo
+        areaLayer.frame = self.bounds
+        areaLayer.path = area
+        areaLayer.strokeColor = nil
+        if isAboveZeroLine {
+            areaLayer.fillColor = series[seriesIndex].colors.above.withAlphaComponent(areaAlphaComponent).cgColor
+        } else {
+            areaLayer.fillColor = series[seriesIndex].colors.below.withAlphaComponent(areaAlphaComponent).cgColor
+        }
+        areaLayer.lineWidth = 0
+
+        self.layer.addSublayer(areaLayer)
+
+        layerStore.append(areaLayer)
+    }
+
+    fileprivate func drawAxes() {
+
+        let conte
