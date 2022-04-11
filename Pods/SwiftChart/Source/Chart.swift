@@ -572,4 +572,17 @@ open class Chart: UIControl {
 
             // Add vertical grid for each label, except axes on the left and right
 
-        
+            if x != 0 && x != drawingWidth {
+                context.move(to: CGPoint(x: x, y: CGFloat(0)))
+                context.addLine(to: CGPoint(x: x, y: bounds.height))
+                context.strokePath()
+            }
+
+            if xLabelsSkipLast && isLastLabel {
+                // Do not add label at the most right position
+                return
+            }
+
+            // Add label
+            let label = UILabel(frame: CGRect(x: x, y: drawingHeight, width: 0, height: 0))
+            label
