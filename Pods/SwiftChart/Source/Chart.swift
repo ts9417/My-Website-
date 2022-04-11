@@ -540,4 +540,19 @@ open class Chart: UIControl {
         // vertical axis on the left
         context.move(to: CGPoint(x: CGFloat(0), y: CGFloat(0)))
         context.addLine(to: CGPoint(x: CGFloat(0), y: drawingHeight + topInset))
-        context.stro
+        context.strokePath()
+
+        // vertical axis on the right
+        context.move(to: CGPoint(x: CGFloat(drawingWidth), y: CGFloat(0)))
+        context.addLine(to: CGPoint(x: CGFloat(drawingWidth), y: drawingHeight + topInset))
+        context.strokePath()
+
+    }
+
+    fileprivate func drawLabelsAndGridOnXAxis() {
+
+        let context = UIGraphicsGetCurrentContext()!
+        context.setStrokeColor(gridColor.cgColor)
+        context.setLineWidth(0.5)
+
+        var labels: [Float]
