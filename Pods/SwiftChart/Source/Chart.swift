@@ -556,3 +556,20 @@ open class Chart: UIControl {
         context.setLineWidth(0.5)
 
         var labels: [Float]
+        if xLabels == nil {
+            // Use labels from the first series
+            labels = series[0].data.map({ (point: ChartPoint) -> Float in
+                return point.x })
+        } else {
+            labels = xLabels!
+        }
+
+        let scaled = scaleValuesOnXAxis(labels)
+        let padding: CGFloat = 5
+        scaled.enumerated().forEach { (i, value) in
+            let x = CGFloat(value)
+            let isLastLabel = x == drawingWidth
+
+            // Add vertical grid for each label, except axes on the left and right
+
+        
