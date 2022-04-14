@@ -585,4 +585,18 @@ open class Chart: UIControl {
 
             // Add label
             let label = UILabel(frame: CGRect(x: x, y: drawingHeight, width: 0, height: 0))
-            label
+            label.font = labelFont
+            label.text = xLabelsFormatter(i, labels[i])
+            label.textColor = labelColor
+
+            // Set label size
+            label.sizeToFit()
+            // Center label vertically
+            label.frame.origin.y += topInset
+            if xLabelsOrientation == .horizontal {
+                // Add left padding
+                label.frame.origin.y -= (label.frame.height - bottomInset) / 2
+                label.frame.origin.x += padding
+
+                // Set label's text alignment
+          
