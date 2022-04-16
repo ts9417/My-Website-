@@ -599,4 +599,15 @@ open class Chart: UIControl {
                 label.frame.origin.x += padding
 
                 // Set label's text alignment
-          
+                label.frame.size.width = (drawingWidth / CGFloat(labels.count)) - padding * 2
+                label.textAlignment = xLabelsTextAlignment
+            } else {
+                label.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi / 2))
+
+                // Adjust vertical position according to the label's height
+                label.frame.origin.y += label.frame.size.height / 2
+
+                // Adjust horizontal position as the series line
+                label.frame.origin.x = x
+                if xLabelsTextAlignment == .center {
+   
