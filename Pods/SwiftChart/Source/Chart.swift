@@ -610,4 +610,20 @@ open class Chart: UIControl {
                 // Adjust horizontal position as the series line
                 label.frame.origin.x = x
                 if xLabelsTextAlignment == .center {
-   
+                    // Align horizontally in series
+                    label.frame.origin.x += ((drawingWidth / CGFloat(labels.count)) / 2) - (label.frame.size.width / 2)
+                } else {
+                    // Give some space from the vertical line
+                    label.frame.origin.x += padding
+                }
+            }
+
+            self.addSubview(label)
+        }
+
+    }
+
+    fileprivate func drawLabelsAndGridOnYAxis() {
+
+        let context = UIGraphicsGetCurrentContext()!
+        con
