@@ -626,4 +626,21 @@ open class Chart: UIControl {
     fileprivate func drawLabelsAndGridOnYAxis() {
 
         let context = UIGraphicsGetCurrentContext()!
-        con
+        context.setStrokeColor(gridColor.cgColor)
+        context.setLineWidth(0.5)
+
+        var labels: [Float]
+        if yLabels == nil {
+            labels = [(min.y + max.y) / 2, max.y]
+            if yLabelsOnRightSide || min.y != 0 {
+                labels.insert(min.y, at: 0)
+            }
+        } else {
+            labels = yLabels!
+        }
+
+        let scaled = scaleValuesOnYAxis(labels)
+        let padding: CGFloat = 5
+        let zero = CGFloat(getZeroValueOnYAxis(zeroLevel: 0))
+
+        scaled.enumerated().forEach { (i, valu
