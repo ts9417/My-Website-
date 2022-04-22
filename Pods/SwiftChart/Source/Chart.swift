@@ -643,4 +643,17 @@ open class Chart: UIControl {
         let padding: CGFloat = 5
         let zero = CGFloat(getZeroValueOnYAxis(zeroLevel: 0))
 
-        scaled.enumerated().forEach { (i, valu
+        scaled.enumerated().forEach { (i, value) in
+
+            let y = CGFloat(value)
+
+            // Add horizontal grid for each label, but not over axes
+            if y != drawingHeight + topInset && y != zero {
+
+                context.move(to: CGPoint(x: CGFloat(0), y: y))
+                context.addLine(to: CGPoint(x: self.bounds.width, y: y))
+                if labels[i] != 0 {
+                    // Horizontal grid for 0 is not dashed
+                    context.setLineDash(phase: CGFloat(0), lengths: [CGFloat(5)])
+                } else {
+                  
