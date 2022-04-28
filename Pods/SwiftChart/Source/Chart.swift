@@ -656,4 +656,20 @@ open class Chart: UIControl {
                     // Horizontal grid for 0 is not dashed
                     context.setLineDash(phase: CGFloat(0), lengths: [CGFloat(5)])
                 } else {
-                  
+                    context.setLineDash(phase: CGFloat(0), lengths: [])
+                }
+                context.strokePath()
+            }
+
+            let label = UILabel(frame: CGRect(x: padding, y: y, width: 0, height: 0))
+            label.font = labelFont
+            label.text = yLabelsFormatter(i, labels[i])
+            label.textColor = labelColor
+            label.sizeToFit()
+
+            if yLabelsOnRightSide {
+                label.frame.origin.x = drawingWidth
+                label.frame.origin.x -= label.frame.width + padding
+            }
+
+     
