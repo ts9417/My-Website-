@@ -672,4 +672,23 @@ open class Chart: UIControl {
                 label.frame.origin.x -= label.frame.width + padding
             }
 
-     
+            // Labels should be placed above the horizontal grid
+            label.frame.origin.y -= label.frame.height
+
+            self.addSubview(label)
+
+        }
+
+        UIGraphicsEndImageContext()
+
+    }
+
+    // MARK: - Touch events
+
+    fileprivate func drawHighlightLineFromLeftPosition(_ left: CGFloat) {
+        if let shapeLayer = highlightShapeLayer {
+            // Use line already created
+            let path = CGMutablePath()
+
+            path.move(to: CGPoint(x: left, y: 0))
+            path.addLine(to: CGPoint(x: left, y: draw
