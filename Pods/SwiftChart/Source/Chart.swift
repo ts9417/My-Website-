@@ -691,4 +691,17 @@ open class Chart: UIControl {
             let path = CGMutablePath()
 
             path.move(to: CGPoint(x: left, y: 0))
-            path.addLine(to: CGPoint(x: left, y: draw
+            path.addLine(to: CGPoint(x: left, y: drawingHeight + topInset))
+            shapeLayer.path = path
+        } else {
+            // Create the line
+            let path = CGMutablePath()
+
+            path.move(to: CGPoint(x: left, y: CGFloat(0)))
+            path.addLine(to: CGPoint(x: left, y: drawingHeight + topInset))
+            let shapeLayer = CAShapeLayer()
+            shapeLayer.frame = self.bounds
+            shapeLayer.path = path
+            shapeLayer.strokeColor = highlightLineColor.cgColor
+            shapeLayer.fillColor = nil
+            s
