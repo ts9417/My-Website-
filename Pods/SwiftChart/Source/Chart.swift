@@ -704,4 +704,19 @@ open class Chart: UIControl {
             shapeLayer.path = path
             shapeLayer.strokeColor = highlightLineColor.cgColor
             shapeLayer.fillColor = nil
-            s
+            shapeLayer.lineWidth = highlightLineWidth
+
+            highlightShapeLayer = shapeLayer
+            layer.addSublayer(shapeLayer)
+            layerStore.append(shapeLayer)
+        }
+
+    }
+
+    func handleTouchEvents(_ touches: Set<UITouch>, event: UIEvent!) {
+        let point = touches.first!
+        let left = point.location(in: self).x
+        let x = valueFromPointAtX(left)
+
+        if left < 0 || left > (drawingWidth as CGFloat) {
+            // Remove highlight line at the end of t
