@@ -719,4 +719,23 @@ open class Chart: UIControl {
         let x = valueFromPointAtX(left)
 
         if left < 0 || left > (drawingWidth as CGFloat) {
-            // Remove highlight line at the end of t
+            // Remove highlight line at the end of the touch event
+            if let shapeLayer = highlightShapeLayer {
+                shapeLayer.path = nil
+            }
+            delegate?.didFinishTouchingChart(self)
+            return
+        }
+
+        drawHighlightLineFromLeftPosition(left)
+
+        if delegate == nil {
+            return
+        }
+
+        var indexes: [Int?] = []
+
+        for series in self.series {
+            var index: Int? = nil
+            let xValues = series.data.map({ (point: ChartPoint) -> Float in
+                return po
