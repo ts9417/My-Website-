@@ -738,4 +738,20 @@ open class Chart: UIControl {
         for series in self.series {
             var index: Int? = nil
             let xValues = series.data.map({ (point: ChartPoint) -> Float in
-                return po
+                return point.x })
+            let closest = Chart.findClosestInValues(xValues, forValue: x)
+            if closest.lowestIndex != nil && closest.highestIndex != nil {
+                // Consider valid only values on the right
+                index = closest.lowestIndex
+            }
+            indexes.append(index)
+        }
+
+        delegate!.didTouchChart(self, indexes: indexes, x: x, left: left)
+
+    }
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        handleTouchEvents(touches, event: event)
+    }
+
+    
