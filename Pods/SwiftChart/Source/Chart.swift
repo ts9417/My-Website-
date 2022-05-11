@@ -754,4 +754,20 @@ open class Chart: UIControl {
         handleTouchEvents(touches, event: event)
     }
 
-    
+    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        handleTouchEvents(touches, event: event)
+        delegate?.didEndTouchingChart(self)
+    }
+
+    override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        handleTouchEvents(touches, event: event)
+    }
+
+    // MARK: - Utilities
+
+    fileprivate func valueFromPointAtX(_ x: CGFloat) -> Float {
+        let value = ((max.x-min.x) / Float(drawingWidth)) * Float(x) + min.x
+        return value
+    }
+
+    fileprivate func valueFromPointAtY(_ 
