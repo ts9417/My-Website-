@@ -819,4 +819,13 @@ open class Chart: UIControl {
             segment.append(point)
             if i < line.count - 1 {
                 let nextPoint = line[i+1]
-                if point.y >=
+                if point.y >= zeroLevel && nextPoint.y < zeroLevel || point.y < zeroLevel && nextPoint.y >= zeroLevel {
+                    // The segment intersects zeroLevel, close the segment with the intersection point
+                    let closingPoint = Chart.intersectionWithLevel(point, and: nextPoint, level: zeroLevel)
+                    segment.append(closingPoint)
+                    segments.append(segment)
+                    // Start a new segment
+                    segment = [closingPoint]
+                }
+            } else {
+        
