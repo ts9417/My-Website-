@@ -788,4 +788,18 @@ open class Chart: UIControl {
 
         values.enumerated().forEach { (i, currentValue) in
 
-    
+            if currentValue <= value && (lowestValue == nil || lowestValue! < currentValue) {
+                lowestValue = currentValue
+                lowestIndex = i
+            }
+            if currentValue >= value && (highestValue == nil || highestValue! > currentValue) {
+                highestValue = currentValue
+                highestIndex = i
+            }
+
+        }
+        return (
+            lowestValue: lowestValue,
+            highestValue: highestValue,
+            lowestIndex: lowestIndex,
+            highestIndex:
