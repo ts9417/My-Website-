@@ -802,4 +802,21 @@ open class Chart: UIControl {
             lowestValue: lowestValue,
             highestValue: highestValue,
             lowestIndex: lowestIndex,
-            highestIndex:
+            highestIndex: highestIndex
+        )
+    }
+
+    /**
+    Segment a line in multiple lines when the line touches the x-axis, i.e. separating
+    positive from negative values.
+    */
+    fileprivate class func segmentLine(_ line: ChartLineSegment, zeroLevel: Float) -> [ChartLineSegment] {
+        var segments: [ChartLineSegment] = []
+        var segment: ChartLineSegment = []
+
+        line.enumerated().forEach { (i, point) in
+
+            segment.append(point)
+            if i < line.count - 1 {
+                let nextPoint = line[i+1]
+                if point.y >=
