@@ -770,4 +770,22 @@ open class Chart: UIControl {
         return value
     }
 
-    fileprivate func valueFromPointAtY(_ 
+    fileprivate func valueFromPointAtY(_ y: CGFloat) -> Float {
+        let value = ((max.y - min.y) / Float(drawingHeight)) * Float(y) + min.y
+        return -value
+    }
+
+    fileprivate class func findClosestInValues(
+        _ values: [Float],
+        forValue value: Float
+    ) -> (
+            lowestValue: Float?,
+            highestValue: Float?,
+            lowestIndex: Int?,
+            highestIndex: Int?
+        ) {
+        var lowestValue: Float?, highestValue: Float?, lowestIndex: Int?, highestIndex: Int?
+
+        values.enumerated().forEach { (i, currentValue) in
+
+    
