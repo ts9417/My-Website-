@@ -828,4 +828,20 @@ open class Chart: UIControl {
                     segment = [closingPoint]
                 }
             } else {
-        
+                // End of the line
+                segments.append(segment)
+            }
+
+        }
+        return segments
+    }
+
+    /**
+    Return the intersection of a line between two points and 'y = level' line
+    */
+    fileprivate class func intersectionWithLevel(_ p1: ChartPoint, and p2: ChartPoint, level: Float) -> ChartPoint {
+        let dy1 = level - p1.y
+        let dy2 = level - p2.y
+        return (x: (p2.x * dy1 - p1.x * dy2) / (dy1 - dy2), y: level)
+    }
+}
