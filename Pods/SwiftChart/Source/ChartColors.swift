@@ -38,4 +38,21 @@ public struct ChartColors {
         return colorFromHex(0xD0021B)
     }
     static public func purpleColor() -> UIColor {
-        r
+        return colorFromHex(0x9013FE)
+    }
+    static public func maroonColor() -> UIColor {
+        return colorFromHex(0x8B572A)
+    }
+    static public func pinkColor() -> UIColor {
+        return colorFromHex(0xBD10E0)
+    }
+    static public func greyColor() -> UIColor {
+        return colorFromHex(0x7f7f7f)
+    }
+    static public func cyanColor() -> UIColor {
+        return colorFromHex(0x50E3C2)
+    }
+    static public func goldColor() -> UIColor {
+        return colorFromHex(0xbcbd22)
+    }
+    static public func yellowColor() -> UIColor
