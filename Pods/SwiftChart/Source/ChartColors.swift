@@ -55,4 +55,7 @@ public struct ChartColors {
     static public func goldColor() -> UIColor {
         return colorFromHex(0xbcbd22)
     }
-    static public func yellowColor() -> UIColor
+    static public func yellowColor() -> UIColor {
+        return colorFromHex(0xF8E71C)
+    }
+}
