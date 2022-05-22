@@ -34,3 +34,25 @@ The code would look like this:
 ```swift
 
 if let statusesArray = try? NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? [[String: AnyObject]],
+    let user = statusesArray[0]["user"] as? [String: AnyObject],
+    let username = user["name"] as? String {
+    // Finally we got the username
+}
+
+```
+
+It's not good.
+
+Even if we use optional chaining, it would be messy:
+
+```swift
+
+if let JSONObject = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? [[String: AnyObject]],
+    let username = (JSONObject[0]["user"] as? [String: AnyObject])?["name"] as? String {
+        // There's our username
+}
+
+```
+An unreadable mess--for something that should really be simple!
+
+With Swifty
