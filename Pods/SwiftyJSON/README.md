@@ -55,4 +55,24 @@ if let JSONObject = try NSJSONSerialization.JSONObjectWithData(data, options: .A
 ```
 An unreadable mess--for something that should really be simple!
 
-With Swifty
+With SwiftyJSON all you have to do is:
+
+```swift
+
+let json = JSON(data: dataFromNetworking)
+if let userName = json[0]["user"]["name"].string {
+  //Now you got your value
+}
+
+```
+
+And don't worry about the Optional Wrapping thing. It's done for you automatically.
+
+```swift
+
+let json = JSON(data: dataFromNetworking)
+if let userName = json[999999]["wrong_key"]["wrong_name"].string {
+    //Calm down, take it easy, the ".string" property still produces the correct Optional String type with safety
+} else {
+    //Print the error
+  
