@@ -75,4 +75,30 @@ if let userName = json[999999]["wrong_key"]["wrong_name"].string {
     //Calm down, take it easy, the ".string" property still produces the correct Optional String type with safety
 } else {
     //Print the error
-  
+    print(json[999999]["wrong_key"]["wrong_name"])
+}
+
+```
+
+## Requirements
+
+- iOS 7.0+ / OS X 10.9+
+- Xcode 8
+
+##Integration
+
+####CocoaPods (iOS 8+, OS X 10.9+)
+You can use [Cocoapods](http://cocoapods.org/) to install `SwiftyJSON`by adding it to your `Podfile`:
+```ruby
+platform :ios, '8.0'
+use_frameworks!
+
+target 'MyApp' do
+	pod 'SwiftyJSON'
+end
+```
+Note that this requires CocoaPods version 36, and your iOS deployment target to be at least 8.0:
+
+
+####Carthage (iOS 8+, OS X 10.9+)
+You can use [Carthage](https://github.com/Carthage/Carth
