@@ -101,4 +101,23 @@ Note that this requires CocoaPods version 36, and your iOS deployment target to 
 
 
 ####Carthage (iOS 8+, OS X 10.9+)
-You can use [Carthage](https://github.com/Carthage/Carth
+You can use [Carthage](https://github.com/Carthage/Carthage) to install `SwiftyJSON` by adding it to your `Cartfile`:
+```
+github "SwiftyJSON/SwiftyJSON"
+```
+
+####Swift Package Manager
+You can use [The Swift Package Manager](https://swift.org/package-manager) to install `SwiftyJSON` by adding the proper description to your `Package.swift` file:
+```swift
+import PackageDescription
+
+let package = Package(
+    name: "YOUR_PROJECT_NAME",
+    targets: [],
+    dependencies: [
+        .Package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", versions: "2.3.3" ..< Version.max)
+    ]
+)
+```
+
+Note that the 
