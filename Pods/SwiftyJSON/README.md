@@ -120,4 +120,20 @@ let package = Package(
 )
 ```
 
-Note that the 
+Note that the [Swift Package Manager](https://swift.org/package-manager) is still in early design and development, for more infomation checkout its [GitHub Page](https://github.com/apple/swift-package-manager)
+
+####Manually (iOS 7+, OS X 10.9+)
+
+To use this library in your project manually you may:  
+
+1. for Projects, just drag SwiftyJSON.swift to the project tree
+2. for Workspaces, include the whole SwiftyJSON.xcodeproj
+
+## Usage
+
+####Initialization
+```swift
+import SwiftyJSON
+```
+```swift
+let json = JSON(data: dataFromNetwo
