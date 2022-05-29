@@ -159,4 +159,29 @@ let name = json["name"].stringValue
 ```swift
 //Getting a string using a path to the element
 let path = [1,"list",2,"name"]
-let name = json[
+let name = json[path].string
+//Just the same
+let name = json[1]["list"][2]["name"].string
+//Alternatively
+let name = json[1,"list",2,"name"].string
+```
+```swift
+//With a hard way
+let name = json[].string
+```
+```swift
+//With a custom way
+let keys:[SubscriptType] = [1,"list",2,"name"]
+let name = json[keys].string
+```
+####Loop
+```swift
+//If json is .Dictionary
+for (key,subJson):(String, JSON) in json {
+   //Do something you want
+}
+```
+*The first element is always a String, even if the JSON is an Array*
+```swift
+//If json is .Array
+//The `index` is 0.
