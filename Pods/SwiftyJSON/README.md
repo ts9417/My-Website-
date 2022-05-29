@@ -136,4 +136,27 @@ To use this library in your project manually you may:
 import SwiftyJSON
 ```
 ```swift
-let json = JSON(data: dataFromNetwo
+let json = JSON(data: dataFromNetworking)
+```
+```swift
+let json = JSON(jsonObject)
+```
+```swift
+if let dataFromString = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
+    let json = JSON(data: dataFromString)
+}
+```
+
+####Subscript
+```swift
+//Getting a double from a JSON Array
+let name = json[0].double
+```
+```swift
+//Getting a string from a JSON Dictionary
+let name = json["name"].stringValue
+```
+```swift
+//Getting a string using a path to the element
+let path = [1,"list",2,"name"]
+let name = json[
