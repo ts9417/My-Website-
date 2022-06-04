@@ -221,4 +221,27 @@ if let age = json[0].string {
     //Do something you want
 } else {
     print(json[0])       // "Array[0] failure, It is not an array"
-    print(json[0].
+    print(json[0].error) // "Array[0] failure, It is not an array"
+}
+
+if let name = json["name"].string {
+    //Do something you want
+} else {
+    print(json["name"])       // "Dictionary[\"name"] failure, It is not an dictionary"
+    print(json["name"].error) // "Dictionary[\"name"] failure, It is not an dictionary"
+}
+```
+
+####Optional getter
+```swift
+//NSNumber
+if let id = json["user"]["favourites_count"].number {
+   //Do something you want
+} else {
+   //Print the error
+   print(json["user"]["favourites_count"].error)
+}
+```
+```swift
+//String
+if let id = json["
