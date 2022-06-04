@@ -184,4 +184,21 @@ for (key,subJson):(String, JSON) in json {
 *The first element is always a String, even if the JSON is an Array*
 ```swift
 //If json is .Array
-//The `index` is 0.
+//The `index` is 0..<json.count's string value
+for (index,subJson):(String, JSON) in json {
+    //Do something you want
+}
+```
+####Error
+Use a subscript to get/set a value in an Array or Dictionary
+
+If the JSON is:
+*  an array, the app may crash with "index out-of-bounds."
+*  a dictionary, it will be assigned `nil` without a reason.
+*  not an array or a dictionary, the app may crash with an "unrecognised selector" exception.
+
+This will never happen in SwiftyJSON.
+
+```swift
+let json = JSON(["name", "age"])
+if let name = json[999].string {
