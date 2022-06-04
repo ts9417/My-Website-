@@ -202,3 +202,23 @@ This will never happen in SwiftyJSON.
 ```swift
 let json = JSON(["name", "age"])
 if let name = json[999].string {
+    //Do something you want
+} else {
+    print(json[999].error) // "Array[999] is out of bounds"
+}
+```
+```swift
+let json = JSON(["name":"Jack", "age": 25])
+if let name = json["address"].string {
+    //Do something you want
+} else {
+    print(json["address"].error) // "Dictionary["address"] does not exist"
+}
+```
+```swift
+let json = JSON(12345)
+if let age = json[0].string {
+    //Do something you want
+} else {
+    print(json[0])       // "Array[0] failure, It is not an array"
+    print(json[0].
