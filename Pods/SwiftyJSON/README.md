@@ -326,3 +326,28 @@ if let string = json.rawString() {
 //shows you whether value specified in JSON or not
 if json["name"].isExists()
 ```
+
+####Literal convertibles
+For more info about literal convertibles: [Swift Literal Convertibles](http://nshipster.com/swift-literal-convertible/)
+```swift
+//StringLiteralConvertible
+let json: JSON = "I'm a json"
+```
+```swift
+//IntegerLiteralConvertible
+let json: JSON =  12345
+```
+```swift
+//BooleanLiteralConvertible
+let json: JSON =  true
+```
+```swift
+//FloatLiteralConvertible
+let json: JSON =  2.8765
+```
+```swift
+//DictionaryLiteralConvertible
+let json: JSON =  ["I":"am", "a":"json"]
+```
+```swift
+//ArrayLiteralConvert
