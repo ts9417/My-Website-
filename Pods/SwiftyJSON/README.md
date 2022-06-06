@@ -244,4 +244,33 @@ if let id = json["user"]["favourites_count"].number {
 ```
 ```swift
 //String
-if let id = json["
+if let id = json["user"]["name"].string {
+   //Do something you want
+} else {
+   //Print the error
+   print(json["user"]["name"])
+}
+```
+```swift
+//Bool
+if let id = json["user"]["is_translator"].bool {
+   //Do something you want
+} else {
+   //Print the error
+   print(json["user"]["is_translator"])
+}
+```
+```swift
+//Int
+if let id = json["user"]["id"].int {
+   //Do something you want
+} else {
+   //Print the error
+   print(json["user"]["id"])
+}
+...
+```
+####Non-optional getter
+Non-optional getter is named `xxxValue`
+```swift
+//If not a Number or nil,
