@@ -297,4 +297,32 @@ json[0] = JSON(1)
 ```swift
 json["id"].int =  1234567890
 json["coordinate"].double =  8766.766
-json["name"].string =  "
+json["name"].string =  "Jack"
+json.arrayObject = [1,2,3,4]
+json.dictionary = ["name":"Jack", "age":25]
+```
+
+####Raw object
+```swift
+let jsonObject: AnyObject = json.object
+```
+```swift
+if let jsonObject: AnyObject = json.rawValue
+```
+```swift
+//convert the JSON to raw NSData
+if let data = json.rawData() {
+    //Do something you want
+}
+```
+```swift
+//convert the JSON to a raw String
+if let string = json.rawString() {
+    //Do something you want
+}
+```
+####Existance
+```swift
+//shows you whether value specified in JSON or not
+if json["name"].isExists()
+```
