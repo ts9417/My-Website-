@@ -273,4 +273,28 @@ if let id = json["user"]["id"].int {
 ####Non-optional getter
 Non-optional getter is named `xxxValue`
 ```swift
-//If not a Number or nil,
+//If not a Number or nil, return 0
+let id: Int = json["id"].intValue
+```
+```swift
+//If not a String or nil, return ""
+let name: String = json["name"].stringValue
+```
+```swift
+//If not a Array or nil, return []
+let list: Array<JSON> = json["list"].arrayValue
+```
+```swift
+//If not a Dictionary or nil, return [:]
+let user: Dictionary<String, JSON> = json["user"].dictionaryValue
+```
+
+####Setter
+```swift
+json["name"] = JSON("new-name")
+json[0] = JSON(1)
+```
+```swift
+json["id"].int =  1234567890
+json["coordinate"].double =  8766.766
+json["name"].string =  "
