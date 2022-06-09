@@ -350,4 +350,27 @@ let json: JSON =  2.8765
 let json: JSON =  ["I":"am", "a":"json"]
 ```
 ```swift
-//ArrayLiteralConvert
+//ArrayLiteralConvertible
+let json: JSON =  ["I", "am", "a", "json"]
+```
+```swift
+//NilLiteralConvertible
+let json: JSON =  nil
+```
+```swift
+//With subscript in array
+var json: JSON =  [1,2,3]
+json[0] = 100
+json[1] = 200
+json[2] = 300
+json[999] = 300 //Don't worry, nothing will happen
+```
+```swift
+//With subscript in dictionary
+var json: JSON =  ["name": "Jack", "age": 25]
+json["name"] = "Mike"
+json["age"] = "25" //It's OK to set String
+json["address"] = "L.A." // Add the "address": "L.A." in json
+```
+```swift
+//Array & 
