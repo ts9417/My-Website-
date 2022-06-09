@@ -373,4 +373,19 @@ json["age"] = "25" //It's OK to set String
 json["address"] = "L.A." // Add the "address": "L.A." in json
 ```
 ```swift
-//Array & 
+//Array & Dictionary
+var json: JSON =  ["name": "Jack", "age": 25, "list": ["a", "b", "c", ["what": "this"]]]
+json["list"][3]["what"] = "that"
+json["list",3,"what"] = "that"
+let path = ["list",3,"what"]
+json[path] = "that"
+```
+##Work with Alamofire
+
+SwiftyJSON nicely wraps the result of the Alamofire JSON response handler:
+```swift
+Alamofire.request(.GET, url).validate().responseJSON { response in
+    switch response.result {
+    case .Success:
+        if let value = response.result.value {
+          let json = JSON(val
