@@ -32,4 +32,32 @@ public let ErrorUnsupportedType: Int = 999
 public let ErrorIndexOutOfBounds: Int = 900
 public let ErrorWrongType: Int = 901
 public let ErrorNotExist: Int = 500
-public let ErrorInvalidJSON: I
+public let ErrorInvalidJSON: Int = 490
+
+// MARK: - JSON Type
+
+/**
+ JSON's type definitions.
+ 
+ See http://www.json.org
+ */
+public enum Type :Int{
+    
+    case number
+    case string
+    case bool
+    case array
+    case dictionary
+    case null
+    case unknown
+}
+
+// MARK: - JSON Base
+
+public struct JSON {
+    
+    /**
+     Creates a JSON using the data.
+     
+     - parameter data:  The NSData used to convert to json.Top level object in data is an NSArray or NSDictionary
+     - parameter opt:   The JSON serialization reading options. `
