@@ -91,4 +91,24 @@ public struct JSON {
     /**
      Creates a JSON using the object.
      
-     - parameter object:  The object must have the following properties: All objects are NSString/String, NSNu
+     - parameter object:  The object must have the following properties: All objects are NSString/String, NSNumber/Int/Float/Double/Bool, NSArray/Array, NSDictionary/Dictionary, or NSNull; All dictionary keys are NSStrings/String; NSNumbers are not NaN or infinity.
+     
+     - returns: The created JSON
+     */
+    public init(_ object: Any) {
+        self.object = object
+    }
+    
+    /**
+     Creates a JSON from a [JSON]
+     
+     - parameter jsonArray: A Swift array of JSON objects
+     
+     - returns: The created JSON
+     */
+    public init(_ jsonArray:[JSON]) {
+        self.init(jsonArray.map { $0.object })
+    }
+    
+    /**
+     Creates a JSON from a [Stri
