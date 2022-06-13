@@ -73,4 +73,22 @@ public struct JSON {
             if error != nil {
                 error??.pointee = aError
             }
-            
+            self.init(NSNull())
+        }
+    }
+    
+    /**
+     Create a JSON from JSON string
+     - parameter string: Normal json string like '{"a":"b"}'
+     
+     - returns: The created JSON
+     */
+    public static func parse(_ string:String) -> JSON {
+        return string.data(using: String.Encoding.utf8)
+            .flatMap({JSON(data: $0)}) ?? JSON(NSNull())
+    }
+    
+    /**
+     Creates a JSON using the object.
+     
+     - parameter object:  The object must have the following properties: All objects are NSString/String, NSNu
