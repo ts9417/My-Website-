@@ -60,4 +60,17 @@ public struct JSON {
      Creates a JSON using the data.
      
      - parameter data:  The NSData used to convert to json.Top level object in data is an NSArray or NSDictionary
-     - parameter opt:   The JSON serialization reading options. `
+     - parameter opt:   The JSON serialization reading options. `.AllowFragments` by default.
+     - parameter error: error The NSErrorPointer used to return the error. `nil` by default.
+     
+     - returns: The created JSON
+     */
+    public init(data:Data, options opt: JSONSerialization.ReadingOptions = .allowFragments, error: NSErrorPointer? = nil) {
+        do {
+            let object: Any = try JSONSerialization.jsonObject(with: data, options: opt)
+            self.init(object)
+        } catch let aError as NSError {
+            if error != nil {
+                error??.pointee = aError
+            }
+            
