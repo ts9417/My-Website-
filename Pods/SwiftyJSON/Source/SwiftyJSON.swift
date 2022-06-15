@@ -111,4 +111,20 @@ public struct JSON {
     }
     
     /**
-     Creates a JSON from a [Stri
+     Creates a JSON from a [String: JSON]
+     
+     - parameter jsonDictionary: A Swift dictionary of JSON objects
+     
+     - returns: The created JSON
+     */
+    public init(_ jsonDictionary:[String: JSON]) {
+        var dictionary = [String: Any](minimumCapacity: jsonDictionary.count)
+        for (key, json) in jsonDictionary {
+            dictionary[key] = json.object
+        }
+        self.init(dictionary)
+    }
+    
+    /// Private object
+    fileprivate var rawArray: [Any] = []
+    fileprivate var rawDictionary: [String : An
