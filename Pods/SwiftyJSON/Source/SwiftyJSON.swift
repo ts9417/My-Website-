@@ -143,4 +143,23 @@ public struct JSON {
             switch self.type {
             case .array:
                 return self.rawArray
-            case .di
+            case .dictionary:
+                return self.rawDictionary
+            case .string:
+                return self.rawString
+            case .number:
+                return self.rawNumber
+            case .bool:
+                return self.rawBool
+            default:
+                return self.rawNull
+            }
+        }
+        set {
+            _error = nil
+            switch newValue {
+            case let number as NSNumber:
+                if number.isBool {
+                    _type = .bool
+                    self.rawBool = number.boolValue
+                } else
