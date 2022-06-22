@@ -162,4 +162,19 @@ public struct JSON {
                 if number.isBool {
                     _type = .bool
                     self.rawBool = number.boolValue
-                } else
+                } else {
+                    _type = .number
+                    self.rawNumber = number
+                }
+            case  let string as String:
+                _type = .string
+                self.rawString = string
+            case  _ as NSNull:
+                _type = .null
+            case let array as [Any]:
+                _type = .array
+                self.rawArray = array
+            case let dictionary as [String : Any]:
+                _type = .dictionary
+                self.rawDictionary = dictionary
+            
