@@ -127,4 +127,20 @@ public struct JSON {
     
     /// Private object
     fileprivate var rawArray: [Any] = []
-    fileprivate var rawDictionary: [String : An
+    fileprivate var rawDictionary: [String : Any] = [:]
+    fileprivate var rawString: String = ""
+    fileprivate var rawNumber: NSNumber = 0
+    fileprivate var rawNull: NSNull = NSNull()
+    fileprivate var rawBool: Bool = false
+    /// Private type
+    fileprivate var _type: Type = .null
+    /// prviate error
+    fileprivate var _error: NSError? = nil
+    
+    /// Object in JSON
+    public var object: Any {
+        get {
+            switch self.type {
+            case .array:
+                return self.rawArray
+            case .di
