@@ -177,4 +177,20 @@ public struct JSON {
             case let dictionary as [String : Any]:
                 _type = .dictionary
                 self.rawDictionary = dictionary
-            
+            default:
+                _type = .unknown
+                _error = NSError(domain: ErrorDomain, code: ErrorUnsupportedType, userInfo: [NSLocalizedDescriptionKey: "It is a unsupported type"])
+            }
+        }
+    }
+    
+    /// json type
+    public var type: Type { get { return _type } }
+    
+    /// Error in JSON
+    public var error: NSError? { get { return self._error } }
+    
+    /// The static null json
+    @available(*, unavailable, renamed:"null")
+    public static var nullJSON: JSON { get { return null } }
+    public static var 
