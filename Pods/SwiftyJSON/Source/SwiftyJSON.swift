@@ -193,4 +193,25 @@ public struct JSON {
     /// The static null json
     @available(*, unavailable, renamed:"null")
     public static var nullJSON: JSON { get { return null } }
-    public static var 
+    public static var null: JSON { get { return JSON(NSNull()) } }
+}
+
+public enum JSONIndex:Comparable {
+    case array(Int)
+    case dictionary(DictionaryIndex<String, JSON>)
+    case null
+}
+
+public func ==(lhs: JSONIndex, rhs: JSONIndex) -> Bool {
+    switch (lhs, rhs) {
+    case (.array(let left), .array(let right)):
+        return left == right
+    case (.dictionary(let left), .dictionary(let right)):
+        return left == right
+    default:
+        return false
+    }
+}
+
+public func <(lhs: JSONIndex, rhs: JSONIndex) -> Bool {
+    switch (
