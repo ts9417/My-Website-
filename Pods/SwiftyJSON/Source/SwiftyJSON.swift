@@ -214,4 +214,26 @@ public func ==(lhs: JSONIndex, rhs: JSONIndex) -> Bool {
 }
 
 public func <(lhs: JSONIndex, rhs: JSONIndex) -> Bool {
-    switch (
+    switch (lhs, rhs) {
+    case (.array(let left), .array(let right)):
+        return left < right
+    case (.dictionary(let left), .dictionary(let right)):
+        return left < right
+    default:
+        return false
+    }
+}
+
+
+extension JSON: Collection{
+    
+    public typealias Index = JSONIndex
+    
+    public var startIndex: Index{
+        switch type {
+        case .array:
+            return .array(rawArray.startIndex)
+        case .dictionary:
+            return .dictionary(dictionaryValue.startIndex)
+        default:
+           
