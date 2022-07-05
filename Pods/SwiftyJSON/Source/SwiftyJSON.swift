@@ -236,4 +236,24 @@ extension JSON: Collection{
         case .dictionary:
             return .dictionary(dictionaryValue.startIndex)
         default:
-           
+            return .null
+        }
+    }
+    
+    public var endIndex: Index{
+        switch type {
+        case .array:
+            return .array(rawArray.endIndex)
+        case .dictionary:
+            return .dictionary(dictionaryValue.endIndex)
+        default:
+            return .null
+        }
+    }
+    
+    public func index(after i: Index) -> Index {
+        switch i {
+        case .array(let idx):
+            return .array(rawArray.index(after: idx))
+        case .dictionary(let idx):
+            return .dictionary(dictionaryValue.index(after: idx)
