@@ -256,4 +256,32 @@ extension JSON: Collection{
         case .array(let idx):
             return .array(rawArray.index(after: idx))
         case .dictionary(let idx):
-            return .dictionary(dictionaryValue.index(after: idx)
+            return .dictionary(dictionaryValue.index(after: idx))
+        default:
+            return .null
+        }
+        
+    }
+    
+    public subscript (position: Index) -> (String, JSON) {
+        switch position {
+        case .array(let idx):
+            return (String(idx), JSON(self.rawArray[idx]))
+        case .dictionary(let idx):
+            return dictionaryValue[idx]
+        default:
+            return ("", JSON.null)
+        }
+    }
+    
+    
+}
+
+// MARK: - Subscript
+
+/**
+ *  To mark both String and Int can be used in subscript.
+ */
+public enum JSONKey {
+    case index(Int)
+    case key(Strin
