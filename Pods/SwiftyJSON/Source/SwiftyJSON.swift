@@ -284,4 +284,28 @@ extension JSON: Collection{
  */
 public enum JSONKey {
     case index(Int)
-    case key(Strin
+    case key(String)
+}
+
+public protocol JSONSubscriptType {
+    var jsonKey:JSONKey { get }
+}
+
+extension Int: JSONSubscriptType {
+    public var jsonKey:JSONKey {
+        return JSONKey.index(self)
+    }
+}
+
+extension String: JSONSubscriptType {
+    public var jsonKey:JSONKey {
+        return JSONKey.key(self)
+    }
+}
+
+extension JSON {
+    
+    /// If `type` is `.Array`, return json whose object is `array[index]`, otherwise return null json with error.
+    fileprivate subscript(index index: Int) -> JSON {
+        get {
+            if self.type != .arra
