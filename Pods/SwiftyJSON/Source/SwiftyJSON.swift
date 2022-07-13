@@ -331,4 +331,13 @@ extension JSON {
     
     /// If `type` is `.Dictionary`, return json whose object is `dictionary[key]` , otherwise return null json with error.
     fileprivate subscript(key key: String) -> JSON {
-        get 
+        get {
+            var r = JSON.null
+            if self.type == .dictionary {
+                if let o = self.rawDictionary[key] {
+                    r = JSON(o)
+                } else {
+                    r._error = NSError(domain: ErrorDomain, code: ErrorNotExist, userInfo: [NSLocalizedDescriptionKey: "Dictionary[\"\(key)\"] does not exist"])
+                }
+            } else {
+                r._error = self._error ?? NSError(domain: ErrorDomain, code: ErrorWrongType, userInfo: [NSLocalizedDescriptionKey: "Dictionary
