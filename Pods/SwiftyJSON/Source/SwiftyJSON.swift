@@ -308,4 +308,12 @@ extension JSON {
     /// If `type` is `.Array`, return json whose object is `array[index]`, otherwise return null json with error.
     fileprivate subscript(index index: Int) -> JSON {
         get {
-            if self.type != .arra
+            if self.type != .array {
+                var r = JSON.null
+                r._error = self._error ?? NSError(domain: ErrorDomain, code: ErrorWrongType, userInfo: [NSLocalizedDescriptionKey: "Array[\(index)] failure, It is not an array"])
+                return r
+            } else if index >= 0 && index < self.rawArray.count {
+                return JSON(self.rawArray[index])
+            } else {
+                var r = JSON.null
+                r._error = NSError(domain: ErrorDomain, code:ErrorIndexOutOfBounds , userInfo: [NSLocalizedDescriptionKey: 
