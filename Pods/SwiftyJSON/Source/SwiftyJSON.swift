@@ -316,4 +316,19 @@ extension JSON {
                 return JSON(self.rawArray[index])
             } else {
                 var r = JSON.null
-                r._error = NSError(domain: ErrorDomain, code:ErrorIndexOutOfBounds , userInfo: [NSLocalizedDescriptionKey: 
+                r._error = NSError(domain: ErrorDomain, code:ErrorIndexOutOfBounds , userInfo: [NSLocalizedDescriptionKey: "Array[\(index)] is out of bounds"])
+                return r
+            }
+        }
+        set {
+            if self.type == .array {
+                if self.rawArray.count > index && newValue.error == nil {
+                    self.rawArray[index] = newValue.object
+                }
+            }
+        }
+    }
+    
+    /// If `type` is `.Dictionary`, return json whose object is `dictionary[key]` , otherwise return null json with error.
+    fileprivate subscript(key key: String) -> JSON {
+        get 
