@@ -472,4 +472,31 @@ extension JSON: Swift.ExpressibleByDictionaryLiteral {
 extension JSON: Swift.ExpressibleByArrayLiteral {
     
     public init(arrayLiteral elements: Any...) {
-        self.init(elem
+        self.init(elements as Any)
+    }
+}
+
+extension JSON: Swift.ExpressibleByNilLiteral {
+    
+    public init(nilLiteral: ()) {
+        self.init(NSNull() as Any)
+    }
+}
+
+// MARK: - Raw
+
+extension JSON: Swift.RawRepresentable {
+    
+    public init?(rawValue: Any) {
+        if JSON(rawValue).type == .unknown {
+            return nil
+        } else {
+            self.init(rawValue)
+        }
+    }
+    
+    public var rawValue: Any {
+        return self.object
+    }
+    
+    public func rawData(options opt: JSONSerialization.Writing
