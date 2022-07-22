@@ -454,4 +454,22 @@ extension JSON: Swift.ExpressibleByBooleanLiteral {
 extension JSON: Swift.ExpressibleByFloatLiteral {
     
     public init(floatLiteral value: FloatLiteralType) {
-        self.init(value as 
+        self.init(value as Any)
+    }
+}
+
+extension JSON: Swift.ExpressibleByDictionaryLiteral {
+    
+    public init(dictionaryLiteral elements: (String, Any)...) {
+        self.init(elements.reduce([String : Any](minimumCapacity: elements.count)){(dictionary: [String : Any], element:(String, Any)) -> [String : Any] in
+            var d = dictionary
+            d[element.0] = element.1
+            return d
+        } as Any)
+    }
+}
+
+extension JSON: Swift.ExpressibleByArrayLiteral {
+    
+    public init(arrayLiteral elements: Any...) {
+        self.init(elem
