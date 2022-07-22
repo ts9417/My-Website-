@@ -432,4 +432,26 @@ extension JSON: Swift.ExpressibleByStringLiteral {
         self.init(value as Any)
     }
     
-    public i
+    public init(unicodeScalarLiteral value: StringLiteralType) {
+        self.init(value as Any)
+    }
+}
+
+extension JSON: Swift.ExpressibleByIntegerLiteral {
+    
+    public init(integerLiteral value: IntegerLiteralType) {
+        self.init(value as Any)
+    }
+}
+
+extension JSON: Swift.ExpressibleByBooleanLiteral {
+    
+    public init(booleanLiteral value: BooleanLiteralType) {
+        self.init(value as Any)
+    }
+}
+
+extension JSON: Swift.ExpressibleByFloatLiteral {
+    
+    public init(floatLiteral value: FloatLiteralType) {
+        self.init(value as 
