@@ -356,4 +356,24 @@ extension JSON {
         get {
             switch sub.jsonKey {
             case .index(let index): return self[index: index]
-  
+            case .key(let key): return self[key: key]
+            }
+        }
+        set {
+            switch sub.jsonKey {
+            case .index(let index): self[index: index] = newValue
+            case .key(let key): self[key: key] = newValue
+            }
+        }
+    }
+    
+    /**
+     Find a json in the complex data structuresby using the Int/String's array.
+     
+     - parameter path: The target json's path. Example:
+     
+     let json = JSON[data]
+     let path = [9,"list","person","name"]
+     let name = json[path]
+     
+     Th
