@@ -391,4 +391,21 @@ extension JSON {
             case 1:
                 self[sub:path[0]].object = newValue.object
             default:
-         
+                var aPath = path; aPath.remove(at: 0)
+                var nextJSON = self[sub: path[0]]
+                nextJSON[aPath] = newValue
+                self[sub: path[0]] = nextJSON
+            }
+        }
+    }
+    
+    /**
+     Find a json in the complex data structures by using the Int/String's array.
+     
+     - parameter path: The target json's path. Example:
+     
+     let name = json[9,"list","person","name"]
+     
+     The same as: let name = json[9]["list"]["person"]["name"]
+     
+     - returns: Retu
