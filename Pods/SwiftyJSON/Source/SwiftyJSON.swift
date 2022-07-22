@@ -408,4 +408,28 @@ extension JSON {
      
      The same as: let name = json[9]["list"]["person"]["name"]
      
-     - returns: Retu
+     - returns: Return a json found by the path or a null json with error
+     */
+    public subscript(path: JSONSubscriptType...) -> JSON {
+        get {
+            return self[path]
+        }
+        set {
+            self[path] = newValue
+        }
+    }
+}
+
+// MARK: - LiteralConvertible
+
+extension JSON: Swift.ExpressibleByStringLiteral {
+    
+    public init(stringLiteral value: StringLiteralType) {
+        self.init(value as Any)
+    }
+    
+    public init(extendedGraphemeClusterLiteral value: StringLiteralType) {
+        self.init(value as Any)
+    }
+    
+    public i
