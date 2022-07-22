@@ -340,4 +340,20 @@ extension JSON {
                     r._error = NSError(domain: ErrorDomain, code: ErrorNotExist, userInfo: [NSLocalizedDescriptionKey: "Dictionary[\"\(key)\"] does not exist"])
                 }
             } else {
-                r._error = self._error ?? NSError(domain: ErrorDomain, code: ErrorWrongType, userInfo: [NSLocalizedDescriptionKey: "Dictionary
+                r._error = self._error ?? NSError(domain: ErrorDomain, code: ErrorWrongType, userInfo: [NSLocalizedDescriptionKey: "Dictionary[\"\(key)\"] failure, It is not an dictionary"])
+            }
+            return r
+        }
+        set {
+            if self.type == .dictionary && newValue.error == nil {
+                self.rawDictionary[key] = newValue.object
+            }
+        }
+    }
+    
+    /// If `sub` is `Int`, return `subscript(index:)`; If `sub` is `String`,  return `subscript(key:)`.
+    fileprivate subscript(sub sub: JSONSubscriptType) -> JSON {
+        get {
+            switch sub.jsonKey {
+            case .index(let index): return self[index: index]
+  
