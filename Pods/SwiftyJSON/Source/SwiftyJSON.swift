@@ -499,4 +499,12 @@ extension JSON: Swift.RawRepresentable {
         return self.object
     }
     
-    public func rawData(options opt: JSONSerialization.Writing
+    public func rawData(options opt: JSONSerialization.WritingOptions = JSONSerialization.WritingOptions(rawValue: 0)) throws -> Data {
+        guard JSONSerialization.isValidJSONObject(self.object) else {
+            throw NSError(domain: ErrorDomain, code: ErrorInvalidJSON, userInfo: [NSLocalizedDescriptionKey: "JSON is invalid"])
+        }
+        
+        return try JSONSerialization.data(withJSONObject: self.object, options: opt)
+    }
+    
+    public func rawString(_ encoding: String.Encoding = String.Encoding.utf8, options opt: JSONSerialization.Writ
