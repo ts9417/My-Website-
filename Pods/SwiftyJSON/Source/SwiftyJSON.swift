@@ -376,4 +376,19 @@ extension JSON {
      let path = [9,"list","person","name"]
      let name = json[path]
      
-     Th
+     The same as: let name = json[9]["list"]["person"]["name"]
+     
+     - returns: Return a json found by the path or a null json with error
+     */
+    public subscript(path: [JSONSubscriptType]) -> JSON {
+        get {
+            return path.reduce(self) { $0[sub: $1] }
+        }
+        set {
+            switch path.count {
+            case 0:
+                return
+            case 1:
+                self[sub:path[0]].object = newValue.object
+            default:
+         
