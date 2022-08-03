@@ -575,4 +575,26 @@ extension JSON {
             switch self.type {
             case .array:
                 return self.rawArray
+            default:
+                return nil
+            }
+        }
+        set {
+            if let array = newValue {
+                self.object = array as Any
+            } else {
+                self.object = NSNull()
+            }
+        }
+    }
+}
+
+// MARK: - Dictionary
+
+extension JSON {
+    
+    //Optional [String : JSON]
+    public var dictionary: [String : JSON]? {
+        if self.type == .dictionary {
             
+            return self.rawDictionary.reduce([String : JSON]()) { (dictionary: [String : JSON]
