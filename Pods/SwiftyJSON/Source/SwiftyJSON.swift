@@ -523,4 +523,32 @@ extension JSON: Swift.RawRepresentable {
         case .bool:
             return self.rawBool.description
         case .null:
-  
+            return "null"
+        default:
+            return nil
+        }
+    }
+}
+
+// MARK: - Printable, DebugPrintable
+
+extension JSON: Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+    
+    public var description: String {
+        if let string = self.rawString(options:.prettyPrinted) {
+            return string
+        } else {
+            return "unknown"
+        }
+    }
+    
+    public var debugDescription: String {
+        return description
+    }
+}
+
+// MARK: - Array
+
+extension JSON {
+    
+    //Optional 
