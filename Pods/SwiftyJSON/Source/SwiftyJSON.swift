@@ -551,4 +551,28 @@ extension JSON: Swift.CustomStringConvertible, Swift.CustomDebugStringConvertibl
 
 extension JSON {
     
-    //Optional 
+    //Optional [JSON]
+    public var array: [JSON]? {
+        get {
+            if self.type == .array {
+                return self.rawArray.map{ JSON($0) }
+            } else {
+                return nil
+            }
+        }
+    }
+    
+    //Non-optional [JSON]
+    public var arrayValue: [JSON] {
+        get {
+            return self.array ?? []
+        }
+    }
+    
+    //Optional [AnyObject]
+    public var arrayObject: [Any]? {
+        get {
+            switch self.type {
+            case .array:
+                return self.rawArray
+            
