@@ -597,4 +597,24 @@ extension JSON {
     public var dictionary: [String : JSON]? {
         if self.type == .dictionary {
             
-            return self.rawDictionary.reduce([String : JSON]()) { (dictionary: [String : JSON]
+            return self.rawDictionary.reduce([String : JSON]()) { (dictionary: [String : JSON], element: (String, Any)) -> [String : JSON] in
+                var d = dictionary
+                d[element.0] = JSON(element.1)
+                return d
+            }
+        } else {
+            return nil
+        }
+    }
+    
+    //Non-optional [String : JSON]
+    public var dictionaryValue: [String : JSON] {
+        return self.dictionary ?? [:]
+    }
+    
+    //Optional [String : AnyObject]
+    public var dictionaryObject: [String : Any]? {
+        get {
+            switch self.type {
+            case .dictionary:
+                re
