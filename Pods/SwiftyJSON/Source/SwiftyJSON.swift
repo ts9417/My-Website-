@@ -735,4 +735,19 @@ extension JSON {
         }
         set {
             self.object = newValue ?? NSNull()
-      
+        }
+    }
+    
+    //Non-optional number
+    public var numberValue: NSNumber {
+        get {
+            switch self.type {
+            case .string:
+                let decimal = NSDecimalNumber(string: self.object as? String)
+                if decimal == NSDecimalNumber.notANumber {  // indicates parse error
+                    return NSDecimalNumber.zero
+                }
+                return decimal
+            case .number:
+                return self.object as? NSNumber ?? NSNumber(value: 0)
+            case 
