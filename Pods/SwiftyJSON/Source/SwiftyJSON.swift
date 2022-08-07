@@ -643,4 +643,25 @@ extension JSON { // : Swift.Bool
             case .bool:
                 return self.rawBool
             default:
-                
+                return nil
+            }
+        }
+        set {
+            if let newValue = newValue {
+                self.object = newValue as Bool
+            } else {
+                self.object = NSNull()
+            }
+        }
+    }
+    
+    //Non-optional bool
+    public var boolValue: Bool {
+        get {
+            switch self.type {
+            case .bool:
+                return self.rawBool
+            case .number:
+                return self.rawNumber.boolValue
+            case .string:
+                return self.rawString.caseInse
