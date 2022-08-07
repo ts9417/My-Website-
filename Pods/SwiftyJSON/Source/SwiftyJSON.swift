@@ -708,4 +708,31 @@ extension JSON {
                 return self.rawNumber.stringValue
             case .bool:
                 return (self.object as? Bool).map { String($0) } ?? ""
-            defau
+            default:
+                return ""
+            }
+        }
+        set {
+            self.object = NSString(string:newValue)
+        }
+    }
+}
+
+// MARK: - Number
+extension JSON {
+    
+    //Optional number
+    public var number: NSNumber? {
+        get {
+            switch self.type {
+            case .number:
+                return self.rawNumber
+            case .bool:
+                return NSNumber(value: self.rawBool ? 1 : 0)
+            default:
+                return nil
+            }
+        }
+        set {
+            self.object = newValue ?? NSNull()
+      
