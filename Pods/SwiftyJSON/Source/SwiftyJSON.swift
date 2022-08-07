@@ -690,4 +690,22 @@ extension JSON {
             }
         }
         set {
-            if let newValue = new
+            if let newValue = newValue {
+                self.object = NSString(string:newValue)
+            } else {
+                self.object = NSNull()
+            }
+        }
+    }
+    
+    //Non-optional string
+    public var stringValue: String {
+        get {
+            switch self.type {
+            case .string:
+                return self.object as? String ?? ""
+            case .number:
+                return self.rawNumber.stringValue
+            case .bool:
+                return (self.object as? Bool).map { String($0) } ?? ""
+            defau
