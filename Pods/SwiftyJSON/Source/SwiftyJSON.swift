@@ -664,4 +664,30 @@ extension JSON { // : Swift.Bool
             case .number:
                 return self.rawNumber.boolValue
             case .string:
-                return self.rawString.caseInse
+                return self.rawString.caseInsensitiveCompare("true") == .orderedSame
+            default:
+                return false
+            }
+        }
+        set {
+            self.object = newValue
+        }
+    }
+}
+
+// MARK: - String
+
+extension JSON {
+    
+    //Optional string
+    public var string: String? {
+        get {
+            switch self.type {
+            case .string:
+                return self.object as? String
+            default:
+                return nil
+            }
+        }
+        set {
+            if let newValue = new
