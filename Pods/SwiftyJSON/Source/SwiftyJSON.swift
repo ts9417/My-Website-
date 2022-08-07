@@ -617,4 +617,30 @@ extension JSON {
         get {
             switch self.type {
             case .dictionary:
-                re
+                return self.rawDictionary
+            default:
+                return nil
+            }
+        }
+        set {
+            if let v = newValue {
+                self.object = v as Any
+            } else {
+                self.object = NSNull()
+            }
+        }
+    }
+}
+
+// MARK: - Bool
+
+extension JSON { // : Swift.Bool
+    
+    //Optional bool
+    public var bool: Bool? {
+        get {
+            switch self.type {
+            case .bool:
+                return self.rawBool
+            default:
+                
