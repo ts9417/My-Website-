@@ -750,4 +750,29 @@ extension JSON {
                 return decimal
             case .number:
                 return self.object as? NSNumber ?? NSNumber(value: 0)
-            case 
+            case .bool:
+                return NSNumber(value: self.rawBool ? 1 : 0)
+            default:
+                return NSNumber(value: 0.0)
+            }
+        }
+        set {
+            self.object = newValue
+        }
+    }
+}
+
+//MARK: - Null
+extension JSON {
+    
+    public var null: NSNull? {
+        get {
+            switch self.type {
+            case .null:
+                return self.rawNull
+            default:
+                return nil
+            }
+        }
+        set {
+            sel
