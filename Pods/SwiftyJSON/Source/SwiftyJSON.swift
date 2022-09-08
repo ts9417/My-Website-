@@ -775,4 +775,24 @@ extension JSON {
             }
         }
         set {
-            sel
+            self.object = NSNull()
+        }
+    }
+    public func exists() -> Bool{
+        if let errorValue = error , errorValue.code == ErrorNotExist{
+            return false
+        }
+        return true
+    }
+}
+
+//MARK: - URL
+extension JSON {
+    
+    //Optional URL
+    public var URL: NSURL? {
+        get {
+            switch self.type {
+            case .string:
+                if let encodedString_ = self.rawString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) {
+                    return NSURL
