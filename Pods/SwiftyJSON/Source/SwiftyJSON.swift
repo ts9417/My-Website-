@@ -795,4 +795,28 @@ extension JSON {
             switch self.type {
             case .string:
                 if let encodedString_ = self.rawString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) {
-                    return NSURL
+                    return NSURL(string: encodedString_)
+                } else {
+                    return nil
+                }
+            default:
+                return nil
+            }
+        }
+        set {
+            self.object = newValue?.absoluteString
+        }
+    }
+}
+
+// MARK: - Int, Double, Float, Int8, Int16, Int32, Int64
+
+extension JSON {
+    
+    public var double: Double? {
+        get {
+            return self.number?.doubleValue
+        }
+        set {
+            if let newValue = newValue {
+ 
