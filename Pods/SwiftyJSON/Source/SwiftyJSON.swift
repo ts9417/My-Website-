@@ -865,4 +865,28 @@ extension JSON {
             if let newValue = newValue {
                 self.object = NSNumber(value: newValue)
             } else {
-         
+                self.object = NSNull()
+            }
+        }
+    }
+    
+    public var intValue: Int {
+        get {
+            return self.numberValue.intValue
+        }
+        set {
+            self.object = NSNumber(value: newValue)
+        }
+    }
+    
+    public var uInt: UInt? {
+        get {
+            return self.number?.uintValue
+        }
+        set {
+            if let newValue = newValue {
+                self.object = NSNumber(value: newValue)
+            } else {
+                self.object = NSNull()
+            }
+   
