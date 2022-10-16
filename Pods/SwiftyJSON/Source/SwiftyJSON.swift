@@ -889,4 +889,29 @@ extension JSON {
             } else {
                 self.object = NSNull()
             }
-   
+        }
+    }
+    
+    public var uIntValue: UInt {
+        get {
+            return self.numberValue.uintValue
+        }
+        set {
+            self.object = NSNumber(value: newValue)
+        }
+    }
+    
+    public var int8: Int8? {
+        get {
+            return self.number?.int8Value
+        }
+        set {
+            if let newValue = newValue {
+                self.object = NSNumber(value: newValue)
+            } else {
+                self.object =  NSNull()
+            }
+        }
+    }
+    
+ 
