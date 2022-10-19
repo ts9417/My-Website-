@@ -914,4 +914,28 @@ extension JSON {
         }
     }
     
- 
+    public var int8Value: Int8 {
+        get {
+            return self.numberValue.int8Value
+        }
+        set {
+            self.object = NSNumber(value: newValue)
+        }
+    }
+    
+    public var uInt8: UInt8? {
+        get {
+            return self.number?.uint8Value
+        }
+        set {
+            if let newValue = newValue {
+                self.object = NSNumber(value: newValue)
+            } else {
+                self.object =  NSNull()
+            }
+        }
+    }
+    
+    public var uInt8Value: UInt8 {
+        get {
+            r
