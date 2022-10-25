@@ -984,3 +984,27 @@ extension JSON {
         get {
             return self.numberValue.uint16Value
         }
+        set {
+            self.object = NSNumber(value: newValue)
+        }
+    }
+    
+    public var int32: Int32? {
+        get {
+            return self.number?.int32Value
+        }
+        set {
+            if let newValue = newValue {
+                self.object = NSNumber(value: newValue)
+            } else {
+                self.object =  NSNull()
+            }
+        }
+    }
+    
+    public var int32Value: Int32 {
+        get {
+            return self.numberValue.int32Value
+        }
+        set {
+            self.ob
