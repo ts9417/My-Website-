@@ -1007,4 +1007,30 @@ extension JSON {
             return self.numberValue.int32Value
         }
         set {
-            self.ob
+            self.object = NSNumber(value: newValue)
+        }
+    }
+    
+    public var uInt32: UInt32? {
+        get {
+            return self.number?.uint32Value
+        }
+        set {
+            if let newValue = newValue {
+                self.object = NSNumber(value: newValue)
+            } else {
+                self.object =  NSNull()
+            }
+        }
+    }
+    
+    public var uInt32Value: UInt32 {
+        get {
+            return self.numberValue.uint32Value
+        }
+        set {
+            self.object = NSNumber(value: newValue)
+        }
+    }
+    
+    p
