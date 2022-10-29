@@ -1057,4 +1057,28 @@ extension JSON {
     
     public var uInt64: UInt64? {
         get {
-            retur
+            return self.number?.uint64Value
+        }
+        set {
+            if let newValue = newValue {
+                self.object = NSNumber(value: newValue)
+            } else {
+                self.object =  NSNull()
+            }
+        }
+    }
+    
+    public var uInt64Value: UInt64 {
+        get {
+            return self.numberValue.uint64Value
+        }
+        set {
+            self.object = NSNumber(value: newValue)
+        }
+    }
+}
+
+//MARK: - Comparable
+extension JSON : Swift.Comparable {}
+
+public func ==(lhs: JSON
