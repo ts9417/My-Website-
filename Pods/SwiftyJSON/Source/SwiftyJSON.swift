@@ -1033,4 +1033,28 @@ extension JSON {
         }
     }
     
-    p
+    public var int64: Int64? {
+        get {
+            return self.number?.int64Value
+        }
+        set {
+            if let newValue = newValue {
+                self.object = NSNumber(value: newValue)
+            } else {
+                self.object =  NSNull()
+            }
+        }
+    }
+    
+    public var int64Value: Int64 {
+        get {
+            return self.numberValue.int64Value
+        }
+        set {
+            self.object = NSNumber(value: newValue)
+        }
+    }
+    
+    public var uInt64: UInt64? {
+        get {
+            retur
