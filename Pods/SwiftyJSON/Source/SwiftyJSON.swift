@@ -1148,4 +1148,24 @@ public func >(lhs: JSON, rhs: JSON) -> Bool {
         return lhs.rawNumber > rhs.rawNumber
     case (.string, .string):
         return lhs.rawString > rhs.rawString
-    defa
+    default:
+        return false
+    }
+}
+
+public func <(lhs: JSON, rhs: JSON) -> Bool {
+    
+    switch (lhs.type, rhs.type) {
+    case (.number, .number):
+        return lhs.rawNumber < rhs.rawNumber
+    case (.string, .string):
+        return lhs.rawString < rhs.rawString
+    default:
+        return false
+    }
+}
+
+private let trueNumber = NSNumber(value: true)
+private let falseNumber = NSNumber(value: false)
+private let trueObjCType = String(cString: trueNumber.objCType)
+private let falseObjCType = String(cString: falseNumber.ob
