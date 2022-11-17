@@ -1187,4 +1187,28 @@ extension NSNumber {
 }
 
 func ==(lhs: NSNumber, rhs: NSNumber) -> Bool {
-    switch (lhs.is
+    switch (lhs.isBool, rhs.isBool) {
+    case (false, true):
+        return false
+    case (true, false):
+        return false
+    default:
+        return lhs.compare(rhs) == ComparisonResult.orderedSame
+    }
+}
+
+func !=(lhs: NSNumber, rhs: NSNumber) -> Bool {
+    return !(lhs == rhs)
+}
+
+func <(lhs: NSNumber, rhs: NSNumber) -> Bool {
+    
+    switch (lhs.isBool, rhs.isBool) {
+    case (false, true):
+        return false
+    case (true, false):
+        return false
+    default:
+        return lhs.compare(rhs) == ComparisonResult.orderedAscending
+    }
+}
