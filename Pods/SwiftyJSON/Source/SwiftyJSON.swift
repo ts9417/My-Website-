@@ -1237,4 +1237,14 @@ func <=(lhs: NSNumber, rhs: NSNumber) -> Bool {
     }
 }
 
-func >=(lhs:
+func >=(lhs: NSNumber, rhs: NSNumber) -> Bool {
+    
+    switch (lhs.isBool, rhs.isBool) {
+    case (false, true):
+        return false
+    case (true, false):
+        return false
+    default:
+        return lhs.compare(rhs) != ComparisonResult.orderedAscending
+    }
+}
