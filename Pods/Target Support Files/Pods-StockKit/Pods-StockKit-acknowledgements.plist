@@ -144,4 +144,8 @@ THE SOFTWARE.
 		</dict>
 	</array>
 	<key>StringsTable</key>
-	<string>Acknowledgements</str
+	<string>Acknowledgements</string>
+	<key>Title</key>
+	<string>Acknowledgements</string>
+</dict>
+</plist>
