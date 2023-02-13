@@ -146,3 +146,38 @@ public extension UIView {
     }
     
     func anchorCenterYToSuperview(constant: CGFloat = 0) {
+        
+        if self.superview == nil {
+            print("`superview` was nil – call `addSubview(view: UIView)` before calling `anchorCenterYToSuperview()` to fix this.", String(describing: self))
+            return
+        }
+        translatesAutoresizingMaskIntoConstraints = false
+        if let anchor = superview?.centerYAnchor {
+            centerYAnchor.constraint(equalTo: anchor, constant: constant).isActive = true
+        }
+    }
+    
+    func anchorCenterSuperview() {
+        anchorCenterXToSuperview()
+        anchorCenterYToSuperview()
+    }
+    
+    func constraint(withIdentifier identifier: String) -> NSLayoutConstraint? {
+        for constraint in self.constraints {
+            if constraint.identifier == identifier {
+                return constraint
+            }
+        }
+        return nil
+    }
+    
+    func anchorWidthToItem(_ item: UIView) {
+        let widthConstraint = widthAnchor.constraint(equalTo: item.widthAnchor, multiplier: 1)
+        widthConstraint.isActive = true
+    }
+    
+    func anchorHeightToItem(_ item: UIView) {
+        let widthConstraint = heightAnchor.constraint(equalTo: item.heightAnchor, multiplier: 1)
+        widthConstraint.isActive = true
+    }
+}
