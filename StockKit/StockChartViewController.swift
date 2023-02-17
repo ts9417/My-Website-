@@ -9,4 +9,19 @@
 import UIKit
 import SwiftChart
 
-c
+class StockChartViewController: UIViewController, ChartDelegate {
+    
+    var selectedChart = 0
+    
+    var labelLeadingMarginConstraint: NSLayoutConstraint!
+    var label: UILabel = UILabel()
+    var chart: Chart = Chart()
+    
+    fileprivate var labelLeadingMarginInitialConstant: CGFloat!
+    
+    override func viewDidLoad() {
+        
+        view.backgroundColor = .white
+        
+        view.addSubview(chart)
+        chart.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 40, leftConstant: 
