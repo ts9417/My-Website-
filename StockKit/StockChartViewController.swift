@@ -24,4 +24,14 @@ class StockChartViewController: UIViewController, ChartDelegate {
         view.backgroundColor = .white
         
         view.addSubview(chart)
-        chart.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 40, leftConstant: 
+        chart.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 40, leftConstant: 16, bottomConstant: 0, rightConstant: 16, widthConstant: 0, heightConstant: 300)
+        view.addSubview(label)
+        labelLeadingMarginConstraint = label.anchorWithReturnAnchors(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 20)[1]
+        
+        labelLeadingMarginInitialConstant = labelLeadingMarginConstraint.constant
+        initializeChart()
+        
+    }
+    
+    func initializeChart() {
+        chart.delegate
