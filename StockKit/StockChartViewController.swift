@@ -34,4 +34,20 @@ class StockChartViewController: UIViewController, ChartDelegate {
     }
     
     func initializeChart() {
-        chart.delegate
+        chart.delegate = self
+        
+        // Initialize data series and labels
+        
+    }
+    // Chart delegate
+    
+    func didTouchChart(_ chart: Chart, indexes: Array<Int?>, x: Float, left: CGFloat) {
+        
+        if let value = chart.valueForSeries(0, atIndex: indexes[0]) {
+            
+            let numberFormatter = NumberFormatter()
+            numberFormatter.minimumFractionDigits = 2
+            numberFormatter.maximumFractionDigits = 2
+            label.text = numberFormatter.string(from: NSNumber(value: value))
+            
+            // Alig
