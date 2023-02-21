@@ -50,4 +50,14 @@ class StockChartViewController: UIViewController, ChartDelegate {
             numberFormatter.maximumFractionDigits = 2
             label.text = numberFormatter.string(from: NSNumber(value: value))
             
-            // Alig
+            // Align the label to the touch left position, centered
+            var constant = labelLeadingMarginInitialConstant + left - (label.frame.width / 2)
+            
+            // Avoid placing the label on the left of the chart
+            if constant < labelLeadingMarginInitialConstant {
+                constant = labelLeadingMarginInitialConstant
+            }
+            
+            // Avoid placing the label on the right of the chart
+            let rightMargin = chart.frame.width - label.frame.width
+            if co
