@@ -60,4 +60,24 @@ class StockChartViewController: UIViewController, ChartDelegate {
             
             // Avoid placing the label on the right of the chart
             let rightMargin = chart.frame.width - label.frame.width
-            if co
+            if constant > rightMargin {
+                constant = rightMargin
+            }
+            
+            labelLeadingMarginConstraint.constant = constant
+            
+        }
+        
+    }
+    
+    func didFinishTouchingChart(_ chart: Chart) {
+        label.text = ""
+        labelLeadingMarginConstraint.constant = labelLeadingMarginInitialConstant
+    }
+    
+    func didEndTouchingChart(_ chart: Chart) {
+        
+    }
+    
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCo
