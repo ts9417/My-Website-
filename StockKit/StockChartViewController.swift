@@ -80,4 +80,8 @@ class StockChartViewController: UIViewController, ChartDelegate {
     }
     
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCo
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        chart.setNeedsDisplay()
+    }
+}
