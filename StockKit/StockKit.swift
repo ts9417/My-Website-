@@ -41,4 +41,10 @@ public struct StockKit {
     
     
     
-    static func findQuoteInBackground(
+    static func findQuoteInBackground(forSymbol symbol: String, completion: @escaping (Stock)->Void) {
+        let url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%20in%20(%22\(symbol)%22)&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&format=json"
+        
+        Alamofire.request(url).responseJSON { response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("R
