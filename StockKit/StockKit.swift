@@ -47,4 +47,18 @@ public struct StockKit {
         Alamofire.request(url).responseJSON { response in
             print("Request: \(String(describing: response.request))")   // original url request
             print("Response: \(String(describing: response.response))") // http url response
-            print("R
+            print("Result: \(response.result)")                         // response serialization result
+            
+            let json = JSON(response.result.value ?? "")
+            let quote = json["query"]["results"]["quote"]
+            let stock = Stock(quote)
+            completion(stock)
+        }
+    }
+    
+    static func findHistoricPricesInBackground(forSymbol symbol: String, beginAt: Date, completion: @escaping (Stock)->Void) {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-DD"
+        
+ 
