@@ -67,4 +67,17 @@ public struct StockKit {
             print("Request: \(String(describing: response.request))")   // original url request
             print("Response: \(String(describing: response.response))") // http url response
             print("Result: \(response.result)")                         // response serialization result
+            
+            let json = JSON(response.result.value ?? "")
+            let datatable = json["datatable"]
+            let stock = Stock(datatable)
+            completion(stock)
+        }
+    }
     
+    static func findNewsInBackground(forSymbol symbol: String, completion: @escaping (Stock)->Void) {
+        
+        let url = "https://www.bloomberg.com/quote/\(symbol):us"
+        
+        Alamofire.request(url).responseJSON { response in
+            print("Request: \(String(describing: response.request))")   
