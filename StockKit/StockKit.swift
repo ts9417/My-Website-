@@ -61,4 +61,10 @@ public struct StockKit {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-DD"
         
- 
+        let url = "https://quantprice.herokuapp.com/api/v1.1/scoop/period?tickers=\(symbol)&begin=\(dateFormatter.string(from: beginAt))"
+        
+        Alamofire.request(url).responseJSON { response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")                         // response serialization result
+    
