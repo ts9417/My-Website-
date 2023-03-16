@@ -104,3 +104,204 @@ open class StockTrackerDatasource: NTCollectionDatasource {
     open override func numberOfSections() -> Int {
         return objects?.count ?? 0
     }
+    
+    ///For each row in your list, override this to provide it with a specific item. Access this in your DatasourceCell by overriding datasourceItem.
+    open override func item(_ indexPath: IndexPath) -> Any? {
+        return objects?[indexPath.section]
+    }
+    
+    ///If your headers need a special item, return it here.
+    open override func headerItem(_ section: Int) -> Any? {
+        return objects?[section]
+    }
+}
+
+open class StockViewHeaderCell: NTCollectionViewDefaultHeader {
+    
+    open let actionButton: UIButton = {
+        let button = UIButton()
+        button.setImage(Icon.More, for: .normal)
+        button.tintColor = .white
+        return button
+    }()
+    
+    open override func setupViews() {
+        super.setupViews()
+        
+        separatorLineView.isHidden = true
+        addSubview(actionButton)
+        actionButton.anchor(topAnchor, left: nil, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 16, widthConstant: 20, heightConstant: 20)
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 20)
+    }
+    
+}
+
+open class StockViewCell: NTCollectionViewCell, ChartDelegate {
+    
+    open override var datasourceItem: Any? {
+        didSet {
+            guard let stock = datasourceItem as? String else {
+                return
+            }
+            setupChart(forSymbol: stock)
+            
+            StockKit.findQuoteInBackground(forSymbol: stock) { (stock) in
+                self.percentChangeLabel.text = stock.json["PercentChange"].stringValue
+                self.currentPriceLabel.text = "$" + stock.json["LastTradePriceOnly"].stringValue
+                self.tradeTimeLabel.text = stock.json["LastTradeTime"].stringValue
+                if let text = self.percentChangeLabel.text {
+                    if text.contains("+") {
+                        self.percentChangeLabel.textColor = Color.Green.P500
+                    } else {
+                        self.percentChangeLabel.textColor = Color.Red.P500
+                    }
+                }
+            }
+        }
+    }
+    
+    fileprivate var labelLeadingMarginConstraint: NSLayoutConstraint!
+    
+    open let percentChangeLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 30, weight: UIFontWeightMedium)
+        return label
+    }()
+    
+    open let currentPriceLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .lightText
+        return label
+    }()
+    
+    open let tradeTimeLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .lightText
+        return label
+    }()
+    
+    open let scrollLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.isHidden = true
+        return label
+    }()
+    
+    open let stockChart: Chart = {
+        let chart = Chart()
+        chart.axesColor = .white
+        chart.bottomInset = 0
+        chart.labelColor = .white
+        chart.showXLabelsAndGrid = false
+        return chart
+    }()
+    
+    open override func setupViews() {
+        super.setupViews()
+        
+        separatorLineView.isHidden = false
+        separatorLineView.backgroundColor = Color.Black.lighter(by: 15)
+        addSubview(percentChangeLabel)
+        addSubview(currentPriceLabel)
+        addSubview(tradeTimeLabel)
+        addSubview(stockChart)
+        addSubview(scrollLabel)
+        stockChart.delegate = self
+        
+        percentChangeLabel.anchor(topAnchor, left: leftAnchor, bottom: nil, right: stockChart.leftAnchor, topConstant: 5, leftConstant: 16, bottomConstant: 0, rightConstant: 2, widthConstant: 0, heightConstant: 40)
+        currentPriceLabel.anchor(percentChangeLabel.bottomAnchor, left: percentChangeLabel.leftAnchor, bottom: nil, right: percentChangeLabel.rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 20)
+        tradeTimeLabel.anchor(currentPriceLabel.bottomAnchor, left: currentPriceLabel.leftAnchor, bottom: nil, right: currentPriceLabel.rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 20)
+        stockChart.anchor(topAnchor, left: nil, bottom: nil, right: rightAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 0, rightConstant: 16, widthConstant: 200, heightConstant: 90)
+        
+        labelLeadingMarginConstraint = scrollLabel.anchorWithReturnAnchors(stockChart.topAnchor, left: stockChart.leftAnchor, bottom: nil, right: nil, topConstant: 4, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 20)[1]
+    }
+    
+    open func setupChart(forSymbol symbol: String) {
+        StockKit.findHistoricPricesInBackground(forSymbol: symbol, beginAt: Date().addMonth(-1)) { (stock) in
+            print(stock.json)
+            
+            let stockValues = stock.json["data"].array?.map { (json) -> Dictionary<String, Any> in
+                let dateString = json.array?[6].stringValue
+                let close = json.array?[10].floatValue
+                return ["date": Date.fromString(strDate: dateString!, format: "YYYY-MM-DD")!, "close": close!]
+            }
+            
+            var serieData: [Float] = []
+            var labels: [Float] = []
+            var labelsAsString: Array<String> = []
+            
+            // Date formatter to retrieve the month names
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM"
+            
+            for (i, value) in stockValues!.enumerated() {
+                
+                serieData.append(value["close"] as! Float)
+                
+                // Use only one label for each month
+                let month = Int(dateFormatter.string(from: value["date"] as! Date))!
+                let monthAsString:String = dateFormatter.monthSymbols[month - 1]
+                if (labels.count == 0 || labelsAsString.last != monthAsString) {
+                    labels.append(Float(i))
+                    labelsAsString.append(monthAsString)
+                }
+            }
+            if serieData.count <= 0 {
+                return
+            }
+            let series = ChartSeries(serieData)
+            series.area = true
+            series.color = Color.BlueGray.P400
+            
+            // Configure chart layout
+            
+            self.stockChart.lineWidth = 0.5
+            self.stockChart.labelFont = UIFont.systemFont(ofSize: 12)
+            self.stockChart.xLabels = labels
+            self.stockChart.xLabelsFormatter = { (labelIndex: Int, labelValue: Float) -> String in
+                return labelsAsString[labelIndex]
+            }
+            self.stockChart.xLabelsTextAlignment = .center
+            self.stockChart.yLabelsOnRightSide = true
+            // Add some padding above the x-axis
+            self.stockChart.minY = (serieData.min() ?? 0) - 5
+            self.stockChart.add(series)
+        }
+    }
+    
+    // Chart delegate
+    
+    open func didTouchChart(_ chart: Chart, indexes: Array<Int?>, x: Float, left: CGFloat) {
+        if indexes.count <= 0 {
+            return
+        }
+        if let value = chart.valueForSeries(0, atIndex: indexes[0]) {
+            
+            let numberFormatter = NumberFormatter()
+            numberFormatter.minimumFractionDigits = 2
+            numberFormatter.maximumFractionDigits = 2
+            scrollLabel.text = numberFormatter.string(from: NSNumber(value: value))
+            scrollLabel.isHidden = false
+            
+            stockChart.labelColor = .clear
+            stockChart.highlightLineColor = .white
+            
+            // Align the label to the touch left position, centered
+            let constant = left - (scrollLabel.frame.width / 2)
+            labelLeadingMarginConstraint.constant = constant
+        }
+        
+    }
+    
+    public func didEndTouchingChart(_ chart: Chart) {
+        scrollLabel.isHidden = false
+        stockChart.labelColor = .white
+        stockChart.highlightLineColor = .clear
+    }
+    
+    public func didFinishTouchingChart(_ chart: Chart) {
+        
+    }
+}
