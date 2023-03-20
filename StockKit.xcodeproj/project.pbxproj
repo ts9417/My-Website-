@@ -511,3 +511,86 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.nathantannar.StockKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		38DF76F91F21A11500D01CDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08CCE8B91C3A4C28994C59E3 /* Pods-StockKitTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9EUCWD26TP;
+				INFOPLIST_FILE = StockKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.nathantannar.StockKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StockKit.app/StockKit";
+			};
+			name = Debug;
+		};
+		38DF76FA1F21A11500D01CDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0DF724E1CDCAE19184D9147 /* Pods-StockKitTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9EUCWD26TP;
+				INFOPLIST_FILE = StockKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.nathantannar.StockKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StockKit.app/StockKit";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38DF76D01F21A11500D01CDD /* Build configuration list for PBXProject "StockKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38DF76F31F21A11500D01CDD /* Debug */,
+				38DF76F41F21A11500D01CDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38DF76F51F21A11500D01CDD /* Build configuration list for PBXNativeTarget "StockKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38DF76F61F21A11500D01CDD /* Debug */,
+				38DF76F71F21A11500D01CDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38DF76F81F21A11500D01CDD /* Build configuration list for PBXNativeTarget "StockKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38DF76F91F21A11500D01CDD /* Debug */,
+				38DF76FA1F21A11500D01CDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		38DF76DF1F21A11500D01CDD /* StockKit.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				38DF76E01F21A11500D01CDD /* StockKit.xcdatamodel */,
+			);
+			currentVersion = 38DF76E01F21A11500D01CDD /* StockKit.xcdatamodel */;
+			path = StockKit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 38DF76CD1F21A11500D01CDD /* Project object */;
+}
