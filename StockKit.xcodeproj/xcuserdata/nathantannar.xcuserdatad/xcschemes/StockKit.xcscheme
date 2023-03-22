@@ -33,4 +33,16 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "38DF76EB1F21A11500D01CDD"
-         
+               BuildableName = "StockKitTests.xctest"
+               BlueprintName = "StockKitTests"
+               ReferencedContainer = "container:StockKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "38DF76D41F21A11500D01CDD"
+            BuildableName = "StockKit.app"
+            BlueprintName = "StockKit"
+            ReferencedContainer = "container:StockKit.xcodeproj">
