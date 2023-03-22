@@ -7,4 +7,16 @@
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
-            buildForTesting 
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "38DF76D41F21A11500D01CDD"
+               BuildableName = "StockKit.app"
+               BlueprintName = "StockKit"
+               ReferencedContainer = "container:StockKit.xcodeproj">
+            </BuildableReference>
+         </BuildActio
