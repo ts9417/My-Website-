@@ -87,4 +87,15 @@
             BlueprintIdentifier = "38DF76D41F21A11500D01CDD"
             BuildableName = "StockKit.app"
             BlueprintName = "StockKit"
-            ReferencedContainer = "container:StockKit.xcodepro
+            ReferencedContainer = "container:StockKit.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
