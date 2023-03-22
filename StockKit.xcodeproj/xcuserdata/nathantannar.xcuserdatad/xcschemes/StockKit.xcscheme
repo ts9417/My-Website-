@@ -75,4 +75,16 @@
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
-      buildConfiguration 
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "38DF76D41F21A11500D01CDD"
+            BuildableName = "StockKit.app"
+            BlueprintName = "StockKit"
+            ReferencedContainer = "container:StockKit.xcodepro
